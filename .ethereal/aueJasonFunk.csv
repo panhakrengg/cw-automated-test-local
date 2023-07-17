@@ -1,0 +1,4 @@
+"Service","Name","Username","Password","Hostname","Port","Security"
+"SMTP","Jason Funk","jason.funk@ethereal.email","fZ6vZ44PTU966T6A5U","smtp.ethereal.email",587,"STARTTLS"
+"IMAP","Jason Funk","jason.funk@ethereal.email","fZ6vZ44PTU966T6A5U","imap.ethereal.email",993,"TLS"
+"POP3","Jason Funk","jason.funk@ethereal.email","fZ6vZ44PTU966T6A5U","pop3.ethereal.email",995,"TLS"

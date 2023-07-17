@@ -1,0 +1,4 @@
+{
+  "files": ["./cypress/support/index.d.ts"],
+  "exclude": ["./node_modules"]
+}

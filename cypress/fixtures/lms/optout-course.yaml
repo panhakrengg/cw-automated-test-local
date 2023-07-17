@@ -1,0 +1,41 @@
+CourseData:
+  optOutLearning:
+    name: Opt Out Learner Notification
+    url:
+      beta:
+        id:
+          - 108346069
+      uat:
+        id:
+          - 110123479
+      prd:
+        id:
+          - ''
+    categories:
+      optOutNotify:
+        name: Opt out notify
+    forBookInstance:
+      deliveryMethod: Self-study
+      url:
+        beta:
+          id:
+            - 108363559
+        uat:
+          id:
+            - 110123585
+        prd:
+          id:
+            - ''
+    forWithdrawInstance:
+      deliveryMethod: Virtual Classroom
+      date: 01 Jan, 2039 - 10 Jan, 2039
+      url:
+        beta:
+          id:
+            - 108364035
+        uat:
+          id:
+            - 110138191
+        prd:
+          id:
+            - ''

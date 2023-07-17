@@ -1,0 +1,70 @@
+CourseData:
+  tennisByYourself:
+    name: Tennis By Yourself
+    courseOverview: Tips on how to practice tennis alone and what equipment is helpful when practicing by yourself.
+    url:
+      beta:
+        id:
+          - 104648328
+      uat:
+        id:
+          - 105290121
+      prd:
+        id:
+          - 52066797
+    freeCourse: &freeCourseInstance
+      additionalBookingNote: Publish for booking FREE course in LMS-Training CoP.
+      date: 01 Jun, 2039 - 30 Jun, 2039
+      deliveryMethod: Blended Learning
+      maxParticipant: 10
+      activities: #all activities list in /lms/course-activities/sample-activities.yaml > SampleActivities
+        total: 1
+        fileImage:
+          Title: Tennis Scoreboard Image
+    prePaidCourse: &prePaidCourseInstance
+      <<: *freeCourseInstance
+      additionalBookingNote: Publish for booking Prepaid course in LMS-Training CoP.
+      date: 01 Dec, 2039 - 31 Dec, 2039
+      endDate: 31 Dec, 2039
+      courseFee:
+        value: 26
+        currency: USD
+  practiceMorning:
+    name: Practice early morning
+    courseOverview: Always published, has instance and also published
+    url:
+      beta:
+        id:
+          - 110252886
+      uat:
+        id:
+          - 108696296
+      prd:
+        id:
+          - 52085626
+    freeCourseLP: &freeCourseInstanceInLP
+      <<: *freeCourseInstance
+      additionalBookingNote: For testing booking FREE course in Learning Path of LMS-Training CoP
+      date: 01 Apr, 2039 - 30 Apr, 2039
+LearningPathData:
+  firstClass:
+    name: First Class in City Club
+    url:
+      beta:
+        id:
+          - 111182953
+      uat:
+        id:
+          - 108642975
+      prd:
+        id:
+          - ''
+
+BookingCourse:
+  freeCourse:
+    <<: *freeCourseInstance
+    slotAvailable: 9
+  prePaidCourse:
+    <<: *prePaidCourseInstance
+    slotAvailable: 9
+  freeCourseLP: *freeCourseInstanceInLP

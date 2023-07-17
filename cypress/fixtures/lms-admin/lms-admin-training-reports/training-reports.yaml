@@ -1,0 +1,320 @@
+Categories:
+  ctgFuncTrainingReport:
+    name: &ctgFuncTrainingReportName Ctg Func Training Reports
+    users:
+      addUsers:
+        - au_ln_ctgad
+        - &courseFaciScreenName au_ln_coufaci
+        - &courseAdminScreenName au_ln_couad
+        - au_ln_istfaci
+        - &categoryMemberScreenName au_ln_ctgmem
+        - &learnerDelScreenName au_ln_istmem_del
+      admins:
+        - aue_kenton.weimann@
+
+Courses:
+  courseSharedForCheckingTrainingReport: &courseSharedForCheckingTrainingReport
+    name: &courseSharedForCheckingTrainingReportName Course Shared for Checking Training Reports
+    image: lms-admin/lms-admin-training-reports/attachments/courseSharedToCommunityImage.jpg
+    categories:
+      - *ctgFuncTrainingReportName
+    communitySharing:
+      communitySharing: true
+    url:
+      beta:
+        id:
+          - ''
+      uat:
+        id:
+          - ''
+    managePeople:
+      admins:
+        - *courseAdminScreenName
+      faci:
+        - *courseFaciScreenName
+    instanceCoPLearnerBooked: &instanceCoPLearnerBooked
+      title: Instance CoP learners booked
+      deliveryMethod: Self-study
+      activities: &only1FileDocActivity
+        tOActivityDocWarmUp: &toActivityDocWarmUp
+          type: File
+          from: Organization
+          title: TOActivity Warm Up Guide
+  courseHaveAdminLearnerBooked: &courseHaveAdminLearnerBooked
+    name: &courseHaveAdminLearnerBookedName Course have Admin&Learner booked for Report
+    image: lms-admin/lms-admin-training-reports/attachments/courseHaveAdminLearnerBookedImage.jpg
+    categories:
+      - *ctgFuncTrainingReportName
+    url:
+      beta:
+        id:
+          - 141747919
+      uat:
+        id:
+          - 139761171
+      local:
+        id:
+          - 138247831
+    managePeople:
+      admins:
+        - *courseAdminScreenName
+    instanceThereAre2Learners:
+      title: Instance which there are 2 learners
+      deliveryMethod: Self-study
+      activities: *only1FileDocActivity
+      url:
+        beta:
+          id:
+            - 141748875
+        uat:
+          id:
+            - 139761270
+        local:
+          id:
+            - 138248903
+      managePeople:
+        learners:
+          - *courseAdminScreenName
+          - *categoryMemberScreenName
+    instanceThereIs1Learner:
+      title: Instance which there is 1 learner
+      deliveryMethod: Virtual Classroom
+      maxParticipant: 999
+      activities: *only1FileDocActivity
+      managePeople:
+        learners:
+          - *categoryMemberScreenName
+  courseFullCatalog: &courseFullCatalog
+    name: Course in Full Catalog for Report
+    image: lms-admin/lms-admin-training-reports/attachments/courseFullCatalogImage.jpg
+    url:
+      beta:
+        id:
+          - ''
+      uat:
+        id:
+          - ''
+    instanceSmokeLearnerChangeEmail:
+      title: Instance smoke has learner that change email
+      deliveryMethod: Self-study
+      managePeople:
+        learners:
+          - au_change_jen
+      courseStatus:
+        au_change_jen:
+          status: Booked
+    instanceSmokeExitedOrgMember:
+      title: Instance smoke has learner as exited org member
+      deliveryMethod: Blended Learning
+      maxParticipant: 999
+      activities: *only1FileDocActivity
+      managePeople:
+        learners:
+          - aue_exited_hazle
+    instanceExitedOrgMemberBooked: &instanceExitedOrgMemberBooked
+      title: Instance has learner as Exited org members with Booked status
+      deliveryMethod: Physical Classroom
+      maxParticipant: 999
+      startDate: '2039-01-01'
+      endDate: '2039-02-01'
+      managePeople:
+        learners:
+          - au_exited_simo
+      activities: *only1FileDocActivity
+      courseStatus:
+        au_exited_simo:
+          status: Booked
+    instanceExitedOrgMemberCompleted: &instanceExitedOrgMemberCompleted
+      <<: *instanceExitedOrgMemberBooked
+      title: Instance has learner as Exited org members with Completed status
+      deliveryMethod: Blended Learning
+      startDate: ''
+      endDate: ''
+      courseStatus:
+        au_exited_simo:
+          status: Completed
+          completedDate:
+            uat: 'May 18, 2023'
+            beta: 'May 19, 2023'
+            local: 'Jun 15, 2023'
+  courseFuncForReport:
+    name: Course Func for checking report
+    courseOverview: This course is under category and use for learner (booking, learning, withdraw) & admin (remove learner), then check in the report.
+    image: lms-admin/lms-admin-training-reports/attachments/courseFuncForReportImage.jpg
+    categories:
+      - *ctgFuncTrainingReportName
+    url:
+      uat:
+        id:
+          - 140168835
+      beta:
+        id:
+          - 141748173
+      local:
+        id:
+          - 138247760
+    instanceForBooking: &instanceForBooking
+      title: Instance for booking
+      deliveryMethod: Self-study
+      activities: *only1FileDocActivity
+      url:
+        uat:
+          id:
+            - 140169189
+        beta:
+          id:
+            - 141749200
+        local:
+          id:
+            - 138248408
+      courseStatus:
+        au_ln_istmem_del:
+          status: Booked
+          percentage: 0.00%
+    instanceForLearnActivities:
+      <<: *instanceForBooking
+      title: Instance for learning some activities
+      activities:
+        tOActivityDocWarmUp: *toActivityDocWarmUp
+        beginnerTennisLesson: &beginnerTennisLesson
+          type: Hyperlink
+          from: Organization
+          title: Beginner Tennis Lesson
+      managePeople:
+        learners:
+          - *learnerDelScreenName
+    instanceForWithdraw:
+      <<: *instanceForBooking
+      title: Instance for withdraw
+      url:
+        uat:
+          id:
+            - 140169435
+        beta:
+          id:
+            - 141749330
+        local:
+          id:
+            - 138248707
+      courseStatus:
+        au_ln_istmem_del:
+          status: Withdrawn
+    instanceForCompleted:
+      title: Instance for completed
+      deliveryMethod: Self-study
+      activities:
+        beginnerTennisLesson: *beginnerTennisLesson
+      managePeople:
+        learners:
+          - *learnerDelScreenName
+    instanceForAdminRemoveLearner:
+      <<: *instanceForBooking
+      title: Instance for admin remove learner
+      url:
+        uat:
+          id:
+            - 140184289
+        beta:
+          id:
+            - 141749540
+        local:
+          id:
+            - 138248314
+      courseStatus:
+        au_ln_istmem_del:
+          status: Booked
+
+Communities:
+  tCopTrainingReport:
+    organization: FireCloud Zone
+    name: TCoP Training Reports
+    url: /web/tcop-training-reports
+    profile:
+      path: lms-admin/lms-admin-training-reports/attachments/tCopFuncTrainingReportProfile.jpg
+    admin:
+      url: /web/tcop-training-reports/admin/admin
+    copUsers:
+      uat:
+        inviteViaEmails:
+          - &onlyMeEmailUat onlyme@gmail.com
+          - &ferryEmail au_ferry45@mail.com
+          - &litzyEmailUat aue_litzy5@ethereal.email
+          - &kulasEmail au_learneronlymeKulas@mail.com
+        members:
+          - *onlyMeEmailUat
+          - *ferryEmail
+          - *litzyEmailUat
+          - *kulasEmail
+    manageConsent:
+      formName: Community Training report full name
+      consentItems:
+        seeEmail: Community admin and owner are able to see your email.
+        seeFullName: I agree for training facilitators and administrators of this community to see my full name and review my training progress.
+    acceptSeeFullName:
+      uat:
+        onlyMe:
+          email: *onlyMeEmailUat
+          acceptSeeFullName: true
+        ferry:
+          email: *ferryEmail
+          acceptSeeFullName: false
+        kulas:
+          email: *kulasEmail
+          acceptSeeFullName: false
+        litzy:
+          email: *litzyEmailUat
+          acceptSeeFullName: true
+    sharedCourses:
+      courseSharedForCheckingTrainingReport:
+        name: *courseSharedForCheckingTrainingReportName
+        instanceCoPLearnerBooked: *instanceCoPLearnerBooked
+
+AdvancedFilters:
+  checkFilterValidation:
+    learnerName: AU
+    courseIndex:
+      - 0
+    categoryIndex:
+      - 0
+    deliveryMethodIndex:
+      - 0
+    location: Phnom Penh
+    completionStatusIndex:
+      - 0
+    showLearnersNotBook: true
+
+SearchInReport:
+  courseHasLearner:
+    <<: *courseHaveAdminLearnerBooked
+    totalRecordAtLeast: 3
+  courseNoLearner:
+    name: Publish no one book
+    totalRecordAtLeast: 0
+  learnerQuentin:
+    # read learner info from yaml
+    courses:
+      courseHaveAdminLearnerBooked:
+        <<: *courseHaveAdminLearnerBooked
+        totalRecordAtLeast: 2
+
+ShowLearnersWhoNotBookCourse:
+  courseHaveAdminLearnerBooked:
+    courseName: *courseHaveAdminLearnerBookedName
+    showLearnersNotBook: true
+    totalRecordAtLeast: 30 # more than 30
+    nonOrgMembers:
+      uat:
+        - hazle24@ethereal.email
+        - au.normaluser@crosswired.com
+    learners:
+      uat:
+        - aue_tressie.hettinger47@ethereal.email
+        - aue_quentin.bode@ethereal.email
+
+ManageColumns:
+  learningAdmin:
+    add2Columns:
+      - Email (Organization Profile)
+      - Facilitator
+    remove1Column:
+      - Account Email

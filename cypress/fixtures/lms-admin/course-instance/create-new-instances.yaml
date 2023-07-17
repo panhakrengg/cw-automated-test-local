@@ -1,0 +1,86 @@
+CategoryData:
+  ctgFuncForNewInstances:
+    name:
+      value: &ctgFuncForNewInstancesName Ctg Func for New Instances
+    users:
+      addUsers: &ctgFuncForNewInstancesUsers
+        - &courseAdminScreenName au_ln_couad
+        - au_ln_ctgmem
+        - &instanceFaci au_ln_istfaci
+      members: *ctgFuncForNewInstancesUsers
+
+CourseData:
+  courseFuncForNewInstance: &courseFuncForNewInstance
+    name:
+      value: Course Func For New Instance
+    image: &courseFuncForNewInstanceImage lms-admin/course-instance/attachments/courseFuncForNewInstance_Image.png
+    courseOverview: Use for creating new course instance functionality only. This course is under "Ctg Func for New Instances" category, and from org-lms.
+    categories:
+      - *ctgFuncForNewInstancesName
+    url:
+      beta:
+        id:
+          - 129100353
+      uat:
+        id:
+          - 130958597
+    managePeople:
+      addUsers:
+        - *courseAdminScreenName
+      adminEmails:
+        - aue_tressie.hettinger47@
+
+CreateInstances:
+  courseFuncForNewInstance:
+    <<: *courseFuncForNewInstance
+    instanceWithAllInfo: &instanceWithAllInfo
+      deliveryMethod: &selfStudy Self-study
+      title:
+        value: AU instance with all info and 20 USD
+      language:
+        - English
+      courseCompletion: 2
+      expectedDuration: 120
+      courseContactEmail: conuser2022@mail.com
+      additionalBookingNote: AU course instance
+      courseFee:
+        value: 20
+        currency: USD
+        paymentMethod: Postpaid
+    instanceWithoutTitle:
+      <<: *instanceWithAllInfo
+      deliveryMethod: &physicalClassroom Physical Classroom
+      title:
+        value: ''
+      managePeople:
+        faci:
+          - *instanceFaci
+      startDate: '2028-01-01'
+      endDate: '2028-01-31'
+      date: '01 Jan, 2028 - 31 Jan, 2028'
+      maxParticipant: 10
+      availableParticipant: 10
+      mustBookBy: 2
+      mustCancelBy: 3
+      additionalBookingNote: AU course instance without title
+    instancePhysicalClass:
+      deliveryMethod: Physical Classroom
+      title:
+        value: AU instance with Physical Classroom
+      status: Draft
+      date: '-'
+      location: '-'
+    instanceMultiLanguages:
+      deliveryMethod: Blended Learning
+      title:
+        value: AU instance - English, Portuguese, & Spanish
+      language:
+        - English
+        - Portuguese
+        - Spanish
+    instanceLanguage:
+      deliveryMethod: *selfStudy
+      title:
+        value: AU instance language Polish (Poland)
+      language:
+        - Polish (Poland)

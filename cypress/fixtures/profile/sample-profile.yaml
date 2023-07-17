@@ -1,0 +1,506 @@
+CommunitySuite:
+  indCoP:
+    label: &indCoP818th IndCoP 818th
+  topicalCoP:
+    label: &topical158th Topical 158th
+  orgCoP:
+    label: &org855th Org 855th
+VisibilityStatic:
+  onlyMe:
+    label: &onlyMe Only Me
+  connections:
+    label: &connections Connections
+    desc: Your connections on the platform
+  organization:
+    label: &organization Organization
+    desc: Members in your organizations
+  network:
+    label: &network Network
+    desc: Includes your connections and organization members
+  platform:
+    label: &platform Platform
+    desc: All Logged-in Users
+ProfileStatic:
+  url: /web/my-profile/profile
+  tab:
+    community:
+      label: Community
+      aboutMe:
+        label: About me
+        background:
+          value:
+          visibility:
+      myPrimaryCoP:
+        label: My Primary Community of Purpose
+        community: *indCoP818th
+      myOtherCoP:
+        label: My Other Communities of Purpose
+        communities:
+          - *topical158th
+          - *org855th
+    expertiseQualifications:
+      label: Expertise & Qualification
+      myFocus:
+        areaOfFocus:
+          label: Area of Focus
+          value:
+            - QA
+            - Quality Control
+        skillsAndExpertise:
+          label: Skills and Expertise
+          value:
+            - UI
+            - Permission
+        languages:
+          label: Languages
+          value:
+            - Khmer
+            - English
+        interestsAndHobbies:
+          label: Interests and Hobbies
+          value:
+            - Walking
+            - Coffee
+  contactInfo:
+    noteMessage: 'Note: The ability to set visibility is a premium feature and requires a paid subscription.'
+    warningMessage: Visibility Settings of your profile & details are very important for privacy. Please verify your details before publishing it.
+  Details:
+    noteMessage: 'Note: The ability to set visibility is a premium feature and requires a paid subscription.'
+    warningMessage: Visibility Settings of your profile & details are very important for privacy. Please verify your details before publishing it.
+  users:
+    freemium:
+      contactInfo:
+        screenName: au_freemium
+        emails:
+          preferred:
+            type: Preferred
+            emails:
+              - freemium@yopmail.com
+    orgAdmin:
+      contactInfo:
+        screenName: au_orgmgtadmin
+        givenName: AUOrgMgt
+        familyName: OrganizationMgtAdmin
+        fullName:
+          globalSearch: au_orgmgtadmin (AUOrgMgt OrganizationMgtAdmin)
+          myProfile: au_orgmgtadmin ( AUOrgMgt OrganizationMgtAdmin )
+        headline: Organizational control to help people collectively work to achieve company
+        emails:
+          personal:
+            type: Personal
+            emails:
+              - orgmgtadmin3@yopmail.com
+              - orgmgtadmin@ymail.com
+          work:
+            type: Work
+            emails:
+              - orgmgtadmin2@yopmail.com
+          preferred:
+            type: Preferred
+            emails:
+              - orgmgtadmin@yopmail.com
+        addresses:
+          workAddress:
+            type: Work Address
+            addresses:
+              - '#BrazilStreetAddressOrganization, #BrazilStreetAddressOrganization, BazilCity, BazilState, Brazil 12345'
+          sendingCountryAddress:
+            type: Sending Country Address
+            addresses:
+              - '#IndiaStreetAddressNetwork, #IndiaStreetAddressNetwork, New Delhi, IndiaState, India 12345'
+          fieldSideAddress:
+            type: Field Side Address
+            addresses:
+              - '#GermanyStreetAddressPlatform, #GermanyStreetAddressPlatform, Munich, Bavaria, Germany 12345'
+          homeAddress:
+            type: Home (Current) Address
+            addresses:
+              - '#USStreetAddressConnections, #USStreetAddressConnections, Ohio, United, United-states 12345'
+              - '#CambodiaStreetAddressOnlyMe, #CambodiaStreetAddressOnlyMe, Phnom Penh, Capital, Cambodia 12345'
+        phoneNumbers:
+          personal:
+            germany:
+              type: Personal
+              countryCode: de
+              number: +49 8599 78
+            india:
+              type: Other
+              countryCode: in
+              number: +91 88888 99999
+            brazil:
+              type: Work
+              countryCode: br
+              number: +55 999966666
+            america:
+              type: Home
+              countryCode: us
+              number: +1 440 999 9666
+            cambodia:
+              type: Personal - Preferred
+              countryCode: kh
+              number: +855 97 888 999
+      details:
+        knownAs: Org Admin WebLearn
+        gender: Male
+        birthday: Jun 26, 1990
+        company: Khalibre
+        jobTitle: Organization Control
+        position: Team Lead
+        website:
+          - https://kh-organization.org
+          - https://kh-network.com
+          - https://kh-platform.com
+          - https://kh-myconnections.com
+          - https://onlyme.com
+        socialMedia:
+          facebook:
+            - http://www.facebook.com/KhalibreCompany
+            - http://www.facebook.com/KhalibreCompany
+          instagram:
+            - http://www.ig.com/KhalibreCompany
+          twitter:
+            - http://www.twitter.com/KhalibreCompany
+          linkIn:
+            - https://www.linkedin.com/company/khalibre/
+      expertiseQualifications:
+        areaOfFocus:
+          label: Area of Focus
+          items:
+            - Area of Focus
+          newItems:
+            - Writing
+          visibility: Connections
+        interestsAndHobbies:
+          label: Interests and Hobbies
+          items:
+            - Interests and Hobbies
+          newItems:
+            - Photography
+          visibility: Organization
+        skillsAndExpertise:
+          label: Skills and Expertise
+          items:
+            - Skills and Expertise
+          newItems:
+            - IT Management
+          visibility: Network
+        languages:
+          label: Languages
+          items:
+            - Khmer
+          newItems:
+            - Arabic
+          visibility: Platform
+      uuid:
+        local: 9a88a436-3e63-427e-aead-af56fbd3bbdf
+        uat: 9a88a436-3e63-427e-aead-af56fbd3bbdf
+        beta: ab9813a6-04ed-403b-a2d9-d92b5905d24c
+        prd: 6220b023-f65d-4cca-8aba-a079198bb165
+    normal:
+      contactInfo:
+        screenName: au_instancemem
+        givenName: AU
+        familyName: InstanceMember
+    teamLeader:
+      contactInfo:
+        screenName: auleadroot
+        givenName: AULead
+        familyName: LeaderRootOrg
+        phoneNumbers:
+          personal:
+            unitedState:
+              label: United States
+              type: Home
+              countryCode: us
+              number: +1 9205555444
+              invalidNumber: +1 9215555444
+            cambodia:
+              label: Cambodia
+              type: Other #there is known issue with Label so I used Other instead
+              countryCode: kh
+              number: +855 97 888 999
+              visibility: Organization
+        emails:
+          preferred:
+            type: Preferred
+            emails:
+              - teamleadrootorg@yopmail.com
+          personal:
+            type: Personal
+            emails:
+              - teamleader@yopmail.com
+        addresses:
+          fieldSideAddress:
+            type: Field Side Address
+            addresses:
+              - '#GermanyStreetAddressPlatform, #GermanyStreetAddressPlatform, Munich, Bavaria, Germany 12345'
+      details:
+        knownAs: Emily
+        gender: Female
+        birthday:
+          edit: 07/07/2004
+          show: Jul 7, 2004
+        company: Khalibre
+        jobTitle:
+          - Automate Title - Do Not Delete
+        position:
+          - Automate Position - Do Not Delete
+        quickTip:
+          title: User Profile
+          list:
+            - 'Customize your profile’s visibility by choosing who can view each personal detail.'
+            - "See how your profile appears to specific audiences by clicking on 'Preview profile as' on your profile page."
+        websites:
+          - http://auteamleader.org
+          - https://auleadautomation.org
+        socialMedias:
+          facebook:
+            type: Facebook
+            url: http://www.facebook.com/KhalibreCompany
+            visibility: *onlyMe
+          linkedIn:
+            type: LinkedIn
+            url: http://www.linkedin.com/company/khalibre/
+            visibility: *connections
+          twitter:
+            type: Twitter
+            url: http://www.twitter.com/KhalibreCompany
+            visibility: *organization
+          instagram:
+            type: Instagram
+            url: http://wwww.ig.com/khalibreCompany
+            visibility: *network
+          facebook2:
+            type: Facebook
+            url: http://www.facebook.com/KhalibreCompany/2
+            visibility: *platform
+        update:
+          knownAs: Emily(Update)
+          gender: Male
+          birthday:
+            edit: 12/12/1995
+            show: Dec 12, 1995
+          company: Khalibre(Update)
+          jobTitle:
+            - QA
+          position:
+            - Tester
+      expertiseQualifications:
+        areaOfFocus:
+          label: Area of Focus
+          items:
+            - Area of Focus
+          newItems:
+            - Writing
+          visibility: *onlyMe
+        interestsAndHobbies:
+          label: Interests and Hobbies
+          items:
+            - Interests and Hobbies
+          newItems:
+            - Photography
+          visibility: *onlyMe
+        skillsAndExpertise:
+          label: Skills and Expertise
+          items:
+            - Skills and Expertise
+          newItems:
+            - IT Management
+          visibility: *onlyMe
+        languages:
+          label: Languages
+          items:
+            - Khmer
+          newItems:
+            - Arabic
+          visibility: *onlyMe
+      aboutMe: Involving creating rules, procedures or best practices for an individual or department in an organization. Create policies can help direct the actions of team or other members of organization, which may increase the overall productivity of your organization.
+      uuid:
+        local: ea69193d-d3e0-4119-aade-cc58c33649c5
+        uat: ea69193d-d3e0-4119-aade-cc58c33649c5
+        beta: 0befa012-7479-42d0-ad48-4ed331cf7a50
+        prd:
+    cwNormalUser:
+      contactInfo:
+        screenName: au_normaluser
+        givenName: au
+        familyName: normaUser
+        aboutMe: About me?
+    aueEldredLegros:
+      contactInfo:
+        screenName: au_eldred50
+    instanceMember:
+      contactInfo:
+        screenName: au_instancemember
+        emails:
+          preferred:
+            type: Preferred
+            emails:
+              - cimem@uat.crosswired.net
+      uuid:
+        local: 5e673c66-89e9-46c5-99b0-c8c21fd8a0b2
+        uat: 5e673c66-89e9-46c5-99b0-c8c21fd8a0b2
+        beta: 5e673c66-89e9-46c5-99b0-c8c21fd8a0b2
+        prd: a0831483-3623-4baf-8cfb-990614784fed
+    orgMgtUser:
+      contactInfo:
+        screenName: au_orgmgtuser
+        familyName: OrganizationMgtUser
+        givenName: AUOrgU
+      uuid:
+        local: 1ccae32a-e81f-4f3f-a16d-c74c96f4bb82
+        uat: 1ccae32a-e81f-4f3f-a16d-c74c96f4bb82
+        beta: fcaba5e6-cbf5-488f-83c2-90ffc04a2013
+        prd:
+      community:
+        webLearn:
+          name: WebLearn International
+        startLearning:
+          name: Start Learning Time
+    auPfSwitchCoP:
+      contactInfo:
+        screenName: au_pf_switchcop
+        familyName: Au Profile Switch Primary
+        givenName: CoP
+      uuid:
+        local: f27d9026-01b4-4161-9148-38796417c2dc
+        uat: f27d9026-01b4-4161-9148-38796417c2dc
+        beta: f0feed23-d9e1-49df-98af-bdd01ab87cb4
+        prd:
+      community:
+        webLearn:
+          name: WebLearn International
+        startLearning:
+          name: Start Learning Time
+    auAcFuncMember:
+      expertiseQualifications:
+        areaOfFocus:
+          label: Area of Focus
+          newItems:
+            - Writing
+          visibility: *platform
+        interestsAndHobbies:
+          label: Interests and Hobbies
+          newItems:
+            - bike riding
+          visibility: *platform
+        skillsAndExpertise:
+          label: Skills and Expertise
+          newItems:
+            - IT Management
+          visibility: *platform
+        languages:
+          label: Languages
+          newItems:
+            - Afar
+          visibility: *platform
+InvalidProfileStatic:
+  invalidSymbolScreenName: my&name
+  overLengthScreenName: leader-weblean-emily
+ErrorMessages:
+  screenName:
+    notAvailable: 'The Screen Name you entered is not available. Please enter a different name.'
+    invalidSymbol: 'Your screen name must be between 6 and 16 characters long and can contain letters, numbers, and the following characters: . - _'
+    overLength: 'Your screen name must be between 6 and 16 characters long and can contain letters, numbers, and the following characters: . - _'
+EmptyStateStatic:
+  community:
+    aboutMe:
+      title: About me
+      instruction: Add a brief background about yourself.
+    myPrimaryCommunity:
+      title: My Primary Community of Purpose
+      instruction: Display your primary Community of Purpose (You can select your own CoP or select from a list of CoPs you are part of)
+    myOtherCommunity:
+      title: My Other Communities of Purpose
+      instruction: Show Community of Purpose sites you are subscribed to
+  expertise:
+    myFocus:
+      title: My Focus
+      instruction: Add your area of focus
+    certificates:
+      title: Certificates
+      instruction: Showcase your learning achievement with others.
+SampleEditAddress:
+  addresses:
+    germany:
+      country: Germany
+      type: Field Side Address
+      visibility: Platform
+      streetAddress1: '#GermanyStreetAddressPlatform'
+      streetAddress2: '#GermanyStreetAddressPlatform'
+      city: Munich
+      state: Bavaria
+      postalCode: 12345
+    india:
+      country: India
+      type: Sending Country Address
+      visibility: Network
+      streetAddress1: '#IndiaStreetAddressNetwork'
+      streetAddress2: '#IndiaStreetAddressNetwork'
+      city: New Delhi
+      state: IndiaState
+      postalCode: 12345
+AddConnection:
+  personalNote: I would like to send a request to you.
+  swal2:
+    title: Add Connection
+    description: Your connection request to auleadroot is still pending.
+    noteHeader: Personal Note
+    link: Cancel this request
+  cecPopUp:
+    title: Add Connection
+    description: 'You’re about to send a connection request to'
+    noteHeader: Personal Note (Optional)
+    placeholder: Add a note for recipient
+    link: Send request
+ButtonStatic:
+  connectionRequestSend: Connection Request Sent
+  connect: Connect
+ProfileImageCanvas:
+  css:
+    transform:
+      defaultImage:
+        original: 'translate3d(55.0028px, 55.0028px, 0px) scale(1.0526); transform-origin: 94.9972px 94.9972px; opacity: 1;'
+      myProfileImage:
+        original: 'translate3d(-149.97px, -149.97px, 0px) scale(0.3333); transform-origin: 299.97px 299.97px; opacity: 1;'
+      myProfileImage1:
+        original:
+          - 'translate3d(-50px, 7.62939e-06px, 0px) scale(0.6667); transform-origin: 200px 150px; opacity: 1;'
+          - 'translate3d(-50px, 1.52588e-05px, 0px) scale(0.6667); transform-origin: 200px 150px; opacity: 1;'
+        zoomIn1:
+          - 'translate3d(-50px, 0px, 0px) scale(1); transform-origin: 200px 150px; opacity: 1;'
+          - 'translate3d(-50px, 1.52588e-05px, 0px) scale(1); transform-origin: 200px 150px; opacity: 1;'
+        zoomOut0:
+          - 'translate3d(-50px, 0px, 0px) scale(0.6667); transform-origin: 200px 150px; opacity: 1;'
+          - 'translate3d(-50px, 1.52588e-05px, 0px) scale(0.6667); transform-origin: 200px 150px; opacity: 1;'
+        rotateLeft:
+          - 'translate3d(0px, -50px, 0px) scale(0.6667); transform-origin: 150px 200px; opacity: 1;'
+          - 'translate3d(1.52588e-05px, -50px, 0px) scale(0.6667); transform-origin: 150px 200px; opacity: 1;'
+        rotateRight:
+          - 'translate3d(-50px, 0px, 0px) scale(0.6667); transform-origin: 200px 150px; opacity: 1;'
+          - 'translate3d(-50px, 1.52588e-05px, 0px) scale(0.6667); transform-origin: 200px 150px; opacity: 1;'
+Settings:
+  header: My Profile Settings
+  body:
+    globalSearch:
+      label: Global Search
+      allUsersCanSee:
+        label: All users can find me
+        toggle:
+          users:
+            freemium: &enabled enabled
+            orgMember: *enabled
+      otherInMyOrgFindMe:
+        label: Others in my organization can find me
+        toggle:
+          users:
+          freemium: &disabled disabled
+          orgMember: *disabled
+    orgProfile:
+      label: Organization Profile
+      otherInMyOrgCanView:
+        label: Others in my organization can view
+        toggle:
+          users:
+            freemium: *disabled
+            orgMember: *enabled

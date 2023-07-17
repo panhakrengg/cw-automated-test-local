@@ -1,0 +1,63 @@
+CourseData:
+  scoreInTennis:
+    description: Use for changing publish/unpublish course and course instance
+    name: A Score in tennis
+    url:
+      beta:
+        id:
+          - 102774205
+      uat:
+        id:
+          - 101555701
+      prd:
+        id:
+          - 52066017
+    courseInstances:
+      noActivity: &noActivityCourseInstances
+        description: Use for testing publish/unpublish course instance only - no activities
+        facilitators: CoPUsers.owner
+        endDate: 01 Dec, 2039
+        deliveryMethod: Blended Learning
+        additionalBookingNote: Use for testing publish/unpublish course instance only - no activities
+        courseFee: &noActivityCourseInstancesFee
+          value: 0
+          currency: USD
+        timeZone: (UTC +7:0) Indochina Time (Asia/Phnom_Penh)
+        language: English (United States)
+        courseCompletion: 0
+        expectedDuration: 0
+        maxParticipant: 1
+        mustBookBy: 0
+        mustCancelBy: 0
+        contactEmail: conuser2022@outlook.com
+        url:
+          beta:
+            id:
+              - 102774860
+          uat:
+            id:
+              - 126794620
+          prd:
+            id:
+              - 52066284
+EditInstanceBehavior:
+  scoreInTennis:
+    courseInstances:
+      noActivity:
+        <<: *noActivityCourseInstances
+        language: German (Germany)
+        courseCompletion: 2
+        expectedDuration: 5
+        timeZone: (UTC +1:0) GMT+01:00 (Etc/GMT-1)
+        startDate: '2025-07-01'
+        startTime: 8:00 am
+        endDate: '2029-12-02'
+        endTime: 5:20 pm
+        additionalBookingNote: Use for testing publish/unpublish course instance only - no activities
+        courseFee:
+          <<: *noActivityCourseInstancesFee
+          value: 12
+        maxParticipant: 8
+        mustBookBy: 2
+        mustCancelBy: 1
+        contactEmail: conuser2022@outlook.comupdated

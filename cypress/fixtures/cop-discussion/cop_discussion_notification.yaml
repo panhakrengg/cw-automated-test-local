@@ -1,0 +1,150 @@
+CommunityDiscussionMembers:
+  - &copOwnerKristyGivenName Kristy
+  - &copMemberEnolaEmailUat enola.renner@ethereal.email
+  - &copAdminKendallEmailUat kendall.feeney@ethereal.email
+  - &copAdminBettyeEmail au.copad_connection_bettye@mail.com
+
+DiscussionInfo:
+  categories:
+    memberSubscribed: &memberSubscribed
+      name: &memberSubscribedName Member Subscribed
+      description: this category is subscribed by cop member
+      parentCategory: &noneParentCategory
+        name: None
+    mainDiscussionCategory: &mainDiscussionCategory
+      name: Main Discussion Category
+      description: this category is for general thread, will not update/delete.
+      parentCategory: *noneParentCategory
+    categoryForNewThread: &categoryForNewThread
+      name: Category for creating new thread
+      parentCategory: *noneParentCategory
+  threads:
+    memberSubscribedThread: &memberSubscribedThread
+      subject: Kristy - thread is subscribed by cop member
+      category: *mainDiscussionCategory
+      owner: owner_Kristy()
+    singleReply: &singleReplyThread
+      subject: Kendall - thread for single reply
+      category: *mainDiscussionCategory
+      owner: admin_Kendall()
+    multiReplies: &multiRepliesThread
+      subject: Kristy - thread for multi replies
+      category: *mainDiscussionCategory
+      owner: owner_Kristy()
+    voteThread: &voteThread
+      subject: Enola - up vote thread
+      owner: member_Enola()
+    voteReply: &voteReply
+      subject: Kendall - down vote reply
+      owner: admin_Kendall()
+      replies:
+        byMember: &enolaReplyThread
+          value: Enola - reply for voting
+          owner: member_Enola()
+    authorUnsubscribedThread: &authorUnsubscribedThread
+      subject: Enola - unsubscribed thread
+      description: Unsubscriber (previous thread's author) not receive notification when there is new reply
+      category: *mainDiscussionCategory
+      owner: member_Enola()
+
+Communities:
+  oCoPFuncDiscussionNotify: &oCoPFuncDiscussionNotify
+    type: Organization
+    organization: &fireCloudZone FireCloud Zone
+    name: OCoP Func Discussion Notify
+    url: /web/ocop-func-discussion-notify
+    admin:
+      url: /web/ocop-func-discussion-notify/admin/admin
+    copUsers:
+      uat:
+        inviteViaEmails:
+          - *copAdminKendallEmailUat
+          - *copMemberEnolaEmailUat
+          - *copAdminBettyeEmail
+        members:
+          - *copAdminKendallEmailUat
+          - *copMemberEnolaEmailUat
+          - *copAdminBettyeEmail
+        admins:
+          - *copAdminKendallEmailUat
+          - *copAdminBettyeEmail
+        owner: *copOwnerKristyGivenName
+    discussions:
+      categories:
+        memberSubscribed: *memberSubscribed
+        mainDiscussionCategory: *mainDiscussionCategory
+        categoryForNewThread: *categoryForNewThread
+      threads:
+        memberSubscribedThread: *memberSubscribedThread
+        singleReply: *singleReplyThread
+        multiReplies: *multiRepliesThread
+        voteThread:
+          <<: *voteThread
+          totalReact: 1
+        voteReply:
+          <<: *voteReply
+          replies:
+            byMember:
+              value: Enola - reply for voting
+              totalReact: 1
+        authorUnsubscribedThread: *authorUnsubscribedThread
+
+NewThreads:
+  oCoPFuncDiscussionNotify:
+    <<: *oCoPFuncDiscussionNotify
+    discussions:
+      threads:
+        auEnolaHopeReceiveNotification:
+          subject: AU Enola - hope admin receive notification
+        auKristySubscriberReceiveNotification:
+          subject: AU Kristy - category subscriber will receive notification
+          subjectTruncated: AU Kristy - category subscriber will receive...
+          category:
+            name: *memberSubscribedName
+        auKendallThreadSameCategory:
+          subject: AU Kendall - thread under the same category
+          description: from cop admin
+          category: *categoryForNewThread
+        auEnolaThreadSameCategory:
+          subject: AU Enola - thread under the same category
+          description: from cop member
+          category: *categoryForNewThread
+        auEnolaRemoveNotification:
+          subject: AU Enola - thread's notification will be removed
+
+ReplyThread:
+  oCoPFuncDiscussionNotify:
+    <<: *oCoPFuncDiscussionNotify
+    discussions:
+      threads:
+        singleReply:
+          <<: *singleReplyThread
+          replies:
+            byMember:
+              new: &auMemberReply AU Enola - comment
+        memberSubscribedThread:
+          <<: *memberSubscribedThread
+          replies:
+            byAdmin:
+              new: &auAdminReply AU Kendall - reply
+        multiReplies:
+          <<: *multiRepliesThread
+          replies:
+            byAdmin:
+              new: *auAdminReply
+            byMember:
+              new: *auMemberReply
+        authorUnsubscribedThread:
+          <<: *authorUnsubscribedThread
+          replies:
+            byAdmin:
+              new: AU Bettye - reply
+
+NewCategories:
+  oCoPFuncDiscussionNotify:
+    <<: *oCoPFuncDiscussionNotify
+    discussions:
+      categories:
+        auKendallNewCategory:
+          name: AU Kendall - new category then check notification
+          owner: admin_Kendall()

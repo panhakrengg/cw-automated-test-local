@@ -1,0 +1,4 @@
+Service,Name,Username,Password,Hostname,Port,Security
+SMTP,Quentin Bode,quentin.bode@ethereal.email,bYUfBSUaEjKCrUJV6g,smtp.ethereal.email,587,STARTTLS
+IMAP,Quentin Bode,quentin.bode@ethereal.email,bYUfBSUaEjKCrUJV6g,imap.ethereal.email,993,TLS
+POP3,Quentin Bode,quentin.bode@ethereal.email,bYUfBSUaEjKCrUJV6g,pop3.ethereal.email,995,TLS

@@ -1,0 +1,510 @@
+HelpGuideStatic:
+  tags:
+    topics:
+      - &topicAutomate Automate
+      - &topicLearningManagement Learning Management
+      - &topicCourse Course
+    roles:
+HelpGuide:
+  admin:
+    url: /web/help-guide/admin
+    banner:
+      label: Banner
+      modifyBy:
+        helpGuideAdmin: &helpGuideAdmin HelpGuideUsers.admin
+      data:
+        pageTitle:
+          label: Page title
+          value: &bannerTitle NEED HELP! Come here, you may find what you want
+        shortDescription:
+          label: Short Description
+          value: &bannerDescription We are always here to help you to get more information about our system. Feel free to check. We will try to upload contents as much as we can.
+    articles:
+      platForm:
+        perfectLesson:
+          value: &articleChangeEmail How to make a perfect lesson for smoke (has video file) (Automation Do not Delete)
+        addActivityLibrary:
+          value: How to add activity library (Automation Do not Delete)
+          tags:
+            topics:
+              - *topicLearningManagement
+        faithPracticeAndDrawing:
+          value: Faith, Practices, and Drawing (Automation Do not Delete)
+          tags:
+            topics:
+              - *topicLearningManagement
+        consentForm:
+          value: &articleConsentForm Consent Forms
+        manageConsentForm:
+          value: &articleManageConsentForm Managing Your Accepted Consent Forms
+        unChange:
+          value: &articleUnChange UnChange article for role and topic (Automation Do not Delete)
+      webLearn:
+        createOrgCoP:
+          value: &articleCreateOrgCoP Create organization community of purpose
+        courseNoCategory:
+          value: &articleCourseNoCategory Create a course without category
+        courseCategory:
+          value: &articleCourseCategory Create a course with category (without featured image)
+        inviteUserOrg:
+          value: &articleInviteUserOrg Invite user to organization (has youtube)
+        inviteUserCoP:
+          value: &articleInviteUserCoP Invite user to community of purpose (has vimeo)
+  home:
+    url: /web/help-guide
+    banner:
+      viewBy:
+        crosswiredUser: &allLogin CWUsers.allLogin
+        organizationMember: &organizationMember OrgMgtUsers.orgMgt.members.normal
+      data:
+        pageTitle:
+          value: *bannerTitle
+        shortDescription:
+          value: *bannerDescription
+    viewBy:
+      crosswiredUser: *allLogin
+      organizationMember: *organizationMember
+ManageTopic:
+  admin:
+    topics:
+      label: &topicsLabel topics
+      modifyBy:
+        helpGuideAdmin: *helpGuideAdmin
+      resetBy:
+        helpGuideOrgAdmin: *helpGuideAdmin
+        emailIndex: 1
+        screenNameIndex: 1
+      name:
+        label: &topicLabel Name
+        new: &topicNewTitle AU Topic
+        value: &topicValue User Settings (Automation Do not Delete)
+        edit: &topicEditTitle User Settings (Automation Do not Delete) Updated
+        delete: &topicDeleteTitle Course (Automation Do not Delete)
+    articles:
+      name:
+        value: *articleCourseNoCategory
+  home:
+    topics:
+      viewBy:
+        organizationAdmin: &organizationAdmin OrgMgtUsers.orgMgt.admins.organization
+      name:
+        new: *topicNewTitle
+        edit: *topicEditTitle
+        delete: *topicDeleteTitle
+    articles:
+      name:
+        value: *articleUnChange
+ManageRole:
+  admin:
+    roles:
+      label: &rolesLabel roles
+      modifyBy:
+        helpGuideAdmin: *helpGuideAdmin
+      resetBy:
+        helpGuideOrgAdmin: *helpGuideAdmin
+        emailIndex: 1
+        screenNameIndex: 1
+      name:
+        label: Name
+        new: &roleNewTitle AU Role
+        value: General (Automation Do not Delete)
+        edit: &roleEditTitle General (Automation Do not Delete) Updated
+        delete: &roleDeleteTitle Organization Admins (Automation Do not Delete)
+    articles:
+      name:
+        value: *articleCourseNoCategory
+  home:
+    roles:
+      viewBy:
+        organizationAdmin: *organizationAdmin
+      name:
+        new: *roleNewTitle
+        edit: *roleEditTitle
+        delete: *roleDeleteTitle
+    articles:
+      name:
+        value: *articleUnChange
+
+FilterSearch:
+  home:
+    viewBy:
+      organizationMember: *organizationMember
+    topics:
+      name:
+        value:
+          - &security Security
+    roles:
+      name:
+        value:
+          - Trainers
+          - Community Admins
+    articles:
+      searchByName:
+        name:
+          value:
+            - *articleConsentForm #This will append (Automation Do not Delete) for UAT & Beta
+        results:
+          value:
+            - *articleConsentForm
+            - *articleManageConsentForm
+      searchByContent:
+        content:
+          value:
+            - animal
+        results:
+          value:
+            - Paragraph on Camel
+            - Paragraph on Lion
+            - Paragraph on Tiger
+            - Paragraph on Horse
+            - Paragraph on Dog
+            - Paragraph on Cow
+ArticleDetails:
+  viewBy:
+    organizationMember: *organizationAdmin
+  article:
+    name:
+      value:
+        - *articleInviteUserOrg #This will append (Automation Do not Delete) for UAT & Beta
+        - View Help Guide Home #This will append (Automation Do not Delete) for UAT & Beta
+    language: English
+    languageCode: &englishUsCode en_US
+    url:
+      uat:
+        id:
+          - &articleInviteUserOrgIdUat 85908120 #Url article with tag
+          - 89596682 #Url article without tag
+      beta:
+        id:
+          - &articleInviteUserOrgIdBeta 83449503 #Url article with tag
+          - 87824893 #Url article without tag
+      prd:
+        id:
+          - &articleInviteUserOrgIdPrd 52029039 #Url article with tag
+          - 52029002
+    tag:
+      name:
+        value:
+          - *security
+          - Video
+          - Learning Admins
+PromotedArticle:
+  platform:
+    admin:
+      article:
+        label: &articlesLabel articles
+        modifyBy:
+          helpGuideAdmin: *helpGuideAdmin
+        name:
+          value: *articleManageConsentForm
+    dashboard:
+      recommendedHelpGuide:
+        article:
+          viewBy:
+            crosswiredUser: *allLogin
+            organizationMember: *organizationMember
+          name:
+            value: *articleManageConsentForm
+          body:
+            value: There is an easy way to review and manage the consent forms you have accepted! This gives you total control over any consent you have
+  webLearn:
+    admin:
+      article:
+        label: *articlesLabel
+        modifyBy:
+          helpGuideOrgAdmin: *helpGuideAdmin
+          organizationAdmin: *organizationAdmin
+        name:
+          value: *articleCreateOrgCoP
+    dashboard:
+      recommendedHelpGuide:
+        article:
+          viewBy:
+            crosswiredUser: *allLogin
+            organizationMember: *organizationMember
+          name:
+            value: *articleCreateOrgCoP
+          body:
+            value: Steps Sign in to system as Community Creator Click My Communities in Global Menu Click Create Community of Purpose Select Organization
+CreateArticleWithVisibility:
+  webLearn:
+    label: WebLearn
+    admin:
+      articles:
+        adminTwoOrg:
+          name:
+            new: &articleByAdminTwoOrg AU Article by Admin Two Org
+          createBy: &adminTwoOrg OrgMgtUsers.orgMgt.admins.twoOrganization
+          viewBy:
+            adminTwoOrg: *adminTwoOrg
+            organizationAdmin: *organizationAdmin
+        organizationAdmin:
+          name:
+            new: &articleByOrgAdmin AU Article by Org Admin
+          createBy: *organizationAdmin
+          viewBy:
+            adminTwoOrg: *adminTwoOrg
+            organizationAdmin: *organizationAdmin
+    home:
+      articles:
+        adminTwoOrg:
+          name:
+            new: *articleByAdminTwoOrg
+        organizationAdmin:
+          name:
+            new: *articleByOrgAdmin
+        viewBy:
+          organizationAdmin: *organizationAdmin
+          adminTwoOrg: *adminTwoOrg
+          organizationMember: *organizationMember
+  platForm:
+    label: Platform
+    visibility:
+      allUsers:
+        admin:
+          articles:
+            name:
+              new: &articleVisibilityAllUsers AU Article by HelpGuide Admin With Visibility All users
+            createBy:
+              helpGuideAdmin: *helpGuideAdmin
+            viewBy:
+              helpGuideAdmin: *helpGuideAdmin
+        home:
+          articles:
+            name:
+              new: *articleVisibilityAllUsers
+            viewBy:
+              helpGuideAdmin: *helpGuideAdmin
+              organizationAdmin: *organizationAdmin
+              adminTwoOrg: *adminTwoOrg
+              crosswiredUser: *allLogin
+      organizationMember:
+        admin:
+          articles:
+            name:
+              new: &articleVisibilityOrganization AU Article by HelpGuide Admin With Visibility Organization
+            createBy:
+              helpGuideAdmin: *helpGuideAdmin
+            viewBy:
+              helpGuideAdmin: *helpGuideAdmin
+        home:
+          articles:
+            name:
+              new: *articleVisibilityOrganization
+            viewBy:
+              organizationAdmin: *organizationAdmin
+              organizationMember: *organizationMember
+CopyLink:
+  platform:
+    viewBy:
+      crosswiredUser: *allLogin
+    articleDetail:
+      url:
+        beta:
+          id:
+            - 86637233
+        prd:
+          id:
+            - 43623333
+        uat:
+          id:
+            - 89402981
+      name:
+        value: *articleManageConsentForm
+  webLearn:
+    viewBy:
+      organizationMember: *organizationMember
+    articleDetail:
+      languageCode: *englishUsCode
+      url:
+        beta:
+          id:
+            - *articleInviteUserOrgIdBeta
+        prd:
+          id:
+            - *articleInviteUserOrgIdPrd
+        uat:
+          id:
+            - *articleInviteUserOrgIdUat
+      name:
+        value: *articleInviteUserOrg
+PlayVideo:
+  viewBy:
+    organizationMember: *organizationMember
+  youtube:
+    title: Nastya invited her friend to visit to have fun
+    article:
+      url:
+        beta:
+          id:
+            - 83449503
+        uat:
+          id:
+            - 85908120
+      name:
+        value: Invite user to organization (has youtube)
+  vimeo:
+    title: Wedding Invite Animation | Cool summer wedding Invite
+    article:
+      url:
+        beta:
+          id:
+            - 83449452
+        uat:
+          id:
+            - 85908075
+      name:
+        value: Invite user to community of purpose (has vimeo)
+  uploadedVideo:
+    article:
+      url:
+        beta:
+          id:
+            - 93824081
+        uat:
+          id:
+            - 92926851
+      name:
+        value: Org Admin create an article (has video file)
+CreateVideoArticle:
+  admin:
+    articles:
+      helpGuideAdmin:
+        video:
+          name:
+            new: &videoByHelpguideAdmin AU Video By HelpGuide Admin
+        vimeo:
+          name:
+            new: &vimeoByHelpguideAdmin AU Vimeo By HelpGuide Admin
+        upload:
+          name:
+            new: &videoUploadByHelpguideAdmin AU Video Upload By HelpGuide Admin
+        createdBy: *helpGuideAdmin
+      adminTwoOrg:
+        video:
+          name:
+            new: &videoByAdminTwoOrg AU Video By Admin Two Org
+        vimeo:
+          name:
+            new: &vimeoByAdminTwoOrg AU Vimeo By Admin Two Org
+        upload:
+          name:
+            new: &videoUploadByAdminTwoOrg AU Video Upload By Admin Two Org
+        createdBy: *adminTwoOrg
+      organizationAdmin:
+        video:
+          name:
+            new: &videoByOrganizationAdmin AU Video By Organization Admin
+        vimeo:
+          name:
+            new: &vimeoByOrganizationAdmin AU Vimeo By Organization Admin
+        upload:
+          name:
+            new: &videoUploadByOrganizationAdmin AU Video Upload By Organization Admin
+        createdBy: *organizationAdmin
+      vimeoUrl: https://vimeo.com/278174511
+      youTubeUrl: https://www.youtube.com/watch?v=6GqYd8lsdZs
+      uploadVideoPath: /attachments/Video1.mp4
+  home:
+    articles:
+      helpGuideAdmin:
+        video:
+          name:
+            new: *videoByHelpguideAdmin
+          viewBy: *helpGuideAdmin
+        vimeo:
+          name:
+            new: *vimeoByHelpguideAdmin
+          viewBy: *helpGuideAdmin
+        upload:
+          name:
+            new: *videoUploadByHelpguideAdmin
+          viewBy: *helpGuideAdmin
+      adminTwoOrg:
+        video:
+          name:
+            new: *videoByAdminTwoOrg
+          viewBy: *adminTwoOrg
+        vimeo:
+          name:
+            new: *vimeoByAdminTwoOrg
+          viewBy: *adminTwoOrg
+        upload:
+          name:
+            new: *videoUploadByAdminTwoOrg
+          viewBy: *adminTwoOrg
+      organizationAdmin:
+        video:
+          name:
+            new: *videoByOrganizationAdmin
+          viewBy: *organizationAdmin
+        vimeo:
+          name:
+            new: *vimeoByOrganizationAdmin
+          viewBy: *organizationAdmin
+        upload:
+          name:
+            new: *videoUploadByOrganizationAdmin
+          viewBy: *organizationAdmin
+CreateArticleNotIncludeVideo:
+  admin:
+    articles:
+      helpGuideAdmin:
+        article:
+          name:
+            new: &noVideoByHelpguideAdmin AU No Video By HelpGuide Admin
+        articleWithTopicAndRole:
+          name:
+            new: &noVideoWithTopicAndRoleByHelguideAdmin AU No Video with topic and role By HelpGuide Admin
+        createBy: *helpGuideAdmin
+      adminTwoOrg:
+        article:
+          name:
+            new: &noVideoByAdminTwoOrg AU No Video By Admin Two Org
+      organizationAdmin:
+        article:
+          name:
+            new: &videoByOrganizationAdmin AU No Video By Organization Admin
+          createdBy: *organizationAdmin
+        articleWithTopic:
+          name:
+            new: &noVideoWithTopicByOrganizationAdmin AU No Video with topic By Organization Admin
+        createBy: *adminTwoOrg
+      existingArticle: Change email (has video file) (Automation Do not Delete)
+      role: RoleZ (Automation Do not Delete)
+      topic: TopicA (Automation Do not Delete)
+  home:
+    articles:
+      helpGuideAdmin:
+        article:
+          name:
+            new: *noVideoByHelpguideAdmin
+          viewBy: *helpGuideAdmin
+        articleWithTopicAndRole:
+          name:
+            new: *noVideoWithTopicAndRoleByHelguideAdmin
+          viewBy: *helpGuideAdmin
+      adminTwoOrg:
+        article:
+          name:
+            new: *noVideoByAdminTwoOrg
+          viewBy: *adminTwoOrg
+      organizationAdmin:
+        article:
+          name:
+            new: *videoByOrganizationAdmin
+          viewBy: *organizationAdmin
+        articleWithTopic:
+          name:
+            new: *noVideoWithTopicByOrganizationAdmin
+          viewBy: *organizationAdmin
+FileStructure:
+  admin:
+    url: /web/help-guide/admin
+  viewBy:
+    helpGuideOrgAdmin: HelpGuideUsers.orgAdmin
+    organizationMember: *organizationMember
+    crosswiredUser: *allLogin
+    twoOrgAdmin: OrgMgtUsers.orgMgt.admins.twoOrganization
+  attachment:
+    name: weblearn_banner.png

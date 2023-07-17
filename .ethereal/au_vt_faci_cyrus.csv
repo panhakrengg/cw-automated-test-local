@@ -1,0 +1,4 @@
+"Service","Name","Username","Password","Hostname","Port","Security"
+"SMTP","Cyrus Gaylord","cyrus.gaylord@ethereal.email","PPYR66QZVqP12yZqux","smtp.ethereal.email",587,"STARTTLS"
+"IMAP","Cyrus Gaylord","cyrus.gaylord@ethereal.email","PPYR66QZVqP12yZqux","imap.ethereal.email",993,"TLS"
+"POP3","Cyrus Gaylord","cyrus.gaylord@ethereal.email","PPYR66QZVqP12yZqux","pop3.ethereal.email",995,"TLS"

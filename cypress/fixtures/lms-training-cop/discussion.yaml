@@ -1,0 +1,90 @@
+CourseData:
+  tennisWarmUpGuide:
+    description: 
+    url: &tennisWarmUpGuideCourseId  # change CourseId: /web/training-qa-2020/admin/admin?p_p_id=copMemberManagementPortlet&p_p_lifecycle=0&_copMemberManagementPortlet_mvcRenderCommandName=%2Fcourse%2Fedit&_copMemberManagementPortlet_id=102713353&_copMemberManagementPortlet_tab=
+      beta:
+        id:
+          - 102713353
+      uat:
+        id:
+          - 100852060
+      prd:
+        id:
+          - 50914816
+    courseInstances:
+      createNewInstance:
+        url: *tennisWarmUpGuideCourseId # change CourseId: /web/training-qa-2020/admin/admin?p_p_id=copMemberManagementPortlet&p_p_lifecycle=0&_copMemberManagementPortlet_id=0&_copMemberManagementPortlet_tab=edit-course-instance&_copMemberManagementPortlet_courseId=102713353&_copMemberManagementPortlet_mvcRenderCommandName=%2Fcourse_instance%2Fedit
+      defaultCourse:
+        description: For testing course activities, learner resources, discussions, notes. There is a course member.
+        endDate: 01 Mar, 2039
+        url: # change CourseId & InstanceId: /web/training-qa-2020/admin/admin?p_p_id=copMemberManagementPortlet&p_p_lifecycle=0&_copMemberManagementPortlet_mvcRenderCommandName=%2Fcourse_instance%2Fedit&_copMemberManagementPortlet_id=102743088&_copMemberManagementPortlet_tab=overview&_copMemberManagementPortlet_courseId=102713353#_copMemberManagementPortlet_tab=
+          beta:
+            id:
+              - 102743088
+          uat:
+            id:
+              - 101005909
+          prd:
+            id:
+              - 50930229
+        discussionInfo:
+          categories:
+            atLeast: 3
+            uncategorised:
+              description: it's default category in discussions
+              name: &uncategorisedCategoryName Uncategorised
+              body: ''
+            talkingPlace: &talkingPlaceCategory
+              description: &forSmokeDesc it uses for Smoke testing
+              name: &talkingPlaceCategoryName Talking Place
+              body: Use for sharing and discussing any information, experiences, etc. # description of category
+            welcome: &welcomeCategory
+              description: &forEditDesc it uses for Edit functionality
+              name: &welcomeCategoryName Welcome
+              body: Use for welcome new member # description of category
+            party: &partyCategory
+              description: &forRemoveDesc it uses for Remove functionality
+              name: Party
+              body: Always have after completing a class. # description of category
+          subCategories:
+            faceToFace: &faceToFaceSubCategory
+              description: it uses for Smoke functionality
+              name: Face to Face
+              body: '' # description of category
+              parentCategory: *talkingPlaceCategoryName                
+          threads:
+            atLeast: 2
+            niceToMeetYou:
+              description: *forSmokeDesc
+              name: Nice to meet you!
+              body: The phrase, "nice to meet you" is very kind but definitely overused. It is a way to express gratitude towards a person and let them know you appreciate their presence. Telling someone, "nice to meet you" is formal but also laid back and easygoing. Create by CoP Admin
+              category: *welcomeCategoryName
+              createdBy: &copAdmin CoPUsers.admin
+              replies:
+                helloAll:
+                  description: *forSmokeDesc
+                  body: Hello all, how are you?
+                  like: 1
+                  replyBy: *copAdmin
+                helloTeacher:
+                  description: *forSmokeDesc
+                  body: Hello teacher, I'm good. Glad to meet you!
+                  like: 0
+                  replyBy: &learner CoPUsers.member
+            tennisRules:
+              description: *forEditDesc
+              name: Tennis Rules
+              body: Want to learn how to play tennis? Or, do you want to understand what’s going on when you’re at a tournament or watching tennis on TV? Obviously, you’re going to need to know the rules of tennis in order to understand the sport. Create by learner
+              category: *talkingPlaceCategoryName
+              createdBy: *learner
+              tags:
+                - play
+                - stand
+            tennisWarmUpGuide:
+              description: *forRemoveDesc
+              name: Tennis warm up guide 2022
+              body: Tennis players must keep their limbs warm and their minds sharp during a tennis match. Warm-up exercises and stretches are integral for body flexibility and preventing injury. Create by CoP Owner
+              category: *uncategorisedCategoryName
+              createdBy: &copOwner CoPUsers.owner
+
+  

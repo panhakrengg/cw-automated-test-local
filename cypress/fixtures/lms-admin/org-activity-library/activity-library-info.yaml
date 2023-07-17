@@ -1,0 +1,254 @@
+ActivityLibrary:
+  file:
+    auSOActivityFilePdf:
+      title: AU SOActivity file pdf
+      description: It's document file, so it can only download. It is standard activity from org
+      uploadFiles:
+        path:
+          - &fileAsPdf lms-admin/org-activity-library/attachments/file as pdf.pdf
+        name:
+          - file as pdf.pdf
+      templateOption: Standard activity
+    auSOActivityFileImage:
+      title: AU SOActivity file image
+      description: &notChooseTemplateText Not choose template option, keep it as default.
+      coverImage:
+        path: &fileImage50kB lms-admin/org-activity-library/attachments/file image 50kB.jpg
+      uploadFiles:
+        path:
+          - *fileImage50kB
+        name:
+          - file image 50kB.jpg
+    sOActivityFileUnarchive: &sOActivityFileUnarchive
+      type: File
+      from: Organization
+      title: SOActivity file doc for unarchive
+      description: *notChooseTemplateText
+      coverImage:
+        path: lms-admin/org-activity-library/attachments/file_100kB.doc
+        name: file_100kB.doc
+      uploadFiles:
+        path:
+          - lms-admin/org-activity-library/attachments/docFileCoverImage.webp
+        name:
+          - docFileCoverImage.webp
+  hyperlink:
+    auTOActivityHyperlinkCw:
+      displayText: AU TOActivity link - Crosswired
+      url: &cwUrl crosswired.com
+      description: It's a hyperlink. It is activity template from org
+      templateOption: &activityTemplate Activity template
+    auSOActivityHyperlinkCw:
+      displayText: AU SOActivity link - Crosswired
+      url: *cwUrl
+      description: *notChooseTemplateText
+      coverImage:
+        path: lms-admin/org-activity-library/attachments/hyperlinkCoverImage.png
+    tOActivityHyperlinkArchive: &tOActivityHyperlinkArchive
+      type: Hyperlink
+      from: Organization
+      displayText: &tOActivityHyperlinkArchiveText TOActivity link - Vimeo
+      title: *tOActivityHyperlinkArchiveText
+      url: vimeo.com
+      description: *notChooseTemplateText
+      coverImage:
+        path: lms-admin/org-activity-library/attachments/youtubeCoverImage.webp
+        name: youtubeCoverImage.webp
+      templateOption: *activityTemplate
+      totalUsed: 1
+  elearning:
+    auSOActivityElearning:
+      type: &elearningType Interactive eLearning
+      title: AU SOActivity elearning - Upload Testing Purpose
+      description: This elearning is a standard activity, after dash(-) is original package name.
+      descriptionImage:
+        path: &auSOActivityElearningImage lms-admin/org-activity-library/attachments/auSOActivityElearning.png
+        name: auSOActivityElearning.png
+      coverImage:
+        path: *auSOActivityElearningImage
+        name: auSOActivityElearning.png
+      uploadLessonPackage: &auSOActivityElearningUploadLessonPackage
+        path:
+          - lms-admin/org-activity-library/attachments/Upload Testing Purpose.zip
+        name:
+          - Upload Testing Purpose.zip
+      uploadFiles: *auSOActivityElearningUploadLessonPackage
+    sOActivityElearningEdit: &sOActivityElearningEdit
+      previous:
+        type: *elearningType
+        from: Organization
+        title: SOActivity elearning for edit - The Shortest Interactive eLearning
+        description: This elearning is a standard activity, after dash(-) is original package name
+        descriptionImage: &auSOActivityElearningImage
+          path: lms-admin/org-activity-library/attachments/auSOActivityElearning.png
+          name: auSOActivityElearning.png
+        coverImage:
+          path: lms-admin/org-activity-library/attachments/elearningPreviousCoverImage.jpg
+          name: elearningPreviousCoverImage.jpg
+        uploadLessonPackage: &sOActivityElearningEditUploadLessonPackagePrevious
+          path:
+            - lms-admin/org-activity-library/attachments/The Shortest Interactive eLearning.zip
+          name:
+            - The Shortest Interactive eLearning.zip
+        uploadFiles: *sOActivityElearningEditUploadLessonPackagePrevious
+        language: English (United States)
+        scoreLimit: 0.95
+        estimateComplete: '0'
+      edit:
+        type: *elearningType
+        from: Organization
+        title: SOActivity elearning for edit - The Shortest Interactive eLearning updated
+        description: This elearning is a standard activity, after dash(-) is original package name updated
+        descriptionImage: *auSOActivityElearningImage
+        coverImage:
+          path: lms-admin/org-activity-library/attachments/elearningNewCoverImage.jpg
+          name: elearningNewCoverImage.jpg
+        uploadLessonPackage: &sOActivityElearningEditUploadLessonPackageEdit
+          path:
+            - lms-admin/org-activity-library/attachments/The Love Of God.zip
+          name:
+            - The Love Of God.zip
+        uploadFiles: *sOActivityElearningEditUploadLessonPackageEdit
+        language: Portuguese (Brazil)
+        scoreLimit: 0.5
+        estimateComplete: 10
+  video:
+    auSOActivityVideoFile:
+      title: AU SOActivity upload video file
+      description: *notChooseTemplateText
+      descriptionImage: &ActivityVideoDescriptionImage
+        path: lms-admin/org-activity-library/attachments/description_content_image_500kB.png
+        name: description_content_image_500kB.png
+      coverImage:
+        path: lms-admin/org-activity-library/attachments/videoFileCoverImage.png
+        name: videoFileCoverImage.png
+      uploadVideoFile:
+        path:
+          - lms-admin/org-activity-library/attachments/small video size.mp4
+        name:
+          - small video size.mp4
+  richText:
+    auSOActivityRichText:
+      title: AU SOActivity rich text
+      content: *notChooseTemplateText
+      contentImage: *ActivityVideoDescriptionImage
+      coverImage:
+        path: lms-admin/org-activity-library/attachments/richTextCoverImage.gif
+        name: richTextCoverImage.gif
+    sOActivityRichTextDelete: &sOActivityRichTextDelete
+      title: SOActivity rich text for delete
+      content: *notChooseTemplateText
+  learningGoal:
+    auSOActivityLearningGoal:
+      title: AU SOActivity learning goal
+      description: *notChooseTemplateText
+      coverImage:
+        path: lms-admin/org-activity-library/attachments/learningGoalCoverImage.jpg
+        name: learningGoalCoverImage.jpg
+      uploadFiles:
+        path:
+          - *fileAsPdf
+          - *fileImage50kB
+        name:
+          - file as pdf.pdf
+          - file image 50kB.jpg
+  quiz:
+    auTOActivityQuiz:
+      title: AU TOActivity quiz
+      description: This may take a few minutes short text multiple choices true/false Pass score is 2.
+      gradeToPass: 2
+      coverImage:
+        path: lms-admin/org-activity-library/attachments/quizCoverImage.jpg
+  assignment:
+    auTOActivityAssignment:
+      assignmentName: AU TOActivity Assignment
+      description: &teamMembers Team can have 5 members.
+      additionalFiles:
+        path: *fileAsPdf
+      coverImage:
+        path: lms-admin/org-activity-library/attachments/assignmentCoverImage.webp
+        name: assignmentCoverImage.webp
+    tOActivityAssignmentEdit: &tOActivityAssignmentEdit
+      previous:
+        assignmentName: &tOActivityAssignmentEditName TOActivity Assignment for editing
+        title: *tOActivityAssignmentEditName
+        type: Assignment
+        from: Organization
+        description: *teamMembers
+        additionalFiles:
+          path: *fileAsPdf
+        coverImage:
+          path: lms-admin/org-activity-library/attachments/assignmentPreviousCoverImage.webp
+          name: assignmentPreviousCoverImage.webp
+      edit:
+        assignmentName: &tOActivityAssignmentEditNameUpdated TOActivity Assignment for editing updated
+        title: *tOActivityAssignmentEditNameUpdated
+        description: Team can have 5 members update.
+        coverImage:
+          path: lms-admin/org-activity-library/attachments/assignmentNewCoverImage.jpg
+          name: assignmentNewCoverImage.jpg
+
+  feedback:
+    auTOActivityFeedback:
+      name: AU TOActivity Feedback
+      description: Feel free to give feedback. thanks
+      coverImage:
+        path: lms-admin/org-activity-library/attachments/assignmentCoverImage.webp
+
+CourseData:
+  courseFuncActivityFromLibrary: &courseFuncActivity
+    name:
+      value: Course Func Activity from Library
+    url:
+      beta:
+        id:
+          - 129534951
+      uat:
+        id:
+          - 128103903
+    funcSOActivityElearningEdit:
+      url:
+        beta:
+          id:
+            - 135863595
+        uat:
+          id:
+            - 128442656
+      deliveryMethod: Blended Learning
+      title:
+        value: Func edit SPActivity elearning
+      additionalBookingNote: Course instance use for checking editing activities (elearning) by choose from organization
+      activities:
+        value:
+          sOActivityElearningEdit: *sOActivityElearningEdit
+    funArchiveUnarchiveActivity:
+      url:
+        beta:
+          id:
+            - 135419036
+        uat:
+          id:
+            - 128477225
+      deliveryMethod: Virtual Classroom
+      title:
+        value: Func archive/unarchive activity hyperlink/file
+      additionalBookingNote: Course instance use for checking archive hyperlink & unarchive file by choose from organization
+      activities:
+        value:
+          sOActivityFileUnarchive: *sOActivityFileUnarchive
+          tOActivityHyperlinkArchive: *tOActivityHyperlinkArchive
+    funEditAssignmentActivity:
+      url:
+        beta:
+          id:
+            - 136487959
+        uat:
+          id:
+            - 128966411
+      deliveryMethod: Self-study
+      title:
+        value: Func edit activity moodle assignment
+      additionalBookingNote: Course instance use for editing moodle (assignment) by choose from organization
+      activities:
+        value:
+          tOActivityAssignmentEdit: *tOActivityAssignmentEdit

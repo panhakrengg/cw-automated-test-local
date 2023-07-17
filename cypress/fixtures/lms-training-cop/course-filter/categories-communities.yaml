@@ -1,0 +1,14 @@
+CourseData:
+  itFromTCop:
+    name: It from TCoP
+    courseOverview: Publish, course in Portuguese
+    underCommunityName: &tCoPFilterCommunityName TCoP Filter Course
+    tagSkill:
+      - Compliance & Leadership
+  tCopRelax:
+    name: TCoP relax way
+    courseOverview: Publish from TCoP and has tag - Member Health & Well-Being and Missiology & Evangelism
+    underCommunityName: *tCoPFilterCommunityName
+    tagSkill:
+      - Member Health & Well-Being
+      - Missiology & Evangelism

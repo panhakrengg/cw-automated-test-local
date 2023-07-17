@@ -1,0 +1,680 @@
+PreviewSuiteFile: &previewFiles
+  files:
+    - 1-file-svg.svg
+    - 2-file-svg.svg
+    - 3-file-webm.webm
+    - 4-file-mov.mov
+    - 5-file-mp4.mp4
+    - 6-file-gif.gif
+    - 7-file-pdf.pdf
+    - 8-file-docx.docx
+    - 9-file-mp3.mp3
+    - 12-file-text.txt
+    - 13-file-xls-10.xls
+    - 14-file-xlsx-10.xlsx
+    - 15-file-PPT.ppt
+    - 16-file-odt-sample_100kB.odt
+    - 17-file-ODS.ods
+    - 18-file-ODP_200kB.odp
+    - 19-file-sample_100kB.rtf
+    - 20-file-JPG_100kB.jpg
+    - 21-file-PNG_500kB.png
+    - 22-file-TIFF_1MB.tiff
+    - 23-file-WEBP_50kB.webp
+    - 24-file-WAV_1MG.wav
+    - 25-file-OOG_1MG.ogg
+    - 26-file-sample_100kB.doc
+SampleSuiteFile:
+  file1svg: &file1svg 1-2fa-app.svg
+  file2svg: &file2svg 2-fa-key.svg
+  file3webm: &file3webm 3-Admin---edit-log-slow-to-show-data.webm
+  file4mov: &file4mov 4-file_example_MOV_480_700kB.mov
+  file5mp4: &file5mp4 5-file_example_MP4_480_1_5MG.mp4
+  file6gif: &file6gif 6-inconsistency.gif
+  file7jks: &file7jks 7-keystore.jks
+  file8docx: &file8docx 8-sample3.docx
+  file9mp3: &file9mp3 9-sample-3s.mp3
+  file10mp4: &file10mp4 10-Sample-Video-File-For-Testing.mp4
+  file11invalid: &file11invalid 11-slickslice
+  file12text: &file12text 12-text.txt
+  fileSample1MBdoc: &fileSample1MBdoc file-sample_1MB.doc
+  fileSample1MBdocx: &fileSample1MBdocx file-sample_1MB.docx
+  fileSample500KBdoc: &fileSample500KBdoc file-sample_500kB.doc
+  fileSample500KBdocx: &fileSample500KBdocx file-sample_500kB.docx
+  fileSample100KBdoc: &fileSample100KBdoc file-sample_100kB.doc
+  fileSample100KBdocx: &fileSample100KBdocx file-sample_100kB.docx
+OnlyOfficeStatic:
+  wordDocument: &wordDocument Word Document
+CoPMemberSuite:
+  owner: &CoPOwner firecloudamy
+  adminJson: &CoPAdminJson aue_jason_funk
+  memberPayton: &CoPMemberPayton aue_payton
+  memberEldred: &CoPMemberEldred aue_eldred50
+ManageMembersSuite:
+  manageMembers: &manageMembers
+    owner:
+      uat:
+        - firecloud.amy@mail.com
+      prd:
+        - firecloud.amy@mail.com
+    admins:
+      uat:
+        - jason.funk@ethereal.email
+      prd:
+        - jason.funk@mail.com
+    members:
+      uat:
+        - payton.stanton@ethereal.email
+        - eldred50@ethereal.email
+        - jason.funk@ethereal.email
+        - lucy.walsh28@ethereal.email
+      prd:
+        - payton.stanton@mail.com
+        - eldred50@mail.com
+        - jason.funk@mail.com
+        - lucy.walsh29@mail.com
+    noMembers:
+      uat:
+        - aue_litzy5@ethereal.email
+      prd:
+        - aue_litzy5@mail.com
+ManageCommunitySuite:
+  OCoPFileSharingForFunctionalityVault:
+    label: OCoP file sharing for functionality vault
+    type: Organization
+    url: /web/ocop-file-sharing-for-functionality-vault
+    <<: *manageMembers
+    fileSharing:
+      communityFiles:
+        vault:
+          name: Vault
+          owner: *CoPOwner
+          copAdminFolderForDetails:
+            name: CoP Admin - Folder For Details (Automation Do Not Delete)
+            owner: *CoPAdminJson
+            uploadFiles:
+              byAdminJson:
+                - CoP Admin - File For Details.doc
+          folderForCopyLink:
+            name: Folder For Copy Link (Automation Do Not Delete)
+            owner: *CoPAdminJson
+            uploadFiles:
+              byMemberPayton:
+                - *file8docx
+          folderNotForPreviewFiles:
+            name: Folder Not For Preview Files
+            owner: *CoPAdminJson
+            uploadFiles:
+              byAdminJson:
+                - *file5mp4
+                - *file4mov
+                - *file3webm
+                - *file12text
+                - *file6gif
+                - *file8docx
+                - *file9mp3
+                - *file2svg
+          FileAndFolderDetails:
+            memberFile:
+              name: 'CoP Member - File For Details.docx'
+              contentType: 'docx'
+              size: '34 KB'
+              location: 'OCoP file sharing for functionality vault / Community Files / Vault / CoP Member - Folder For Details (Automation Do Not Delete)'
+              uploadedBy: 'Aue payton Stanton'
+              uploadedDate:
+                uat: 'on Feb 17, 2023'
+                prd: 'on Mar 01, 2023'
+              modifiedBy: 'Aue payton Stanton'
+              modifiedDate:
+                uat: 'on Feb 17, 2023'
+                prd: 'on Mar 01, 2023'
+            memberFolder:
+              name: 'CoP Member - Folder For Details (Automation Do Not Delete)'
+              createdBy: 'Aue payton Stanton'
+              createdDate:
+                uat: 'on Feb 17, 2023'
+                prd: 'on Mar 01, 2023'
+              location: 'OCoP file sharing for functionality vault / Community Files / Vault'
+            adminFile:
+              name: 'CoP Admin - File For Details.doc'
+              description: 'Please Do Not Update'
+              size: '98 KB'
+              contentType: 'doc'
+              location: 'OCoP file sharing for functionality vault / Community Files / Vault / CoP Admin - Folder For Details (Automation Do Not Delete)'
+              uploadedBy: 'aue_jason_funk'
+              uploadedDate:
+                uat: 'on Feb 17, 2023'
+                prd: 'on Mar 01, 2023'
+              modifiedBy: 'aue_jason_funk'
+              modifiedDate:
+                uat: 'on Feb 17, 2023'
+                prd: 'on Mar 01, 2023'
+            adminFolder:
+              name: 'CoP Admin - Folder For Details (Automation Do Not Delete)'
+              description: 'Please Do Not Update'
+              createdBy: 'aue_jason_funk'
+              createdDate:
+                uat: 'on Feb 17, 2023'
+                prd: 'on Mar 01, 2023'
+              location: 'OCoP file sharing for functionality vault / Community Files / Vault'
+  OCoPManageFile:
+    label: OCoP file sharing manage file
+    type: Organization
+    url: /web/ocop-file-sharing-manage-file
+    <<: *manageMembers
+    adminSetting:
+      userGroups:
+        clientContract:
+          label: Client's Contract
+          members:
+            - *CoPMemberEldred
+        groupCoPAdministrator:
+          label: &groupCoPAdministrator Group CoP Administrator
+          members:
+            - *CoPAdminJson
+        documentTeamB:
+          label: Document Team B
+          members:
+            - *CoPMemberPayton
+        groupForAssignAndUnassign:
+          label: Group For Assign And UnAssign
+          members:
+            - *CoPMemberEldred
+    fileSharing:
+      url: /web/ocop-file-sharing-manage-file/collaboration/file-sharing
+      favorite:
+        byMemberPayton:
+          files:
+            - *fileSample100KBdoc
+            - *fileSample100KBdocx
+        byAdminJson:
+          files:
+            - CoP Admin - Favorite To Be Found File.doc
+            - CoP Admin - File For Mark as Favorite For Permission Group.doc
+          folders:
+            - CoP Admin - Favorite To Be Found Folder
+      communityFiles:
+        newFolder:
+          firstLevel:
+            name:
+              input:
+                new: First Level (Automation Do Not Delete)
+            owner: *CoPOwner
+            subFolder:
+              secondLevel:
+                name:
+                  input:
+                    new: Second Level (Automation Do Not Delete)
+          auFolderForDelete:
+            name:
+              input:
+                new: Au Folder For Delete
+            owner: *CoPAdminJson
+            subFolder:
+              auSubFolderForDelete:
+                name:
+                  input:
+                    new: Au Sub Folder For Delete
+        existingFolder:
+          folderForDeleteFiles:
+            name: Folder For Delete Files (Automation Do Not Delete)
+            owner: *CoPAdminJson
+            uploadFiles:
+              byAdminJson:
+                files:
+                  - *file3webm
+                  - *file1svg
+                  - *file2svg
+          folderForName:
+            name: Folder For Name in Community Files (Automation Do Not Delete)
+            owner: *CoPOwner
+            rename:
+              owner: *CoPAdminJson
+              input:
+                new: Folder For Name in Community Files (Automation Do Not Delete) - Update
+          folderForUploadMultipleFiles:
+            name: Folder For Upload Multiple files (Automation Do Not Delete)
+            owner: *CoPMemberPayton
+            uploadFiles:
+              byMemberPayton:
+                files:
+                  - *file7jks
+                  - *file8docx
+                  - *file9mp3
+          folderForUploadAFile:
+            name: Folder For Upload A File (Automation Do Not Delete)
+            owner: *CoPOwner
+            uploadFiles:
+              byMemberPayton:
+                files:
+                  - *file7jks
+          folderForDownload:
+            name: Folder For Download (Automation Do Not Delete)
+            owner: *CoPMemberPayton
+            subFolder:
+              wordOffice:
+                name: Word Office
+                owner: *CoPMemberPayton
+                uploadFiles:
+                  byMemberPayton:
+                    files:
+                      - *fileSample1MBdoc
+                      - *fileSample1MBdocx
+                      - *fileSample500KBdoc
+                      - *fileSample500KBdocx
+                      - *fileSample100KBdoc
+                      - *fileSample100KBdocx
+          folderForMove:
+            name: Folder For Move (Automation Do Not Delete)
+            owner: *CoPAdminJson
+            newDocument:
+              auFileQuickAccessMoveIntoPlatform:
+                name: Au File Quick Access Move into Platform
+                type: *wordDocument
+            subFolder:
+              destinate:
+                name: Destinate
+                owner: *CoPAdminJson
+                subFolder:
+                  folderHasNoFiles:
+                    name: Folder Has No Files For Moving 3
+                  folderHasFiles:
+                    name: Folder Has Files For Moving 4
+                    uploadFiles:
+                      byAdminJson:
+                        files:
+                          - File Should Be Under Folder Has Files For Moving 4.doc
+                uploadFiles:
+                  byAdminJson:
+                    files:
+                      - File For Moving 1.doc
+                      - File For Moving 2.docx
+              originate:
+                name: Originate
+                owner: *CoPAdminJson
+          folderForCoPAdmin:
+            name: Folder For CoP Admin (Automation Do Not Delete)
+            owner: *CoPAdminJson
+            permissionGroups:
+              - *groupCoPAdministrator
+            subFolder:
+              folderForMarkAsFavorite:
+                name: Folder For Mark As Favorite (Automation Do Not Delete)
+                owner: *CoPAdminJson
+            uploadFiles:
+              byAdminJson:
+                files:
+                  - CoP Admin - File For Functionality Mark Favorite.doc
+                  - CoP Admin - File Appear On Quick Access For Permission Group.doc
+                  - CoP Admin - File For Mark as Favorite For Permission Group.doc
+          folderForSearchFunctionality:
+            name: CoP Admin - Folder For Functionality Search (Automation Do Not Delete)
+            owner: *CoPAdminJson
+            permissionGroups:
+              - *groupCoPAdministrator
+            subFolder:
+              folderForFavoriteSearch:
+                name: CoP Admin - Folder For Favorite Search (Automation Do Not Delete)
+                owner: *CoPAdminJson
+                subFolder:
+                  favoriteToBeFoundFolder:
+                    name: CoP Admin - Favorite To Be Found Folder
+                  uploadFiles:
+                    byAdminJson:
+                      files:
+                        - CoP Admin - Favorite To Be Found File.doc
+              toBeFoundFolder1HasFolders:
+                name: CoP Admin - To Be Found Folder 1 Has Folders
+                owner: *CoPAdminJson
+                subFolder:
+                  toBeFoundFolderSub1:
+                    name: CoP Admin - To Be Found Folder Sub 1
+                    owner: *CoPAdminJson
+                  toBeFoundFolderSub2:
+                    name: CoP Admin - To Be Found Folder Sub 2
+                    owner: *CoPAdminJson
+                  toBeFoundFolderSub3:
+                    name: CoP Admin - To Be Found Folder Sub 3
+                    owner: *CoPAdminJson
+                  toBeFoundFolderSub4:
+                    name: CoP Admin - To Be Found Folder Sub 4
+                    owner: *CoPAdminJson
+              toBeFoundFolder2HasFiles:
+                name: CoP Admin - To Be Found Folder 2 Has Files
+                owner: *CoPAdminJson
+                uploadFiles:
+                  byAdminJson:
+                    files:
+                      - CoP Admin - To Be Found File Sub 1.doc
+                      - CoP Admin - To Be Found File Sub 2.doc
+                      - CoP Admin - To Be Found File Sub 3.doc
+                      - CoP Admin - To Be Found File Sub 4.doc
+              toBeFoundFolder3:
+                name: CoP Admin - To Be Found Folder 3
+              toBeFoundFolder4:
+                name: CoP Admin - To Be Found Folder 4
+            uploadFiles:
+              byAdminJson:
+                files:
+                  - CoP Admin - To Be Found File 1.doc
+                  - CoP Admin - To Be Found File 2.doc
+                  - CoP Admin - To Be Found File 3.doc
+                  - CoP Admin - To Be Found File 4.doc
+          folderForBreadcrumb:
+            name: Folder For Breadcrumb (Automation Do Not Delete)
+            owner: *CoPAdminJson
+            subFolder:
+              name: BreadCrumb A
+              owner: *CoPAdminJson
+              folderForMarkAsFavorite:
+                subFolder:
+                  name: BreadCrumb A1
+                  owner: *CoPAdminJson
+          folderForGlobalSearch:
+            name: Folder Not To Be Found (Automation Do Not Delete)
+          folderForMarkAsFavorite:
+            name: Folder For Mark As Favorite (Automation Do Not Delete)
+      platform:
+        existingFolder:
+          folderForMoveFromCommunity:
+            name: Folder For Move From Community (Automation Do Not Delete)
+            owner: *CoPAdminJson
+          folderForNameInPlatform:
+            name: Folder For Name in Platform (Automation Do Not Delete) - Update
+            owner: *CoPOwner
+  OCoPDisplayThumbnailAndPreviewFile:
+    label: OCoP file sharing display thumbnail and preview files
+    type: Organization
+    url: /web/ocop-file-sharing-display-thumbnail-and-preview-files
+    fileSharing:
+      url: /web/ocop-file-sharing-display-thumbnail-and-preview-files/collaboration/file-sharing
+      communityFiles:
+        vault:
+          name: Vault
+          owner: *CoPOwner
+          uploadFiles:
+            byOwner:
+              <<: *previewFiles
+        folderForSorting:
+          name: Folder For Sorting (Automation Do Not Delete)
+          owner: *CoPMemberPayton
+        uploadFiles:
+          byOwner:
+            <<: *previewFiles
+      platform:
+        uploadFiles:
+          byOwner:
+            <<: *previewFiles
+      organization:
+        uploadFiles:
+          byOwner:
+            <<: *previewFiles
+  OCoPGlobalSearch:
+    name: OCoP file sharing for functionality global search
+    type: Organization
+    url: /web/ocop-file-sharing-for-functionality-global-search
+    fileSharing:
+      searchFile: 717273fileglobalsearch
+      searchSubFolder: 717273subfolderglobalsearch
+      url: /web/ocop-file-sharing-for-functionality-global-search/collaboration/file-sharing
+      communityFiles:
+        vault:
+          name: Vault
+          owner: *CoPOwner
+          uploadFiles:
+            byOwner:
+              - 717273fileglobalsearch vault.doc
+          717273FolderGlobalSearchVault:
+            name: 717273folderglobalsearch vault
+            owner: *CoPOwner
+            subFolder:
+              717273SubFolderGlobalSearchVault:
+                name: 717273subfolderglobalsearch vault
+                owner: *CoPMemberEldred
+                id:
+                  beta: 115050027
+                  uat: 113291822
+                  prd: 52613991
+        717273FolderGlobalSearchCommunity:
+          name: 717273folderglobalsearch community
+          owner: *CoPOwner
+          subFolder:
+            717273SubFolderGlobalSearchCommunity:
+              name: 717273subfolderglobalsearch community
+              owner: *CoPMemberEldred
+              id:
+                beta: 115049964
+                uat: 113291828
+                prd: 52613425
+        uploadFiles:
+          byOwner:
+            - 717273fileglobalsearch community.docx
+      platform:
+        717273FolderGlobalSearchPlatform:
+          name: 717273folderglobalsearch platform
+          owner: *CoPMemberPayton
+          subFolder:
+            717273SubFolderGlobalSearchPlatform:
+              name: 717273subfolderglobalsearch platform
+              owner: *CoPMemberEldred
+              id:
+                beta: 120756278
+                uat: 113291834
+        uploadFiles:
+          byOwner:
+            - 717273fileglobalsearch platform.docx
+      organization:
+        717273FolderGlobalSearchOrganization:
+          name: 717273folderglobalsearch organization
+          owner: *CoPAdminJson
+          location: OCoP file sharing for functionality global search / Organization / 717273folderglobalsearch organization
+          subFolder:
+            717273SubFolderGlobalSearchOrganization:
+              name: 717273subfolderglobalsearch organization
+              owner: *CoPMemberEldred
+              id:
+                beta: 120756282
+                uat: 113291838
+        uploadFiles:
+          byOwner:
+            - 717273fileglobalsearch organization.docx
+  aPCoPFireCloudZoneInternational:
+    name: FireCloud Zone International
+    type: Primary CoP
+    url: /web/firecloud-zone-international
+    fileSharing:
+      url: /web/firecloud-zone-international/collaboration/file-sharing
+      searchFile: firecloudzoneinternational
+      communityFiles:
+        vault:
+          name: Vault
+          owner: *CoPOwner
+        uploadFiles:
+          byOwner:
+            - firecloudzoneinternational.doc
+      platform:
+        uploadFiles:
+          byOwner:
+            - firecloudzoneinternational.doc
+      organization:
+        uploadFiles:
+          byOwner:
+            - firecloudzoneinternational.doc
+  oCoPUploadFileVersion:
+    name: OCoP for functionality upload file version
+    type: Organization
+    url: /web/ocop-for-functionality-upload-file-version
+    fileSharing:
+      url: /web/ocop-for-functionality-upload-file-version/collaboration/file-sharing
+      communityFiles:
+        vault:
+          name: Vault
+          owner: *CoPOwner
+          uploadFiles:
+            byOwner:
+              - *file8docx
+        uploadFiles:
+          byOwner:
+            - *file8docx
+            - file for keep it seperate.docx
+            - CoP Admin file for modify.docx
+          byAdminJson:
+            - CoP admin file version.docx
+          byMemberPayton:
+            - open a file.docx
+        collaborationAsCoP:
+          name: Collaboration as CoP
+          owner: *CoPAdminJson
+          uploadFiles:
+            byAdminJson:
+              - CoP Owner edit a file and another CoP Admin try to view a file.docx
+        coPMemberFileVersion:
+          name: CoP Member File Version
+          owner: *CoPMemberPayton
+          uploadFiles:
+            byMemberPayton:
+              - file for rename.docx
+              - file for switch version then download.docx
+              - file for switch version then edit.docx
+              - file for switch version then copy link.docx
+              - file for switch version then view.docx
+              - file for download version.docx
+              - File excel for support version.xlsx
+              - file for upload a new version file.docx
+              - file for upload a new version for different file type.docx
+              - payton file for functionality upload existing file.docx
+            byMemberEldred:
+              - file for reset version.docx
+              - eldred50 file for permission change default.docx
+      platform:
+        uploadFiles:
+          byOwner:
+            - *file8docx
+      organization:
+        uploadFiles:
+          byOwner:
+            - *file8docx
+            - file for keep it seperate.docx
+          byMemberPayton:
+            - payton file for functionality upload existing file.docx
+  oCoPVaultEnableRecycleBin:
+    name: OCoP file sharing for functionality vault enable recycle bin
+    type: Organization
+    url: /web/ocop-file-sharing-for-functionality-vault-enable-recycle-bin
+    fileSharing:
+      url: /web/ocop-file-sharing-for-functionality-vault-enable-recycle-bin/collaboration/file-sharing
+      deletedFolders:
+        - Deleted Folder To Be Found
+        - CoP Owner Folder Deleted
+        - CoP Admin Folder Deleted
+        - CoP Member Payton Folder To Be Deleted
+        - Contact Manager Eldred Folder To Be Deleted
+      deletedFiles:
+        - Delete File To Be Found.docx
+        - CoP Owner File Deleted.docx
+        - CoP Admin File Deleted.docx
+        - CoP Member Payton File To Be Deleted.docx
+        - Contact Manager Eldred File To Be Deleted.docx
+  PCoPWebLearnInternational:
+    name: WebLearn International
+    type: Primary CoP
+    url: /web/weblearn-international
+    fileSharing:
+      communityFiles:
+        uploadFiles:
+          byOrgAdmin:
+            files:
+              - 8-file-docx.docx
+      platform:
+        uploadFiles:
+          byOrgAdmin:
+            files:
+              - 8-file-docx.docx
+      organization:
+        uploadFiles:
+          byOrgAdmin:
+            files:
+              - 8-file-docx.docx
+  tCoPHackettLebsack:
+    name: TCoP Hackett Lebsack
+    type: Training
+    url: /web/tcop-hackett-lebsack
+    fileSharing:
+      searchFile: 717274fileglobalsearch
+      searchFolder: 717274folderglobalsearch
+      url: /web/tcop-hackett-lebsack/collaboration/file-sharing
+      communityFiles:
+        vault:
+          name: Vault
+          owner: *CoPOwner
+          717274FolderGlobalSearchVault:
+            name: 717274folderglobalsearch vault
+            owner: *CoPOwner
+          uploadFiles:
+            byOwner:
+              - 717274fileglobalsearch vault.docx
+        717274FolderGlobalSearchCommunity:
+          name: 717274folderglobalsearch community
+          owner: *CoPOwner
+        uploadFiles:
+          byOwner:
+            - 717274fileglobalsearch community.docx
+      platform:
+        717274FolderGlobalSearchPlatform:
+          name: 717274folderglobalsearch platform
+          owner: *CoPOwner
+        uploadFiles:
+          byOwner:
+            - 717274fileglobalsearch platform.docx
+      organization:
+        717274FolderGlobalSearchOrganization:
+          name: 717274folderglobalsearch organization
+          owner: *CoPOwner
+        uploadFiles:
+          byOwner:
+            - 717274fileglobalsearch organization.docx
+VaultFileAndFolderDetails:
+  memberFile:
+    name: 'CoP Member - File For Details.docx'
+    views: '3'
+    contentType: 'docx'
+    size: '34 KB'
+    location: 'OCoP file sharing for functionality vault / Community Files / Vault / CoP Member - Folder For Details (Automation Do Not Delete)'
+    uploadedBy: 'Aue payton Stanton'
+    uploadedDate:
+      uat: 'on Dec 28, 2022'
+      prd: 'on Mar 01, 2023'
+    modifiedBy: 'Aue payton Stanton'
+    modifiedDate:
+      uat: 'on Dec 28, 2022'
+      prd: 'on Mar 01, 2023'
+  memberFolder:
+    name: 'CoP Member - Folder For Details (Automation Do Not Delete)'
+    createdBy: 'Aue payton Stanton'
+    createdDate:
+      uat: 'on Dec 28, 2022'
+      prd: 'on Mar 01, 2023'
+    location: 'OCoP file sharing for functionality vault / Community Files / Vault'
+  adminFile:
+    name: 'CoP Admin - File For Details.doc'
+    description: 'Please Do Not Update'
+    views: '2'
+    size: '98 KB'
+    contentType: 'doc'
+    location: 'OCoP file sharing for functionality vault / Community Files / Vault / CoP Admin - Folder For Details (Automation Do Not Delete)'
+    uploadedBy: 'aue_jason_funk'
+    uploadedDate:
+      uat: 'on Dec 28, 2022'
+      prd: 'on Mar 01, 2023'
+    modifiedBy: 'aue_jason_funk'
+    modifiedDate:
+      uat: 'on Dec 28, 2022'
+      prd: 'on Mar 01, 2023'
+  adminFolder:
+    name: 'CoP Admin - Folder For Details (Automation Do Not Delete)'
+    description: 'Please Do Not Update'
+    createdBy: 'aue_jason_funk'
+    createdDate:
+      uat: 'on Dec 28, 2022'
+      prd: 'on Mar 01, 2023'
+    location: 'OCoP file sharing for functionality vault / Community Files / Vault'

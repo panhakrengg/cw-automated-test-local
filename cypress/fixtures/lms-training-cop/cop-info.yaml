@@ -1,0 +1,19 @@
+CopInfo:
+  trainingCop:
+    learnTennis:
+      description: This training cop is under WebLearn organization, but not under any specific org unit
+      url: 
+        uat: /web/learn-tennis
+        prd: /web/tcop-learning-management
+    paintingPictures:
+      description: This training cop is normal training cop OR can call training cop under connect instance
+      url: 
+        uat: /web/training-qa-2020
+        prd: /web/cw-tcop-smoke-check
+      name: Painting Pictures
+    tCopFilter:
+      description: This training cop is under FireCloud organization, use for filter course
+      url:
+        uat: /web/tcop-filter-course
+        prd: ''
+      name: TCoP Filter Course

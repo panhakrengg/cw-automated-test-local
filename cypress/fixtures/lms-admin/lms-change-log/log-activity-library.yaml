@@ -1,0 +1,80 @@
+NewActivityLibrary:
+  file:
+    auSOActivityFilePdfLog:
+      title: AU SOActivity file pdf - check log
+      description: Admin will check Change Log after creation
+      uploadFiles:
+        path:
+          - &filePdfPath lms-admin/org-activity-library/attachments/file as pdf.pdf
+        name:
+          - &filePdfName file as pdf.pdf
+      templateOption: Standard activity
+      coverImage:
+EditActivityLibrary:
+  file:
+    previous:
+      title: SOActivity file for edit - check log
+      description: File image description
+      coverImage:
+        path: &fileImage50kBPath lms-admin/org-activity-library/attachments/file image 50kB.jpg
+      uploadFiles:
+        path:
+          - *fileImage50kBPath
+        name:
+          - file image 50kB.jpg
+    new:
+      title: SOActivity file for edit - check log updated
+      description: File image description updated
+      uploadFiles:
+        path:
+          - *filePdfPath
+        name:
+          - *filePdfName
+
+DeleteActivityLibrary:
+  file:
+    auSOActivityFileDeleteLog:
+      title: AU SOActivity file for delete - check log
+      description: Admin will check Change Log after delete
+      uploadFiles:
+        path:
+          - lms-admin/org-activity-library/attachments/file_100kB.doc
+        name:
+          - file_100kB.doc
+
+ArchiveActivityLibrary:
+  file:
+    sOActivityFileArchiveLog: &sOActivityFileArchiveLog
+      type: File
+      title: SOActivity file for archive - check log
+      description: Admin will check Change Log after archive
+      uploadFiles:
+        path:
+          - lms-admin/org-activity-library/attachments/small video size.mp4
+
+UnarchiveActivityLibrary:
+  file:
+    sOActivityFileUnarchiveLog: &sOActivityFileUnarchiveLog
+      type: File
+      title: SOActivity file for unarchive - check log
+      description: Admin will check Change Log after unarchive
+      coverImage:
+        path: &descriptionContentImage500kBPath lms-admin/org-activity-library/attachments/description_content_image_500kB.png
+      uploadFiles:
+        path:
+          - *descriptionContentImage500kBPath
+
+Courses:
+  courseFuncActivityFromLibrary:
+    name:
+      value: Course Func Activity from Library
+    instanceArchiveFileLog:
+      title: Instance archive file activity then check log
+      deliveryMethod: Self-study
+      activities:
+        sOActivityFileArchiveLog: *sOActivityFileArchiveLog
+    instanceUnarchiveFileLog:
+      title: Instance unarchive file activity then check log
+      deliveryMethod: Self-study
+      activities:
+        sOActivityFileUnarchiveLog: *sOActivityFileUnarchiveLog

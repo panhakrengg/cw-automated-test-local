@@ -1,0 +1,31 @@
+CourseData:
+  chinese:
+    name: &chineseArchiveCourseName Language Chinese, but archive course instance
+    courseOverview: Publish, but has course instance in Chinese that archived
+  chineseGerman:
+    name: &chineseAndGermanCourseName Language Chinese and German
+    courseOverview: Publish and has course instance - Chinese and German
+  french:
+    name: &frenchOnlyCourseName Language French unique
+    courseOverview: Publish and has course instance in French
+  german:
+    name: &germanOnlyCourseName Language German only in Full Catalog
+    courseOverview: Publish and has course instance in German language
+
+FilterLanguage:
+  german:
+    totalResult: 2
+    resultShow:
+      - *chineseAndGermanCourseName
+      - *germanOnlyCourseName
+  french:
+    totalResult: 1
+    resultShow:
+      - *frenchOnlyCourseName
+  frenchChinese:
+    totalResult: 2
+    resultShow:
+      - *chineseAndGermanCourseName
+      - *frenchOnlyCourseName
+    resultNotShow:
+      - *chineseArchiveCourseName

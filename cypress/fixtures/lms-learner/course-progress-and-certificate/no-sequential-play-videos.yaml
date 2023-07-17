@@ -1,0 +1,63 @@
+ActivityLibrary:
+  file:
+    tOActivityDocWarmUp: &toActivityDocWarmUp
+      title:
+        value: TOActivity Warm Up Guide
+  video:
+    tOActivityVideoFile: &tOActivityVideoFile
+      title:
+        value: TOActivity File Video
+      description: It's basic lesson.
+      videoSource:
+        fileName:
+          value: Video1.mp4
+    tOActivityVideoYouTube: &tOActivityVideoYouTube
+      title:
+        value: TOActivity YouTube video
+      description: It's basic lesson.
+      videoSource:
+        youTubeLink:
+          value: https://www.youtube.com/watch?v=xmAccdXUiMQ
+    tOActivityVideoVimeo: &tOActivityVideoVimeo
+      title:
+        value: TOActivity Vimeo video
+      description: It's basic lesson.
+      videoSource:
+        vimeoLink:
+          value: https://vimeo.com/61088058
+
+CourseData:
+  progressOnVideoActivities:
+    name: Progress On Video Activity & No Sequential
+    courseOverview: Draft course, has 1 instance uses for duplicate.
+    attachment:
+      - pexels-min-an-1629200.jpg
+    url:
+      beta:
+        id:
+          - 108989405
+      uat:
+        id:
+          - 110715499
+      prd:
+        id:
+          - ''
+    instanceHasVideos: &instanceHasVideos
+      title:
+        value: Instance has 3 video types
+      deliveryMethod: Blended Learning
+      date: 01 Apr, 2039 - 24 Apr, 2039
+      additionalBookingNote: For testing course progress on video activities - Youtube, Vimeo & File. The course has no Sequential. There is a file activity that learner will not complete.
+      activities:
+        value:
+          total: 4
+          tOActivityVideoYouTube: *tOActivityVideoYouTube
+          tOActivityVideoVimeo: *tOActivityVideoVimeo
+          tOActivityVideoFile: *tOActivityVideoFile
+          tOActivityDocWarmUp: *toActivityDocWarmUp
+
+CourseProgress:
+  auInstanceHasVideos:
+    <<: *instanceHasVideos
+    title:
+      new: AU Instance has 3 video types

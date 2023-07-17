@@ -1,0 +1,34 @@
+CourseData:
+  learnQuickNoSequential:
+    name: CoP Course On Video Activity & No Sequential
+    courseOverview: Draft course, has 1 instance uses for duplicate.
+    attachment:
+      - pexels-martin-lopez-1117132.jpg
+    url:
+      beta:
+        id:
+          - 108971766
+      uat:
+        id:
+          - 110715524
+      prd:
+        id:
+          - ''
+    duplicateVideos:
+      deliveryMethod: Blended Learning
+      date: 01 Apr, 2039 - 24 Apr, 2039
+      additionalBookingNote: For testing course progress on video activities - Youtube, Vimeo & File. The course has no Sequential.
+      activities: #all activities list in /lms/course-activities/sample-activities.yaml > SampleActivities
+        total: 3
+        videoVimeo:
+          title: Vimeo video
+        videoFile:
+          title: File Video
+        videoYouTube:
+          title: YouTube video
+
+CourseProgress:
+  videos:
+    startDate: 2028-09-15
+    endDate: 2028-09-18
+    date: 15 Sep, 2028 - 18 Sep, 2028

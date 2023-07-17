@@ -1,0 +1,37 @@
+CourseData:
+  tennisWarmUpGuide: &tennisWarmUpGuideCourse
+    description: Use for edit course and data in course instance
+    name: Tennis Warm-Up Guide
+    bannerImage: &tennisBallImage tennis ball.jpg
+    courseOverview: Tennis players must keep their limbs warm and their minds sharp during a tennis match. reference https://www.masterclass.com/articles/tennis-warm-up-guide
+    courseFee: &courseFee
+      value: 5
+      currency: USD
+    attachment:
+      - tennis warm-up guide 2022.pdf
+    tagSkill:
+      - Member Health & Well-Being
+    url:
+      beta:
+        id:
+          - 102765415
+      uat:
+        id:
+          - 101485726
+      prd:
+        id:
+          - 52065394
+EditCourse:
+  tennisWarmUpGuide:
+    <<: *tennisWarmUpGuideCourse
+    name: Tennis Warm-Up Guide Updated
+    bannerImage: tennis racket.jpg
+    courseOverview: Tennis players must keep their limbs warm and their minds sharp during a tennis match. reference https://www.masterclass.com/articles/tennis-warm-up-guide Updated
+    courseFee:
+      <<: *courseFee
+      value: 20
+    attachment:
+      - *tennisBallImage
+      - tennis warm up.docx
+    tagSkill:
+      - Compliance & Leadership

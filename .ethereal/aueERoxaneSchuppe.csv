@@ -1,0 +1,4 @@
+"Service","Name","Username","Password","Hostname","Port","Security"
+"SMTP","Roxane Schuppe","roxane.schuppe84@ethereal.email","h9ytuk3DqMA3AWgb2S","smtp.ethereal.email",587,"STARTTLS"
+"IMAP","Roxane Schuppe","roxane.schuppe84@ethereal.email","h9ytuk3DqMA3AWgb2S","imap.ethereal.email",993,"TLS"
+"POP3","Roxane Schuppe","roxane.schuppe84@ethereal.email","h9ytuk3DqMA3AWgb2S","pop3.ethereal.email",995,"TLS"

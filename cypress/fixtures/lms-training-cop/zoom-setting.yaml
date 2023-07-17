@@ -1,0 +1,100 @@
+ZoomSettings:
+  learnTennisTraining:
+    description: this training cop is under WebLearn organization, but not under any specific org unit
+    readHelpGuide:
+      settingUpZoomAccountArticle:
+        url: /web/help-guide/home
+        title: Setting up a Zoom Account
+        body: A Zoom Account allows you to create Virtual Classes in your Course Instance.
+    url: # all env are using the same url
+      uat: /web/learn-tennis/admin/admin#_copMemberManagementPortlet_option=zoom-settings
+      prd: /web/tcop-learning-management/admin/admin#_copMemberManagementPortlet_option=zoom-settings
+    zoomInfo:
+      MeetBeforeClass: &meetBeforeClassZoom
+        description: for Smoke testing, will not use for editing or removing
+        zoomAccountName: Meet before class
+        hostEmail: conuser2022@outlook.com
+        apiKey: pffUEfe8SqOTsXeBW5NI6Q
+        secretKey: PcPkBmULptCtrdUFVE8nJH5lN2q1htRbJ4U0
+      introductionYourself: &introductionYourselfZoom
+        description: for Edit functionality
+        zoomAccountName: Introduction yourself
+        hostEmail: conuser2022@outlook.com
+        apiKey: nNo_TINfSWCZuTiMfGt0ww
+        secretKey: eNhUetxwa4rPxVMubWTzqx91welf1bjxhFiU
+      sharingExperience: &sharingExperienceZoom
+        description: for Remove functionality
+        zoomAccountName: Sharing Experience
+        hostEmail: conuser2022@outlook.com
+        apiKey: p0qmdK2uSL6GHBPaEGZHdg
+        secretKey: YLqNYoC7CQWdGCQeIiFBfJHZrfwkS5PgAVwO
+ActivityType:
+  virtualClass: &virtualClassActivityType Virtual Class
+CourseData:
+  tennisWarmUpGuide:
+    url:
+      beta:
+        id:
+          - 102765415
+      uat:
+        id:
+          - 101485726
+      prd:
+        id:
+          - 52065394
+    courseInstance:
+      checkingVirtualClass: &checkingVirtualClassInstance
+        description: this course instance has 2 Virtual Class - 1 for checking editing zoom & another for removing zoom
+        endDate: 01 Dec, 2039
+        url:
+          beta:
+            id:
+              - 102765491
+          uat:
+            id:
+              - 101486320
+          prd:
+            id:
+              - ''
+        activities:
+          useEditZoom:
+            activityType: *virtualClassActivityType
+            title: First meet, Introduction yourself
+          useRemoveZoom:
+            activityType: *virtualClassActivityType
+            title: Time to learn from classmates
+EditZoom:
+  modifyBy:
+    copAdmin: &copAdmin CoPUsers.admin
+  zoomInfo:
+    existing:
+      introductionYourself: *introductionYourselfZoom
+    edit:
+      introductionYourself:
+        zoomAccountName: Introduction yourself Updated
+        hostEmail: conuser2022@outlook.comupdate
+        apiKey: nNo_TINfSWCZuTiMfGt0wwUpdated
+        secretKey: eNhUetxwa4rPxVMubWTzqx91welf1bjxhFiUUpdated
+  courseInstance:
+    checkingVirtualClass: *checkingVirtualClassInstance
+RemoveZoom:
+  modifyBy:
+    copAdmin: *copAdmin
+  zoomInfo:
+    removing:
+      sharingExperience: *sharingExperienceZoom
+  courseInstance:
+    checkingVirtualClass: *checkingVirtualClassInstance
+CreateZoom:
+  modifyBy:
+    copAdmin: *copAdmin
+  zoomInfo:
+    creatingNew:
+      classTraining:
+        <<: *sharingExperienceZoom
+        description: for Create functionality
+        zoomAccountName: AU Class Training
+    createDuplicateZoom:
+      MeetBeforeClass:
+        <<: *meetBeforeClassZoom
+        description: for Create duplicate zoom account name functionality

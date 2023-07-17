@@ -1,0 +1,2297 @@
+Users:
+  uat: # same in beta
+    devteam:
+      label: Dev team
+      screenName: devteam
+      description: Development script
+      email: &devteam devteam@crosswired.com
+    orgMgtAdmin:
+      label: &orgMgtAdmin Organization Management Admin
+      email: &orgMgtAdminEmail orgmgtadmin@yopmail.com
+      screenName: &orgMgtAdminScreenName au_orgmgtadmin
+      familyName: &orgMgtAdminFamilyName OrganizationMgtAdmin
+      givenName: &orgMgtAdminGivenName AUOrgMgt
+      role: &orgMgtAdminRole Organization Admin of Demo Frontier
+    courseOrgAdmin:
+      email: &courseOrgAdminEmail courseorgadmin@yopmail.com
+      familyName: &courseOrgAdminFamilyName CourseOrgLmsAdmin
+      givenName: &courseOrgAdminGivenName AUCouOrgA
+      label: &courseOrgAdmin Course Org LMS Admin
+      role: &courseOrgAdminRole Course Admin role of Demo Frontier
+      screenName: &courseOrgAdminScreenName au_courseorgadmin
+    courseOrgLeader:
+      email: &courseOrgLeaderEmail courseorgleader@yopmail.com
+      familyName: &courseOrgLeaderFamilyName CourseOrgLmsLeader
+      givenName: &courseOrgLeaderGivenName AUCouOrgL
+      label: &courseOrgLeader Course Org LMS Leader
+      role: &courseOrgLeaderRole Course Admin role of Demo Frontier
+      screenName: &courseOrgLeaderScreenName au_courseorgleader
+    courseOrgLeadFaci:
+      email: &courseOrgLeadFaciEmail courseorgleadfaci@yopmail.com
+      familyName: &courseOrgLeadFaciFamilyName CourseOrgLmsLeadFacilitator
+      givenName: &courseOrgLeadFaciGivenName AUCouOrgLF
+      label: &courseOrgLeadFaci Course Org LMS Lead Facilitator
+      role: &courseOrgLeadFaciRole Course Lead Facilitator role of Demo Frontier
+      screenName: &courseOrgLeadFaciScreenName au_courseorgleadfaci
+    courseOrgFaci:
+      email: &courseOrgFaciEmail courseorgfaci@yopmail.com
+      familyName: &courseOrgFaciFamilyName CourseOrgLmsFacilitator
+      givenName: &courseOrgFaciGivenName AUCouOrgF
+      label: &courseOrgFaci Course Org LMS Facilitator
+      role: &courseOrgFaciRole Course Facilitator role of Demo Frontier
+      screenName: &courseOrgFaciScreenName au_courseorgfaci
+    learnMgtAdmin:
+      email: &learnMgtAdminEmail learnmgtadmin@yopmail.com
+      familyName: &learnMgtAdminFamilyName LearningMgtAdmin
+      fullName: &learnMgtAdminFullName AULearnMgt LearningMgtAdmin
+      givenName: &learnMgtAdminGivenName AULearnMgt
+      label: &learnMgtAdmin Learning Admin of WebLearn & CoP Admin of "Learn Tennis"
+      screenName: &learnMgtAdminScreenName au_learnmgtadmin
+    auLnAdmin_Emery:
+      email: &auLnAdEmeryEmail aue_emery.macgyver39@ethereal.email
+      familyName: &auLnAdEmeryFamilyName Ln Ad
+      fullName: &auLnAdEmeryFullName AuEmery Ln Ad
+      givenName: &auLnAdEmeryGivenName AuEmery
+      label: &auLnAdEmery Learning Admin in FireCloud Zone
+      screenName: &auLnAdEmeryScreenName au_ln_lnad
+    auLnCtgAd_Kenton:
+      email: &auKentonEmail aue_kenton.weimann@ethereal.email
+      familyName: &auKentonFamilyName Ctg Ad
+      fullName: &auKentonFullName AuKenton Ctg Ad
+      givenName: &auKentonGivenName AuKenton
+      label: &auKenton Category Admin in category "Soft Skill" of "WebLearn"
+      screenName: &auKentonScreenName au_ln_ctgad
+    auLnCouAd_Tressie:
+      email: &auTressieEmail aue_tressie.hettinger47@ethereal.email
+      familyName: &auTressieFamilyName Cou Admin
+      fullName: &auTressieFullName AuTressie Cou Admin
+      givenName: &auTressieGivenName AuTressie
+      label: &auTressie Course Admin in category "Soft Skill" of "WebLearn"
+      screenName: &auTressieScreenName au_ln_couad
+    auLnCouLead_Giles:
+      email: &auGilesEmail aue_giles.grimes@ethereal.email
+      familyName: Cou Lead
+      fullName: &auGilesFullName AuGiles Cou Lead
+      givenName: AuGiles
+      label: &auGiles Course Leader in category "Soft Skill" of "WebLearn"
+      screenName: &auGilesScreenName au_ln_coulead
+    auLnCouLeadFaci_Maverick:
+      email: &auMaverickEmail aue_maverick.king33@ethereal.email
+      familyName: Cou LeadFaci
+      fullName: &auMaverickFullName AuMaverick Cou LeadFaci
+      givenName: AuMaverick
+      label: &auMaverick Course Lead Facilitator in category "Soft Skill" of "WebLearn"
+      screenName: &auMaverickScreenName au_ln_coulfaci
+    auLnCouFaci_Joanie:
+      email: &auJoanieEmail aue_joanie.deckow@ethereal.email
+      familyName: Cou Faci
+      fullName: &auJoanieFullName AuJoanie Cou Faci
+      givenName: AuJoanie
+      label: &auJoanie Course Org LMS Facilitator
+      screenName: &auJoanieScreenName au_ln_coufaci
+    auLnCtgMem_Quentin:
+      email: &auQuentinEmail aue_quentin.bode@ethereal.email
+      familyName: &auQuentinFamilyName Ctg Mem
+      fullName: &auQuentinFullName AuQuentin Ctg Mem
+      givenName: &auQuentinGivenName AuQuentin
+      label: &auQuentin Category Member in category "Soft Skill" of "WebLearn"
+      screenName: &auQuentinScreenName au_ln_ctgmem
+    auLnCouMem_Litzy:
+      email: &auLitzyEmail aue_litzy5@ethereal.email
+      familyName: Cou Mem
+      fullName: &auLitzyFullName AuLitzy Cou Mem
+      givenName: AuLitzy
+      label: &auLitzy Course Org LMS Member
+      screenName: &auLitzyScreenName au_ln_coumem
+    auLnIstAd_Frances:
+      email: &auFrancesEmail aue_frances.ondricka@ethereal.email
+      familyName: Ist Ad
+      fullName: &auFrancesFullName AuFrances Ist Ad
+      givenName: AuFrances
+      label: &auFrances Instance Admin in category "Soft Skill" of "WebLearn"
+      screenName: &auFrancesScreenName au_ln_istad
+    auLnIstFaci_Britney:
+      email: &auBritneyEmail aue_britney.windler89@ethereal.email
+      familyName: Ist Faci
+      fullName: &auBritneyFullName AuBritney Ist Faci
+      givenName: AuBritney
+      label: &auBritney Instance Facilitator in category "Soft Skill" of "WebLearn"
+      screenName: &auBritneyScreenName au_ln_istfaci
+    auLnIstLeadFaci_Amina:
+      email: &auAminaEmail aue_amina61@ethereal.email
+      familyName: AuAmina
+      fullName: &auAminaFullName AuAmina Ist LeadFaci
+      givenName: Ist LeadFaci
+      label: &auAmina Instance Lead Facilitator in category "Soft Skill" of "WebLearn"
+      screenName: &auAminaScreenName au_ln_istlfaci
+    auLnIstMem_Mallory:
+      email: &auMalloryEmail aue_mallory47@ethereal.email
+      familyName: &auMalloryFamilyName Ist Mem
+      fullName: &auMalloryFullName AuMallory Ist Mem
+      givenName: &auMalloryGivenName AuMallory
+      label: &auMallory Instance Member in category "Soft Skill" of "WebLearn"
+      screenName: &auMalloryScreenName au_ln_istmem
+    auLnIstMem_Delphia:
+      email: &auDelphiaEmail aue_delphia.langworth@ethereal.email
+      familyName: Ist Mem
+      fullName: &auDelphiaFullName AuDelphia Ist Mem
+      givenName: AuDelphia
+      label: &auDelphia Instance Member in category "Soft Skill" of "FireCloud Zone"
+      screenName: &auDelphiaScreenName au_ln_istmem_del
+    auLearnerOnlyMe_Kulas:
+      email: &auKulasEmail au_learneronlymekulas@mail.com
+      familyName: &auKulasFamilyName OnlyMe
+      fullName: &auKulasFullName LearnerKulas OnlyMe
+      givenName: &auKulasGivenName LearnerKulas
+      label: &auKulasLabel Learner that have profile visibility as Only Me of "FireCloud Zone"
+      screenName: &auKulasScreenName au_learner_kulas
+      profile: &auKulasProfile users/attachments/au_learner_kulas.jpg
+    auLearningPathF:
+      email: &learningPathFEmail au_learningpath@mail.com
+      familyName: &learningPathFFamilyName LearningPath
+      fullName: &learningPathFFullName AuF LearningPath
+      givenName: &learningPathFGivenName AuF
+      label: &learningPathFLabel Learning Path Admin of FireCloud Zone
+      screenName: &learningPathFScreenName aulearningpath_f
+      profile: &learningPathFProfile users/attachments/aulearningpath_f.jpg
+    orgMgtUser:
+      email: &orgMgtUserEmail orgmgtuser@yopmail.com
+      familyName: &orgMgtUserFamilyName OrganizationMgtUser
+      givenName: &orgMgtUserGivenName AUOrgU
+      label: &orgMgtUser Organization Management User
+      role: &orgMgtUserRole User in Organization Management of Automate
+      screenName: &orgMgtUserScreenName au_orgmgtuser
+    teamLeadRootOrg:
+      email: &teamLeadRootOrgEmail teamleadrootorg@yopmail.com
+      familyName: &teamLeadRootOrgFamilyName LeaderRootOrg
+      givenName: &teamLeadRootOrgGivenName AULead
+      label: &teamLeadRootOrg Team Leader Organization Management
+      role: &teamLeadRootOrgRole Team Leader of Root Org Unit Organization Management
+      screenName: &teamLeadRootOrgScreenName auleadroot
+    teamLeadRootOrg_Wi:
+      email: &teamLeadRootOrgWiEmail au_rteamlead_wi@mail.com
+      familyName: &teamLeadRootOrgWiFamilyName LeaderRootOrg
+      givenName: &teamLeadRootOrgWiGivenName AuWi
+      label: &teamLeadRootOrgWi Team Leader Organization Management
+      role: &teamLeadRootOrgWiRole Team Leader of Root Org Unit Organization Management
+      screenName: &teamLeadRootOrgWiScreenName auleadroot_wi
+    memberRootOrg:
+      email: &memberRootOrgEmail memberrootorg@yopmail.com
+      familyName: &memberRootOrgFamilyName MemberRootOrg
+      givenName: &memberRootOrgGivenName AUMember
+      label: &memberRootOrg Member Root Organization
+      role: &memberRootOrgRole Member of Root Org Unit Organization Management
+      screenName: &memberRootOrgScreenName aumemroot
+    reresetPwdRootOrg:
+      email: &resetPwdRootOrgEmail resetpwdrootorg@yopmail.com
+      familyName: &resetPwdRootOrgFamilyName ResetPwdRootOrg
+      givenName: &resetPwdRootOrgGivenName AUMember
+      label: &reresetPwdRootOrg Reset Password Root Organization
+      role: &reresetPwdRootOrgRole Member of Root Org Unit use for Reset Password
+      screenName: &resetPwdRootOrgScreenName auresetpwdroot
+    lockRootOrg:
+      email: &lockRootOrgEmail lockrootorg@yopmail.com
+      familyName: &lockRootOrgFamilyName LockRootOrg
+      givenName: &lockRootOrgGivenName AUMember
+      label: &lockRootOrg Lock Root Organization
+      role: &lockRootOrgRole Member of Root Org Unit use for Lock or Unlock Account
+      screenName: &lockRootOrgScreenName aulockroot
+    twoFaRootOrg:
+      email: &twoFaRootOrgEmail 2farootorg@yopmail.com
+      familyName: &twoFaRootOrgFamilyName 2FaRootOrg
+      givenName: &twoFaRootOrgGivenName AUMember
+      label: &twoFaRootOrg 2-Step Verification Root Organization
+      role: &twoFaRootOrgRole Member of Root Org Unit use for Setup 2-Step Verification
+      screenName: &twoFaRootOrgScreenName au2faroot
+    teamLeadFronted:
+      email: &teamLeadFrontedEmail teamleadfronted@yopmail.com
+      familyName: &teamLeadFrontedFamilyName LeaderFronted
+      givenName: &teamLeadFrontedGivenName AULeadFE
+      label: &teamLeadFronted Team Leader Fronted
+      role: &teamLeadFrontedRole Team Leader of Design Fronted in Organization Management
+      screenName: &teamLeadFrontedScreenName auleadfe
+    memberFronted:
+      email: &memberFrontedEmail memberfronted@yopmail.com
+      familyName: &memberFrontedFamilyName MemberFronted
+      givenName: &memberFrontedGivenName AUMemFE
+      label: &memberFronted Member Fronted
+      role: &memberFrontedRole Member of Design Fronted in Organization Management
+      screenName: &memberFrontedScreenName aumemfe
+    teamLeadPlan:
+      email: &teamLeadPlanEmail teamleadplan@yopmail.com
+      familyName: &teamLeadPlanFamilyName LeaderPlan
+      givenName: &teamLeadPlanGivenName AULeadP
+      label: &teamLeadPlan Team Leader Plan
+      role: &teamLeadPlanRole Team Leader of Drawing Features Plan in Organization Management
+      screenName: &teamLeadPlanScreenName auleadplan
+    memberPlan:
+      email: &memberPlanEmail memberplan@yopmail.com
+      familyName: &memberPlanFamilyName MemberPlan
+      givenName: &memberPlanGivenName AUMemP
+      label: &memberPlan Member Plan
+      role: &memberPlanRole Member of Drawing Features Plan in Organization Management
+      screenName: &memberPlanScreenName aumemplan
+    resetPwdPlan:
+      email: &resetPwdPlanEmail resetpwdplan@yopmail.com
+      familyName: &resetPwdPlanFamilyName ResetPwdPlan
+      givenName: &resetPwdPlanGivenName AUMember
+      label: &resetPwdPlan Reset Password Drawing Features Plan
+      role: &resetPwdPlanRole Member of Drawing Features Plan use for Reset Password
+      screenName: &resetPwdPlanScreenName auresetpwdplan
+    lockPlan:
+      email: &lockPlanEmail lockplan@yopmail.com
+      familyName: &lockPlanFamilyName LockPlan
+      givenName: &lockPlanGivenName AUMember
+      label: &lockPlan Lock Drawing Features Plan
+      role: &lockPlanRole Member Drawing Features Plan use for Lock or Unlock Account
+      screenName: &lockPlanScreenName aulockplan
+    twoFaPlan:
+      email: &twoFaPlanEmail 2faplan@yopmail.com
+      familyName: &twoFaPlanFamilyName 2FaPlan
+      givenName: &twoFaPlanGivenName AUMember
+      label: &twoFaPlan 2-Step Verification Drawing Features Plan
+      role: &twoFaPlanRole Member of Drawing Features Plan use for 2-Step Verification
+      screenName: &twoFaPlanScreenName au2faplan
+    twoFaSmokePlan:
+      email: &twoFaSmokePlanEmail 2fasmokeplan@yopmail.com
+      familyName: &twoFaSmokePlanFamilyName 2FaSmokePlan
+      givenName: &twoFaSmokePlanGivenName AUMember
+      label: &twoFaSmokePlan 2-Step Verification Smoke Drawing Features Plan
+      role: &twoFaSmokePlanRole Member of Drawing Features Plan use for Smoke 2-Step Verification
+      screenName: &twoFaSmokePlanScreenName au2fasmokeplan
+    au2FaActivityLog:
+      email: &au2FaActivityLogEmail 2fa.activitylog@yopmail.com
+      givenName: &au2FaActivityLogGivenName 2FA Activity Log
+      familyName: &au2FaActivityLogFamilyName AU Member
+      label: &au2FaActivityLogLabel 2-Step Verification for activity log
+      role: &au2FaActivityLogRole Member of web learn org use for 2-Step Verification activity log
+      screenName: &au2FaActivityLogScreenName 2faactivitylog
+    teamLeadInstruction:
+      email: &teamLeadInstructionEmail teamleadinstruction@yopmail.com
+      familyName: &teamLeadInstructionFamilyName LeaderInstruction
+      givenName: &teamLeadInstructionGivenName AULeadIst
+      label: &teamLeadInstruction Team Leader Instruction
+      role: &teamLeadInstructionRole Team Leader of Instruction Session Plan in Organization Management
+      screenName: &teamLeadInstructionScreenName auleadist
+    memberInstruction:
+      email: &memberInstructionEmail memberinstruction@yopmail.com
+      familyName: &memberInstructionFamilyName MemberInstruction
+      givenName: &memberInstructionGivenName AUMemIst
+      label: &memberInstruction Member Instruction
+      role: &memberInstructionRole Member of Instruction Session Plan in Organization Management
+      screenName: &memberInstructionScreenName aumemist
+    copOwnerRoot:
+      email: &copOwnerRootEmail copownerroot@yopmail.com
+      familyName: &copOwnerRootFamilyName CoPOwnerRoot
+      givenName: &copOwnerRootGivenName AUCoPRoot
+      label: &copOwnerRoot CoP Owner Root
+      role: &copOwnerRootRole Member and CoP Owner of Root Org Unit in Organization Management
+      screenName: &copOwnerRootScreenName aucoproot
+    copOwnerFrontend:
+      email: &copOwnerFrontendEmail copownerfrontend@yopmail.com
+      familyName: &copOwnerFrontendFamilyName CoPOwnerFrontend
+      givenName: &copOwnerFrontendGivenName AUCoPFE
+      label: &copOwnerFrontend CoP Owner Frontend
+      role: &copOwnerFrontendRole Member and CoP Owner of Design Fronted in Organization Management
+      screenName: &copOwnerFrontendScreenName aucopfe
+    personalMgtAdmin:
+      email: &personalMgtAdminEmail personalmgtadmin@yopmail.com
+      familyName: &personalMgtAdminFamilyName PersonalManagement
+      givenName: &personalMgtAdminGivenName AUPersonal
+      label: &personalMgtAdmin Personal Management Admin
+      role: &personalMgtAdminRole Personal Management Admin in Organization Management
+      screenName: &personalMgtAdminScreenName aupermgt
+    resetPwd:
+      email: &resetPwdEmail resetpwd@yopmail.com
+      familyName: &resetPwdFamilyName ResetPwd
+      givenName: &resetPwdGivenName AUUser
+      label: &resetPwd Reset Password
+      role: &resetPwdRole User in Organization Management use for Force Password Reset
+      screenName: &resetPwdScreenName auresetpwd
+    lockUser:
+      email: &lockUserEmail lockuser@yopmail.com
+      familyName: &lockUserFamilyName LockUser
+      givenName: &lockUserGivenName AUUser
+      label: &lockUser Lock User
+      role: &lockUserRole User in Organization Management use for Lock or Unlock Account
+      screenName: &lockUserScreenName aulockuser
+    twoFaUser:
+      email: &twoFaUserEmail 2fauser@yopmail.com
+      familyName: &twoFaUserFamilyName TwoFaUser
+      givenName: &twoFaUserGivenName AUUser
+      label: &twoFaUser 2-Step Verification
+      role: &twoFaUserRole User in Organization Management use for Manage 2-Step Verification (2SV)
+      screenName: &twoFaUserScreenName au2fauser
+    viewOrgProfile:
+      email: &viewOrgProfileEmail vieworgprofile@yopmail.com
+      familyName: &viewOrgProfileFamilyName ViewOrgProfile
+      givenName: &viewOrgProfileGivenName AUUser
+      label: &viewOrgProfile View Organization Profile
+      role: &viewOrgProfileRole User in Organization Management use for View Organization Profile & Change Member Subscription 3 dots
+      screenName: &viewOrgProfileScreenName auorgprofile
+    removeUser:
+      email: &removeUserEmail removeuser@yopmail.com
+      familyName: &removeUserFamilyName RemoveUser
+      givenName: &removeUserGivenName AUUser
+      label: &removeUser Remove User
+      role: &removeUserRole User in Organization Management use for remove from organization
+      screenName: &removeUserScreenName auremoveuser
+    removeFreeUser:
+      email: &removeFreeUserEmail removefreeuser@yopmail.com
+      familyName: &removeFreeUserFamilyName RemoveFreeUser
+      givenName: &removeFreeUserGivenName AUUser
+      label: &removeFreeUser Remove Free User
+      role: &removeFreeUserRole User in Organization Management use for remove from organization
+      screenName: &removeFreeUserScreenName aurefreeuser
+    enabledTwoFa:
+      email: &enabledTwoFaEmail enabledtwofa@yopmail.com
+      familyName: &enabledTwoFaFamilyName EnabledTwoFa
+      givenName: &enabledTwoFaGivenName AUUser
+      label: &enabledTwoFa Enabled Two Factor
+      role: &enabledTwoFaRole User in Organization Management use for checking who already setup 2FA
+      screenName: &enabledTwoFaScreenName auEnTwoFa
+    fullSecurity:
+      email: &fullSecurityEmail fullsecurity@yopmail.com
+      familyName: &fullSecurityFamilyName FullSecurity
+      givenName: &fullSecurityGivenName AUUser
+      label: &fullSecurity Full Security
+      role: &fullSecurityRole User in Organization Management use for checking who already setup 2FA via back up code, app and email
+      screenName: &fullSecurityScreenName aufullsecu
+    premiumBasicUser:
+      email: &premiumBasicUserEmail premiumbasicuser@yopmail.com
+      familyName: &premiumBasicUserFamilyName PremiumBasic
+      givenName: &premiumBasicUserGivenName AUUser
+      label: &premiumBasicUser Premium Basic User
+      role: &premiumBasicUserRole User in Organization Management use for Premium Basic user
+      screenName: &premiumBasicUserScreenName aubasicuser
+    exitedUser:
+      email: &exitedUserEmail exiteduser@yopmail.com
+      familyName: &exitedUserFamilyName Exited
+      givenName: &exitedUserGivenName AUEx
+      label: &exitedUser Exited User
+      role: &exitedUserRole Exited User in Organization Management
+      screenName: &exitedUserScreenName auexited
+    orgExited_Hazle:
+      email: &orgExitedHazleEmail hazle24@ethereal.email
+      familyName: &orgExitedHazleFamilyName Exited Org
+      givenName: &orgExitedHazleGivenName AUHazle
+      label: &orgExitedHazleLabel Exited User of "FireCloud Zone" org
+      screenName: &orgExitedHazleScreenName aue_exited_hazle
+    auExitedModify_Simo:
+      email: &orgExitedSimoEmail au_exited_modify_simo@mail.com
+      familyName: &orgExitedSimoFamilyName Exited Org
+      givenName: &orgExitedSimoGivenName AUSimo
+      label: &orgExitedSimoLabel Exited User of "FireCloud Zone" org and modify profile info
+      profile: &orgExitedSimoProfile users/attachments/au_exited_simo.jpg
+      screenName: &orgExitedSimoScreenName au_exited_simo
+    auLearnerChangeEmail_Jen:
+      email: &auJenEmail au_frommail_jen@mail.com
+      secondEmail: &auJenSecondEmail au_tomail_jen@mail.com
+      familyName: &auJenFamilyName ChangeEmail
+      givenName: &auJenGivenName AuJen
+      label: &auJenLabel Org member & Learner change email
+      profile: &auJenProfile users/attachments/au_change_jen.jpg
+      screenName: &auJenScreenName au_change_jen
+    csExitedUser:
+      email: &csExitedUserEmail csexiteduser@yopmail.com
+      familyName: &csExitedUserFamilyName Consent Exited
+      givenName: &csExitedUserGivenName AUEx
+      label: &csExitedUser Exited User
+      role: &csExitedUserRole Exited User in Organization Management
+      screenName: &csExitedUserScreenName csexiteduser
+    orgTwoAdmin:
+      email: &orgTwoAdminEmail org2admin@yopmail.com
+      familyName: &orgTwoAdminFamilyName OrgAdmin
+      givenName: &orgTwoAdminGivenName AuOrg2
+      label: &orgTwoAdmin Organization Admin of 2 Organizations
+      role: &orgTwoAdminRole Organization Admin of 2 Organizations-WebLearn & Demo Frontier
+      screenName: &orgTwoAdminScreenName auorg2ad
+    demoFrontierMember:
+      email: &demoFrontierMemberEmail notweblearn@outlook.com
+      familyName: &demoFrontierMemberFamilyName WebLearn
+      givenName: &demoFrontierMemberGivenName AUNot
+      label: &demoFrontierMember Not Member of WebLearn
+      role: &demoFrontierMemberRole Org Member of another org besides WebLearn
+      screenName: &demoFrontierMemberScreenName notweblearn
+    demoFrontierAdmin:
+      Email: &demoFrontierAdminEmail notwebad@outlook.com
+      Given Name: &demoFrontierAdminGivenName AUNotAdmin
+      Family Name: &demoFrontierAdminFamilyName OfWebLearn
+      Screen Name: &demoFrontierAdminScreenName notweblearnadmin
+      label: &demoFrontierAdmin Admin of org Demo Frontier
+    orgMemberEvan:
+      label: &orgMemberEvanLabel Evan JunMac
+      screenName: &orgMemberEvanScreenName evan20222
+      description: Org WebLearn's member for testing given name and screen name are different
+      email: &orgMemberEvanEmail evan.junmac1@aumail.com
+      givenName: &orgMemberEvanGivenName Evan
+      familyName: &orgMemberEvanFamilyName JunMac
+    orgMemberCoffeeSick:
+      label: &orgMemberCoffeeSickLabel coffee Sick
+      screenName: &orgMemberCoffeeSickScreenName coffeeSick
+      familyName: &orgMemberCoffeeSickFamilyName Sick
+      description: Org WebLearn's member for testing given name and screen name are the same
+      email: &orgMemberCoffeeSickEmail coffee.sick@aumail.com
+      givenName: &orgMemberCoffeeSickGivenName coffeeSick
+    auCourseAdTimeZ:
+      email: &auCourseAdTimeZEmail aucourseadtimez@yopmail.com
+      familyName: &auCourseAdmin Au Time Zone
+      givenName: &timeZone Japan
+      label: &auCourseAdTimeZLabel Course Administrator of Course Timezone
+      role: Org Member Premium of WebLearn
+      screenName: &auCourseAdTimeZScreenName aucourseadtimez
+    auTimeUSA:
+      email: &auTimeUSAEmail au_timez_usa@yopmail.com
+      familyName: &auTimeUSAFamilyName Au Time Zone
+      givenName: &auTimeUSAGivenName USA
+      label: &auTimeUSALabel Course Leader of Course Timezone
+      role: Org Member Premium of WebLearn
+      screenName: &auTimeUSAScreenName au_timez_usa
+    auTimeMoscow:
+      email: &auTimeMoscowEmail au_timez_mosco@yopmail.com
+      familyName: &auTimeMoscowFamilyName Au Time Zone
+      givenName: &auTimeMoscowGivenName Moscow
+      label: &auTimeMoscowLabel Lead Facilitator of Course Timezone
+      role: Org Member Premium of WebLearn
+      screenName: &auTimeMoscowScreenName au_timez_mosco
+    auTimeLondon:
+      email: &auTimeLondonEmail au_timez_london@yopmail.com
+      familyName: &auTimeLondonFamilyName Au Time Zone
+      givenName: &auTimeLondonGivenName London
+      label: &auTimeLondonLabel Facilitator of Course Timezone
+      role: Org Member Premium of WebLearn
+      screenName: &auTimeLondonScreenName au_timez_london
+    auTimeKh:
+      email: &auTimeKhEmail au_timez_kh@yopmail.com
+      familyName: &auTimeKhFamilyName Au Time Zone
+      givenName: &auTimeKhGivenName Khmer
+      label: &auTimeKhLabel Learner of Course Timezone not yet book
+      role: Org Member Premium of WebLearn
+      screenName: &auTimeKhScreenName au_timez_kh
+    auTimeJp:
+      email: &auTimeJpEmail au_timez_jp@yopmail.com
+      familyName: &auTimeJpFamilyName Au Time Zone
+      givenName: &auTimeJpGivenName Learner Japan
+      label: &auTimeJpLabel Learner of Course Timezone booked
+      role: Org Member Premium of WebLearn
+      screenName: &auTimeJpScreeName au_timez_japan
+    auAcOrgAdmin:
+      email: &auAcOrgAdminEmail au_ac_orgadmin@yopmail.com
+      familyName: &auAcOrgAdminFamilyName Org Admin WebLearn
+      givenName: &auAcOrgAdminGivenName Au Activity Consent
+      label: &auAcOrgAdminLabel User for smoke test on activity log consent
+      role: Org Admin of WebLearn
+      screenName: &auAcOrgAdminScreenName au_ac_orgadmin
+    orgAdmin_Amy:
+      email: &orgAdminAmyEmail firecloud.amy@mail.com
+      familyName: &orgAdminAmyFamilyName Admin
+      givenName: &orgAdminAmyGivenName Amy
+      label: &orgAdminAmyLabel Org Admin of FireCloud Zone
+      screenName: &orgAdminAmyScreenName firecloudamy
+    auAcFunc:
+      email: &auAcFuncEmail au_ac_func@yopmail.com
+      familyName: &auAcFuncFamilyName Au Activity Consent
+      givenName: &auAcFuncGivenName Function Consent
+      label: &auAcFunc User for func test on activity log consent
+      role: Org Admin of WebLearn
+      fullName: &auAcFuncFullName Function Consent Au Activity Consent
+      screenName: &auAcFuncScreeName au_ac_func
+    auAcMember:
+      email: &auAcMemberEmail au_ac_member@yopmail.com
+      familyName: &auAcMemberFamilyName Au Activity Consent
+      givenName: &auAcMemberGivenName Member
+      label: &auAcMemberLabel User for smoke test on activity log consent
+      role: CoP Member and Course Member
+      screenName: &auAcMemberScreeName au_ac_member
+    auAcFuncMember:
+      email: &auAcFuncMemberEmail au_ac_funcmember@yopmail.com
+      familyName: &auAcFuncMemberFamilyName Au Activity Consent
+      givenName: &auAcFuncMemberGivenName Function Member
+      label: &auAcFuncMemberLabel User for functionality test on activity log consent
+      role: CoP Member and Course Member
+      screenName: &auAcFuncMemberScreeName au_ac_funcmember
+    auPfSwitchCoP:
+      email: &auPfSwitchCoPEmail au_pf_switchcop@mail.com
+      familyName: &auPfSwitchCoPFamilyName Au Profile Switch Primary
+      givenName: &auPfSwitchCoPGivenName CoP
+      label: &auPfSwitchCoPEmailLabel User set primary CoP profile
+      role: Org Member
+      screenName: &auPfSwitchCoPScreeName au_pf_switchcop
+    auAcFuncMembers:
+      email: &auAcFuncMembersEmail au_ac_funcmember@yopmail.com
+      familyName: Function Member
+      givenName: Au Activity Consent
+      label: &auAcFuncMembers User for func test as member role
+      fullName: &auAcFuncMembersFullName Au Activity Consent Function Member
+      screenName: &auAcFuncMembersScreenName au_ac_funcmember
+    aueTanya:
+      email: &aueTanyaEmail tanya.dubuque23@ethereal.email
+      familyName: &aueTanyaFamilyName DuBuque
+      givenName: &aueTanyaGivenName Aue Tanya
+      label: &aueTanyaLabel LMS course leader for opt out course notification
+      fullName: &aueTanyaFullName LMS opt out course leader
+      screenName: &aueTanyaScreenName aue_tanya
+    auOptOutMember:
+      label: &auOptOutMember Learner opt out given consent
+      screenName: &auOptOutMemberScreenName au_optout_member
+      email: &auOptOutMemberEmail au_optout_member@mail.com
+      givenName: &auOptOutMemberGivenName Au CoPMember
+      familyName: &auOptOutMemberFamilyName Opt Out
+    auOptOutOwner:
+      label: &auOptOutOwner Learning consent opt out manage consent
+      screenName: &auOptOutOwnerScreenName au_optout_owner
+      email: &auOptOutOwnerEmail au_optout_owner@mail.com
+      givenName: &auOptOutOwnerGivenName Au Opt Out
+      familyName: &auOptOutOwnerFamilyName CoP Owner
+    auOptOutCa:
+      label: &auOptOutCa Learning consent opt out manage consent
+      screenName: &auOptOutCaScreenName au_optoutca
+      email: &auOptOutCaEmail au_optoutca@mail.com
+      secondaryEmail: &auOptOutCaSecondaryEmail au_optoutca1@mail.com
+      givenName: &auOptOutCaGivenName Au Optout
+      familyName: &auOptOutCaFamilyName Course Administrator
+    auOptOutLearner:
+      label: &auOptOutLearner Learner opt in given consent
+      screenName: &auOptOutLearnerScreenName au_optoutlearner
+      email: &auOptOutLearnerEmail au_optoutlearner@mail.com
+      secondaryEmail: &auOptOutLearnerEmail2 au_optoutlearner@hotmail.com
+      givenName: &auOptOutLearnerGivenName Au Optout
+      familyName: &auOptOutLearnerFamilyName Course learner
+    auePaytonStanton:
+      email: &auePaytonStanton payton.stanton@ethereal.email
+      screenName: &auePaytonStantonScreenName aue_payton
+      givenName: &auePaytonStantonGivenName Aue payton
+      familyName: &auePaytonStantonFamilyName Stanton
+    auOrgMember_Arielle:
+      email: &auArielleEmail arielle.jacobs74@ethereal.email
+      familyName: Org Mem
+      fullName: &auArielleFullName AuArielle Org Mem
+      givenName: AuArielle
+      label: &auArielle Category Member in category "Soft Skill" of "WebLearn"
+      screenName: &auArielleScreenName aue_orgmember
+    copOwner_Kristy:
+      email: &auKristyEmail kristy78@ethereal.email
+      familyName: &auKristyFamilyName CoP Owner
+      givenName: &auKristyGivenName AuKristy
+      label: &auKristyLabel CoP Owner
+      screenName: &auKristyScreenName aue_copow_kristy
+    copOwner_Phoebe:
+      email: &auPhoebeEmail phoebe49@ethereal.email
+      familyName: &auPhoebeFamilyName CoP Owner
+      givenName: &auPhoebeGivenName AuPhoebe
+      label: &auPhoebeLabel CoP Owner
+      screenName: &auPhoebeScreenName aue_copow_phoebe
+    copAdmin_Kendal:
+      email: &auKendalEmail kendall.feeney@ethereal.email
+      familyName: &auKendalFamilyName CoP Admin
+      givenName: &auKendalGivenName AuKendal
+      fullName: AuKendal CoP Admin
+      label: &auKendalLabel CoP Admin
+      screenName: &auKendalScreenName aue_copad_kendal
+    copAdmin_Bettye:
+      email: &auBettyeEmail au.copad_connection_bettye@mail.com
+      familyName: &auBettyeFamilyName CoP Admin
+      givenName: &auBettyeGivenName AuBettye
+      fullName: AuBettye CoP Admin
+      label: &auBettyeLabel CoP Admin and have connection
+      screenName: &auBettyeScreenName au_copad_bettye
+    copContMgr_Murl:
+      email: &auMurlEmail murl0@ethereal.email
+      familyName: &auMurlFamilyName CoP ContMgr
+      givenName: &auMurlGivenName AuMurl
+      label: &auMurlLabel CoP Contact Manager
+      screenName: &auMurlScreenName aue_copcnmg_murl
+    copMember_Enola:
+      email: &auEnolaEmail enola.renner@ethereal.email
+      familyName: &auEnolaFamilyName CoP Mem
+      givenName: &auEnolaGivenName AuEnola
+      label: &auEnolaLabel CoP Member
+      screenName: &auEnolaScreenName aue_copmem_enola
+    auESantos:
+      label: &auESantos Org Member preferred FireCloud Zone
+      screenName: &auESantosScreenName au_wl_firecloud
+      email: &auESantosEmail santos80@ethereal.email
+      givenName: &auESantosGivenName AU Santos
+      familyName: &auESantosFamilyName Batz
+    auEOfflineMsg:
+      label: &auEOfflineMsg Org Member preferred domain FireCloud Zone
+      screenName: &auEOfflineMsgScreenName au_eoffline_msg
+      email: &auEOfflineMsgEmail jaquan.abshire@ethereal.email
+      givenName: &auEOfflineMsgGivenName AU Jaquan
+      familyName: &auEOfflineMsgFamilyName Abshire
+    auELucyWalsh:
+      label: &auELucyWalsh CoP Admin preferred domain FireCloud Zone
+      screenName: &auELucyWalshScreenName au_elucy_walsh
+      email: &auELucyWalshEmail lucy.walsh28@ethereal.email
+      givenName: &auELucyWalshGivenName AU Lucy
+      familyName: &auELucyWalshFamilyName Walsh
+    auMarleneRempel:
+      label: &auMarleneRempelLabel Normal user add connection user
+      email: &auMarleneRempelEmail marlene.rempel97@mail.com
+      screenName: &auMarleneRempelScreenName marlene.rempel97
+      givenName: &auMarleneRempelGivenName DeonMarlene
+      familyName: &auMarleneRempelFamilyName Rempel
+    auLogJoinCop:
+      email: &auLogJoinCopEmail au.logjoincop@mail.com
+      familyName: &auLogJoinCopFamilyName RequestCoP
+      givenName: &auLogJoinCopGivenName AUFuncLog
+      label: &auLogJoinCopLabel Normal org user
+      screenName: &auLogJoinCopScreeName au_logrequestcop
+    auLogAcceptCop:
+      email: &auLogAcceptCopEmail au.logacceptcop@mail.com
+      familyName: &auLogAcceptCopFamilyName AcceptCoP
+      givenName: &auLogAcceptCopGivenName AULog
+      label: &auLogAcceptCopLabel Normal org user
+      screenName: &auLogAcceptCopScreeName au_logaccpectcop
+    auNonOrgMember_Virgie:
+      email: &auNonOrgMember_VirgieEmail au.nonorg_virgie@mail.com
+      familyName: &auNonOrgMember_VirgieFamilyName Virgie
+      givenName: &auNonOrgMember_VirgieGivenName AUNonOrg
+      label: &auNonOrgMember_VirgieLabel Non-org member
+      screenName: &auNonOrgMember_VirgieScreenName au.nonorg_virgie
+  prd:
+    removeUser:
+      email: &removeUserEmailPrd removeuser@yopmail.com
+      familyName: &removeUserFamilyNamePrd RemoveUser
+      givenName: &removeUserGivenNamePrd AUUser
+      label: &removeUserPrd Remove User
+      role: &removeUserRolePrd User in Organization Management use for remove from organization
+      screenName: &removeUserScreenNamePrd auremoveuser
+    copOwnerFrontend:
+      email: &copOwnerFrontendEmailPrd copownerfrontend@mail.com
+      familyName: &copOwnerFrontendFamilyNamePrd CoPOwnerFrontend
+      givenName: &copOwnerFrontendGivenNamePrd AUCoPFE
+      label: &copOwnerFrontendPrd CoP Owner Frontend
+      role: &copOwnerFrontendRolePrd Member and CoP Owner of Design Fronted in Organization Management
+      screenName: &copOwnerFrontendScreenNamePrd aucopfe
+    premiumBasicUser:
+      email: &premiumBasicUserEmailPrd premiumbasicuser@mail.com
+      familyName: &premiumBasicUserFamilyNamePrd PremiumBasic
+      givenName: &premiumBasicUserGivenNamePrd AUUser
+      label: &premiumBasicUserPrd Premium Basic User
+      role: &premiumBasicUserRolePrd User in Organization Management use for Premium Basic user
+      screenName: &premiumBasicUserScreenNamePrd aubasicuser
+    demoFrontierMember:
+      email: &demoFrontierMemberEmailprd mailto:notweblearn@outlook.com
+      familyName: &demoFrontierMemberFamilyNameprd Wel
+      givenName: &demoFrontierMemberGivenNameprd Vayty
+      label: *demoFrontierMember
+      role: *demoFrontierMemberRole
+      screenName: &demoFrontierMemberScreenNameprd vayty2022
+    teamLeadRootOrg:
+      email: &teamLeadRootOrgEmailPrd teamleader@email.com
+      familyName: LeaderRootOrg
+      givenName: AULead
+      screenName: &teamLeadRootOrgScreenNamePrd auleadroot
+    teamLeadFronted:
+      email: &teamLeadFrontedEmailPrd teamleadfronted@mail.com
+      familyName: &teamLeadFrontedFamilyNamePrd LeaderFronted
+      givenName: &teamLeadFrontedGivenNamePrd AULeadFE
+      screenName: &teamLeadFrontedScreenNamePrd auleadfe
+    orgMgtUser:
+      email: &orgMgtUserEmailPrd orgmgtuser@mail.com
+      familyName: OrganizationMgtUser
+      fullName: &orgMgtUserFullNamePrd AUOrgU OrganizationMgtUser
+      givenName: AUOrgU
+      screenName: &orgMgtUserScreenNamePrd au_orgmgtuser
+    orgMgtAdmin:
+      label: Organization Management Admin of FireCloud Zone
+      email: &orgMgtAdminEmailPrd orgmgtadm1@mail.com
+      screenName: &orgMgtAdminScreenNamePrd au_orgmgtadmin
+      familyName: &orgMgtAdminFamilyNamePrd OrganizationMgtAdmin
+      givenName: &orgMgtAdminGivenNamePrd AUOrgMgt
+    learnMgtAdmin:
+      email: &learnMgtAdminEmailPrd learnmgtad@mail.com
+      familyName: &learnMgtAdminFamilyNamePrd LearningMgtAdmin
+      fullName: &learnMgtAdminFullNamePrd AULearnMgt LearningMgtAdmin
+      givenName: &learnMgtAdminGivenNamePrd AULearnMgt
+      screenName: &learnMgtAdminScreenNamePrd au_learnmgtadmin
+    twoFaSmokePlan:
+      email: &twoFaSmokePlanEmailPrd 2fasmokeplan@mail.com
+      familyName: &twoFaSmokePlanFamilyNamePrd 2FaSmokePlan
+      givenName: &twoFaSmokePlanGivenNamePrd AUMember
+      screenName: &twoFaSmokePlanScreenNamePrd au2fasmokeplan
+    auCourseAdTimeZ:
+      screenName: *auCourseAdTimeZScreenName
+      email: &auCourseAdTimeZEmailPrd aucourseadtimez@mail.com
+    auAcFuncMember:
+      screenName: *auAcFuncMemberScreeName
+      email: &auAcFuncMemberEmailPrd au_ac_funcmem@mail.com
+    auAcOrgAdmin:
+      familyName: *auAcOrgAdminFamilyName
+      givenName: *auAcOrgAdminGivenName
+      screenName: *auAcOrgAdminScreenName
+      email: &auAcOrgAdminEmailPrd laury45@mail.com
+    auAcMember:
+      screenName: *auAcMemberScreeName
+      familyName: *auAcMemberFamilyName
+      givenName: *auAcMemberGivenName
+      role: CoP Member and Course Member
+      email: &auAcMemberEmailPrd bud.hyatt@mail.com
+    auLnAdmin_Emery:
+      email: &auLnAdEmeryEmailPrd emery.macgyver39@mail.com
+      familyName: Ln Ad
+      fullName: &auLnAdEmeryFullNamePrd AuEmery Ln Ad
+      givenName: AuEmery
+      screenName: &auLnAdEmeryScreenNamePrd au_ln_lnad
+    orgTwoAdmin:
+      email: &orgTwoAdminEmailPrd org2ad@mail.com
+      familyName: &orgTwoAdminFamilyNamePrd OrgAdmin
+      givenName: &orgTwoAdminGivenNamePrd AuOrg2
+      screenName: &orgTwoAdminScreenNamePrd auorg2ad
+    auOrgMember_Arielle:
+      email: &auArielleEmailPrd firecloud.arielle@mail.com
+      familyName: OPremium
+      fullName: &auArielleFullNamePrd AuArielle OPremium
+      givenName: AuArielle
+      label: Premium Organization member of FireCloud Zone
+      screenName: &auArielleScreenNamePrd firecloudarielle
+    exitedUser:
+      email: &exitedUserEmailPrd hazle24@mail.com
+      familyName: &exitedUserFamilyNamePrd Exited Org
+      givenName: &exitedUserGivenNamePrd AuHazle
+      screenName: &exitedUserScreenNamePrd au_exited_hazle
+    orgExited_Hazle:
+      email: &orgExitedHazleEmailPrd hazle24@mail.com
+      familyName: &orgExitedHazleFamilyNamePrd Exited Org
+      givenName: &orgExitedHazleGivenNamePrd AuHazle
+      screenName: &orgExitedHazleScreenNamePrd au_exited_hazle
+    auLnCtgAd_Kenton:
+      email: &auKentonEmailprd aue_kenton.weimann@mail.com
+      familyName: Category Admin
+      fullName: &auKentonFullNameprd AuKenton Category Admin
+      givenName: AuKenton
+      screenName: &auKentonScreenNameprd au_ln_ctgad
+    auLnCtgMem_Quentin:
+      email: &auQuentinEmailprd aue_quentin.bode@mail.com
+      familyName: Category Member
+      fullName: &auQuentinFullNameprd AuQuentin Category Member
+      givenName: AuQuentin
+      screenName: &auQuentinScreenNameprd firecloudquentin
+    auLnIstMem_Mallory:
+      email: &auMalloryEmailprd aue_mallory47@mail.com
+      familyName: &auMalloryFamilyNameprd Student
+      fullName: &auMalloryFullNameprd AuMallory Student
+      givenName: &auMalloryGivenNameprd AuMallory
+      screenName: &auMalloryScreenNameprd au_ln_istmem
+    auLnIstMem_Delphia:
+      email: &auDelphiaEmailprd firecloud.delphia@mail.com
+      familyName: Student
+      fullName: &auDelphiaFullNameprd AuDelphia Student
+      givenName: AuDelphia
+      screenName: &auDelphiaScreenNameprd fireclouddelphia
+    auLnCouMem_Litzy:
+      email: &auLitzyEmailprd aue_litzy5@mail.com
+      familyName: Cou Member
+      fullName: &auLitzyFullNameprd AuLitzy Cou Mem
+      givenName: AuLitzy
+      screenName: &auLitzyScreenNameprd au_ln_coumem
+    auLnIstFaci_Britney:
+      email: &auBritneyEmailprd aue_britney.windler89@mail.com
+      familyName: Teacher
+      fullName: &auBritneyFullNameprd AuBritney Teacher
+      givenName: AuBritney
+      screenName: &auBritneyScreenNameprd au_ln_istfaci
+    copOwner_Kristy:
+      email: &auKristyEmailprd kristy78@mail.com
+      familyName: &auKristyFamilyNameprd CoP Owner
+      givenName: &auKristyGivenNameprd AuKristy
+      label: &auKristyLabelprd CoP Owner
+      screenName: &auKristyScreenNameprd copow_kristy
+    copAdmin_Kendal:
+      email: &auKendalEmailprd kendall.feeney@mail.com
+      familyName: &auKendalFamilyNameprd CoP Admin
+      givenName: &auKendalGivenNameprd AuKendal
+      label: &auKendalLabelprd CoP Admin
+      screenName: &auKendalScreenNameprd copad_kendal
+    copContMgr_Murl:
+      email: &auMurlEmailprd murl0@mail.com
+      familyName: &auMurlFamilyNameprd CoP ContMgr
+      givenName: &auMurlGivenNameprd AuMurl
+      label: &auMurlLabelprd CoP Contact Manager
+      screenName: &auMurlScreenNameprd copcnmg_murl
+    copMember_Enola:
+      email: &auEnolaEmailprd enola.renner@mail.com
+      familyName: &auEnolaFamilyNameprd CoP Mem
+      givenName: &auEnolaGivenNameprd AuEnola
+      label: &auEnolaLabelprd CoP Member
+      screenName: &auEnolaScreenNameprd copmem_enola
+    auESantos:
+      email: &auESantosEmailPrd santos80@email.com
+      screenName: *auESantosScreenName
+    auTimeJp:
+      email: &auTimeJpEmailPrd au_timez_japan@mail.com
+      screenName: &auTimeJpScreeNamePrd au_timez_japan
+    auTimeKh:
+      email: &auTimeKhEmailPrd au_timez_kh@mail.com
+      screenName: &auTimeKhScreenNamePrd au_timez_kh
+    auTimeLondon:
+      email: &auTimeLondonEmailPrd au_timez_london@mail.com
+      screenName: &auTimeLondonScreenNamePrd au_timez_london
+    auTimeMoscow:
+      email: &auTimeMoscowEmailPrd au_timez_mosco@mail.com
+      screenName: &auTimeMoscowScreenNamePrd au_timez_mosco
+    auTimeUSA:
+      email: &auTimeUSAEmailPrd au_timez_usa@mail.com
+      screenName: &auTimeUSAScreenNamePrd au_timez_usa
+    memberFronted:
+      email: &memberFrontedEmailPrd memberfronted@mail.com
+      screenName: &memberFrontedScreenNamePrd aumemfe
+    orgMemberCoffeeSick:
+      screenName: coffee
+      givenName: coffee
+      familyName: *orgMemberCoffeeSickFamilyName
+      email: &orgMemberCoffeeSickEmail coffee.sick@mail.com
+    orgMemberEvan:
+      screenName: evan2022
+      email: evan.junmac@mail.com
+      givenName: *orgMemberEvanGivenName
+      familyName: *orgMemberEvanFamilyName
+    auELucyWalsh:
+      label: &auELucyWalsh CoP Admin preferred domain FireCloud Zone
+      screenName: &auELucyWalshScreenNamePrd au_elucy_walsh
+      email: &auELucyWalshEmailPrd lucy.walsh29@mail.com
+      givenName: &auELucyWalshGivenNamePrd AU Lucy
+      familyName: &auELucyWalshFamilyNamePrd Walsh
+    twoFaRootOrg:
+      email: &twoFaRootOrgEmailPrd twofamainorg@mail.com
+      familyName: &twoFaRootOrgFamilyNamePrd 2FaRootOrg
+      givenName: &twoFaRootOrgGivenNamePrd AUMember
+      label: &twoFaRootOrgPrd 2-Step Verification Root Organization
+      role: &twoFaRootOrgRolePrd Member of Root Org Unit use for Setup 2-Step Verification
+      screenName: &twoFaRootOrgScreenNamePrd au2faroot
+    twoFaPlan:
+      email: &twoFaPlanEmailPrd 2faplan@mail.com
+      familyName: &twoFaPlanFamilyNamePrd 2FaPlan
+      givenName: &twoFaPlanGivenNamePrd AUMember
+      label: &twoFaPlanPrd 2-Step Verification Drawing Features Plan
+      role: &twoFaPlanRolePrd Member of Drawing Features Plan use for 2-Step Verification
+      screenName: &twoFaPlanScreenNamePrd au2faplan
+    memberRootOrg:
+      email: &memberRootOrgEmailPrd memberorg@mail.com
+      familyName: &memberRootOrgFamilyNamePrd MemberRootOrg
+      givenName: &memberRootOrgGivenNamePrd AUMember
+      label: &memberRootOrgPrd Member Root Organization
+      role: &memberRootOrgRolePrd Member of Root Org Unit Organization Management
+      screenName: &memberRootOrgScreenNamePrd amemroot
+    viewOrgProfile:
+      email: &viewOrgProfileEmailPrd linnea.nicolas59@mail.com
+      familyName: &viewOrgProfileFamilyNamePrd viewOrgProfile
+      givenName: &viewOrgProfileGivenNamePrd AUMember
+      label: &viewOrgProfilePrd Member Root Organization
+      role: &viewOrgProfileRolePrd Organization profile view activity
+      screenName: &viewOrgProfileScreenNamePrd auorgprofile
+    enabledTwoFa:
+      email: *viewOrgProfileEmailPrd
+      familyName: &enabledTwoFaFamilyNamePrd EnabledTwoFa
+      givenName: &enabledTwoFaGivenNamePrd AUUser
+      label: &enabledTwoFaPrd Enabled Two Factor
+      role: &enabledTwoFaRolePrd User in Organization Management use for checking who already setup 2FA
+      screenName: &enabledTwoFaScreenNamePrd auEnTwoFa
+OrgMgtUsers:
+  orgMgt:
+    admins:
+      organization:
+        label: *orgMgtAdmin
+        users:
+          uat:
+            screenNames:
+              - *orgMgtAdminScreenName
+              - *auAcOrgAdminScreenName
+              - *auAcFuncScreeName
+            emails:
+              - *orgMgtAdminEmail
+              - *auAcOrgAdminEmail
+              - *auAcFuncEmail
+            givenNames:
+              - *orgMgtAdminGivenName
+            familyNames:
+              - *orgMgtAdminFamilyName
+          prd:
+            emails:
+              - *orgMgtAdminEmailPrd
+              - *auAcOrgAdminEmailPrd
+            screenNames:
+              - *orgMgtAdminScreenNamePrd
+              - *auAcOrgAdminScreenName
+              - *auAcFuncScreeName
+            givenNames:
+              - *orgMgtAdminGivenNamePrd
+            familyNames:
+              - *orgMgtAdminFamilyNamePrd
+      twoOrganization:
+        label: *orgTwoAdmin
+        users:
+          uat:
+            screenNames:
+              - *orgTwoAdminScreenName
+            emails:
+              - *orgTwoAdminEmail
+            givenNames:
+              - *orgTwoAdminGivenName
+            familyNames:
+              - *orgTwoAdminFamilyName
+          prd:
+            screenNames:
+              - *orgTwoAdminScreenNamePrd
+            emails:
+              - *orgTwoAdminEmailPrd
+            givenNames:
+              - *orgTwoAdminGivenNamePrd
+            familyNames:
+              - *orgTwoAdminFamilyNamePrd
+      learning:
+        label: *learnMgtAdmin
+        users:
+          uat:
+            screenNames:
+              - *learnMgtAdminScreenName
+            emails:
+              - *learnMgtAdminEmail
+            givenNames:
+              - *learnMgtAdminGivenName
+            familyNames:
+              - *learnMgtAdminFamilyName
+          prd:
+            screenNames:
+              - *learnMgtAdminScreenNamePrd
+            emails:
+              - *learnMgtAdminEmailPrd
+            givenNames:
+              - *learnMgtAdminGivenNamePrd
+            familyNames:
+              - *learnMgtAdminFamilyNamePrd
+      orgAdmin_Amy:
+        label: *orgAdminAmyLabel
+        users:
+          uat:
+            screenNames:
+              - *orgAdminAmyScreenName
+            emails:
+              - *orgAdminAmyEmail
+            givenNames:
+              - *orgAdminAmyGivenName
+            familyNames:
+              - *orgAdminAmyFamilyName
+    members:
+      arielle:
+        role: *auArielle
+        users:
+          uat:
+            screenNames:
+              - *auArielleScreenName
+            emails:
+              - *auArielleEmail
+            fullNames:
+              - *auArielleFullName
+          prd:
+            screenNames:
+              - *auArielleScreenNamePrd
+            emails:
+              - *auArielleEmailPrd
+            fullNames:
+              - *auArielleFullNamePrd
+      normal:
+        label: *orgMgtUser
+        users:
+          uat:
+            screenNames:
+              - *orgMgtUserScreenName
+            emails:
+              - *orgMgtUserEmail
+            givenNames:
+              - *orgMgtUserGivenName
+            familyNames:
+              - *orgMgtUserFamilyName
+          prd:
+            emails:
+              - *orgMgtUserEmailPrd
+            screenNames:
+              - *orgMgtUserScreenNamePrd
+            fullNames:
+              - *orgMgtUserFullNamePrd
+      au2FaActivityLog:
+        label: *au2FaActivityLogLabel
+        users:
+          uat:
+            screenNames:
+              - *au2FaActivityLogScreenName
+            emails:
+              - *au2FaActivityLogEmail
+            givenNames:
+              - *au2FaActivityLogGivenName
+            familyNames:
+              - *au2FaActivityLogFamilyName
+      orgExited_Hazle:
+        label: *orgExitedHazleLabel
+        users:
+          uat:
+            screenNames:
+              - *orgExitedHazleScreenName
+            emails:
+              - *orgExitedHazleEmail
+            givenNames:
+              - *orgExitedHazleGivenName
+            familyNames:
+              - *orgExitedHazleFamilyName
+          prd:
+            screenNames:
+              - *orgExitedHazleScreenNamePrd
+            emails:
+              - *orgExitedHazleEmailPrd
+            givenNames:
+              - *orgExitedHazleGivenNamePrd
+            familyNames:
+              - *orgExitedHazleFamilyNamePrd
+      orgExited_Simo:
+        label: *orgExitedSimoLabel
+        users:
+          uat:
+            screenNames:
+              - *orgExitedSimoScreenName
+            emails:
+              - *orgExitedSimoEmail
+            givenNames:
+              - *orgExitedSimoGivenName
+            familyNames:
+              - *orgExitedSimoFamilyName
+            profiles:
+              - *orgExitedSimoProfile
+      exited:
+        label: *exitedUser
+        users:
+          uat:
+            screenNames:
+              - *exitedUserScreenName
+            emails:
+              - *exitedUserEmail
+            givenNames:
+              - *exitedUserGivenName
+            familyNames:
+              - *exitedUserFamilyName
+          prd:
+            screenNames:
+              - *exitedUserScreenNamePrd
+            emails:
+              - *exitedUserEmailPrd
+            givenNames:
+              - *exitedUserGivenNamePrd
+            familyNames:
+              - *exitedUserFamilyNamePrd
+      resetPwd:
+        label: *resetPwd
+        users:
+          uat:
+            screenNames:
+              - *resetPwdScreenName
+            emails:
+              - *resetPwdEmail
+            givenNames:
+              - *resetPwdGivenName
+            familyNames:
+              - *resetPwdFamilyName
+      lockUser:
+        label: *lockUser
+        users:
+          uat:
+            screenNames:
+              - *lockUserScreenName
+            emails:
+              - *lockUserEmail
+            givenNames:
+              - *lockUserGivenName
+            familyNames:
+              - *lockUserFamilyName
+      twoFaUser:
+        label: *twoFaUser
+        users:
+          uat:
+            screenNames:
+              - *twoFaUserScreenName
+            emails:
+              - *twoFaUserEmail
+            givenNames:
+              - *twoFaUserGivenName
+            familyNames:
+              - *twoFaUserFamilyName
+      viewOrgProfile:
+        label: *viewOrgProfile
+        users:
+          uat:
+            screenNames:
+              - *viewOrgProfileScreenName
+            emails:
+              - *viewOrgProfileEmail
+            givenNames:
+              - *viewOrgProfileGivenName
+            familyNames:
+              - *viewOrgProfileFamilyName
+          prd:
+            screenNames:
+              - *viewOrgProfileScreenNamePrd
+            emails:
+              - *viewOrgProfileEmailPrd
+            givenNames:
+              - *viewOrgProfileGivenNamePrd
+            familyNames:
+              - *viewOrgProfileFamilyNamePrd
+      removeUser:
+        label: *removeUser
+        users:
+          uat:
+            screenNames:
+              - *removeUserScreenName
+            emails:
+              - *removeUserEmail
+            givenNames:
+              - *removeUserGivenName
+            familyNames:
+              - *removeUserFamilyName
+      removeFreeUser:
+        label: *removeFreeUser
+        users:
+          uat:
+            screenNames:
+              - *removeFreeUserScreenName
+            emails:
+              - *removeFreeUserEmail
+            givenNames:
+              - *removeFreeUserGivenName
+            familyNames:
+              - *removeFreeUserFamilyName
+      enabledTwoFa:
+        label: *enabledTwoFa
+        users:
+          uat:
+            screenNames:
+              - *enabledTwoFaScreenName
+            emails:
+              - *enabledTwoFaEmail
+            givenNames:
+              - *enabledTwoFaGivenName
+            familyNames:
+              - *enabledTwoFaFamilyName
+      fullSecurity:
+        label: *fullSecurity
+        users:
+          uat:
+            screenNames:
+              - *fullSecurityScreenName
+            emails:
+              - *fullSecurityEmail
+            givenNames:
+              - *fullSecurityGivenName
+            familyNames:
+              - *fullSecurityFamilyName
+      premiumBasicUser:
+        label: *premiumBasicUser
+        users:
+          uat:
+            screenNames:
+              - *premiumBasicUserScreenName
+            emails:
+              - *premiumBasicUserEmail
+            givenNames:
+              - *premiumBasicUserGivenName
+            familyNames:
+              - *premiumBasicUserFamilyName
+          prd:
+            screenNames:
+              - *premiumBasicUserScreenNamePrd
+            emails:
+              - *premiumBasicUserEmailPrd
+            givenNames:
+              - *premiumBasicUserGivenNamePrd
+            familyNames:
+              - *premiumBasicUserFamilyNamePrd
+      auPfSwitchCoP:
+        label: *auPfSwitchCoPEmailLabel
+        users:
+          uat:
+            screenNames:
+              - *auPfSwitchCoPScreeName
+            emails:
+              - *auPfSwitchCoPEmail
+            givenNames:
+              - *auPfSwitchCoPGivenName
+            familyNames:
+              - *auPfSwitchCoPFamilyName
+    orgUnit:
+      rootOrg:
+        teamLeaders:
+          label: *teamLeadRootOrg
+          users:
+            uat:
+              screenNames:
+                - *teamLeadRootOrgScreenName
+              emails:
+                - *teamLeadRootOrgEmail
+              givenNames:
+                - *teamLeadRootOrgGivenName
+              familyNames:
+                - *teamLeadRootOrgFamilyName
+            prd:
+              emails:
+                - *teamLeadRootOrgEmailPrd
+              screenNames:
+                - *teamLeadRootOrgScreenNamePrd
+        teamLeaderWi:
+          label: *teamLeadRootOrgWi
+          users:
+            uat:
+              screenNames:
+                - *teamLeadRootOrgWiScreenName
+              emails:
+                - *teamLeadRootOrgWiEmail
+              givenNames:
+                - *teamLeadRootOrgWiGivenName
+              familyNames:
+                - *teamLeadRootOrgWiFamilyName
+        copOwners:
+          label: *copOwnerRoot
+          users:
+            uat:
+              screenNames:
+                - *copOwnerRootScreenName
+              emails:
+                - *copOwnerRootEmail
+              givenNames:
+                - *copOwnerRootGivenName
+              familyNames:
+                - *copOwnerRootFamilyName
+        members:
+          label: *memberRootOrg
+          users:
+            uat:
+              screenNames:
+                - *memberRootOrgScreenName
+              emails:
+                - *memberRootOrgEmail
+              givenNames:
+                - *memberRootOrgGivenName
+              familyNames:
+                - *memberRootOrgFamilyName
+            prd:
+              screenNames:
+                - *memberRootOrgScreenNamePrd
+              emails:
+                - *memberRootOrgEmailPrd
+              givenNames:
+                - *memberRootOrgGivenNamePrd
+              familyNames:
+                - *memberRootOrgFamilyNamePrd
+        resetPwd:
+          label: *reresetPwdRootOrg
+          users:
+            uat:
+              screenNames:
+                - *resetPwdRootOrgScreenName
+              emails:
+                - *resetPwdRootOrgEmail
+              givenNames:
+                - *resetPwdRootOrgGivenName
+              familyNames:
+                - *resetPwdRootOrgFamilyName
+        lock:
+          label: *lockRootOrg
+          users:
+            uat:
+              screenNames:
+                - *lockRootOrgScreenName
+              emails:
+                - *lockRootOrgEmail
+              givenNames:
+                - *lockRootOrgGivenName
+              familyNames:
+                - *lockRootOrgFamilyName
+        twoFaRootOrg:
+          label: *twoFaRootOrg
+          users:
+            uat:
+              screenNames:
+                - *twoFaRootOrgScreenName
+              emails:
+                - *twoFaRootOrgEmail
+              givenNames:
+                - *twoFaRootOrgGivenName
+              familyNames:
+                - *twoFaRootOrgFamilyName
+            prd:
+              screenNames:
+                - *twoFaRootOrgScreenNamePrd
+              emails:
+                - *twoFaRootOrgEmailPrd
+              givenNames:
+                - *twoFaRootOrgGivenNamePrd
+              familyNames:
+                - *twoFaRootOrgFamilyNamePrd
+      designFrontend:
+        teamLeaders:
+          label: *teamLeadFronted
+          users:
+            uat:
+              screenNames:
+                - *teamLeadFrontedScreenName
+              emails:
+                - *teamLeadFrontedEmail
+              givenNames:
+                - *teamLeadFrontedGivenName
+              familyNames:
+                - *teamLeadFrontedFamilyName
+            prd:
+              screenNames:
+                - *teamLeadFrontedScreenNamePrd
+              emails:
+                - *teamLeadFrontedEmailPrd
+              givenNames:
+                - *teamLeadFrontedGivenNamePrd
+              familyNames:
+                - *teamLeadFrontedFamilyNamePrd
+        copOwners:
+          label: *copOwnerFrontend
+          users:
+            uat:
+              screenNames:
+                - *copOwnerFrontendScreenName
+              emails:
+                - *copOwnerFrontendEmail
+              givenNames:
+                - *copOwnerFrontendGivenName
+              familyNames:
+                - *copOwnerFrontendFamilyName
+            prd:
+              screenNames:
+                - *copOwnerFrontendScreenNamePrd
+              emails:
+                - *copOwnerFrontendEmailPrd
+              givenNames:
+                - *copOwnerFrontendGivenNamePrd
+              familyNames:
+                - *copOwnerFrontendFamilyNamePrd
+        members:
+          label: *memberFronted
+          users:
+            uat:
+              screenNames:
+                - *memberFrontedScreenName
+              emails:
+                - *memberFrontedEmail
+              givenNames:
+                - *memberFrontedGivenName
+              familyNames:
+                - *memberFrontedFamilyName
+            prd:
+              screenNames:
+                - *memberFrontedScreenNamePrd
+              emails:
+                - *memberFrontedEmailPrd
+              givenNames:
+                - *memberFrontedGivenName
+              familyNames:
+                - *memberFrontedFamilyName
+      drawFeaturePlan:
+        teamLeaders:
+          label: *teamLeadPlan
+          users:
+            uat:
+              screenNames:
+                - *teamLeadPlanScreenName
+              emails:
+                - *teamLeadPlanEmail
+              givenNames:
+                - *teamLeadPlanGivenName
+              familyNames:
+                - *teamLeadPlanFamilyName
+        members:
+          label: *memberPlan
+          users:
+            uat:
+              screenNames:
+                - *memberPlanScreenName
+              emails:
+                - *memberPlanEmail
+              givenNames:
+                - *memberPlanGivenName
+              familyNames:
+                - *memberPlanFamilyName
+        resetPwd:
+          label: *resetPwdPlan
+          users:
+            uat:
+              screenNames:
+                - *resetPwdPlanScreenName
+              emails:
+                - *resetPwdPlanEmail
+              givenNames:
+                - *resetPwdPlanGivenName
+              familyNames:
+                - *resetPwdPlanFamilyName
+        lock:
+          label: *lockPlan
+          users:
+            uat:
+              screenNames:
+                - *lockPlanScreenName
+              emails:
+                - *lockPlanEmail
+              givenNames:
+                - *lockPlanGivenName
+              familyNames:
+                - *lockPlanFamilyName
+        twoFaPlan:
+          label: *twoFaPlan
+          users:
+            uat:
+              screenNames:
+                - *twoFaPlanScreenName
+              emails:
+                - *twoFaPlanEmail
+              givenNames:
+                - *twoFaPlanGivenName
+              familyNames:
+                - *twoFaPlanFamilyName
+            prd:
+              screenNames:
+                - *twoFaPlanScreenNamePrd
+              emails:
+                - *twoFaPlanEmailPrd
+              givenNames:
+                - *twoFaPlanGivenNamePrd
+              familyNames:
+                - *twoFaPlanFamilyNamePrd
+        twoFaSmoke:
+          label: *twoFaSmokePlan
+          users:
+            uat:
+              screenNames:
+                - *twoFaSmokePlanScreenName
+              emails:
+                - *twoFaSmokePlanEmail
+              givenNames:
+                - *twoFaSmokePlanGivenName
+              familyNames:
+                - *twoFaSmokePlanFamilyName
+            prd:
+              screenNames:
+                - *twoFaSmokePlanScreenNamePrd
+              emails:
+                - *twoFaSmokePlanEmailPrd
+              givenNames:
+                - *twoFaSmokePlanGivenNamePrd
+              familyNames:
+                - *twoFaSmokePlanFamilyNamePrd
+      instructionSession:
+        teamLeaders:
+          label: *teamLeadInstruction
+          users:
+            uat:
+              screenNames:
+                - *teamLeadInstructionScreenName
+              emails:
+                - *teamLeadInstructionEmail
+              givenNames:
+                - *teamLeadInstructionGivenName
+              familyNames:
+                - *teamLeadInstructionFamilyName
+        members:
+          label: *memberInstruction
+          users:
+            uat:
+              screenNames:
+                - *memberInstructionScreenName
+              emails:
+                - *memberInstructionEmail
+              givenNames:
+                - *memberInstructionGivenName
+              familyNames:
+                - *memberInstructionFamilyName
+      organizationConsentForm:
+        members:
+          label: *csExitedUser
+          users:
+            uat:
+              screenNames:
+                - *csExitedUserScreenName
+              emails:
+                - *csExitedUserEmail
+              givenNames:
+                - *csExitedUserGivenName
+              familyNames:
+                - *csExitedUserFamilyName
+    nonMembers:
+      virgie:
+        role: *auNonOrgMember_VirgieLabel
+        users:
+          uat:
+            screenNames:
+              - *auNonOrgMember_VirgieScreenName
+            emails:
+              - *auNonOrgMember_VirgieEmail
+            givenNames:
+              - *auNonOrgMember_VirgieGivenName
+            familyNames:
+              - *auNonOrgMember_VirgieFamilyName
+  personalManagement:
+    admins:
+      label: *personalMgtAdmin
+      users:
+        uat:
+          screenNames:
+            - *personalMgtAdminScreenName
+          emails:
+            - *personalMgtAdminEmail
+          givenNames:
+            - *personalMgtAdminGivenName
+          familyNames:
+            - *personalMgtAdminFamilyName
+  orgLms:
+    fyi: Users do not list this file because it also under LMS feature, so now all users of orgLms is in users.yaml > LmsUsers.
+DemoFrontierUsers:
+  orgMgt:
+    members:
+      demoFrontierMember:
+        label: *demoFrontierMember
+        users:
+          uat:
+            screenNames:
+              - *demoFrontierMemberScreenName
+            emails:
+              - *demoFrontierMemberEmail
+            givenNames:
+              - *demoFrontierMemberGivenName
+            familyNames:
+              - *demoFrontierMemberFamilyName
+          prd:
+            screenNames:
+              - *demoFrontierMemberScreenNameprd
+            emails:
+              - *demoFrontierMemberEmailprd
+            givenNames:
+              - *demoFrontierMemberGivenNameprd
+            familyNames:
+              - *demoFrontierMemberFamilyNameprd
+      demoFrontierAdmin:
+        label: *demoFrontierAdmin
+        users:
+          uat:
+            screenNames:
+              - *demoFrontierAdminScreenName
+            emails:
+              - *demoFrontierAdminEmail
+            givenNames:
+              - *demoFrontierAdminGivenName
+            familyNames:
+              - *demoFrontierAdminFamilyName
+MyProfile:
+  tabs:
+    OrganizationProfile:
+      label: Organization Profile
+      webLearn:
+        title: WebLearn
+        imageUrl:
+          beta: /image/organization_logo?img_id=97068631
+          uat: /image/organization_logo?img_id=95532911
+          local: /image/organization_logo?img_id=136285021
+        memberStatus:
+          name: Member status
+          value: Active
+        memberGroup:
+          name: Member group
+          value: Member
+        MemberSubGroup:
+          name: Member subgroup
+          value: No data
+      fireCloud:
+        title: FireCloud Zone
+        imageUrl:
+          prd: /image/organization_logo?img_id=51005079
+        memberStatus:
+          name: Member status
+          value: Active
+        memberGroup:
+          name: Member group
+          value: No data
+        MemberSubGroup:
+          name: Member subgroup
+          value: No data
+      orgUnit:
+        label: Org Units
+        designFrontend:
+          orgUnit: Design Frontend
+          position: --
+          teamLeader: AULeadFE LeaderFronted
+Course:
+  instance:
+    learner:
+      auTimeJp:
+        label: *auTimeJpLabel
+        users:
+          uat:
+            screenNames:
+              - *auTimeJpScreeName
+            emails:
+              - *auTimeJpEmail
+          prd:
+            screenNames:
+              - *auTimeJpScreeNamePrd
+            emails:
+              - *auTimeJpEmailPrd
+      auTimeKh:
+        label: *auTimeKhLabel
+        users:
+          uat:
+            screenNames:
+              - *auTimeKhScreenName
+            emails:
+              - *auTimeKhEmail
+          prd:
+            screenNames:
+              - *auTimeKhScreenName
+            emails:
+              - *auTimeKhEmailPrd
+    admin:
+      auCourseAdTimeZ:
+        label: *auCourseAdTimeZLabel
+        users:
+          uat:
+            screenNames:
+              - *auCourseAdTimeZScreenName
+            emails:
+              - *auCourseAdTimeZEmail
+          prd:
+            screenNames:
+              - *auCourseAdTimeZScreenName
+            emails:
+              - *auCourseAdTimeZEmailPrd
+    leader:
+      auTimeUSA:
+        label: *auTimeUSALabel
+        users:
+          uat:
+            screenNames:
+              - *auTimeUSAScreenName
+            emails:
+              - *auTimeUSAEmail
+          prd:
+            screenNames:
+              - *auTimeUSAScreenNamePrd
+            emails:
+              - *auTimeUSAEmailPrd
+    leadFacilitator:
+      auTimeMoscow:
+        label: *auTimeMoscowLabel
+        users:
+          uat:
+            screenNames:
+              - *auTimeMoscowScreenName
+            emails:
+              - *auTimeMoscowEmail
+          prd:
+            screenNames:
+              - *auTimeMoscowScreenNamePrd
+            emails:
+              - *auTimeMoscowEmailPrd
+    facilitator:
+      auTimeLondon:
+        label: *auTimeLondonLabel
+        users:
+          uat:
+            screenNames:
+              - *auTimeLondonScreenName
+            emails:
+              - *auTimeLondonEmail
+          prd:
+            screenNames:
+              - *auTimeLondonScreenName
+            emails:
+              - *auTimeLondonEmailPrd
+ActivityLog:
+  auAcOrgAdmin:
+    label: *auAcOrgAdminLabel
+    users:
+      uat:
+        screenNames:
+          - *auAcOrgAdminScreenName
+        emails:
+          - *auAcOrgAdminEmail
+        familyNames:
+          - *auAcOrgAdminFamilyName
+        givenNames:
+          - *auAcOrgAdminGivenName
+      prd:
+        screenNames:
+          - *auAcOrgAdminScreenName
+        emails:
+          - *auAcOrgAdminEmailPrd
+        familyNames:
+          - *auAcOrgAdminFamilyName
+        givenNames:
+          - *auAcOrgAdminGivenName
+  auMarleneRempel:
+    label: *auMarleneRempelLabel
+    users:
+      uat:
+        screenNames:
+          - *auMarleneRempelScreenName
+        emails:
+          - *auMarleneRempelEmail
+      prd:
+        screenNames:
+          - *auMarleneRempelScreenName
+        emails:
+          - *auMarleneRempelEmail
+  auAcFuncMember:
+    label: *auAcFuncMemberLabel
+    users:
+      uat:
+        screenNames:
+          - *auAcFuncMemberScreeName
+        emails:
+          - *auAcFuncMemberEmail
+        familyNames:
+          - *auAcFuncMemberFamilyName
+        givenNames:
+          - *auAcFuncMemberGivenName
+      prd:
+        screenNames:
+          - *auAcFuncMemberScreeName
+        emails:
+          - *auAcFuncMemberEmailPrd
+  auAcMember:
+    label: *auAcMemberLabel
+    users:
+      uat:
+        screenNames:
+          - *auAcMemberScreeName
+        emails:
+          - *auAcMemberEmail
+      prd:
+        screenNames:
+          - *auAcMemberScreeName
+        emails:
+          - *auAcMemberEmailPrd
+  auLogJoinCop:
+    label: *auLogJoinCopLabel
+    users:
+      uat:
+        screenNames:
+          - *auLogJoinCopScreeName
+        emails:
+          - *auLogJoinCopEmail
+  auLogAcceptCop:
+    label: *auLogAcceptCopLabel
+    users:
+      uat:
+        screenNames:
+          - *auLogAcceptCopScreeName
+        emails:
+          - *auLogAcceptCopEmail
+OrgLmsUsers:
+  admins:
+    categories:
+      auLnCtgAd_Kenton:
+        label: *auKenton
+        users:
+          uat:
+            emails:
+              - *auKentonEmail
+            fullNames:
+              - *auKentonFullName
+            screenNames:
+              - *auKentonScreenName
+            familyNames:
+              - *auKentonFamilyName
+            givenNames:
+              - *auKentonGivenName
+          prd:
+            emails:
+              - *auKentonEmailprd
+            fullNames:
+              - *auKentonFullNameprd
+            screenNames:
+              - *auKentonScreenNameprd
+    courses:
+      auLnCouAd_Tressie:
+        label: *auTressie
+        users:
+          uat:
+            emails:
+              - *auTressieEmail
+            fullNames:
+              - *auTressieFullName
+            screenNames:
+              - *auTressieScreenName
+            familyNames:
+              - *auTressieFamilyName
+            givenNames:
+              - *auTressieGivenName
+      auLnCouFaci_Joanie:
+        label: *auJoanie
+        users:
+          uat:
+            emails:
+              - *auJoanieEmail
+            fullNames:
+              - *auJoanieFullName
+            screenNames:
+              - *auJoanieScreenName
+      auLnCouLead_Giles:
+        label: *auGiles
+        users:
+          uat:
+            emails:
+              - *auGilesEmail
+            fullNames:
+              - *auGilesFullName
+            screenNames:
+              - *auGilesScreenName
+      auLnCouLeadFaci_Maverick:
+        label: *auMaverick
+        users:
+          uat:
+            emails:
+              - *auMaverickEmail
+            fullNames:
+              - *auMaverickFullName
+            screenNames:
+              - *auMaverickScreenName
+      auAcFunc:
+        label: *auAcFunc
+        users:
+          uat:
+            emails:
+              - *auAcFuncEmail
+            fullNames:
+              - *auAcFuncFullName
+            screenNames:
+              - *auAcFuncScreeName
+    instances:
+      auLnIstAd_Frances:
+        label: *auFrances
+        users:
+          uat:
+            emails:
+              - *auFrancesEmail
+            fullNames:
+              - *auFrancesFullName
+            screenNames:
+              - *auFrancesScreenName
+          prd:
+            emails:
+              - *auBritneyEmailprd
+            fullNames:
+              - *auBritneyFullNameprd
+            screenNames:
+              - *auBritneyScreenNameprd
+      auLnIstFaci_Britney:
+        label: *auBritney
+        users:
+          uat:
+            emails:
+              - *auBritneyEmail
+            fullNames:
+              - *auBritneyFullName
+            screenNames:
+              - *auBritneyScreenName
+          prd:
+            emails:
+              - *auBritneyEmailprd
+            fullNames:
+              - *auBritneyFullNameprd
+            screenNames:
+              - *auBritneyScreenNameprd
+      auLnIstLeadFaci_Amina:
+        label: *auAmina
+        users:
+          uat:
+            emails:
+              - *auAminaEmail
+            fullNames:
+              - *auAminaFullName
+            screenNames:
+              - *auAminaScreenName
+    learnings:
+      learnMgtAdmin:
+        label: *learnMgtAdmin
+        users:
+          uat:
+            emails:
+              - *learnMgtAdminEmail
+            fullNames:
+              - *learnMgtAdminFullName
+            screenNames:
+              - *learnMgtAdminScreenName
+      auLnAdmin_Emery:
+        label: *auLnAdEmery
+        users:
+          uat:
+            emails:
+              - *auLnAdEmeryEmail
+            fullNames:
+              - *auLnAdEmeryFullName
+            screenNames:
+              - *auLnAdEmeryScreenName
+            givenNames:
+              - *auLnAdEmeryGivenName
+            familyNames:
+              - *auLnAdEmeryFamilyName
+          prd:
+            emails:
+              - *auLnAdEmeryEmailPrd
+            fullNames:
+              - *auLnAdEmeryFullNamePrd
+            screenNames:
+              - *auLnAdEmeryScreenNamePrd
+      auOptOutOwner:
+        label: *auOptOutOwner
+        users:
+          uat:
+            emails:
+              - *auKentonEmail
+            screenNames:
+              - *auOptOutOwnerScreenName
+          prd:
+            screenNames:
+              - *auOptOutOwnerScreenName
+            emails:
+              - *auKentonEmailprd
+    learningPaths:
+      auLearningPathF:
+        label: *learningPathFLabel
+        users:
+          uat:
+            emails:
+              - *learningPathFEmail
+            fullNames:
+              - *learningPathFFullName
+            familyNames:
+              - *learningPathFFamilyName
+            givenNames:
+              - *learningPathFGivenName
+            screenNames:
+              - *learningPathFScreenName
+            profiles:
+              - *learningPathFProfile
+  learners:
+    auLnIstMem_Mallory:
+      label: *auMallory
+      users:
+        uat:
+          screenNames:
+            - *auMalloryScreenName
+          emails:
+            - *auMalloryEmail
+          fullNames:
+            - *auMalloryFullName
+          givenNames:
+            - *auMalloryGivenName
+          familyNames:
+            - *auMalloryFamilyName
+        prd:
+          screenNames:
+            - *auMalloryScreenNameprd
+          emails:
+            - *auMalloryEmailprd
+          fullNames:
+            - *auMalloryFullNameprd
+          givenNames:
+            - *auMalloryGivenNameprd
+          familyNames:
+            - *auMalloryFamilyNameprd
+    auLnIstMem_Delphia:
+      label: *auDelphia
+      users:
+        uat:
+          screenNames:
+            - *auDelphiaScreenName
+          emails:
+            - *auDelphiaEmail
+          fullNames:
+            - *auDelphiaFullName
+        prd:
+          screenNames:
+            - *auDelphiaScreenNameprd
+          emails:
+            - *auDelphiaEmailprd
+          fullNames:
+            - *auDelphiaFullNameprd
+    auLnCtgMem_Quentin:
+      label: *auQuentin
+      users:
+        uat:
+          emails:
+            - *auQuentinEmail
+          fullNames:
+            - *auQuentinFullName
+          screenNames:
+            - *auQuentinScreenName
+          givenNames:
+            - *auQuentinGivenName
+          familyNames:
+            - *auQuentinFamilyName
+        prd:
+          emails:
+            - *auQuentinEmailprd
+          fullNames:
+            - *auQuentinFullNameprd
+          screenNames:
+            - *auQuentinScreenNameprd
+    auLnCouMem_Litzy:
+      label: *auLitzy
+      users:
+        uat:
+          emails:
+            - *auLitzyEmail
+          fullNames:
+            - *auLitzyFullName
+          screenNames:
+            - *auLitzyScreenName
+        prd:
+          emails:
+            - *auLitzyEmailprd
+          fullNames:
+            - *auLitzyFullNameprd
+          screenNames:
+            - *auLitzyScreenNameprd
+    auAcFuncMembers:
+      label: *auAcFuncMembers
+      users:
+        uat:
+          emails:
+            - *auAcFuncMembersEmail
+          fullNames:
+            - *auAcFuncMembersFullName
+          screenNames:
+            - *auAcFuncMembersScreenName
+    auOptOutMember:
+      label: *auOptOutMember
+      users:
+        uat:
+          emails:
+            - *auOptOutMemberEmail
+          screenNames:
+            - *auOptOutMemberScreenName
+    auOptOutCa:
+      label: *auOptOutCa
+      users:
+        uat:
+          emails:
+            - *auOptOutCaEmail
+            - *auOptOutCaSecondaryEmail
+          screenNames:
+            - *auOptOutCaScreenName
+    auOptOutLearner:
+      label: *auOptOutLearner
+      users:
+        uat:
+          emails:
+            - *auOptOutLearnerEmail
+          screenNames:
+            - *auOptOutLearnerScreenName
+    auLearnerOnlyMe_Kulas:
+      label: *auKulasLabel
+      users:
+        uat:
+          screenNames:
+            - *auKulasScreenName
+          emails:
+            - *auKulasEmail
+          fullNames:
+            - *auKulasFullName
+          familyNames:
+            - *auKulasFamilyName
+          givenNames:
+            - *auKulasGivenName
+          profiles:
+            - *auKulasProfile
+    auLearnerChangeEmail_Jen:
+      label: *auJenLabel
+      users:
+        uat:
+          screenNames:
+            - *auJenScreenName
+          emails:
+            - *auJenEmail
+          secondEmails:
+            - *auJenSecondEmail
+          familyNames:
+            - *auJenFamilyName
+          givenNames:
+            - *auJenGivenName
+          profiles:
+            - *auJenProfile
+  leaders:
+    aueTanya:
+      label: *aueTanyaLabel
+      users:
+        uat:
+          screenNames:
+            - *aueTanyaScreenName
+          emails:
+            - *aueTanyaEmail
+CoPAdministrationUsers:
+  owners:
+    kristy:
+      label: *auKristyLabel
+      users:
+        uat:
+          emails:
+            - *auKristyEmail
+          familyNames:
+            - *auKristyFamilyName
+          givenNames:
+            - *auKristyGivenName
+          screenNames:
+            - *auKristyScreenName
+        prd:
+          emails:
+            - *auKristyEmailprd
+          familyNames:
+            - *auKristyFamilyNameprd
+          givenNames:
+            - *auKristyGivenNameprd
+          screenNames:
+            - *auKristyScreenNameprd
+    phoebe:
+      label: *auPhoebeLabel
+      users:
+        uat:
+          emails:
+            - *auPhoebeEmail
+          familyNames:
+            - *auPhoebeFamilyName
+          givenNames:
+            - *auPhoebeGivenName
+          screenNames:
+            - *auPhoebeScreenName
+  admins:
+    kendal:
+      label: *auKendalLabel
+      users:
+        uat:
+          emails:
+            - *auKendalEmail
+          familyNames:
+            - *auKendalFamilyName
+          givenNames:
+            - *auKendalGivenName
+          screenNames:
+            - *auKendalScreenName
+        prd:
+          emails:
+            - *auKendalEmailprd
+          familyNames:
+            - *auKendalFamilyNameprd
+          givenNames:
+            - *auKendalGivenNameprd
+          screenNames:
+            - *auKendalScreenNameprd
+    bettye:
+      label: *auBettyeLabel
+      users:
+        uat:
+          emails:
+            - *auBettyeEmail
+          familyNames:
+            - *auBettyeFamilyName
+          givenNames:
+            - *auBettyeGivenName
+          screenNames:
+            - *auBettyeScreenName
+  members:
+    enola:
+      label: *auEnolaLabel
+      users:
+        uat:
+          emails:
+            - *auEnolaEmail
+          familyNames:
+            - *auEnolaFamilyName
+          givenNames:
+            - *auEnolaGivenName
+          screenNames:
+            - *auEnolaScreenName
+        prd:
+          emails:
+            - *auEnolaEmailprd
+          familyNames:
+            - *auEnolaFamilyNameprd
+          givenNames:
+            - *auEnolaGivenNameprd
+          screenNames:
+            - *auEnolaScreenNameprd
+  contactManagers:
+    murl:
+      label: *auMurlLabel
+      users:
+        uat:
+          emails:
+            - *auMurlEmail
+          familyNames:
+            - *auMurlFamilyName
+          givenNames:
+            - *auMurlGivenName
+          screenNames:
+            - *auMurlScreenName
+        prd:
+          emails:
+            - *auMurlEmailprd
+          familyNames:
+            - *auMurlFamilyNameprd
+          givenNames:
+            - *auMurlGivenNameprd
+          screenNames:
+            - *auMurlScreenNameprd
+WhiteLabel:
+  org:
+    fireCloud:
+      members:
+        auESantos:
+          label: *auESantos
+          users:
+            uat:
+              screenNames:
+                - *auESantosScreenName
+              emails:
+                - *auESantosEmail
+              givenName:
+                - *auESantosGivenName
+              familyName:
+                - *auESantosFamilyName
+            prd:
+              screenNames:
+                - *auESantosScreenName
+              emails:
+                - *auESantosEmailPrd
+        auEOfflineMsg:
+          label: *auEOfflineMsg
+          users:
+            uat:
+              screenNames:
+                - *auEOfflineMsgScreenName
+              emails:
+                - *auEOfflineMsgEmail
+              givenName:
+                - *auEOfflineMsgGivenName
+              familyName:
+                - *auEOfflineMsgFamilyName
+      orgUnit:
+        hillGroup:
+          member:
+            auELucyWalsh:
+              label: *auELucyWalsh
+              users:
+                uat:
+                  screenNames:
+                    - *auELucyWalshScreenName
+                  emails:
+                    - *auELucyWalshEmail
+                  givenNames:
+                    - *auELucyWalshGivenName
+                  familyNames:
+                    - *auELucyWalshFamilyName
+                prd:
+                  screenNames:
+                    - *auELucyWalshScreenNamePrd
+                  emails:
+                    - *auELucyWalshEmailPrd

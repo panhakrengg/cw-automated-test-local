@@ -1,0 +1,133 @@
+FileTypeIcons: #change FileTypeIcons: /o/cw-cec-theme/images/file_system/small/FileTypeIcons.png
+  jpgFile: &jpgFile jpg
+  docxFile: &docxFile docx
+  pdfFile: &pdfFile pdf
+CourseData:
+  tennisWarmUpGuide:
+    description: Use for edit course and data in course instance
+    name: Tennis Warm-Up Guide
+    url:
+      beta:
+        id:
+          - 102765415
+      uat:
+        id:
+          - 101485726
+      prd:
+        id:
+          - 52065394
+    courseInstances:
+      bookedCourse:
+        description: learner booked and use for Edit learner resources, discussion, note, virtual class activity
+        endDate: 01 Jan, 2039
+        url: &tennisWarmUpGuideBookedCourseInstance
+          beta:
+            id:
+              - 102765491
+          uat:
+            id:
+              - 101486320
+          prd:
+            id:
+              - 52065632
+        learnerUrl: *tennisWarmUpGuideBookedCourseInstance # please change CourseId & InstanceId: /web/ci102765491/course-detail#_courseDetailPortlet_tab=
+        learnerResources:
+          folders:
+            atLeast: 2
+            meetTrainee: &meetTraineeFolder
+              description: for Smoke and Download functionality
+              name: &meetTraineeFolderName Meet trainee
+              folders: Group A
+              files:
+                tennisWarmUp: &tennisWarmUpFile
+                  name: tennis warm up.docx
+                  size: 46 KB
+                  type: *docxFile
+                  owner: &copOwner CoPUsers.owner
+                  path: /lms-training-cop/courses/file/tennis warm up.docx
+                tennisBall:
+                  name: tennis ball.jpg
+                  size: 5.4 MB
+                  type: *jpgFile
+                  owner: *copOwner
+            morningExercise: &morningExerciseFolder
+              description: for Smoke and Download functionality - no sub folder & file
+              name: Morning exercise
+            introduction: &introductionFolder
+              description: for Delete functionality - has 1 file inside
+              name: Introduction
+              files:
+                tennisWarmUp: *tennisWarmUpFile
+            weekendTime: &weekendTimeFolder
+              description: for Delete functionality - has no file inside
+              name: Weekend Time
+          files:
+            atLeast: 2
+            tennisRacket: &tennisRacketFile
+              description: for Smoke and Download functionality
+              name: tennis racket.jpg
+              size: 1.5 MB
+              type: *jpgFile
+              owner: *copOwner
+            tennisWarmUpGuide: &tennisWarmUpGuideFile
+              description: for Smoke and Download functionality
+              name: tennis warm-up guide 2022.pdf
+              size: 8.4 MB
+              type: *pdfFile
+              owner: *copOwner
+            tennisPlayground: &tennisPlaygroundFile
+              description: for Delete functionality
+              name: tennis playground.jpg
+              size: 1.1 MB
+              type: *jpgFile
+CreateFolder:
+  learnerResources:
+    folders:
+      week1:
+        name: AU Week 1
+UploadFiles:
+  learnerResources:
+    folders:
+      meetTrainee:
+        <<: *meetTraineeFolder
+        files:
+          tennisPlayground:
+            <<: *tennisPlaygroundFile
+            description: for Upload file functionality
+            owner: &copAdmin CoPUsers.admin # use to get given name and family name
+            path: /lms-training-cop/courses/banner/tennis playground.jpg
+            view: 0
+          tennisWarmUpGuide:
+            <<: *tennisWarmUpGuideFile
+            description: for Upload file functionality
+            owner: *copAdmin
+            path: /lms-training-cop/courses/file/tennis warm-up guide 2022.pdf
+            view: 0
+DownloadFileFolders:
+  singleFile:
+    files:
+      tennisWarmUpGuide: *tennisWarmUpGuideFile
+  singleFolder:
+    folders:
+      meetTrainee:
+        <<: *meetTraineeFolder
+  multiFileFolder:
+    files:
+      tennisRacket: *tennisRacketFile
+    folders:
+      morningExercise: *morningExerciseFolder
+  singleFileInFolder:
+    folders:
+      meetTrainee:
+        name: *meetTraineeFolderName
+        files:
+          tennisWarmUp: *tennisWarmUpFile
+DeleteFileFolders:
+  singleFolder:
+    folders:
+      introduction: *introductionFolder
+  multiFileFolder:
+    folders:
+      weekendTime: *weekendTimeFolder
+    files:
+      tennisPlayground: *tennisPlaygroundFile

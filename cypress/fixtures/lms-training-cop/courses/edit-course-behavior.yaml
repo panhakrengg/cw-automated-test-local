@@ -1,0 +1,36 @@
+CourseData:
+  scoreInTennis: &scoreInTennisCourse
+    description: Use for changing publish/unpublish course, course instance, and edit course behavior
+    name: A Score in tennis
+    bannerImage: tennis scoreboard.jpg
+    courseOverview: Use for changing publish/unpublish course and course instance
+    courseFee: &scoreInTennisCourseFee
+      value: 2
+      currency: USD
+    uploadedFiles:
+      - tennis scoreboard.jpg (164 KB)
+    tagSkill:
+      - Compliance & Leadership
+    url: &scoreInTennisCourseId
+      beta:
+        id:
+          - 102774205
+      uat:
+        id:
+          - 101555701
+      prd:
+        id:
+          - 52066017
+EditCourseBehavior:
+  scoreInTennis:
+    <<: *scoreInTennisCourse
+    name: A Score in tennis Updated
+    bannerImage: tennis playground.jpg
+    courseOverview: Use for changing publish/unpublish course and course instance Updated
+    courseFee:
+      <<: *scoreInTennisCourseFee
+      value: 9
+    attachment:
+      - tennis warm up.docx
+    tagSkill:
+      - Online Communities

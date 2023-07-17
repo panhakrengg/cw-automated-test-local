@@ -1,0 +1,230 @@
+CourseData:
+  booking:
+    name: Booking Course
+    courseOverview: Always publish, for booking course
+    attachment:
+      - pexels-negative-space-34577.jpg
+    courseFee:
+      value: 70
+      currency: USD
+    url:
+      beta:
+        id:
+          - 109586379
+      uat:
+        id:
+          - 111828791
+      prd:
+        id:
+          - 52129984
+    freeCourse: &freeCourseInstance
+      additionalBookingNote: Publish for booking FREE course and Start Date should be Current Date.
+      deliveryMethod: &physicalClassMethod Physical Classroom
+      date: 19 Jan, 2023 - 28 Feb, 2039
+      endDate: 28 Feb, 2039
+      slotAvailable: 8
+      url:
+        beta:
+          id:
+            - 117883333
+        uat:
+          id:
+            - 118229466
+        prd:
+          id:
+            - ''
+      activities: &bookCourseInstanceActivities #sample-activities.yaml > SampleActivities
+        fileImage:
+          Title: Tennis Scoreboard Image
+    freeCourseGetNotify: &freeCourseGetNotifyInstance
+      <<: *freeCourseInstance
+      additionalBookingNote: Book course then course admin level receive notification https://khalibre.atlassian.net/browse/QA-1513
+      date: 01 Mar, 2039 - 31 Mar, 2039
+      endDate: 31 Mar, 2039
+      url:
+        beta:
+          id:
+            - 111160762
+        uat:
+          id:
+            - 112575971
+        prd:
+          id:
+            - ''
+    prePaidCourse: &prePaidCourseInstance
+      additionalBookingNote: Publish for booking Prepaid course and Start Date should be Past Date.
+      deliveryMethod: *physicalClassMethod
+      endDate: 30 Nov, 2039
+      startDate: 15 Dec, 2022 # date create instance in BETA and UAT
+      date: 15 Dec, 2022 - 30 Nov, 2039
+      courseFee:
+        value: 70
+        currency: USD
+        paymentMethod: Prepaid
+      url:
+        beta:
+          id:
+            - 110293481
+        uat:
+          id:
+            - 111848732
+        prd:
+          id:
+            - 52130072
+      activities: *bookCourseInstanceActivities #all activities list in /lms/course-activities/sample-activities.yaml > SampleActivities
+    postPaidCourse: &postPaidCourseInstance
+      additionalBookingNote: Publish for booking Postpaid course and Start Date should be Future Date.
+      date: 01 Jul, 2039 - 31 Jul, 2039
+      deliveryMethod: *physicalClassMethod
+      endDate: 31 Jul, 2039
+      startDate: 01 Jul, 2039
+      courseFee:
+        value: 70
+        currency: USD
+        paymentMethod: Postpaid
+      url:
+        beta:
+          id:
+            - 110275871
+        uat:
+          id:
+            - 111848428
+        prd:
+          id:
+            - ''
+      activities: *bookCourseInstanceActivities
+    freeCourseAnnouncement: &freeCourseAnnouncement
+      additionalBookingNote: This instance has course announcement
+      deliveryMethod: &blendedLearningMethod Blended Learning
+      date: 01 Apr, 2039 - 30 Apr, 2039
+      slotAvailable: 9
+      url:
+        beta:
+          id:
+            - 116103830
+        uat:
+          id:
+            - 116778366
+        prd:
+          id:
+            - ''
+  bookingNoNotify:
+    name: Booking course and no notification
+    courseOverview: https://khalibre.atlassian.net/browse/QA-1514
+    attachment:
+      - pexels-andrea-piacquadio-3769747.jpg
+    url:
+      beta:
+        id:
+          - 111182086
+      uat:
+        id:
+          - 112593629
+      prd:
+        id:
+          - ''
+    freeCourseNoNotify: &freeCourseNoNotifyInstance
+      <<: *freeCourseInstance
+      additionalBookingNote: Book course then course instance admin level not receive notification https://khalibre.atlassian.net/browse/QA-1514
+      date: 01 Sep, 2039 - 30 Sep, 2039
+      endDate: 30 Sep, 2039
+      url:
+        beta:
+          id:
+            - 111182181
+        uat:
+          id:
+            - 112593833
+        prd:
+          id:
+            - ''
+  bookingWithConsent:
+    name: Booking Course With Consent
+    courseOverview: Free booking, but this course has consent
+    uploadedFiles:
+      - book consent.png
+    categories:
+      courseConsentCtg:
+        name: Course Consent Ctg
+    url:
+      beta:
+        id:
+          - 116319032
+      uat:
+        id:
+          - 116947334
+      prd:
+        id:
+          - ''
+    freeHasConsent: &freeHasConsentInstance
+      additionalBookingNote: Able to see consent when booking course
+      date: 01 Aug, 2039 - 31 Aug, 2039
+      deliveryMethod: *physicalClassMethod
+      url:
+        beta:
+          id:
+            - 116319162
+        uat:
+          id:
+            - 116963323
+        prd:
+          id:
+            - ''
+  bookingAndGiveConsent:
+    name: Booking then give consent
+    courseOverview: Learner books course and give consent
+    uploadedFiles:
+      - book give consent.png
+    categories:
+      courseConsentCtg:
+        name: Course Consent Ctg
+    url:
+      beta:
+        id:
+          - 116521216
+      uat:
+        id:
+          - 117119119
+      prd:
+        id:
+          - ''
+    freeThenGiveConsent: &freeThenGiveConsentInstance
+      additionalBookingNote: Learner will give consent when booking this course instance
+      date: 01 Oct, 2039 - 31 Oct, 2039
+      deliveryMethod: *blendedLearningMethod
+      url:
+        beta:
+          id:
+            - 116521314
+        uat:
+          id:
+            - 117119246
+        prd:
+          id:
+            - ''
+
+BookingCourse:
+  freeCourse:
+    <<: *freeCourseInstance
+    endDate: 2039-02-28
+    startDate: current date
+  prePaidCourse: *prePaidCourseInstance
+  postPaid: *postPaidCourseInstance
+  freeCourseGetNotify: *freeCourseGetNotifyInstance
+  freeCourseNoNotify: *freeCourseNoNotifyInstance
+  freeCourseAnnouncement: *freeCourseAnnouncement
+  freeHasConsent: *freeHasConsentInstance
+
+LearningAdmin:
+  orgLms:
+    fireCloudZone:
+      name: FireCloud Zone
+      orgFullCatalogId:
+        url:
+          beta:
+            id:
+              - 100067108
+          uat:
+            id:
+              - 98437084
+          prd:

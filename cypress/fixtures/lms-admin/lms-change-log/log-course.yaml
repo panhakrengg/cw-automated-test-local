@@ -1,0 +1,439 @@
+Categories:
+  ctgForCourse:
+    name: &ctgForCourseName Ctg for Courses
+    users:
+      addUsers:
+        - au_ln_ctgad
+      admins:
+        - aue_kenton.weimann@
+    userGroups:
+      - LMS Learning group
+
+Courses:
+  sampleCourseInCategory: &sampleCourseInCategory
+    courseOverview: &changeLogCourseOverview Course Change Log
+    categories:
+      - *ctgForCourseName
+  courseConsentNewResourceLog: &courseConsentNewResourceLog
+    name: Course func for consent & new resources to check log
+    courseOverview: This course use for check log when admin Upload file, Create folder in Facilitator resources & edit course consent.
+    categories:
+      - *ctgForCourseName
+    url:
+      uat:
+        id:
+          - 147006158
+      beta:
+        id:
+          - 152431760
+      local:
+        id:
+          - 138747346
+  courseSharingDeleteResourceLog: &courseSharingDeleteResourceLog
+    name: Course func for sharing and delete recourse to check log
+    courseOverview: This course use for check log when admin Delete file/folder in Facilitator resources & disable/enable share community.
+    categories:
+      - *ctgForCourseName
+    url:
+      uat:
+        id:
+          - 147053562
+      beta:
+        id:
+          - 152471092
+      local:
+        id:
+          - 136586130
+
+CreateCourse:
+  auCourseRequiredFieldLog:
+    name: AU course required field - check log
+    courseOverview: &logForCreatingNewCourseOverview There are 2 Logs for creating new course.
+  auCourseAllInfoLog:
+    name: AU course all info - check log
+    image: &auCourseAllInfoLogImagePath /lms-admin/lms-change-log/attachments/auCourseAllInfoLogImage.jpg
+    courseOverview: *logForCreatingNewCourseOverview
+    courseFee:
+      value: 25
+      paymentMethod: Prepaid
+    uploadFiles:
+      path:
+        - *auCourseAllInfoLogImagePath
+      name:
+        - &auCourseAllInfoLogImageName auCourseAllInfoLogImage.jpg
+    categories:
+      - *ctgForCourseName
+    collaborationSettings:
+      connect:
+        enable: true
+        whoLearnersCanSee: All learners in this course
+      discussion:
+        enable: false
+    courseCompletion:
+      awardLearnersWithCertificate: true
+      allowAddingToProfile: false
+
+PublishUnpublishCourse:
+  courseForPublishLog:
+    name: Course for publish & unpublish to check Log
+    image: &courseForPublishLogImagePath /lms-admin/lms-change-log/attachments/courseForPublishLogImage.jpg
+    courseOverview: *changeLogCourseOverview
+    categories:
+      - *ctgForCourseName
+    url:
+      uat:
+        id:
+          - 147005760
+      beta:
+        id:
+          - 152431462
+      local:
+        id:
+          - 136523309
+    managePeople:
+      admins:
+        - au_ln_coulead
+
+DeleteCourse:
+  auCourseDeleteLog:
+    <<: *sampleCourseInCategory
+    name: AU Course for delete to check Log
+
+EditCourse:
+  courseForEditInfoLog:
+    previous:
+      name: Course for edit info to check Log
+      image: *auCourseAllInfoLogImagePath
+      courseOverview: *changeLogCourseOverview
+      courseFee:
+        value: 25
+        paymentMethod: Postpaid
+      uploadFiles:
+        path:
+          - *auCourseAllInfoLogImagePath
+        name:
+          - *auCourseAllInfoLogImageName
+      url:
+        uat:
+          id:
+            - 147005850
+        beta:
+          id:
+            - 152431558
+        local:
+          id:
+            - 136538592
+    new:
+      name: Course for edit info to check Log updated
+      image: &courseForEditInfoLogNewImagePath /lms-admin/lms-change-log/attachments/courseForEditInfoLogNewImage.jpg
+      courseOverview: Course Change Log updated
+      courseFee:
+        value: 50
+        paymentMethod: Prepaid
+      uploadFiles:
+        path:
+          - *courseForEditInfoLogNewImagePath
+        name:
+          - &courseForEditInfoLogNewImageName courseForEditInfoLogNewImage.jpg
+      categories:
+        - *ctgForCourseName
+  courseForDisabledEnableDiscussionLog:
+    <<: *sampleCourseInCategory
+    name: Course for disabled & enable discussion to check log
+    url:
+      uat:
+        id:
+          - 147006038
+      beta:
+        id:
+          - 152431639
+      local:
+        id:
+          - 136578301
+  courseForDisabledEnableConnectLog:
+    <<: *sampleCourseInCategory
+    name: Course for disabled & enable connect to check log
+    url:
+      uat:
+        id:
+          - 147006098
+      beta:
+        id:
+          - 152431705
+      local:
+        id:
+          - 136579261
+
+FacilitatorResources:
+  newFileFolder:
+    <<: *courseConsentNewResourceLog
+    facilitatorResources: &facilitatorResources
+      files:
+        path:
+          - *courseForPublishLogImagePath
+        name:
+          - &courseForPublishLogImageName courseForPublishLogImage.jpg
+      folders:
+        auFolder:
+          name: &auFolderName AU folder
+          files:
+            path:
+              - *courseForEditInfoLogNewImagePath
+            name:
+              - *courseForEditInfoLogNewImageName
+  deleteFileFolder:
+    <<: *courseSharingDeleteResourceLog
+    facilitatorResources:
+      <<: *facilitatorResources
+      deleteFiles:
+        - *courseForPublishLogImageName
+        - *courseForEditInfoLogNewImageName
+      deleteFolders:
+        - *auFolderName
+
+CourseConsents:
+  auCourseNewCustomConsentLog:
+    <<: *sampleCourseInCategory
+    name: AU Course for creating custom consent to check log
+    manageConsent:
+      customCourseConsent: &customCourseConsentPrevious
+        formName: Custom course consent
+        description: The consent create by admin.
+        consentItems:
+          first:
+            shortLabel: first
+            description: The first consent item from course level.
+            optional: false
+          second:
+            shortLabel: second
+            description: The second consent item from course level.
+            optional: true
+        existingMemberMustAgree: false
+  courseEditConsentLog:
+    <<: *courseConsentNewResourceLog
+    manageConsent:
+      previous: *customCourseConsentPrevious
+      new:
+        formName: Custom course consent updated
+        description: The consent create by admin. updated
+        consentItems:
+          first:
+            shortLabel: first
+            description: The first consent item from course level.
+            optional: true
+          second:
+            shortLabel: second
+            description: The second consent item from course level.
+            optional: false
+        existingMemberMustAgree: true
+
+Communities:
+  tCopFuncSuggestSharedCourse: &tCopSuggestSharedCourse
+    type: Training
+    organization: FireCloud Zone
+    name: TCoP Func Suggest Shared Course
+    url: /web/tcop-func-suggest-shared-course
+    profile:
+      path: /lms-admin/lms-change-log/attachments/tCopSuggestSharedCourseProfile.jpg
+    copUsers:
+      uat:
+        owner: phoebe
+  tCopFuncRequestToUseSharedCourse: &tCopFuncRequestToUseSharedCourse
+    type: Training
+    organization: FireCloud Zone
+    name: TCoP Func Request to Use Shared Course
+    url: /web/tcop-func-request-to-use-shared-course
+    profile:
+      path: /lms-admin/lms-change-log/attachments/tCopFuncRequestToUseSharedCourseProfile.jpg
+    copUsers:
+      uat:
+        owner: phoebe
+
+DefaultCourseForCommunityShare: &defaultCourseForCommunityShare
+  courseOverview: *changeLogCourseOverview
+  categories:
+    - *ctgForCourseName
+  communitySharing:
+    communitySharing: true
+
+ShareCourses:
+  allowDuplicateEnablePermission:
+    name: Shared course allow duplicate & enable require permission then check log
+    courseOverview: *changeLogCourseOverview
+    categories:
+      - *ctgForCourseName
+    communitySharing:
+      communitySharing: true
+    url:
+      uat:
+        id:
+          - 147023119
+      beta:
+        id:
+          - 152452663
+      local:
+        id:
+          - 136601243
+  suggestThenApprove:
+    <<: *defaultCourseForCommunityShare
+    name: Shared course for suggest & community approve to check log
+    url:
+      uat:
+        id:
+          - 147006226
+      beta:
+        id:
+          - 152431825
+      local:
+        id:
+          - 136601303
+    communitySharing:
+      communitySharing: true
+      suggestCommunity:
+        tCopSuggestSharedCourse: *tCopSuggestSharedCourse
+  suggestThenDecline:
+    <<: *defaultCourseForCommunityShare
+    name: Shared course for suggest & community decline to check log
+    url:
+      uat:
+        id:
+          - 147021304
+      beta:
+        id:
+          - 152432101
+      local:
+        id:
+          - 136601361
+    communitySharing:
+      communitySharing: true
+      suggestCommunity:
+        tCopSuggestSharedCourse: *tCopSuggestSharedCourse
+  defaultInstanceToSpecific:
+    <<: *defaultCourseForCommunityShare
+    name: Shared course set default instance to specific then check log
+    url:
+      uat:
+        id:
+          - 147021384
+      beta:
+        id:
+          - 152432173
+      local:
+        id:
+          - 136601121
+    instanceToShare: &instanceToShare
+      title: Instance share to community
+      deliveryMethod: Physical Classroom
+    instanceNotToShare: &instanceNotToShare
+      title: Instance not share to community
+      deliveryMethod: Virtual Classroom
+    communitySharing:
+      communitySharing: true
+      instancesToShared:
+        share:
+          instanceToShare: *instanceToShare
+        notShare:
+          instanceNotToShare: *instanceNotToShare
+
+  defaultInstanceToAll:
+    <<: *defaultCourseForCommunityShare
+    name: Shared course set default instance to all then check log
+    url:
+      uat:
+        id:
+          - 147022955
+      beta:
+        id:
+          - 152433304
+      local:
+        id:
+          - 136601183
+    instanceToShare: *instanceToShare
+    communitySharing:
+      communitySharing: true
+      instancesToShared:
+        share:
+          instanceToShare: *instanceToShare
+  tCopFuncRequestToUseSharedCourse:
+    <<: *tCopFuncRequestToUseSharedCourse
+    sharedCourses:
+      requestWithoutPermission:
+        <<: *defaultCourseForCommunityShare
+        name: Share course request without ask permission - check log
+        image: /lms-admin/lms-change-log/attachments/requestWithoutPermissionImage.jpg
+        url:
+          uat:
+            id:
+              - 147021288
+          beta:
+            id:
+              - 152432063
+          local:
+            id:
+              - 136698729
+        instancePublish: &instancePublish
+          title: &instancePublishTitle Instance publish
+          deliveryMethod: Self-study
+      requestThenDeny: &enableCommunitySharingRequirePermission
+        <<: *sampleCourseInCategory
+        name: Share course request then deny - check log
+        image: /lms-admin/lms-change-log/attachments/requestThenDenyImage.jpg
+        url:
+          uat:
+            id:
+              - 147021910
+          beta:
+            id:
+              - 152432522
+          local:
+            id:
+              - 136698892
+        communitySharing:
+          communitySharing: true
+          requirePermission: true
+        instancePublish: *instancePublish
+      requestThenApproveAllInstances:
+        <<: *enableCommunitySharingRequirePermission
+        name: Share course request then approve all instances - check log
+        image: /lms-admin/lms-change-log/attachments/requestThenApproveAllInstancesImage.jpg
+        url:
+          uat:
+            id:
+              - 147022102
+          beta:
+            id:
+              - 152432682
+          local:
+            id:
+              - 136702031
+        instancePublish: *instancePublish
+      requestThenApproveSpecificInstances:
+        <<: *enableCommunitySharingRequirePermission
+        name: Share course request then approve specific instances - check log
+        image: /lms-admin/lms-change-log/attachments/requestThenApproveSpecificInstancesImage.jpg
+        url:
+          uat:
+            id:
+              - 147022297
+          beta:
+            id:
+              - 152432841
+          local:
+            id:
+              - 136699292
+        instancePublish: *instancePublish
+        instanceDraft: &instanceDraft
+          title: Instance draft
+          deliveryMethod: Self-study
+        instanceNotToShare: &instanceNotToShare
+          title: Instance not to share
+          deliveryMethod: Self-study
+        communitySharing:
+          communitySharing: true
+          requirePermission: true
+          instancesToShared:
+            share:
+              instancePublish: *instancePublish
+              instanceDraft: *instanceDraft
+            notShare:
+              instanceNotToShare: *instanceNotToShare

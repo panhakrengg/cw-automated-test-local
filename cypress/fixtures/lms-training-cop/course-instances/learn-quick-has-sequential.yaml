@@ -1,0 +1,34 @@
+CourseData:
+  learnQuickHasSequential:
+    name: CoP Course on Quick Activity & Has Sequential
+    courseOverview: Draft course & has 1 instance.
+    attachment:
+      - pexels-irina-iriser-1590549.jpg
+    url:
+      beta:
+        id:
+          - 108796073
+      uat:
+        id:
+          - 110658042
+      prd:
+        id:
+          - ''
+    duplicateQuickSequential:
+      deliveryMethod: Virtual Classroom
+      date: 01 May, 2039 - 24 May, 2039
+      additionalBookingNote: For testing course progress on quick file - File Image, File Doc, & Rich Text. The course is below Sequential.
+      activities: #all activities list in /lms/course-activities/sample-activities.yaml > SampleActivities
+        total: 3
+        fileImage:
+          Title: Tennis Scoreboard Image
+        fileDoc:
+          title: Warm Up Guide
+        richText:
+          title: Reasons Your Workout Should Include a Warm Up
+
+CourseProgress:
+  quickSequential:
+    startDate: 2028-05-15
+    endDate: 2028-05-18
+    date: 15 May, 2028 - 18 May, 2028

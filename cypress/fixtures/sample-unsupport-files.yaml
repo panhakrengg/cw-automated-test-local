@@ -1,0 +1,16 @@
+UnsupportedFiles:
+  sample1:
+    name: sample1.aiff
+    size: 20.54 MB
+    path: /attachments/sample1.aiff
+    extension: aiff
+  sample2:
+    name: sample2.aac
+    size: 1.68 MB
+    path: /attachments/sample2.aac
+    extension: aac
+  sample3:
+    name: sample3.ppm
+    size: 3.12 MB
+    path: /attachments/sample3.ppm
+    extension: ppm

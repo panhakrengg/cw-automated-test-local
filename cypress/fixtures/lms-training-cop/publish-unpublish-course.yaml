@@ -1,0 +1,311 @@
+DeliveryMethod:
+  virtualClass: &virtualClassMethod Virtual Classroom
+  blendedLearning: &blendedLearningMethod Blended Learning
+CourseData:
+  scoreInTennis:
+    description: Use for changing publish/unpublish course and course instance
+    courseOverview: Use for changing publish/unpublish course and course instance
+    name: A Score in tennis
+    bannerImage: tennis scoreboard.jpg
+    url: &scoreInTennisCourseId
+      beta:
+        id:
+          - 102774205
+      uat:
+        id:
+          - 101555701
+      prd:
+        id:
+          - 52066017
+    courseFee:
+      value: 2
+    attachment: tennis scoreboard.jpg (164 KB)
+    tagSkill: Compliance & Leadership
+    courseInstances:
+      atLeast: 2
+      noActivity: &noActivityCourseInstances
+        description: Use for testing publish/unpublish course instance only - no activities
+        endDate: 01 Dec, 2039
+        deliveryMethod: *blendedLearningMethod
+        additionalBookingNote: Use for testing publish/unpublish course instance only - no activities
+        courseFee:
+          value: 0
+        timeZone: &UTC7TimeZone (UTC +7:0) Indochina Time (Asia/Phnom_Penh)
+        language: English (United States)
+        courseCompletion: 0
+        expectedDuration: 0
+        maxParticipant: 1
+        mustBookBy: 0
+        mustCancelBy: 0
+        contactEmail: conuser2022@outlook.com
+        url:
+          beta:
+            id:
+              - 102774860
+          uat:
+            id:
+              - 126794620
+          prd:
+            id:
+              - 52066284
+      hasActivity:
+        description: Use for testing publish/unpublish course instance only - has activities
+        endDate: 31 Jan, 2039
+        deliveryMethod: *virtualClassMethod
+        additionalBookingNote: Use for testing publish/unpublish course instance only - has activities
+        activities:
+          howToKeepScore:
+            activityType: Rich Text
+            name: HOW TO KEEP SCORE IN TENNIS
+        url:
+          beta:
+            id:
+              - 102775051
+          uat:
+            id:
+              - 126794747
+          prd:
+            id:
+              - 52066363
+    learner:
+      courseDetailInLearning:
+        url: *scoreInTennisCourseId
+      courseDetailInCourseCatalog:
+        url: *scoreInTennisCourseId # change CourseId: /u/home/course-detail?p_p_id=courseDetailPortlet&p_p_lifecycle=0&_courseDetailPortlet_id=102774205&_courseDetailPortlet_type=2&_courseDetailPortlet_isMyLearning=false&_courseDetailPortlet_mvcRenderCommandName=%2Fcourse%2Fdetail
+  typedRacket:
+    description: for Smoke testing - has no course instance
+    name: Typed Racket
+  planNextCourse:
+    name: Plan next course
+    courseOverview: Draft course and has instance
+    url: &planNextCourseCourseId
+      beta:
+        id:
+          - 107462476
+      uat:
+        id:
+          - 107968174
+      prd:
+        id:
+          - 52088977
+    learner:
+      courseDetailInLearning:
+        url: *planNextCourseCourseId
+      courseDetailInCourseCatalog:
+        url: *planNextCourseCourseId
+  acceptedForEveryone:
+    name: Acceptable for everyone
+    courseOverview: Draft course & FREE, has 2 published instances & learner booked at 1 instance
+    courseFee:
+      value: Free
+    url: &planNextCourseCourseId
+      beta:
+        id:
+          - 107483520
+      uat:
+        id:
+          - 107997457
+      prd:
+        id:
+          - 52089168
+  tennisByYourself:
+    name: Tennis By Yourself
+    courseOverview: Tips on how to practice tennis alone and what equipment is helpful when practicing by yourself.
+    description: This course always publish
+    bannerImage: tennis scoreboard.jpg
+    tagSkill: Online Communities
+    url: &tennisByYourselfCourseId
+      beta:
+        id:
+          - 104648328
+      uat:
+        id:
+          - 105290121
+      prd:
+        id:
+          - 52066797
+    attachment:
+      - tennis alone.jpg
+    courseFee:
+      value: Free
+    learner:
+      courseDetailInLearning:
+        url: *tennisByYourselfCourseId
+      courseDetailInCourseCatalog:
+        url: *tennisByYourselfCourseId
+    courseInstances:
+      publishedNotBook:
+        <<: *noActivityCourseInstances
+        title: Instance smoke published & no one book
+        date: 01 Jan, 2039 - 31 Jan, 2039
+        additionalBookingNote: This instance always publishes and no one booked.
+        facilitators: CoPUsers.admin # CoPUsers.admin[1] or copAdminSecond()
+        maxParticipant: 80
+        expectedDuration: 600 # minutes
+        activities: #all activities list in /lms/course-activities/sample-activities.yaml > SampleActivities
+          total: 2
+          physicalClassChildren:
+            title: Children training # get more data on "physicalClassChildren"
+          virtualTalking:
+            title: Talking together # get more data on "virtualTalking"
+      bookedNotOptional: &bookedNotOptionalCourseInstance
+        <<: *noActivityCourseInstances
+        date: 01 Nov, 2039 - 24 Nov, 2039
+        deliveryMethod: *virtualClassMethod
+        additionalBookingNote: has all activities type and learner booked
+        facilitators: CoPUsers.admin # CoPUsers.admin[1] or copAdminSecond()
+        maxParticipant: 10
+        availableParticipant: 9
+        url:
+          beta:
+            id:
+              - 107489848
+          uat:
+            id:
+              - 107998095
+          prd:
+            id:
+              - 52085115
+        activities:
+          total: 14
+          physicalTrainAtSchool: &physicalTrainAtSchool
+            title: Train at school playground
+          fileImage: &fileImage
+            title: Tennis Scoreboard Image
+          videoYouTube: &videoYouTube
+            title: YouTube video
+          hyperlink: &hyperlink
+            title: Beginner Tennis Lesson
+          learningGoal: &learningGoal
+            title: Play tennis 5-6 hours / week
+          eLearningCommunity:
+            title: Cambodia
+          videoVimeo: &videoVimeo
+            title: Vimeo video
+          fileDoc: &fileDoc
+            title: Warm Up Guide
+          videoFile: &videoFile
+            title: File Video
+          richText: &richText
+            title: Reasons Your Workout Should Include a Warm Up
+          virtualTalking: &virtualTalking
+            title: Talking together
+          quizDailyClass: &quizDailyClass
+            title: Daily class
+          assignmentMidterm: &assignmentMidterm
+            title: Midterm 30 pt
+          feedbackClassmate: &feedbackClassmate
+            title: About Classmate
+      bookedOptionalActivity:
+        <<: *bookedNotOptionalCourseInstance
+        date: 01 Oct, 2039 - 24 Oct, 2039
+        additionalBookingNote: has all activities type & optional and learner booked has 2 children (AU_Child1,AU_Child2 )
+        duration: 0 minute
+        language: English
+        location: st 230, Toek L'ak III, TK, PP, KH, Phnom Penh, Cambodia
+        url:
+          beta:
+            id:
+              - 107490833
+          uat:
+            id:
+              - 108127351
+          prd:
+            id:
+              - 52085384
+      duplicateMoodle:
+        deliveryMethod: *virtualClassMethod
+        date: 01 Aug, 2039 - 24 Aug, 2039
+        maxParticipant: 10
+        activities:
+          total: 3
+          quizCheckUnderstand:
+            title: Check understanding about Warm-up
+          assignmentMidterm: *assignmentMidterm
+          feedbackCompleteCourse:
+            title: Do after completing course
+      duplicateQuick:
+        deliveryMethod: *virtualClassMethod
+        date: 01 Sep, 2039 - 24 Sep, 2039
+        additionalBookingNote: For testing course progress on quick file - File Image, Hyperlink, Learning Goal, and Rich Text. The course has no Sequential.
+        activities:
+          total: 4
+          fileImage: *fileImage
+          hyperlink: *hyperlink
+          learningGoal: *learningGoal
+          richText: *richText
+      duplicateQuickSequential:
+        deliveryMethod: *virtualClassMethod
+        date: 01 May, 2039 - 24 May, 2039
+        additionalBookingNote: For testing course progress on quick file - File Image, File Doc, & Rich Text. The course is below Sequential.
+        activities:
+          total: 3
+          fileImage: *fileImage
+          fileDoc: *fileDoc
+          richText: *richText
+      duplicateQuickSequentialOptional:
+        deliveryMethod: *virtualClassMethod
+        date: 01 Jul, 2039 - 24 Jul, 2039
+        additionalBookingNote: For testing course progress on quick file - Hyperlink, Physical Class, and Virtual Class. The course is below Sequential, and there is some activity is Optional.
+        activities:
+          total: 3
+          hyperlink: *hyperlink
+          physicalTrainAtSchool:
+            <<: *physicalTrainAtSchool
+            optional: true
+          virtualTalking:
+            <<: *virtualTalking
+            optional: true
+      duplicateVideo:
+        deliveryMethod: *virtualClassMethod
+        date: 01 Apr, 2039 - 24 Apr, 2039
+        additionalBookingNote: For testing course progress on 3 Video types. The course has no Sequential.
+        activities:
+          total: 3
+          videoVimeo: *videoVimeo
+          videoFile: *videoFile
+          videoYouTube: *videoYouTube
+  practiceMorning:
+    name: Practice early morning
+    courseOverview: Always published, has instance and also published
+    url:
+      beta:
+        id:
+          - 110252886
+      uat:
+        id:
+          - 108696296
+      prd:
+        id:
+          - 52085626
+    courseInstances:
+      duplicateQuick:
+        deliveryMethod: *blendedLearningMethod
+        date: 02 Dec, 2039 - 31 Dec, 2039
+        additionalBookingNote: For testing booking course in Learning Path, published course & has file - image
+        maxParticipant: 10
+        activities:
+          total: 4
+          fileImage: *fileImage
+          hyperlink: *hyperlink
+  onlineTraining:
+    name: Online Training
+    courseOverview: Course in Learning
+    url:
+      beta:
+        id:
+          - 111182434
+      uat:
+        id:
+          - 109119450
+      prd:
+        id:
+          - ''
+    courseInstances:
+      duplicateQuick:
+        deliveryMethod: *blendedLearningMethod
+        date: 01 Jul, 2039 - 24 Jul, 2039
+        additionalBookingNote: for course progress has File Image & Hyperlink
+        activities:
+          total: 1
+          hyperlink: *hyperlink

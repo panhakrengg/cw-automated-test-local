@@ -1,0 +1,34 @@
+NewOrg:
+  name: Au_OrgJavascript
+  businessArea: &businessAre Development Work
+  type: &organization Organization
+  workingHour: &workingHour 40
+NewCompany:
+  name: Au_CompanyJavascript
+  businessArea: *businessAre
+  type: Company Code
+  workingHour: *workingHour
+  companyCode: f001
+  personnelArea: basic learning
+OrgToBeModify:
+  name: Drawing Features Plan
+ModifyOrgTo:
+  name: Drawing Features Plan Updated
+ExistingOrg:
+  root:
+    name: WebLearn International
+    type: Global Company
+FireCloudZone:
+  name: FireCloud Zone
+  lms:
+    orgFullCatalog:
+      url:
+        beta:
+          id:
+            - 100067108
+        uat:
+          id:
+            - 98437084
+        prd:
+          id:
+            - 50812991

@@ -1,0 +1,28 @@
+class Epic {
+  static Account = 'Account'
+  static Announcements = 'Announcements'
+  static Chat = 'Chat'
+  static Connections = 'Connections'
+  static CoPAdministration = 'CoP-Administration'
+  static CoPContactManagement = 'CoP-Contact Management'
+  static CoPDiscussions = 'CoP-Discussions'
+  static CoPFileSharing = 'CoP-File Sharing'
+  static CoPKanban = 'CoP-Kanban'
+  static CoPMemberDirectory = 'CoP-Member Directory'
+  static CoPMyCommunities = 'CoP-My Communities'
+  static CoPPosts = 'CoP-Posts'
+  static CoPSegmentation = 'CoP-Segmentation'
+  static CoPSubscriptions = 'CoP-Subscriptions'
+  static Dashboard = 'Dashboard'
+  static HelpGuides = 'Help Guides'
+  static LmsAdmin = 'LMS-Admin'
+  static LmsLearner = 'LMS-Learner'
+  static LmsTrainingCop = 'LMS-Training CoP'
+  static ManageCommunities = 'Manage Communities'
+  static OrgAdmin = 'Org-Admin'
+  static OrgStructure = 'Org-Structure'
+  static Registration = 'Registration'
+  static Profile = 'Profile'
+}
+
+export default Epic

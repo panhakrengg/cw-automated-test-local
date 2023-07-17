@@ -1,0 +1,175 @@
+SampleDiscussion:
+  categories:
+    uncategorised:
+      name: &uncategorisedCategoryName Uncategorised
+      description: All threads posted without categories will fall into this place.
+      parentCategory: &noneParentCategory
+        name: None
+    nonsubscriber: &nonsubscriber
+      name: &nonsubscriberCategoryName Category nonsubscriber
+      description: Created by course facilitator that inherit from course admin level.
+      owner: &couFaciJoanie couFaci_Joanie()
+      parentCategory: *noneParentCategory
+    forEveryone:
+      name: &forEveryoneCategoryName Can discuss here for everyone
+      description: Do NOT edit/delete
+      owner: *couFaciJoanie
+      parentCategory: *noneParentCategory
+    movingCtg:
+      name: &movingCtgCategoryName Moving Ctg level 1
+      description: Move test case
+      owner: &istFaciBritney istFaci_Britney
+      parentCategory: *noneParentCategory
+    previousCtgThread: &previousCtgThread
+      name: &previousCtgThreadCategoryName Previous Ctg for thread
+      description: For test case move category, and this is the old / previous category.
+      owner: *istFaciBritney
+      parentCategory:
+        name: *movingCtgCategoryName
+    newCtgThread:
+      <<: *previousCtgThread
+      name: &newCtgThreadCategoryName New Ctg for thread
+      description: For test case move category, and this is the New category.
+    welcomeThread: &welcomeThreadCategory
+      name: &welcomeThreadCategoryName Welcome new thread here
+      description: Instance admin is owner and for creating new thread
+      owner: istAdmin_Frances()
+      parentCategory: *noneParentCategory
+  threads:
+    learner_Delphia_NoSubscribe: &learnerDelphiaDiscussion
+      subject: learner Delphia - No one subscribe
+      detail: This thread has all info, and attachments, and no subscriber.
+      attachmentsPath:
+        - &banner1Path /attachments/Banner1.jpg
+        - &docFile1Path /attachments/Doc File 1.docx
+        - /attachments/Excel File 1.xlsx
+        - /attachments/PDF File 1.pdf
+        - /attachments/Video1.mp4
+      attachmentsName:
+        - &banner1 Banner1.jpg
+        - &docFile1 Doc File 1.docx
+        - &excel1 Excel File 1.xlsx
+        - &pdf1 PDF File 1.pdf
+        - &video1 Video1.mp4
+      tags:
+        - &learnerTag learner
+        - &uncategorisedTag uncategorised
+        - &allInfoTag all info
+      category:
+        name: *uncategorisedCategoryName
+    learner_Delphia_like:
+      subject: learner Delphia - for reacted (like)
+      category: &forEveryoneThreadCategory
+        name: *forEveryoneCategoryName
+    learner_Delphia_dislike:
+      subject: learner Delphia - for reacted (dislike)
+      category:
+        name: *forEveryoneCategoryName
+    learner_MalloryMove: &learnerMalloryMoveThread
+      subject: learner Mallory - for move thread
+      detail: will move from 1 into another category
+      category:
+        name: *previousCtgThreadCategoryName
+    learner_MalloryReply: &learnerMalloryReplyThread
+      subject: learner Mallory - for Replying
+      category: *forEveryoneThreadCategory
+    admin_FacilitatorReplyHasSubscriber: &adminFacilitatorReplyHasSubscriberThread
+      <<: *learnerMalloryReplyThread
+      subject: Admin Facilitator - for Replying and Has Subscriber (Delphia)
+      truncateSubject: Admin Facilitator - for Replying and Has...
+      subscriber: istMember_Delphia()
+    learner_Delphia_CountView:
+      <<: *learnerMalloryReplyThread
+      subject: learner Delphia - for counting View
+
+NewThreads:
+  underUncategorised:
+    <<: *learnerDelphiaDiscussion
+    subject: AU learner - thread under uncategorised
+    detail: This thread is under uncategorised, has all info, and attachments.
+    tags:
+      - learner
+      - uncategorised
+      - all info
+  onlyRequiredField:
+    subject: AU learner - thread has only subject
+    category:
+      name: *uncategorisedCategoryName
+  onlyRequiredFieldUncategorised:
+    subject: AU learner - thread uncategorised and only subject
+    category:
+      name: *uncategorisedCategoryName
+  underSpecificCategory:
+    <<: *learnerDelphiaDiscussion
+    subject: AU learner - thread under specific category
+    detail: This thread is under --Category nonsubscriber--, has all info, and attachments.
+    category:
+      name: *nonsubscriberCategoryName
+    tags:
+      - learner
+      - specific category
+  firstSameCategory: &threadUnderWelcomeThreadCategory
+    subject: AU learner Mallory - same category
+    category:
+      name: *welcomeThreadCategoryName
+  secondSameCategory:
+    <<: *threadUnderWelcomeThreadCategory
+    subject: AU learner Delphia - same category
+  underCategorySubscriberCheckNotification:
+    <<: *threadUnderWelcomeThreadCategory
+    subject: AU learner Delphia - category's subscriber should receive notification
+    truncateSubject: AU learner Delphia - category's subscriber...
+  threadCheckDashboard:
+    subject: AU learner Mallory - should display in Dashboard
+EditThread:
+  learner:
+    subject: learner Delphia - No one subscribe Updated
+    detail: This thread has all info, and attachments, and no subscriber & for edit. Updated
+    removeAttachmentsPath:
+      - *banner1Path
+      - *docFile1Path
+    removeAttachments:
+      - *banner1
+      - *docFile1
+    newAttachmentsPath:
+      - /attachments/Banner2.jpg
+    newAttachmentsName:
+      - &banner2 Banner2.jpg
+    removeTags:
+      - *uncategorisedTag
+    category:
+      name: *forEveryoneCategoryName
+    displayAttachments: # use in tread detail
+      - *banner2
+      - *excel1
+      - *pdf1
+      - *video1
+    displayTags: # use in tread detail
+      - *learnerTag
+      - *allInfoTag
+
+MoveThread:
+  learner:
+    <<: *learnerMalloryMoveThread
+    category:
+      previous: *previousCtgThreadCategoryName
+      new: *newCtgThreadCategoryName
+
+ReplyThread:
+  ownerCheckNotification:
+    <<: *learnerMalloryReplyThread
+    replies:
+      byLearner:
+        new: AU learner Delphia comment
+      byAdmin:
+        new: AU admin lead facilitator reply
+  subscriberCheckNotification:
+    <<: *adminFacilitatorReplyHasSubscriberThread
+    replies:
+      byLearner:
+        new: AU learner Mallory reply & subscriber should able to receive notification
+  nonSubscriberCheckNotification: #previous thread's owner
+    <<: *learnerDelphiaDiscussion
+    replies:
+      byLearner:
+        new: AU learner Mallory reply & previous thread's owner(unsubscribe) will not receive notification

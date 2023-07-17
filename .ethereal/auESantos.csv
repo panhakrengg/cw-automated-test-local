@@ -1,0 +1,4 @@
+"Service","Name","Username","Password","Hostname","Port","Security"
+"SMTP","Santos Batz","santos80@ethereal.email","3DGx6SfuJBEwANueZC","smtp.ethereal.email",587,"STARTTLS"
+"IMAP","Santos Batz","santos80@ethereal.email","3DGx6SfuJBEwANueZC","imap.ethereal.email",993,"TLS"
+"POP3","Santos Batz","santos80@ethereal.email","3DGx6SfuJBEwANueZC","pop3.ethereal.email",995,"TLS"

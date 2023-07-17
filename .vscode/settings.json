@@ -1,0 +1,42 @@
+{
+  "cSpell.words": [
+    "Crosswired",
+    "Ctg",
+    "annment",
+    "destinate",
+    "dragdrop",
+    "elearning",
+    "imapflow",
+    "mailparser",
+    "Moodle",
+    "ocop",
+    "Payton",
+    "portlet",
+    "swal2",
+    "Threedot",
+    "Threedots",
+    "Unpublish",
+    "weblearn"
+  ],
+  "eslint.enable": true,
+  "prettier.jsxSingleQuote": false,
+  "prettier.singleQuote": true,
+  "prettier.tabWidth": 2,
+  "prettier.printWidth": 100,
+  "editor.formatOnType": true,
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.formatOnSave": true
+  },
+  "vscode-yaml-sort.sortOnSave": 0,
+  "vscode-yaml-sort.useAsFormatter": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.sortImports": true
+  }
+}

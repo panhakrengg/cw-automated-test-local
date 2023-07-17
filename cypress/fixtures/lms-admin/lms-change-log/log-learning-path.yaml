@@ -1,0 +1,87 @@
+Categories:
+  lpOnly:
+    name: LP Only
+    users:
+      addUsers:
+        - &learningPathFScreenName aulearningpath_f
+
+Courses:
+  publishNoBook:
+    name: Publish no one book
+    noOneBookInstance:
+      title: Instance on one book
+      managePeople:
+        faci:
+          - *learningPathFScreenName
+
+CreateLearningPaths:
+  auRequireField:
+    name: AU require field to check log
+  auAllInfo:
+    name: AU all to check log
+    image:
+      path: lms-admin/lms-change-log/attachments/car on the road.jpg
+      name: car on the road.jpg
+    overview: Has all info.
+    duration:
+      months: 2
+      days: 5
+      hours: 3
+      minutes: 15
+    categories:
+      - &fireCloudLPCategory FireCloud LP
+    phaseSite:
+      - &fireCloudLPOnlyPhaseSite FireCloud Zone - LP Only
+
+EditLearningPaths:
+  lpForEditLog:
+    previous:
+      name: LP for editing to check log
+      image:
+        path: lms-admin/lms-change-log/attachments/glass-facade.jpg
+      overview: Learning path admin this LP then learning admin of Org Lms will check log.
+      duration:
+        months: 2
+        days: 5
+        hours: 3
+        minutes: 15
+      categories:
+        - *fireCloudLPCategory
+    new:
+      name: LP for editing to check log updated
+      image:
+        path: lms-admin/lms-change-log/attachments/grafitti.jpg
+      overview: Learning path admin this LP then learning admin of Org Lms will check log. updated
+      duration:
+        months: 0
+        days: 20
+        hours: 4
+        minutes: 30
+      phaseSite:
+        - *fireCloudLPOnlyPhaseSite
+  lpForDisableEnableCertificate:
+    name: LP for disable & enable to check log
+
+CourseInLearningPaths:
+  lpForUpdateCourseLog:
+    name: LP for updating course to check log
+    courses:
+      - &publishUnderLP Publish under LP
+    addMoreCourses:
+      - &publishNoOneBook Publish no one book
+  lpForAddCourseLog: &lpForAddCourseLog
+    name: LP for add course to check log
+    overview: Default course is NONE, so admin will add courses to this LP.
+    courses:
+      - *publishUnderLP
+      - *publishNoOneBook
+  lpForRemoveCourseLog:
+    <<: *lpForAddCourseLog
+    name: LP for remove course to check log
+    overview: There are course under LP, so admin will remove all courses.
+
+PublishUnpublishLearningPaths:
+  lpForPublishUnpublishLog:
+    name: LP for publish & unpublish to check log
+    courses:
+      - *publishUnderLP

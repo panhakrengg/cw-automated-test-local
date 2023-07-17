@@ -1,0 +1,4 @@
+"Service","Name","Username","Password","Hostname","Port","Security"
+"SMTP","Murl Mayer","murl0@ethereal.email","UUhhukS5WdXrAZSr7W","smtp.ethereal.email",587,"STARTTLS"
+"IMAP","Murl Mayer","murl0@ethereal.email","UUhhukS5WdXrAZSr7W","imap.ethereal.email",993,"TLS"
+"POP3","Murl Mayer","murl0@ethereal.email","UUhhukS5WdXrAZSr7W","pop3.ethereal.email",995,"TLS"

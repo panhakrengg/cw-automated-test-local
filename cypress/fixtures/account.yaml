@@ -1,0 +1,469 @@
+Courses:
+  courseTimezone:
+    url:
+      beta:
+        id:
+          - 102796450
+      local:
+        id:
+          - 107622498
+      uat:
+        id:
+          - 107622498
+      prd:
+        id:
+          - 52057519
+    title: Course Time Zone (Automation Do not Delete)
+    desc: Course setup under Org LMS
+    selfStudy:
+      url:
+        beta:
+          id:
+            - 102797742
+        local:
+          id:
+            - 107627275
+        uat:
+          id:
+            - 107627275
+        prd:
+          id:
+            - 52057941
+      type: Self-study
+      durationDays: 5
+      durationMin: 120
+      languages:
+        - Japanese
+      additionalBookingNote: Study Japan Virtual Class
+      courseFee: 1000
+      courseActivities:
+        virtualClass:
+          type: Virtual Classroom
+          title: 'Japan Virtual Class Time Zone'
+        physicalClass:
+          title: 'Taekwondo'
+        interactELearning:
+          title: 'Virtual Teams: A How-to Guide '
+    virtualClass:
+      url:
+        beta:
+          id:
+            - 102804253
+        local:
+          id:
+            - 108834234
+        uat:
+          id:
+            - 108834234
+        prd:
+          id:
+            - 52057701
+      type: Virtual Classroom
+      courseActivities:
+        richText:
+          type: Rich Text
+          title: Strengths of AI Academy Program
+    admins:
+      courseAdmin:
+        - aucourseadtimez@yopmail.com
+  ccFuncTrackingActivityLog:
+    url:
+      beta:
+        id:
+          - 105311592
+      uat:
+        id:
+          - 104973678
+      local:
+        id:
+          - 104973678
+    courseInstances:
+      virtualClass:
+        type: Virtual Classroom
+        url:
+          beta:
+            id:
+              - 126171555
+          local:
+            id:
+              - 106156990
+          uat:
+            id:
+              - 106156990
+      physicalClass:
+        type: Physical Classroom
+        url:
+          beta:
+            id:
+              - 105311680
+          uat:
+            id:
+              - 106173827
+          local:
+            id:
+              - 106173827
+        completed:
+          user:
+            auAcMember:
+              local:
+                date: 14 Nov, 2022
+                time: 4:42 PM
+              uat:
+                date: 14 Nov, 2022
+                time: 4:42 PM
+              beta:
+                date: 06 Dec, 2022
+                time: 10:59 AM
+              prd:
+                date: 27 Feb, 2023
+                time: 4:12 PM
+    title: CC Function tracking activity log
+  ccTrackingDownloadCourseCertificateActivityLog:
+    url:
+      beta:
+        id:
+          - 105330792
+      uat:
+        id:
+          - 106174980
+      local:
+        id:
+          - 106174980
+    courseInstances:
+      physicalClass:
+        type: Physical Classroom
+        url:
+          beta:
+            id:
+              - 105330947
+          uat:
+            id:
+              - 106175065
+          local:
+            id:
+              - 106175065
+    title: CC Function Tracking Download A Course Certificate Activity Log
+  optOutLearnerNotification:
+    url:
+      beta:
+        id:
+          - 108346069
+      uat:
+        id:
+          - 110123479
+      local:
+        id:
+          - 110123479
+    courseInstances:
+      selfStudy:
+        type: Self-study
+        url:
+          beta:
+            id:
+              - 108363559
+          uat:
+            id:
+              - 110123585
+          local:
+            id:
+              - 110123585
+      virtualClassroom:
+        type: Virtual Classroom
+        url:
+          beta:
+            id:
+              - 108364035
+          uat:
+            id:
+              - 110138191
+          local:
+            id:
+              - 110138191
+        schedule: '01 Jan, 2039 - 10 Jan, 2039'
+    title: Opt out learner notification
+  courseConsentOptOutNotification:
+    url:
+      beta:
+        id:
+          - 110035054
+      uat:
+        id:
+          - 110314397
+      local:
+        id:
+          - 110314397
+    courseInstances:
+      selfStudy:
+        type: Self-study
+        url:
+          beta:
+            id:
+              - 110052615
+          uat:
+            id:
+              - 111799272
+          local:
+            id:
+              - 111799272
+    title: Course consent opt out tracking consent notification
+  courseConsentAdminOptOut:
+    url:
+      beta:
+        id:
+          - 110273991
+      uat:
+        id:
+          - 110451566
+      local:
+        id:
+          - 110451566
+    courseInstances:
+      selfStudy:
+        type: Self-study
+        url:
+          beta:
+            id:
+              - 110274160
+          uat:
+            id:
+              - 110452023
+          local:
+            id:
+              - 110452023
+    title: Course consent course administrator opt out tracking functionality
+  ccForSmokeActivityLog:
+    title: CC For Smoke Activity Log
+    consent: CFC For Smoke Activity Log
+    courseInstances:
+      selfStudy:
+        type: Self-study
+        url:
+          beta:
+            id:
+              - 102977562
+          uat:
+            id:
+              - 103043231
+          local:
+            id:
+              - 103043231
+  courseTrackingActivityLog:
+    url:
+      beta:
+        id:
+          - 110273991
+      uat:
+        id:
+          - 110451566
+      local:
+        id:
+          - 110451566
+      prd:
+        id:
+          - 110273991
+    title: Course Tracking Consent Activity Log
+    consent: Hope The Course Is What You Need To be update
+#TimeOffset: for without zero will stay at 0 first index
+Timezone:
+  utcZero:
+    timeOffSet:
+      - 'UTC'
+    london:
+      timezone: (UTC) Greenwich Mean Time (Etc/GMT)
+  plus0200:
+    timeOffSet:
+      - '+2:00'
+      - '+02:00'
+    israel:
+      timezone: &israelTimezone (UTC +2:0) Central European Summer Time (Europe/Warsaw)
+  plus0300:
+    timeOffSet:
+      - '+3:00'
+      - '+03:00'
+    moscow:
+      timezone: &moscowTimezone (UTC +3:0) Moscow Standard Time (Europe/Moscow)
+  plus0700:
+    timeOffSet:
+      - '+7:00'
+      - '+07:00'
+    phnomPenh:
+      timezone: &phnomPenhTimezone (UTC +7:0) Indochina Time (Asia/Phnom_Penh)
+  plus0900:
+    timeOffSet:
+      - '+9:0'
+      - '+09:00'
+    japan:
+      timezone: &japanTimezone (UTC +9:0) Japan Standard Time
+  minus0400:
+    timeOffSet:
+      - '-4:00'
+      - '-04:00'
+    newYork:
+      timezone: &newYorkTimezone (UTC -4:0) Eastern Standard Time (America/New_York)
+AccountSuite:
+  auCourseAdTimeZ:
+    timezone:
+      old: (UTC +9:0) Japan Standard Time
+  auTimeUSA:
+    timezone:
+      old: (UTC -4:0) Eastern Daylight Time (America/New_York)
+  auTimeMoscow:
+    timezone:
+      old: (UTC +3:0) Moscow Standard Time (Europe/Moscow)
+  auTimeLondon:
+    timezone:
+      old: (UTC) Greenwich Mean Time (Etc/GMT)
+      new: (UTC +2:0) Central European Summer Time (Europe/Warsaw)
+  auTimeKh:
+    timezone:
+      old: (UTC +7:0) Indochina Time (Asia/Phnom_Penh)
+  auTimeJp:
+    timezone:
+      old: *japanTimezone
+LearningAdmin:
+  orgLms:
+    webLearn:
+      name: WebLearn
+      orgFullCatalogId:
+        url:
+          beta:
+            id:
+              - 14117326
+          local:
+            id:
+              - 14117326
+          uat:
+            id:
+              - 14117326
+          prd:
+            id:
+              - 50812991
+Organizations:
+  webLearn:
+    name: WebLearn
+    communities:
+      ccMcopFunctions:
+        name: 'CC MCoP Function Tracking Activity Log'
+      ccFunction:
+        name: 'CC Function Tracking Activity Log'
+      oCopEnableAndDisableConsent:
+        name: 'OCoP Enable And Disable Consent Form'
+      tCopInviteMember:
+        name: 'TCoP invite member track log'
+      oCopInviteMember:
+        name: 'OCoP invite member track log'
+      tpCopInviteMember:
+        name: 'TPCoP invite member track log'
+      mwCopForEditConsent:
+        name: 'MWCoP for edit consent form'
+      tCopForMemberTrackingActivity:
+        name: 'TCoP for member tracking activity'
+      tCopForMemberSharePostTrackingActivity:
+        name: 'TCoP for member share post and tracking activity'
+      tpCopConsentActivity:
+        name: 'TPCoP consent Activity Log Smoke Test'
+      tCopConsentActivity:
+        name: 'TCoP Consent Activity Log Smoke Test'
+      tCopAcceptMemberRequestTrackLog:
+        name: 'TCoP accept member request track log'
+ActivityLogStatic:
+  communities:
+    acceptInvitation:
+      local:
+        date: 11 Nov, 2022
+        time: 9:39 AM
+      uat:
+        date: 11 Nov, 2022
+        time: 9:39 AM
+      beta:
+        date: 06 Dec, 2022
+        time: 9:52 AM
+      prd:
+        date: 27 Feb, 2023
+        time: 5:05 PM
+  Certificate:
+    revert:
+      beta:
+        index: 2
+        date: 10 Feb, 2023
+      local:
+        index: 2
+        date: 09 Mar, 2023
+      uat:
+        index: 2
+        date: 12 Jun, 2023
+      prd:
+        index: 2
+        date: 13 Jun, 2023
+      logs:
+        - 'First signature authorized: Changed'
+        - 'Second signature authorized: Changed'
+        - 'Include authorized people: EnabledDisabled'
+        - 'Issue label date in English (United States): Issued on 1Issued on'
+        - 'Title in English (United States): Certificate 1Certificate'
+        - 'Sub Title in English (United States): of completion 1of completion'
+        - 'Presentation in English (United States): Is presented to 1Is presented to'
+        - 'Acknowledgement in English (United States): for successfully completing 1for successfully completing'
+    edit:
+      beta:
+        index: 2
+        date: 10 Feb, 2023
+      local:
+        index: 3
+        date: 09 Mar, 2023
+      uat:
+        index: 3
+        date: 12 Jun, 2023
+      prd:
+        index: 3
+        date: 13 Jun, 2023
+      logs:
+        - 'First signature authorized: Changed'
+        - 'Second signature authorized: Changed'
+        - 'First Authorized Name in English (United States): Khalibre 1'
+        - 'First Authorized Position in English (United States): Automation Developer 1'
+        - 'Second Authorized Name in English (United States): Khalibre 2'
+        - 'Second Authorized Position in English (United States): Automation Developer 2'
+        - 'Issue label date in English (United States): Issued onIssued on 1'
+        - 'Title in English (United States): CertificateCertificate 1'
+        - 'Sub Title in English (United States): of completionof completion 1'
+        - 'Presentation in English (United States): Is presented toIs presented to 1'
+        - 'Acknowledgement in English (United States): for successfully completingfor successfully completing 1'
+Consents:
+  agreeWithConsent:
+    name: Agree with consent
+    consentItems:
+      - Feel free to share knowledge
+      - Admin able to see your email
+  acceptedConsent:
+    name: Accepted consent
+    consentItems:
+      - Teacher will always come before class start at least 5 minutes
+      - Students will get P if they join class after 15 minutes start.
+      - Have weekly work as team or individual.
+  copConsentActivityForm:
+    name: CoP Consent Activity Form
+  activityLogPredefinedConsentCommunity:
+    name: Activity Log Predefined Consent Form Community
+  activityLogPredefinedConsentCourse:
+    name: Activity Log Predefined Consent Form Course
+  tpCoPConsentForm:
+    name: TPCoP Consent Form
+WhiteLabel:
+  domains:
+    local:
+      crosswired: crosswired.com
+      multiorg: uat-multiorg.crosswired.com
+      firecloud: uat-connect.firecloud.zone
+    uat:
+      crosswired: crosswired.com
+      multiorg: uat-multiorg.crosswired.com
+      firecloud: uat-connect.firecloud.zone
+    beta:
+      crosswired: crosswired.com
+      betaMultiorg: beta-multiorg.crosswired.com
+      firecloud: beta-connect.firecloud.zone
+    prd:
+      crosswired: crosswired.com
+      betaMultiorg: demo.crosswired.com
+      firecloud: firecloud.zone

@@ -1,0 +1,306 @@
+CertificateFireCloudZone:
+  default:
+    enable: true
+    certificate:
+      value: Certificate
+    ofCompletion:
+      value: of training
+    isPresentedTo:
+      value: Proudly present to
+    forSuccessfullyCompleting:
+      value: Has successful completed the course.
+    issueOn:
+      value: Award on
+    orgLogo:
+      value: lms-admin/org-activity-library/attachments/fireCloudZoneOrgValueLogo.png
+      edit: lms-admin/org-activity-library/attachments/fireCloudZoneOrgEditLogo.png
+    themeColor:
+      value: '#aa4100ff'
+      edit: '#2f00b0ff'
+    totalAuthor:
+      value: 2
+    authorEmery:
+      name:
+        value: AuEmery
+      position:
+        value: Learning Admin of FireCloud Zone
+      signature:
+        value: lms-admin/org-activity-library/attachments/EmeryValueSignature.png
+        edit: lms-admin/org-activity-library/attachments/EmeryEditSignature.png
+    authorBritney:
+      name:
+        value: AuBritney
+      position:
+        value: Instance Facilitator
+      signature:
+        value: lms-admin/org-activity-library/attachments/BritneyValueSignature.png
+        edit: lms-admin/org-activity-library/attachments/BritneyEditSignature.png
+  external:
+    enable: true
+    certificate:
+      value: Certificate
+    ofCompletion:
+      value: of learning
+    isPresentedTo:
+      value: This certificate is hereby bestowed upon
+    forSuccessfullyCompleting:
+      value: for completing course from "FireCloud Zone" organization
+    issueOn:
+      value: On the
+    orgLogo:
+      value: lms-admin/org-activity-library/attachments/tCoPCertificateValueProfile.webp
+      edit: lms-admin/org-activity-library/attachments/tCoPCertificateEditProfile.webp
+    themeColor:
+      value: '#807a92ff'
+      edit: '#0dbcf6ff'
+    totalAuthor:
+      value: 2
+    authorKristy:
+      name:
+        value: AuKristy
+      position:
+        value: Community Owner
+      signature:
+        value: lms-admin/org-activity-library/attachments/KristyValueSignature.png
+        edit: lms-admin/org-activity-library/attachments/KristyEditSignature.png
+    authorKendall:
+      name:
+        value: AuKendall
+      position:
+        value: Community Admin
+      signature:
+        value: lms-admin/org-activity-library/attachments/KendallValueSignature.png
+        edit: lms-admin/org-activity-library/attachments/KendallEditSignature.png
+
+ActivityLibrary:
+  hyperlink:
+    beginnerTennisLesson: &beginnerTennisLessonHyperlink
+      type: Hyperlink
+      from: Organization
+      title:
+        value: Beginner Tennis Lesson
+
+CategoryData:
+  ctgFuncCertificate:
+    name:
+      value: &ctgFuncCertificateName Ctg Func Certificate
+    users:
+      addUsers: &ctgFuncCertificateUsers
+        - &courseAdminScreenName au_ln_couad
+        - au_ln_istmem
+        - &courseFaciScreenName au_ln_coufaci
+      members: *ctgFuncCertificateUsers
+
+Communities:
+  tCoPFuncCourseCertificate: &tCoPFuncCourseCertificate
+    organization: FireCloud Zone
+    name:
+      value: TCoP Func FireCloud Course Certificate
+    url: /web/tcop-func-firecloud-course-certificate
+    profile:
+      value: lms-admin/org-activity-library/attachments/tCoPCertificateValueProfile.webp
+    copUsers:
+      uat:
+        inviteViaEmails:
+          - &virgieEmail au.nonorg_virgie@mail.com
+        members:
+          - *virgieEmail
+
+CourseData:
+  courseFuncEnableCertificate:
+    name:
+      value: Course Func for Enable Certificate
+    image: lms-admin/course-certificate/attachments/courseFuncEnableCertificateValue.jpg
+    courseOverview: Use for enable course certificate
+    categories:
+      - *ctgFuncCertificateName
+    courseCompletion: true
+    url:
+      beta:
+        id:
+          - 136542929
+      uat:
+        id:
+          - 135824527
+    managePeople:
+      admins:
+        - *courseAdminScreenName
+    funcInstanceCompletedSeeCertificate:
+      url:
+        beta:
+          id:
+            - 136543264
+        uat:
+          id:
+            - 135824926
+      deliveryMethod: Self-study
+      title:
+        value: Func Instance completed and see certificate
+      additionalBookingNote: Course instance that learner completed successfully and award certificate
+      activities:
+        value:
+          beginnerTennisLesson: *beginnerTennisLessonHyperlink
+      completedDate:
+        beta: Mar 22, 2023
+  courseFuncDisableCertificate: &courseFuncDisableCertificate
+    name:
+      value: Course Func for Disable Certificate
+    image: &courseFuncDisableCertificateImage lms-admin/course-certificate/attachments/courseFuncDisableCertificateValue.jpg
+    courseOverview: Use for disable course certificate
+    categories:
+      - *ctgFuncCertificateName
+    courseCompletion: true
+    url:
+      beta:
+        id:
+          - 136542781
+      uat:
+        id:
+          - 135823986
+    managePeople:
+      admins:
+        - *courseAdminScreenName
+    funcInstanceCompletedNoCertificate:
+      url:
+        beta:
+          id:
+            - 136543172
+        uat:
+          id:
+            - 135824834
+      deliveryMethod: Virtual Classroom
+      title:
+        value: Func Instance completed and cannot see certificate
+      startDate: '2039-08-01'
+      endDate: '2039-08-30'
+      date: 01 Aug, 2039 - 30 Aug, 2039
+      additionalBookingNote: Course instance that learner completed successfully and don't have certificate
+      activities:
+        value:
+          beginnerTennisLesson: *beginnerTennisLessonHyperlink
+      completedDate:
+        beta: Mar 22, 2023
+  courseFuncModifyLanguage:
+    name:
+      value: Course Func for add/remove language in Certificate
+    image: lms-admin/course-certificate/attachments/courseFuncModifyLanguageValue.jpg
+    courseOverview: Use for checking after add/remove language from default certificate
+    categories:
+      - *ctgFuncCertificateName
+    courseCompletion: true
+    url:
+      beta:
+        id:
+          - 136543003
+      uat:
+        id:
+          - 135824675
+    managePeople:
+      admins:
+        - *courseAdminScreenName
+    funcInstanceViewLanguage:
+      url:
+        beta:
+          id:
+            - 136543436
+        uat:
+          id:
+            - 135825103
+      deliveryMethod: Physical Classroom
+      title:
+        value: Func Instance view certificate language
+      startDate: '2039-10-01'
+      endDate: '2039-10-30'
+      date: 01 Oct, 2039 - 30 Oct, 2039
+      additionalBookingNote: Course instance that learner completed successfully, have certificate.
+      activities:
+        value:
+          beginnerTennisLesson: *beginnerTennisLessonHyperlink
+      completedDate:
+        beta: Mar 22, 2023
+  courseFuncEditDefaultCertificate:
+    name:
+      value: Course Func for edit Certificate
+    image: lms-admin/course-certificate/attachments/courseFuncEditDefaultCertificateValue.webp
+    courseOverview: Use for checking awarded certificate and new certificate after editing default certificate
+    categories:
+      - *ctgFuncCertificateName
+    courseCompletion: true
+    url:
+      beta:
+        id:
+          - 136542853
+      uat:
+        id:
+          - 135824597
+    managePeople:
+      admins:
+        - *courseAdminScreenName
+    funcInstanceAwardedBeforeEditing:
+      url:
+        beta:
+          id:
+            - 136543081
+        uat:
+          id:
+            - 135824749
+      deliveryMethod: Self-study
+      title:
+        value: Func Instance awarded certificate before editing certificate
+      additionalBookingNote: Course instance that learner completed successfully and award certificate before editing certificate.
+      activities:
+        value:
+          beginnerTennisLesson: *beginnerTennisLessonHyperlink
+      completedDate:
+        beta: Mar 23, 2023
+    funcInstanceNewCompleteAfterEditing:
+      url:
+        beta:
+          id:
+            - 136543351
+        uat:
+          id:
+            - 143568817
+        local:
+          id:
+            - 135825009
+      deliveryMethod: Self-study
+      title:
+        value: Func Instance new complete after editing certificate
+      additionalBookingNote: Course instance that learner completed successfully and award certificate after editing certificate.
+      activities:
+        value:
+          beginnerTennisLesson: *beginnerTennisLessonHyperlink
+      completedDate:
+        beta:
+  copCourseFuncEditExternalCertificate:
+    name:
+      value: CoP Course Func for edit External Certificate
+    image: lms-admin/course-certificate/attachments/copCourseFuncEditExternalCertificateValue.jpg
+    courseOverview: Use for checking awarded certificate after editing external certificate
+    trainingCoP: *tCoPFuncCourseCertificate
+    courseCompletion: true
+    url:
+      beta:
+        id:
+          -
+      uat:
+        id:
+          -
+    copFuncInstanceAwardedBeforeEditing:
+      url:
+        beta:
+          id:
+            -
+        uat:
+          id:
+            -
+      deliveryMethod: Self-study
+      title:
+        value: CoP Func Instance awarded certificate before editing certificate
+      additionalBookingNote: Course instance that learner completed successfully and award certificate before editing certificate.
+      activities:
+        value:
+          beginnerTennisLesson: *beginnerTennisLessonHyperlink
+      completedDate:
+        beta: Mar 23, 2023

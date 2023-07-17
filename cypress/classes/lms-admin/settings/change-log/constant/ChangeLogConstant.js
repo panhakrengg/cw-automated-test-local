@@ -1,0 +1,45 @@
+export const CollaborationSettings = {
+  DISABLED_ENABLED: 'Disabled  Enabled',
+  ENABLED_DISABLED: 'Enabled  Disabled',
+  ALL_LEARNERS_IN_THIS_COURSE: 'All learners in this course',
+  ONLY_LEARNERS_IN_THE_SAME_INSTANCE: 'Only learners within the same course instance',
+}
+
+export const WhoLearnersCanSee = {
+  ALL_LEARNERS: `${CollaborationSettings.ONLY_LEARNERS_IN_THE_SAME_INSTANCE}  ${CollaborationSettings.ALL_LEARNERS_IN_THIS_COURSE}`,
+  ONLY_LEARNERS_SAME_INSTANCE: `${CollaborationSettings.ALL_LEARNERS_IN_THIS_COURSE}  ${CollaborationSettings.ONLY_LEARNERS_IN_THE_SAME_INSTANCE}`,
+}
+
+export const LogLabel = {
+  ACTIVITY: 'Activity:',
+  ADD_A_NEW_IMAGE: 'added a new image',
+  ALLOW_ADDING: 'Allow adding to profile:',
+  ALLOW_DUPLICATION: 'Allow duplication:',
+  ALL_INSTANCES: 'All instances',
+  AWARD_LEARNERS: 'Award learners with a certificate:',
+  CATEGORIES: 'Categories:',
+  CONSENT_FORM: 'Consent Form:',
+  CONSENT_ITEMS: 'Consent items',
+  COURSE_ATTACHMENT: 'Course Attachment:',
+  COURSE_FEE: 'Course Fee:',
+  COURSE_IMAGE: 'Course Image:',
+  COURSE_OVERVIEW: 'Course Overview:',
+  COURSE_TITLE: 'Course Title:',
+  DESCRIPTION: 'Description:',
+  ENABLED_DISCUSSIONS: 'Enable Discussions:',
+  ENABLE_CONNECT: 'Enable Connect:',
+  EXISTING_MEMBERS_MUST_AGREE: 'Existing members must agree to changes',
+  FILE: 'File:',
+  FILE_NAMES: 'File names',
+  FOLDER_NAMES: 'Folder names',
+  FORM_NAME: 'Form name',
+  INCLUDE_COVER_IMAGE: 'Include cover image:',
+  OPTIONAL: '(Optional)',
+  PAYMENT_METHOD: 'Payment Method:',
+  PERMISSION_NEEDED: 'Permission needed:',
+  SHARED_INSTANCES: 'Shared instances:',
+  SPECIFIC_INSTANCES: 'Specific instances',
+  TEMPLATE_OPTION: 'Template Option:',
+  TITLE: 'Title:',
+  WHO_CAN_SEE: 'Who learners can see:',
+}

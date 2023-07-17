@@ -1,0 +1,205 @@
+SmokeCommunityAdministration:
+  mwCoPSmoke:
+    name:
+      value: MWCoP Smoke Check
+    url: /web/mwcop-smoke-check
+    admin:
+      url: /web/mwcop-smoke-check/admin
+  oCoPSmoke:
+    name:
+      value: OCoP Smoke Check
+    url: /web/ocop-smoke-check
+    admin:
+      url: /web/ocop-smoke-check/admin/admin
+  tCoPSmoke:
+    name:
+      value: TCoP Smoke Check
+    url: /web/tcop-smoke-check
+    admin:
+      url: /web/tcop-smoke-check/admin/admin
+  tPCoPSmoke:
+    name:
+      value: TPCoP Smoke Check
+    url: /web/tpcop-smoke-check
+    admin:
+      url: /web/tpcop-smoke-check/admin
+  cwTCoPSmoke:
+    name:
+      value: CW TCoP Smoke Check
+    url: /web/cw-tcop-smoke-check
+    admin:
+      url: /web/cw-tcop-smoke-check/admin/admin
+  mwCoPUnlisted:
+    name:
+      value: MW Unlisted Community
+    url: /web/mw-unlisted-community
+    admin:
+      url: /web/mw-unlisted-community/admin
+  oCoPUnlisted:
+    name:
+      value: OCoP Fire Unlisted
+    url: /web/ocop-fire-unlisted
+    admin:
+      url: /web/ocop-fire-unlisted/admin/admin
+  tCoPUnlisted:
+    name:
+      value: TCoP Cloud Unlisted
+    url: /web/tcop-cloud-unlisted
+    admin:
+      url: /web/tcop-cloud-unlisted/admin/admin
+  tPCoPUnlisted:
+    name:
+      value: TPCoP Zone Unlisted
+    url: /web/tpcop-zone-unlisted
+    admin:
+      url: /web/tpcop-zone-unlisted/admin
+  mwCoPStandard:
+    name:
+      value: MW Standard Community
+    url: web/mw-standard-community
+    admin:
+      url: /web/mw-unlisted-community/admin
+  oCoPStandard:
+    name:
+      value: OCoP Fire Standard
+    url: /web/ocop-fire-standard
+    admin:
+      url: /web/ocop-fire-standard/admin/admin
+  tCoPStandard:
+    name:
+      value: TCoP Cloud Standard
+    url: /web/tcop-cloud-standard
+    admin:
+      url: /web/tcop-cloud-standard/admin/admin
+  tPCoPStandard:
+    name:
+      value: TPCoP Zone Standard
+    url: /web/tpcop-zone-standard
+    admin:
+      url: /web/tpcop-zone-standard/admin
+
+FuncCommunityVisibility:
+  mwCoPFuncStandard:
+    name:
+      value: MWCoP Func Standard
+    url: /web/mwcop-func-standard
+    admin:
+      url: /web/mwcop-func-standard/admin
+  orgCoPFuncStandard:
+    name:
+      value: OrgCoP Func Standard
+    url: /web/orgcop-func-standard
+    admin:
+      url: /web/orgcop-func-standard/admin/admin
+  tCoPFuncStandard:
+    name:
+      value: TCoP Func Standard
+    url: /web/tcop-func-standard
+    admin:
+      url: /web/tcop-func-standard/admin/admin
+  tPCoPFuncStandard:
+    name:
+      value: TPCoP Func Standard
+    url: /web/tpcop-func-standard
+    admin:
+      url: /web/tpcop-func-standard/admin
+  mwCoPFuncUnlisted:
+    name:
+      value: MWCoP Func Unlisted
+    url: /web/mwcop-func-unlisted
+    admin:
+      url: /web/mwcop-func-unlisted/admin
+  orgCoPFuncUnlisted:
+    name:
+      value: OrgCoP Func Unlisted
+    url: /web/orgcop-func-unlisted
+    admin:
+      url: /web/orgcop-func-unlisted/admin/admin
+  tCoPFuncUnlisted:
+    name:
+      value: TCoP Func Unlisted
+    url: /web/tcop-func-unlisted
+    admin:
+      url: /web/tcop-func-unlisted/admin/admin
+  tPCoPFuncUnlisted:
+    name:
+      value: TPCoP Func Unlisted
+    url: /web/tpcop-func-unlisted
+    admin:
+      url: /web/tpcop-func-unlisted/admin
+
+FuncCommunityMembership:
+  mwCoPCanJoin:
+    name:
+      value: MWCoP Func Can Join
+    url: /web/mwcop-func-can-join
+    admin:
+      url: /web/mwcop-func-can-join/admin
+  tPCoPCanJoin:
+    name:
+      value: TPCoP Func Can Join
+    url: /web/tpcop-func-can-join
+    admin:
+      url: /web/tpcop-func-can-join/admin
+  oCoPCanJoin:
+    name:
+      value: OCoP Func Can Join
+    url: /web/ocop-func-can-join
+    admin:
+      url: /web/ocop-func-can-join/admin/admin
+  tCoPCanJoin:
+    name:
+      value: TCoP Func Can Join
+    url: /web/tcop-func-can-join
+    admin:
+      url: /web/tcop-func-can-join/admin/admin
+
+FuncCommunitySettings:
+  mwCoPPublish:
+    name:
+      value: MWCoP Func Publish
+    url: /web/mwcop-func-publish
+    admin:
+      url: /web/mwcop-func-publish/admin
+  oCoPPublish:
+    name:
+      value: OCoP Func Publish
+    url: /web/ocop-func-publish
+    admin:
+      url: /web/ocop-func-publish/admin/admin
+  tCoPPublish:
+    name:
+      value: TCoP Func Publish
+    url: /web/tcop-func-publish
+    admin:
+      url: /web/tcop-func-publish/admin/admin
+  tpCoPPublish:
+    name:
+      value: TPCoP Func Publish
+    url: /web/tpcop-func-publish
+    admin:
+      url: /web/tpcop-func-publish/admin
+  mwCoPCannotJoin:
+    name:
+      value: MwCoP Func Cannot Join
+    url: /web/mwcop-func-cannot-join
+    admin:
+      url: /web/mwcop-func-cannot-join/admin
+  tpCoPCannotJoin:
+    name:
+      value: TPCoP Func Cannot Join
+    url: /web/tpcop-func-cannot-join
+    admin:
+      url: /web/tpcop-func-cannot-join/admin
+  oCoPCannotJoin:
+    name:
+      value: OCoP Func Cannot Join
+    url: /web/ocop-func-cannot-join
+    admin:
+      url: /web/ocop-func-cannot-join/admin/admin
+  tCoPCannotJoin:
+    name:
+      value: TCoP Func Cannot Join
+    url: /web/tcop-func-cannot-join
+    admin:
+      url: /web/tcop-func-cannot-join/admin/admin

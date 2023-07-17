@@ -1,0 +1,9 @@
+Emails:
+  invalid: user@gmail
+# Modify email below need to update in inviteUserList.xlsx
+BulkInvite:
+  emails:
+    - inviteuser01@yopmail.com
+    - inviteuser02@yopmail.com
+    - invalidEmailInvitation.com
+    - inviteUser02@yopmail.com

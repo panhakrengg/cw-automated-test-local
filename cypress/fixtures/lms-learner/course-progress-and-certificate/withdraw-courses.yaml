@@ -1,0 +1,107 @@
+CategoryData:
+  ctgFuncInstances:
+    name:
+      value: &ctgFuncInstancesName Ctg Func Instances
+
+ActivityLibrary:
+  file:
+    tOActivityImage: &tOActivityImage
+      type: File
+      from: Organization
+      title:
+        value: TOActivity file as image
+  richtext:
+    tOActivityReasonsWorkout: &tOActivityReasonsWorkout
+      type: Rich Text
+      from: Organization
+      title:
+        value: TOActivity Reasons Your Workout Should Include a Warm Up
+
+CourseData:
+  courseFuncWithdraw:
+    name:
+      value: Course Func for withdraw
+    courseOverview: This course use for withdraw course instances
+    image: lms-learner/course-progress-and-certificate/attachments/courseFuncWithdrawValue.jpg
+    categories:
+      - *ctgFuncInstancesName
+    url:
+      beta:
+        id:
+          -
+      uat:
+        id:
+          -
+      prd:
+        id:
+          -
+    managePeople:
+      addUsers:
+        - au_ln_couad
+      adminEmails:
+        - aue_tressie.hettinger47@
+    instanceInProgressCourse: &instanceInProgressCourse
+      title:
+        value: Instance is in Progress status
+      deliveryMethod: Self-study
+      additionalBookingNote: For testing withdraw in progress course.
+      activities:
+        value:
+          total: 2
+          tOActivityImage: *tOActivityImage
+          tOActivityReasonsWorkout: *tOActivityReasonsWorkout
+    instanceNewCourse: &instanceNewCourse
+      title:
+        value: Instance is in Start status
+      deliveryMethod: Virtual Classroom
+      startDate: '2039-07-01'
+      endDate: '2039-07-30'
+      additionalBookingNote: For testing withdraw course that not start learning yet or in Booked status.
+      managePeople:
+        faci:
+          - &instanceFaci au_ln_istfaci
+      activities:
+        value:
+          total: 1
+          tOActivityReasonsWorkout: *tOActivityReasonsWorkout
+    instanceNeverWithdraw:
+      <<: *instanceNewCourse
+      title:
+        value: Instance Never withdraw
+      additionalBookingNote: For learner book and not withdraw to keep the course is in My Learning
+      managePeople:
+        members:
+          - au_ln_istmem
+  courseFuncWithdrawNotification:
+    name:
+      value: Course Func for withdraw and check notification
+    courseOverview: This course use for withdraw course instances and admin check notification
+    image: lms-learner/course-progress-and-certificate/attachments/courseFuncWithdrawNotificationValue.jpg
+    categories:
+      - *ctgFuncInstancesName
+    url:
+      beta:
+        id:
+          -
+      uat:
+        id:
+          -
+      prd:
+        id:
+          -
+    instanceWithdrawNotify: &instanceWithdraw
+      title:
+        value: Instance for withdrawn and suppose to receive notification
+      deliveryMethod: Virtual Classroom
+      additionalBookingNote: For testing withdraw course then admin receive notification
+      managePeople:
+        faci:
+          - *instanceFaci
+
+CourseProgress:
+  instanceInProgressCourse: *instanceInProgressCourse
+
+WithdrawCourse:
+  instanceNewCourse: *instanceNewCourse
+  instanceInProgressCourse: *instanceInProgressCourse
+  instanceWithdraw: *instanceWithdraw

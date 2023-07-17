@@ -1,0 +1,464 @@
+CommunityPostMembers:
+  - &copAdminBettyeEmail au.copad_connection_bettye@mail.com
+  - &copContactManagerMurlEmailUat murl0@ethereal.email
+  - &copMemberEnolaEmailUat enola.renner@ethereal.email
+  - &copOwnerKristyGivenName Kristy
+  - &copOwnerPhoebeGivenName Phoebe
+
+Posts:
+  oCopOwnerPostShareAsMyOrg: &oCopOwnerPostShareAsMyOrgPost
+    title: &oCopOwnerPostShareAsMyOrgTitle OCoP Owner post share as My Organization
+    visibility: &myOrganization My Organization
+    author: &ownerPhoebe copOwner_Phoebe()
+  tCopOwnerPostShareAsAllLogIn: &tCopOwnerPostShareAsAllLogInPost
+    title: &tCopOwnerPostShareAsAllLogInTitle TCoP Owner post share as All Logged-in Users
+    visibility: &allLoginUsers All Logged-in Users
+    author: *ownerPhoebe
+  ownerSharingFromDetail: &ownerSharingFromDetailPost
+    title: Owner post for sharing from detail
+  oCopOwnerPostShareAsMyCommunity: &oCopOwnerPostShareAsMyCommunityPost
+    title: &oCopOwnerPostShareAsMyCommunityTitle OCoP Owner post share as My Community
+    visibility: *allLoginUsers
+    author: *ownerPhoebe
+  tCopOwnerPostShareAsMyCommunity: &tCopOwnerPostShareAsMyCommunityPost
+    title: &tCopOwnerPostShareAsMyCommunityTitle TCoP Owner post share as My Community
+    visibility: *allLoginUsers
+    author: *ownerPhoebe
+  adminActionFromDetailMyOrganization: &adminActionFromDetailMyOrganizationPost
+    visibility: *myOrganization
+    title: Admin post do action from detail as My Organization
+    truncateTitle: Admin post do action from detail as My...
+    author: &adminBettye copAdmin_Bettye()
+  ownerActionFromDetailAllLoggedIn: &ownerActionFromDetailAllLoggedInPost
+    visibility: *allLoginUsers
+    title: Owner post do action from detail as All Logged-in Users
+    truncateTitle: Owner post do action from detail as All...
+    author: *ownerPhoebe
+  ownerActionFromDetailMyCommunity: &ownerActionFromDetailMyCommunityPost
+    visibility: &myCommunity My Community
+    title: Owner post do action from detail as My Community
+    author: *ownerPhoebe
+  adminActionFromDetailOnlyMe: &adminActionFromDetailOnlyMePost
+    visibility: &onlyMe Only Me
+    title: Admin post do action from detail as Only Me
+    author: *adminBettye
+  ownerActionFromHomeMyOrganization: &ownerActionFromHomeMyOrganizationPost
+    visibility: *myOrganization
+    title: Owner post do action from home as My Organization
+    author: *ownerPhoebe
+
+QuickPosts:
+  oCopMemberQuickPostShareAsMyCommunity: &oCopMemberQuickPostShareAsMyCommunityPost
+    title: &oCopMemberQuickPostShareAsMyCommunityTitle OCoP Member quick post share as My Community
+    visibility: *myOrganization
+    author: &memberEnola copMember_Enola()
+  tCopMemberQuickPostShareAsMyCommunity: &tCopMemberQuickPostShareAsMyCommunityPost
+    title: &tCopMemberQuickPostShareAsMyCommunityTitle TCoP Member quick post share as My Community
+    visibility: *allLoginUsers
+    author: *memberEnola
+  oCopMemberQuickPostShareAsOnlyMe: &oCopMemberQuickPostShareAsOnlyMePost
+    title: &oCopMemberQuickPostShareAsOnlyMeTitle OCoP Member quick post share as Only Me
+    visibility: *myOrganization
+    author: *memberEnola
+  tCopMemberQuickPostShareAsOnlyMe: &tCopMemberQuickPostShareAsOnlyMePost
+    title: &tCopMemberQuickPostShareAsOnlyMeTitle TCoP Member quick post share as Only Me
+    visibility: *allLoginUsers
+    author: *memberEnola
+  ownerSharingFromHome: &ownerSharingFromHomePost
+    title: Owner quick post for sharing from home
+  member2CommentsLikes: &member2CommentsLikesPost
+    title: Member post for 2 comments/likes
+    author: *memberEnola
+  member3CommentsLikes: &member3CommentsLikesPost
+    <<: *member2CommentsLikesPost
+    title: Member post for 3 comments/likes
+  memberActionFromHomeAllLoggedIn: &memberActionFromHomeAllLoggedInPost
+    visibility: *allLoginUsers
+    title: Member post do action from home as All Logged-in Users
+    truncateTitle: Member post do action from home as All...
+    author: &memberMurl copContactManager_Murl()
+  adminActionFromHomeMyCommunity: &adminActionFromHomeMyCommunityPost
+    visibility: *myCommunity
+    title: Admin post do action from home as MyCommunity
+    author: *adminBettye
+  ownerActionFromHomeOnlyMe: &ownerActionFromHomeOnlyMePost
+    visibility: *onlyMe
+    title: Owner post do action from home as Only Me
+    author: *ownerPhoebe
+  memberPostHasFollower: &memberPostHasFollowerPost
+    title: Member post has follower
+    author: *memberMurl
+    follower: *memberEnola
+
+Communities:
+  oCoPAcceptSharing: &oCoPAcceptSharing
+    organization: &fireCloudZone FireCloud Zone
+    type: Organization
+    name: &oCoPAcceptSharingName OCoP Func Accept Sharing
+    url: &oCoPAcceptSharingUrl /web/ocop-func-accept-sharing
+    copUsers:
+      uat:
+        inviteViaEmails: &inviteViaEmails
+          - *copMemberEnolaEmailUat
+          - *copAdminBettyeEmail
+          - *copContactManagerMurlEmailUat
+        members: *inviteViaEmails
+        owner: *copOwnerKristyGivenName
+  oCoPFuncForNewPost: &oCoPFuncForNewPost
+    <<: *oCoPAcceptSharing
+    name: &oCoPFuncForNewPostName OCoP Func For New Post
+    url: /web/ocop-func-for-new-post
+    copUsers:
+      uat:
+        inviteViaEmails: *inviteViaEmails
+        members: *inviteViaEmails
+        owner: *copOwnerKristyGivenName
+        admins:
+          - *copAdminBettyeEmail
+        contactManagers:
+          - *copContactManagerMurlEmailUat
+  tCoPFuncForNewPost:
+    <<: *oCoPFuncForNewPost
+    type: Training
+    name: &tCoPFuncForNewPostName TCoP Func For New Post
+    url: /web/tcop-func-for-new-post
+  tCoPAcceptSharing:
+    <<: *oCoPAcceptSharing
+    organization: *fireCloudZone
+    type: Training
+    name: &tCoPAcceptSharingName TCoP Func Accept Sharing
+    url: /web/tcop-func-accept-sharing
+  oCoPSharingNotify: &oCoPSharingNotify
+    organization: *fireCloudZone
+    type: Organization
+    name: OCoP Func Share Post Notify
+    url: /web/ocop-func-share-post-notify
+    copUsers:
+      uat:
+        inviteViaEmails: *inviteViaEmails
+        members: *inviteViaEmails
+        admins:
+          - *copAdminBettyeEmail
+        contactManagers:
+          - *copContactManagerMurlEmailUat
+        owner: *copOwnerPhoebeGivenName
+    posts:
+      oCopOwnerPostShareAsMyOrg: *oCopOwnerPostShareAsMyOrgPost
+    quickPosts:
+      oCopMemberQuickPostShareAsMyCommunity: *oCopMemberQuickPostShareAsMyCommunityPost
+      oCopMemberQuickPostShareAsOnlyMe: *oCopMemberQuickPostShareAsOnlyMePost
+      ownerSharingFromHome:
+        <<: *ownerSharingFromHomePost
+        visibility: *myOrganization
+        author: *ownerPhoebe
+  tCoPSharingNotify:
+    <<: *oCoPSharingNotify
+    organization: *fireCloudZone
+    type: Training
+    name: TCoP Func Share Post Notify
+    url: /web/tcop-func-share-post-notify
+    posts:
+      tCopOwnerPostShareAsAllLogIn: *tCopOwnerPostShareAsAllLogInPost
+    quickPosts:
+      tCopMemberQuickPostShareAsMyCommunity: *tCopMemberQuickPostShareAsMyCommunityPost
+      tCopMemberQuickPostShareAsOnlyMe: *tCopMemberQuickPostShareAsOnlyMePost
+      ownerSharingFromHome:
+        visibility: *allLoginUsers
+        <<: *ownerSharingFromHomePost
+        author: *ownerPhoebe
+  oCoPCommentLikeNotify: &oCoPCommentLikeNotify
+    organization: *fireCloudZone
+    type: Organization
+    name: OCoP Func Comment_Like Post Notify
+    url: /web/ocop-func-comment-like-post-notify
+    copUsers:
+      uat:
+        inviteViaEmails: *inviteViaEmails
+        members: *inviteViaEmails
+        admins:
+          - *copAdminBettyeEmail
+        owner: *copOwnerPhoebeGivenName
+    posts:
+      adminActionFromDetailMyOrganization: *adminActionFromDetailMyOrganizationPost
+      ownerActionFromDetailMyCommunity: *ownerActionFromDetailMyCommunityPost
+      ownerActionFromHomeMyOrganization: *ownerActionFromHomeMyOrganizationPost
+    quickPosts:
+      member3CommentsLikes: *member3CommentsLikesPost
+      adminActionFromHomeMyCommunity: *adminActionFromHomeMyCommunityPost
+      memberPostHasFollower: *memberPostHasFollowerPost
+    sharedPosts:
+      ownerShareToCurrentCommunityMyOrganization: &ownerShareToCurrentCommunityMyOrganization
+        <<: *adminActionFromDetailMyOrganizationPost
+        share:
+          to: &thisCommunity (This Community)
+          shareYourThoughts: &ownerShareToCurrentCommunityMyOrganizationShareThoughts Owner share post from home as My Organization
+          visibility: *myOrganization
+          author: *ownerPhoebe
+      adminShareToAnotherCommunityMyCommunity: &adminShareToAnotherCommunityMyCommunity
+        <<: *ownerActionFromHomeMyOrganizationPost
+        share:
+          to: *oCoPAcceptSharingName
+          shareYourThoughts: &adminShareToAnotherCommunityMyCommunityShareThoughts Admin share post from home as My Community
+          visibility: *myCommunity
+          author: *adminBettye
+  tCoPCommentLikeNotify:
+    <<: *oCoPCommentLikeNotify
+    type: Training
+    name: TCoP Func Comment_Like Post Notify
+    url: /web/tcop-func-comment-like-post-notify
+    posts:
+      ownerActionFromDetailAllLoggedIn: *ownerActionFromDetailAllLoggedInPost
+      adminActionFromDetailOnlyMe: *adminActionFromDetailOnlyMePost
+    quickPosts:
+      member2CommentsLikes: *member2CommentsLikesPost
+      memberActionFromHomeAllLoggedIn: *memberActionFromHomeAllLoggedInPost
+      ownerActionFromHomeOnlyMe: *ownerActionFromHomeOnlyMePost
+    sharedPosts:
+      memberShareToCurrentCommunityAllLoggedIn: &memberShareToCurrentCommunityAllLoggedIn
+        <<: *ownerActionFromDetailAllLoggedInPost
+        share:
+          to: *thisCommunity
+          shareYourThoughts: &memberShareToThisCommunityAllLoggedInTitle Member share post from home as All Logged-in
+          visibility: *allLoginUsers
+          author: *memberEnola
+      memberShareToAnotherCommunityOnlyMe: &memberShareToAnotherCommunityOnlyMe
+        <<: *memberActionFromHomeAllLoggedInPost
+        share:
+          to: *oCoPAcceptSharingName
+          shareYourThoughts: Member share post from home as Only Me
+          visibility: *onlyMe
+          author: *memberMurl
+      adminShareToCurrentCommunityHasFollower: &adminShareToCurrentCommunityHasFollower
+        <<: *ownerActionFromDetailAllLoggedInPost
+        share:
+          to: *thisCommunity
+          shareYourThoughts: Admin share post from home has follower
+          author: *adminBettye
+          follower: *memberMurl
+
+SharePostToAnotherCommunity:
+  oCoPFromDetailAsMyOrganization:
+    title: *oCopOwnerPostShareAsMyOrgTitle
+    share:
+      to: *oCoPAcceptSharingName
+      shareYourThoughts: AU member share post from detail as My Organization
+      visibility: *myOrganization
+      author: *memberEnola
+      url: *oCoPAcceptSharingUrl
+  tCoPFromDetailAsAllLoginUsers:
+    title: *tCopOwnerPostShareAsAllLogInTitle
+    share:
+      to: TCoP Func Accept Sharing
+      shareYourThoughts: AU member share post from detail as All Logged-in Users
+      visibility: *allLoginUsers
+      author: *memberEnola
+      url: /web/tcop-func-accept-sharing
+  oCoPFromHomeAsMyCommunity: &oCoPFromHomeAsMyCommunity
+    title: *oCopMemberQuickPostShareAsMyCommunityTitle
+    share:
+      to: *oCoPAcceptSharingName
+      shareYourThoughts: AU contact manager share post from home as My Community
+      visibility: My Community
+      author: *memberMurl
+      url: *oCoPAcceptSharingUrl
+  tCoPFromHomeAsMyCommunity:
+    <<: *oCoPFromHomeAsMyCommunity
+    title: *tCopMemberQuickPostShareAsMyCommunityTitle
+  oCoPFromHomeAsOnlyMe: &oCoPFromHomeAsOnlyMe
+    title: *oCopMemberQuickPostShareAsOnlyMeTitle
+    share:
+      to: *oCoPAcceptSharingName
+      shareYourThoughts: AU admin share post from home as Only Me
+      visibility: Only Me
+      author: *adminBettye
+      url: *oCoPAcceptSharingUrl
+  tCoPFromHomeAsOnlyMe:
+    <<: *oCoPFromHomeAsOnlyMe
+    title: *tCopMemberQuickPostShareAsOnlyMeTitle
+
+SharePostToCurrentCommunity:
+  fromHomeAsOnlyMe:
+    <<: *ownerSharingFromHomePost
+    share:
+      to: *thisCommunity
+      shareYourThoughts: AU owner share post from home as Only Me
+      visibility: Only Me
+      author: *ownerPhoebe
+  oCoPFromDetailAsMyCommunity: &oCoPFromDetailAsMyCommunity
+    title: *oCopOwnerPostShareAsMyCommunityTitle
+    share:
+      to: *thisCommunity
+      shareYourThoughts: AU contact manager share post from detail as My Community
+      visibility: My Community
+      author: *memberMurl
+  tCoPFromDetailAsMyCommunity:
+    <<: *oCoPFromDetailAsMyCommunity
+    title: *tCopOwnerPostShareAsMyCommunityTitle
+
+CommentPosts:
+  memberFromDetailAllLogin:
+    <<: *ownerActionFromDetailAllLoggedInPost
+    comment:
+      text:
+        - &auMemberCommentDetail AU Member comment from detail
+      by:
+        - *memberEnola
+  memberFromDetailMyOrganization:
+    <<: *adminActionFromDetailMyOrganizationPost
+    comment:
+      text:
+        - *auMemberCommentDetail
+      by:
+        - *memberMurl
+  memberFromDetailMyCommunity:
+    <<: *ownerActionFromDetailMyCommunityPost
+    comment:
+      text:
+        - *auMemberCommentDetail
+      by:
+        - *memberEnola
+  adminFromDetailOnlyMe:
+    <<: *adminActionFromDetailOnlyMePost
+    comment:
+      text:
+        - *auMemberCommentDetail
+      by:
+        - *adminBettye
+  member2CommentsLikes:
+    <<: *member2CommentsLikesPost
+    comment:
+      text:
+        - &auFirstComment AU first comment
+        - &auSecondComment AU second comment
+      by:
+        - *ownerPhoebe
+        - *adminBettye
+  member3CommentsLikes:
+    <<: *member3CommentsLikesPost
+    comment:
+      text:
+        - *auFirstComment
+        - *auSecondComment
+        - AU third comment
+      by:
+        - *ownerPhoebe
+        - *adminBettye
+        - *memberMurl
+  ownerFromHomeAllLoggedIn:
+    <<: *memberActionFromHomeAllLoggedInPost
+    comment:
+      text:
+        - &auOwnerCommentHome AU Owner comment from home
+      by:
+        - *ownerPhoebe
+  adminFromHomeMyOrganization:
+    <<: *ownerActionFromHomeMyOrganizationPost
+    comment:
+      text:
+        - &auAdminCommentHome AU Admin comment from home
+      by:
+        - *adminBettye
+  memberFromHomeMyCommunity:
+    <<: *adminActionFromHomeMyCommunityPost
+    comment:
+      text:
+        - &auMemberCommentHome AU Member comment from home
+      by:
+        - *memberEnola
+  ownerFromHomeOnlyMe:
+    <<: *ownerActionFromHomeOnlyMePost
+    comment:
+      text:
+        - *auOwnerCommentHome
+      by:
+        - *ownerPhoebe
+  adminCommentOnPostHasFollower:
+    <<: *memberPostHasFollowerPost
+    comment:
+      text:
+        - *auAdminCommentHome
+      by:
+        - *adminBettye
+  memberCommentOnSharePostAllLoggedIn:
+    title: *memberShareToThisCommunityAllLoggedInTitle
+    share:
+      comment:
+        text:
+          - *auMemberCommentHome
+        by:
+          - *memberMurl
+  memberCommentOnSharePostMyOrganization:
+    title: *ownerShareToCurrentCommunityMyOrganizationShareThoughts
+    share:
+      comment:
+        text:
+          - *auMemberCommentHome
+        by:
+          - *memberEnola
+  ownerCommentOnSharePostMyCommunity:
+    title: *adminShareToAnotherCommunityMyCommunityShareThoughts
+    share:
+      comment:
+        text:
+          - *auOwnerCommentHome
+        by:
+          - copOwner_Kristy()
+  memberCommentOnOwnSharePostOnlyMe:
+    title: Member share post from home as Only Me
+    share:
+      comment:
+        text:
+          - *auMemberCommentHome
+        by:
+          - *memberMurl
+  memberCommentOnSharePostHasFollower:
+    title: Admin share post from home has follower
+    share:
+      comment:
+        text:
+          - *auMemberCommentHome
+        by:
+          - *memberEnola
+
+NewPosts:
+  auAdminPostAllLoggedInUsers:
+    typeOfPost: &standardPost Standard Post
+    visibility: *allLoginUsers
+    title: AU Admin post as All Logged-in Users
+  auAdminPostMyOrganization:
+    typeOfPost: &slideshow Slideshow
+    visibility: *myOrganization
+    title: AU Admin post as My Organization
+    slideshowImage:
+      name:
+        - auAdminPostMyOrganization.jpg
+      path:
+        - cop-posts/attachments/auAdminPostMyOrganization.jpg
+  auOwnerPostMyCommunity:
+    typeOfPost: &video Video
+    visibility: *myCommunity
+    title: AU Owner post as My Community
+    chooseFeatureVideo: Youtube/Vimeo
+    videoUrl: https://www.youtube.com/watch?v=P1hl_xjHTYc&pp=ygUKY3Jvc3N3aXJlZA%3D%3D
+  auOwnerPostOnlyMe:
+    typeOfPost: *standardPost
+    visibility: *onlyMe
+    title: AU Owner post as Only Me
+  auOwnerDraftPostMyOrganization:
+    typeOfPost: *standardPost
+    visibility: *myOrganization
+    title: AU Owner draft post as My Organization
+
+NewQuickPosts:
+  auMemberPostAllLoggedInUsers:
+    visibility: *allLoginUsers
+    title: AU Member quick post as All Logged-in Users
+  auMemberPostMyCommunity:
+    visibility: *myCommunity
+    title: AU Member quick post as My Community
+  auContactMangerPostMyOrganization:
+    visibility: *myOrganization
+    title: AU contact Manager quick post as My Organization
+  auContactMangerPostOnlyMe:
+    visibility: *onlyMe
+    title: AU contact Manager quick post as Only Me

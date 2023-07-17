@@ -1,0 +1,4 @@
+"Service","Name","Username","Password","Hostname","Port","Security"
+"SMTP","Shannon Bednar","shannon.bednar94@ethereal.email","ztQcP3Wf685sDqBKAU","smtp.ethereal.email",587,"STARTTLS"
+"IMAP","Shannon Bednar","shannon.bednar94@ethereal.email","ztQcP3Wf685sDqBKAU","imap.ethereal.email",993,"TLS"
+"POP3","Shannon Bednar","shannon.bednar94@ethereal.email","ztQcP3Wf685sDqBKAU","pop3.ethereal.email",995,"TLS"

@@ -1,0 +1,66 @@
+CourseData:
+  courseFuncManageInstance: &courseFuncManageInstance
+    url:
+      beta:
+        id:
+          - 129323264
+      uat:
+        id:
+          - 127941037
+    name:
+      value: Course Func Manage Instances
+    image: &courseFuncManageInstanceImage lms-admin/course-instance/attachments/courseFuncManageInstance_Image.png
+    courseOverview: Use for update course instances only such as archive, edit, ...
+    funcEditAllInfoInstance: &funcEditAllInfoInstance
+      url: &funcEditAllInfoInstanceUrl
+        beta:
+          id:
+            - 129398955
+        uat:
+          id:
+            - 127992428
+      deliveryMethod: Virtual Classroom
+      title:
+        value: Func Edit All Info Instance
+      language:
+        - English
+      courseCompletion: 2
+      expectedDuration: 120
+      courseContactEmail: conuser2022@mail.com
+      startDate: '2039-04-01'
+      endDate: '2039-05-30'
+      date: 01 Apr, 2039 - 30 May, 2039
+      maxParticipant: 10
+      mustBookBy: 2
+      mustCancelBy: 3
+      additionalBookingNote: This course instance is used for editing all info.
+      courseFee:
+        value: 20
+
+EditInstance:
+  courseFuncManageInstance:
+    <<: *courseFuncManageInstance
+    previous:
+      funcEditAllInfoInstance: *funcEditAllInfoInstance
+    new:
+      updateFuncEditAllInfoInstance:
+        url: *funcEditAllInfoInstanceUrl
+        title:
+          value: Func Edit All Info Instance updated
+        language:
+          - Spanish
+        deliveryMethod: Virtual Classroom
+        timezone: Asia/Phnom_Penh
+        courseCompletion: 1
+        expectedDuration: 200
+        courseContactEmail: conuser2022@mail.comupdated
+        startDate: '2039-05-01'
+        endDate: '2039-05-15'
+        date: 01 May, 2039 - 15 May, 2039
+        maxParticipant: 20
+        mustBookBy: 1
+        mustCancelBy: 2
+        additionalBookingNote: This course instance is used for editing all info. updated
+        status: Draft
+        courseFee:
+          value: 12

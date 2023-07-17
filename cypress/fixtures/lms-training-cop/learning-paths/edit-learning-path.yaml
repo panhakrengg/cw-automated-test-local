@@ -1,0 +1,24 @@
+EditLearningPath:
+  firstClass:
+    createdBy: &copAdmin CoPUsers.admin
+    # name: fyi: just add " Updated" at the end of text
+    # overview: fyi: just add " Updated" at the end of text
+    image: tennis city club.jpg
+    path: /lms-training-cop/learning-paths/tennis city club.jpg
+AddCourses:
+  firstClass:
+    courses:
+      tennisByYourself:
+        name: Tennis By Yourself
+        courseOverview: Tips on how to practice tennis alone and what equipment is helpful when practicing by yourself.
+        optional: true
+        tags:
+          - Online Communities
+AddMember:
+  tennisCityClub:
+    members:
+      copMember: CoPUsers.members
+RemoveMember:
+  tennisCityClub:
+    members:
+      copMember: CoPUsers.admin

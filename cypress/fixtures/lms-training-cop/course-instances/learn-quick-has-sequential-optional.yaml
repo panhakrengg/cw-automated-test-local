@@ -1,0 +1,38 @@
+CourseData:
+  learnQuickHasSequentialOptional:
+    name: CoP Course on Quick Activity, Has Sequential, & Has Optional
+    courseOverview: Draft course & has 1 instance.
+    attachment:
+      - pexels-pixabay-36478.jpg
+    url:
+      beta:
+        id:
+          - 108953557
+      uat:
+        id:
+          - 110677674
+      prd:
+        id:
+          - ''
+    duplicateQuickSequentialOptional:
+      deliveryMethod: Virtual Classroom
+      date: 01 Jul, 2039 - 24 Jul, 2039
+      additionalBookingNote: For testing course progress on quick file - Hyperlink, Physical Class, and Virtual Class. The course is below Sequential, and there is some activity is Optional.
+      activities:
+        total: 3
+        hyperlink:
+          title: Beginner Tennis Lesson
+        physicalTrainAtSchool:
+          title: Train at school playground
+          optional: true
+        virtualTalking:
+          title: Talking together
+          optional: true
+
+CourseProgress:
+  quickSequentialOptional:
+    startDate: '2028-07-15'
+    endDate: '2028-07-18'
+    date: 15 Jul, 2028 - 18 Jul, 2028
+    startTime: 12:00 am
+    endTime: 11:59 pm

@@ -1,0 +1,123 @@
+Categories:
+  ctgInstance:
+    name: &ctgInstanceName Ctg Func Instances
+    users:
+      addUsers:
+        - &courseAdminScreenName au_ln_coulead
+        - &courseFaciScreenName au_ln_coulfaci
+
+Courses:
+  courseFuncInstanceLog: &courseFuncInstanceLog
+    name: Course func for instance log
+    courseOverview: Course info will nothing change. It'll change only on Instances
+    categories:
+      - *ctgInstanceName
+    managePeople:
+      admins:
+        - *courseAdminScreenName
+      faci:
+        - *courseFaciScreenName
+
+CreateInstances:
+  courseFuncInstanceLog:
+    <<: *courseFuncInstanceLog
+    auInstanceWithAllInfo: &auInstanceWithAllInfo
+      title: AU instance log all info
+      deliveryMethod: Blended Learning
+      courseCompletion: 3
+      expectedDuration: 720
+      startDate: '2039-01-01'
+      endDate: '2039-03-03'
+      maxParticipant: 20
+      mustBookBy: 2
+      mustCancelBy: 1
+      courseContactEmail: conuser2022@mail.com
+      additionalBookingNote: &instanceLogAdditional For checking course instance log
+      courseFee:
+        value: 20
+        paymentMethod: Prepaid
+
+EditInstances:
+  courseFuncInstanceLog:
+    <<: *courseFuncInstanceLog
+    instanceForEditing:
+      previous:
+        <<: *auInstanceWithAllInfo
+        title: Instance for editing to check log
+        language:
+          - English (United States)
+        timeZone: (UTC +7:0) Indochina Time (Asia/Phnom_Penh)
+      new:
+        title: Instance for editing to check log updated
+        language:
+          - English (United States)
+          - Japanese (Japan)
+        timeZone: (UTC +9:0) Japan Standard Time
+        courseCompletion: 5
+        expectedDuration: 800
+        startDate: '2039-08-01'
+        endDate: '2039-09-03'
+        maxParticipant: 10
+        mustBookBy: 1
+        mustCancelBy: 2
+        courseContactEmail: conuser2022@mail.comupdated
+        additionalBookingNote: For checking course instance log updated
+        courseFee:
+          value: 55
+          paymentMethod: Postpaid
+    instanceForDisableEnableConnect:
+      title: Instance for disable & enable connect to check log
+      deliveryMethod: Physical Classroom
+    instanceForDisableEnableDiscussion:
+      title: Instance for disable & enable discussion to check log
+      deliveryMethod: Virtual Classroom
+
+PublishUnpublishInstance:
+  courseFuncInstanceLog:
+    <<: *courseFuncInstanceLog
+    instanceForPublishLog:
+      title: Instance for publish & unpublish to check log
+      deliveryMethod: Self-study
+
+ArchiveInstances:
+  courseFuncInstanceLog:
+    <<: *courseFuncInstanceLog
+    instanceForArchiveLog:
+      title: Instance for archive to check log
+      deliveryMethod: Self-study
+    instanceForUnarchiveLog:
+      title: Instance for unarchive to check log
+      deliveryMethod: Blended Learning
+
+DeleteInstances:
+  courseFuncInstanceLog:
+    <<: *courseFuncInstanceLog
+    auInstanceForDeleteLog:
+      title: AU Instance for deleting to check log
+      deliveryMethod: Self-study
+
+LearnerResources:
+  courseFuncInstanceLog:
+    <<: *courseFuncInstanceLog
+    instanceNewFileFolder: &instanceNewFileFolder
+      title: Instance for new file & folder resource to check log
+      deliveryMethod: Virtual Classroom
+      managePeople:
+        faci:
+          - au_ln_istlfaci
+      learnerResources: &learnerResources
+        files:
+          rootFolder:
+            path: /lms-admin/lms-change-log/attachments/courseForPublishLogImage.jpg
+            name: courseForPublishLogImage.jpg
+        folders:
+          auFolder:
+            name: AU folder
+            files:
+              underAuFolder:
+                path: /lms-admin/lms-change-log/attachments/courseForEditInfoLogNewImage.jpg
+                name: courseForEditInfoLogNewImage.jpg
+    instanceDeleteFileFolder:
+      <<: *instanceNewFileFolder
+      title: Instance for delete file & folder resource to check log
+      deliveryMethod: Self-study

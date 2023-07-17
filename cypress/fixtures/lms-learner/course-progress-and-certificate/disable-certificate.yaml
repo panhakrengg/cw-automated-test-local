@@ -1,0 +1,50 @@
+CategoryData:
+  ctgFuncCertificate:
+    name:
+      value: &ctgFuncCertificateName Ctg Func Certificate
+
+ActivityLibrary:
+  file:
+    tOActivityDocWarmUp: &toActivityDocWarmUp
+      type: File
+      from: Organization
+      title:
+        value: TOActivity Warm Up Guide
+
+CourseData:
+  progressOnDisableCertificate:
+    name:
+      value: Progress on disable certificate
+    courseOverview: This course is disabled certificate after course completing.
+    image: lms-learner/course-progress-and-certificate/attachments/progressOnDisableCertificateValue.jpg
+    categories:
+      - *ctgFuncCertificateName
+    courseCompletion: false
+    url:
+      beta:
+        id:
+          -
+      uat:
+        id:
+          -
+      prd:
+        id:
+          - ''
+    instanceNotAwardCertificate: &instanceNotAwardCertificate
+      title:
+        value: Instance not award certificate
+      deliveryMethod: Blended Learning
+      startDate: '2039-12-01'
+      edDate: '2039-12-31'
+      date: 01 Dec, 2039 - 31 Dec, 2039
+      additionalBookingNote: Learner will not award certificate after completing this course instance.
+      activities:
+        value:
+          total: 1
+          tOActivityDocWarmUp: *toActivityDocWarmUp
+
+CourseProgress:
+  auInstanceNotAwardCertificate:
+    <<: *instanceNotAwardCertificate
+    title:
+      new: AU Instance not award certificate

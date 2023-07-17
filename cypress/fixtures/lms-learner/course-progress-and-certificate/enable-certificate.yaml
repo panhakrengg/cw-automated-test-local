@@ -1,0 +1,50 @@
+CategoryData:
+  ctgFuncCertificate:
+    name:
+      value: &ctgFuncCertificateName Ctg Func Certificate
+
+ActivityLibrary:
+  file:
+    tOActivityDocWarmUp: &toActivityDocWarmUp
+      type: File
+      from: Organization
+      title:
+        value: TOActivity Warm Up Guide
+
+CourseData:
+  progressOnEnableCertificate:
+    name:
+      value: Progress on enable certificate
+    courseOverview: This course is enabled certificate after course completing.
+    image: lms-learner/course-progress-and-certificate/attachments/progressOnEnableCertificateValue.jpg
+    categories:
+      - *ctgFuncCertificateName
+    courseCompletion: true
+    url:
+      beta:
+        id:
+          -
+      uat:
+        id:
+          -
+      prd:
+        id:
+          - ''
+    instanceAwardCertificate: &instanceAwardCertificate
+      title:
+        value: Instance will award certificate
+      deliveryMethod: Blended Learning
+      startDate: '2039-11-01'
+      edDate: '2039-11-30'
+      date: 01 Nov, 2039 - 30 Nov, 2039
+      additionalBookingNote: Learner will award certificate after completing this course instance.
+      activities:
+        value:
+          total: 1
+          tOActivityDocWarmUp: *toActivityDocWarmUp
+
+CourseProgress:
+  auInstanceAwardCertificate:
+    <<: *instanceAwardCertificate
+    title:
+      new: AU Instance will award certificate

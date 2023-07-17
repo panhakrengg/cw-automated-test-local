@@ -1,0 +1,75 @@
+CourseData:
+  tennisWarmUpGuide:
+    description: Use for edit course and data in course instance
+    name: Tennis Warm-Up Guide
+    bannerImage: &tennisBallImage tennis ball.jpg
+    courseOverview: Tennis players must keep their limbs warm and their minds sharp during a tennis match. reference https://www.masterclass.com/articles/tennis-warm-up-guide
+    uploadedFiles:
+      - tennis warm-up guide 2022.pdf
+    tagSkill:
+      - Member Health & Well-Being
+    url:
+      beta:
+        id:
+          - 102765415
+      uat:
+        id:
+          - 101485726
+      prd:
+        id:
+          - 52065394
+    courseInstances:
+      editInstance: &editInstance
+        startDate: 01 Aug, 2025
+        startTime: 7:30 am
+        endDate: 31 Jul, 2039
+        endTime: 6:00 pm
+        date: 01 Aug, 2025 - 31 Jul, 2039
+        deliveryMethod: Blended Learning
+        additionalBookingNote: Use for edit instance
+        courseFee: &editInstancesFee
+          value: 50
+          currency: USD
+        timeZone: (UTC +7:0) Indochina Time (Asia/Phnom_Penh)
+        removeLanguage: &frenchLanguage French (Canada)
+        language: English (United States)
+        courseCompletion: 15
+        expectedDuration: 60
+        maxParticipant: 33
+        mustBookBy: 5
+        mustCancelBy: 2
+        contactEmail: conuser2022@outlook.com
+        url:
+          beta:
+            id:
+              - 104474412
+          uat:
+            id:
+              - 105066032
+          prd:
+            id:
+              - ''
+EditInstance:
+  tennisWarmUpGuide:
+    courseInstances:
+      editInstance:
+        <<: *editInstance
+        startDate: '2025-08-02'
+        startTime: 8:00 am
+        endDate: '2039-07-01'
+        endTime: 5:20 pm
+        date: 02 Aug, 2025 - 01 Jul, 2039
+        additionalBookingNote: Use for edit instance updated
+        courseFee:
+          <<: *editInstancesFee
+          value: 75
+        timeZone: (UTC +7:0) Indochina Time (Asia/Bangkok)
+        language: *frenchLanguage
+        displayLanguages: English, French
+        courseCompletion: 10
+        expectedDuration: 80
+        duration: 1 Hour 20 Minutes
+        maxParticipant: 40
+        mustBookBy: 7
+        mustCancelBy: 4
+        contactEmail: conuser2022@outlook.comupdated

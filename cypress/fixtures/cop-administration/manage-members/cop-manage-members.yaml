@@ -1,0 +1,588 @@
+CommunityManageMemberUsers:
+  - &auAmandaScreenName au_connect_amand
+  - &auBettyeEmail au.copad_connection_bettye@mail.com
+  - &auEmeryEmailUat aue_emery.macgyver39@ethereal.email
+  - &auHazleEmailUat hazle24@ethereal.email
+  - &auLitzyEmailUat aue_litzy5@ethereal.email
+  - &auJamisonScreenName au_connect_jami
+  - &auKendallEmailUat kendall.feeney@ethereal.email
+  - &aueEnolaEmailUat enola.renner@ethereal.email
+  - &aueFrancesEmailUat aue_frances.ondricka@ethereal.email
+  - &aueGilesEmailUat aue_giles.grimes@ethereal.email
+  - &aueJoanieEmailUat aue_joanie.deckow@ethereal.email
+  - &aueMurlEmailUat murl0@ethereal.email
+  - &aueTressieEmailUat aue_tressie.hettinger47@ethereal.email
+  - &cw03Email noncw03@mail.com
+  - &cw04Email noncw04@mail.com
+  - &cw05Email noncw05@mail.com
+  - &cw06Email noncw06@mail.com
+  - &cw07Email noncw07@mail.com
+  - &cw08Email noncw08@mail.com
+  - &delphiaInfo UserRole.LMS_USERS.LEANER.AU_LN_IST_MEM_DELPHIA
+  - &designFrontendCoPOwnerInfo UserRole.DESIGN_FRONTEND.OWNERS
+  - &designFrontendTeamLeadInfo UserRole.DESIGN_FRONTEND.TEAM_LEADERS
+  - &freeFuncEmail free.func@mail.com
+  - &kentonInfo UserRole.LMS_USERS.CATEGORY_ADMIN.AU_LN_CTG_AD_KENTON
+  - &malloryInfo UserRole.LMS_USERS.LEANER.AU_LN_IST_MEM_MALLORY
+  - &maverickInfo UserRole.LMS_USERS.COURSE_ADMIN.AU_LN_COU_LEAD_FACI_MAVERICK
+  - &phoebeEmailUat phoebe49@ethereal.email
+  - &quentinInfo UserRole.LMS_USERS.LEANER.AU_LN_CTG_MEM_QUESTIN
+  - &rootOrgUnitInfo UserRole.ROOT_ORG_UNIT.MEMBERS
+
+Communities:
+  mwCoPInvite: &mwCoPInvite
+    type: Mission Worker
+    name:
+      value: MWCoP Func For Invitation
+    url: /web/mwcop-func-for-invitation
+    admin:
+      url: /web/mwcop-func-for-invitation/admin
+    copUsers:
+      uat:
+        inviteViaEmails:
+          - *phoebeEmailUat
+        members:
+          - *phoebeEmailUat
+        admins:
+          - *phoebeEmailUat
+        owner: *phoebeEmailUat
+  oCoPInvite: &oCoPInvite
+    type: Organization
+    organization: &fireCloudZone FireCloud Zone
+    name:
+      value: OCoP Func For Invitation
+    url: /web/ocop-func-for-invitation
+    admin:
+      url: /web/ocop-func-for-invitation/admin/admin
+    copUsers:
+      uat:
+        inviteViaEmails:
+          - *auBettyeEmail
+        members:
+          - *auBettyeEmail
+        admins:
+          - *auBettyeEmail
+    isOrgCop: true
+  tCoPInvite: &tCoPInvite
+    <<: *oCoPInvite
+    type: Training
+    organization: *fireCloudZone
+    name:
+      value: TCoP Func For Invitation
+    url: /web/tcop-func-for-invitation
+    admin:
+      url: /web/tcop-func-for-invitation/admin/admin
+    isOrgCop: true
+  tPCoPInvite: &tPCoPInvite
+    type: Topical
+    name:
+      value: TPCoP Func For Invitation
+    url: /web/tpcop-func-for-invitation
+    admin:
+      url: /web/tpcop-func-for-invitation/admin
+    copUsers:
+      uat:
+        inviteViaEmails:
+          - *auBettyeEmail
+        members:
+          - *auBettyeEmail
+        admins:
+          - *auBettyeEmail
+  mwCoPReminder: &mwCoPReminder
+    type: Mission Worker
+    name:
+      value: MWCoP Func For Reminder
+    url: /web/mwcop-func-for-reminder
+    admin:
+      url: /web/mwcop-func-for-reminder/admin
+    copUsers:
+      uat:
+        inviteViaEmails:
+          - *phoebeEmailUat
+          - *cw03Email
+          - *aueFrancesEmailUat
+        members:
+          - *phoebeEmailUat
+        admins:
+          - *phoebeEmailUat
+        owner: *phoebeEmailUat
+  tPCoPReminder: &tPCoPReminder
+    <<: *mwCoPInvite
+    type: Topical
+    name:
+      value: TPCoP Func For Reminder
+    url: /web/tpcop-func-for-reminder
+    admin:
+      url: /web/tpcop-func-for-reminder/admin
+    copUsers:
+      inviteViaEmails:
+        - *cw04Email
+        - *aueTressieEmailUat
+  oCoPReminder: &oCoPReminder
+    type: Organization
+    organization: *fireCloudZone
+    name:
+      value: OCoP Func For Reminder
+    url: /web/ocop-func-for-reminder
+    admin:
+      url: /web/ocop-func-for-reminder/admin/admin
+    copUsers:
+      inviteViaEmails:
+        - *cw03Email
+        - *aueFrancesEmailUat
+  tCoPReminder: &tCoPReminder
+    type: Organization
+    organization: *fireCloudZone
+    name:
+      value: TCoP Func For Reminder
+    url: /web/tcop-func-for-reminder
+    admin:
+      url: /web/tcop-func-for-reminder/admin/admin
+    copUsers:
+      inviteViaEmails:
+        - *cw04Email
+        - *aueTressieEmailUat
+  mwCoPAcceptHome: &mwCoPAcceptHome
+    <<: *mwCoPInvite
+    name:
+      value: MWCoP Func For Accept from Home
+    url: /web/mwcop-func-for-accept-from-home
+    admin:
+      url: /web/mwcop-func-for-accept-from-home/admin
+    copUsers:
+      uat:
+        inviteViaEmails:
+          - *phoebeEmailUat
+        members:
+          - *phoebeEmailUat
+        admins:
+          - *phoebeEmailUat
+        owner: *phoebeEmailUat
+  oCoPAcceptHome: &oCoPAcceptHome
+    type: Organization
+    organization: *fireCloudZone
+    name:
+      value: OCoP Func For Accept from Home
+    url: /web/ocop-func-for-accept-from-home
+    admin:
+      url: /web/ocop-func-for-accept-from-home/admin/admin
+    copUsers:
+      uat:
+        inviteViaEmails:
+          - *auBettyeEmail
+        members:
+          - *auBettyeEmail
+        admins:
+          - *auBettyeEmail
+  tCoPAcceptHome: &tCoPAcceptHome
+    <<: *oCoPInvite
+    type: Training
+    organization: *fireCloudZone
+    name:
+      value: TCoP Func For Accept from Home
+    url: /web/tcop-func-for-accept-from-home
+    admin:
+      url: /web/tcop-func-for-accept-from-home/admin/admin
+    copUsers:
+      uat:
+        inviteViaEmails:
+          - *auKendallEmailUat
+        members:
+          - *auKendallEmailUat
+        admins:
+          - *auKendallEmailUat
+  tPCoPAcceptHome: &tPCoPAcceptHome
+    type: Topical
+    name:
+      value: TPCoP Func For Accept from Home
+    url: /web/tpcop-func-for-accept-from-home
+    admin:
+      url: /web/tpcop-func-for-accept-from-home/admin
+    copUsers:
+      uat:
+        inviteViaEmails:
+          - *auKendallEmailUat
+        members:
+          - *auKendallEmailUat
+        admins:
+          - *auKendallEmailUat
+  mwCoPAcceptEmail: &mwCoPAcceptEmail
+    <<: *mwCoPAcceptHome
+    name:
+      value: MWCoP Func For Accept from Email
+    url: /web/mwcop-func-for-accept-from-email
+    admin:
+      url: /web/mwcop-func-for-accept-from-email/admin
+  oCoPAcceptEmail: &oCoPAcceptEmail
+    <<: *oCoPAcceptHome
+    name:
+      value: OCoP Func For Accept from Email
+    url: /web/ocop-func-for-accept-from-email
+    admin:
+      url: /web/ocop-func-for-accept-from-email/admin/admin
+  tCoPAcceptEmail: &tCoPAcceptEmail
+    <<: *tCoPAcceptHome
+    name:
+      value: TCoP Func For Accept from Email
+    url: /web/tcop-func-for-accept-from-email
+    admin:
+      url: /web/tcop-func-for-accept-from-email/admin/admin
+  tPCoPAcceptEmail: &tPCoPAcceptEmail
+    <<: *tPCoPAcceptHome
+    name:
+      value: TPCoP Func For Accept from Email
+    url: /web/tpcop-func-for-accept-from-email
+    admin:
+      url: /web/tpcop-func-for-accept-from-email/admin
+  mwCoPAcceptDenyWeb: &mwCoPAcceptDenyWeb
+    <<: *mwCoPInvite
+    name:
+      value: MWCoP Func For Accept_Deny from Web
+    url: /web/mwcop-func-for-accept-deny-from-web
+    admin:
+      url: /web/mwcop-func-for-accept-deny-from-web/admin
+  oCoPAcceptDenyWeb: &oCoPAcceptDenyWeb
+    type: Organization
+    organization: *fireCloudZone
+    name:
+      value: OCoP Func For Accept_Deny from Web
+    url: /web/ocop-func-for-accept-deny-from-web
+    admin:
+      url: /web/ocop-func-for-accept-deny-from-web/admin/admin
+  tCoPAcceptDenyWeb: &tCoPAcceptDenyWeb
+    <<: *oCoPInvite
+    type: Training
+    organization: *fireCloudZone
+    name:
+      value: TCoP Func For Accept_Deny from Web
+    url: /web/tcop-func-for-accept-deny-from-web
+    admin:
+      url: /web/tcop-func-for-accept-deny-from-web/admin/admin
+  tPCoPAcceptDenyWeb: &tPCoPAcceptDenyWeb
+    type: Topical
+    name:
+      value: TPCoP Func For Accept_Deny from Web
+    url: /web/tpcop-func-for-accept-deny-from-web
+    admin:
+      url: /web/tpcop-func-for-accept-deny-from-web/admin
+  mwCoPAssignRole: &mwCoPAssignRole
+    type: Mission Worker
+    name:
+      value: MWCoP Func For Assign Role
+    url: /web/mwcop-func-for-assign-role
+    admin:
+      url: /web/mwcop-func-for-assign-role/admin
+    copUsers:
+      uat:
+        inviteViaEmails:
+          - *phoebeEmailUat
+          - *auKendallEmailUat
+          - *aueMurlEmailUat
+          - *aueEnolaEmailUat
+        members:
+          - *phoebeEmailUat
+          - *auKendallEmailUat
+          - *aueMurlEmailUat
+          - *aueEnolaEmailUat
+        admins:
+          - *phoebeEmailUat
+        owner: *phoebeEmailUat
+  oCoPAssignRole: &oCoPAssignRole
+    type: Organization
+    organization: *fireCloudZone
+    name:
+      value: OCoP Func For Assign Role
+    url: /web/ocop-func-for-assign-role
+    admin:
+      url: /web/ocop-func-for-assign-role/admin/admin
+    copUsers: &assignRoleUsers
+      uat:
+        inviteViaEmails:
+          - *auBettyeEmail
+          - *auKendallEmailUat
+          - *aueMurlEmailUat
+          - *aueEnolaEmailUat
+        members:
+          - *auBettyeEmail
+          - *auKendallEmailUat
+          - *aueEnolaEmailUat
+          - *aueMurlEmailUat
+  tCoPAssignRole: &tCoPAssignRole
+    type: Training
+    organization: *fireCloudZone
+    name:
+      value: TCoP Func For Assign Role
+    url: /web/tcop-func-for-assign-role
+    admin:
+      url: /web/tcop-func-for-assign-role/admin/admin
+    copUsers: *assignRoleUsers
+  tPCoPAssignRole: &tPCoPAssignRole
+    type: Topical
+    name:
+      value: TPCoP Func For Assign Role
+    url: /web/tpcop-func-for-assign-role
+    admin:
+      url: /web/tpcop-func-for-assign-role/admin
+    copUsers: *assignRoleUsers
+  mwCoPDeleteMember: &mwCoPDeleteMember
+    type: Mission Worker
+    name:
+      value: MWCoP Func For Deleting Member
+    url: /web/mwcop-func-for-deleting-member
+    admin:
+      url: /web/mwcop-func-for-deleting-member/admin
+    copUsers:
+      uat:
+        inviteViaEmails:
+          - *phoebeEmailUat
+        members:
+          - *phoebeEmailUat
+        admins:
+          - *phoebeEmailUat
+        owner: *phoebeEmailUat
+  oCoPDeleteMember: &oCoPDeleteMember
+    type: Organization
+    organization: *fireCloudZone
+    name:
+      value: OCoP Func For Deleting Member
+    url: /web/ocop-func-for-deleting-member
+    admin:
+      url: /web/ocop-func-for-deleting-member/admin/admin
+  tCoPDeleteMember: &tCoPDeleteMember
+    type: Training
+    organization: *fireCloudZone
+    name:
+      value: TCoP Func For Deleting Member
+    url: /web/tcop-func-for-deleting-member
+    admin:
+      url: /web/tcop-func-for-deleting-member/admin/admin
+  tPCoPDeleteMember: &tPCoPDeleteMember
+    type: Topical
+    name:
+      value: TPCoP Func For Deleting Member
+    url: /web/tpcop-func-for-deleting-member
+    admin:
+      url: /web/tpcop-func-for-deleting-member/admin
+
+InviteMembers:
+  mwCoPInvite:
+    <<: *mwCoPInvite
+    invite:
+      uat:
+        viaSelection:
+          - *auAmandaScreenName
+        viaCwUserEmail:
+          - &cwNormalUserEmailUat au.normaluser@crosswired.com
+        viaNonCwEmail:
+          - *cw03Email
+        viaMultiEmails: &viaMultiEmailsUatMW
+          - *aueTressieEmailUat
+          - *aueJoanieEmailUat
+          - *auEmeryEmailUat
+          - *cw04Email
+          - *cw05Email
+    personalNote: &invitationPersonalNote I would like to invite you to my community.
+  tPCoPInvite:
+    <<: *tPCoPInvite
+    invite:
+      uat:
+        viaSelection:
+          - *auJamisonScreenName
+        viaCwUserEmail:
+          - *auHazleEmailUat
+        viaNonCwEmail:
+          - *cw06Email
+        viaMultiEmails: &viaMultiEmailsUatTP
+          - *aueFrancesEmailUat
+          - *aueEnolaEmailUat
+          - *aueMurlEmailUat
+          - *cw07Email
+          - *cw08Email
+    personalNote: *invitationPersonalNote
+  oCoPInvite:
+    <<: *oCoPInvite
+    invite:
+      uat:
+        viaSelection:
+          - *auAmandaScreenName
+          - &orgUserScreenName aue_orgmember
+        viaCwUserEmail:
+          - *cwNormalUserEmailUat
+        viaOrgUserEmail:
+          - *aueGilesEmailUat
+        viaNonCwEmail:
+          - *cw03Email
+        viaMultiEmails: *viaMultiEmailsUatMW
+    personalNote: *invitationPersonalNote
+  tCoPInvite:
+    <<: *tCoPInvite
+    invite:
+      uat:
+        viaSelection:
+          - *auJamisonScreenName
+          - *orgUserScreenName
+        viaCwUserEmail:
+          - *auHazleEmailUat
+        viaOrgUserEmail:
+          - *auLitzyEmailUat
+        viaNonCwEmail:
+          - *cw06Email
+        viaMultiEmails: *viaMultiEmailsUatTP
+    personalNote: *invitationPersonalNote
+
+SendReminder:
+  mwCoPReminder:
+    <<: *mwCoPReminder
+    reminder: &reminderEmailsMW
+      uat:
+        viaCwUserEmail:
+          - *aueFrancesEmailUat
+        viaNonCwEmail:
+          - *cw03Email
+    personalNote: &reminderPersonalNote We're sending this email to remind you of our community invitation. Please kindly accept.
+  tPCoPReminder:
+    <<: *tPCoPReminder
+    reminder: &reminderEmailsTP
+      uat:
+        viaCwUserEmail:
+          - *aueTressieEmailUat
+        viaNonCwEmail:
+          - *cw04Email
+    personalNote: *reminderPersonalNote
+  oCoPReminder:
+    <<: *oCoPReminder
+    reminder: *reminderEmailsMW
+    personalNote: *reminderPersonalNote
+  tCoPReminder:
+    <<: *tCoPReminder
+    reminder: *reminderEmailsTP
+    personalNote: *reminderPersonalNote
+
+DenyCommunities:
+  mwCoPAcceptDenyWeb:
+    <<: *mwCoPAcceptDenyWeb
+    acceptBy:
+      - *designFrontendTeamLeadInfo
+  oCoPAcceptDenyWeb:
+    <<: *oCoPAcceptDenyWeb
+    acceptBy:
+      - *designFrontendTeamLeadInfo
+  tPCoPAcceptDenyWeb:
+    <<: *tPCoPAcceptDenyWeb
+    acceptBy:
+      - *designFrontendCoPOwnerInfo
+  tCoPAcceptDenyWeb:
+    <<: *tCoPAcceptDenyWeb
+    acceptBy:
+      - *designFrontendCoPOwnerInfo
+
+AcceptCommunities:
+  mwCoPAcceptHome:
+    <<: *mwCoPAcceptHome
+    acceptBy:
+      - *kentonInfo
+  oCoPAcceptHome:
+    <<: *oCoPAcceptHome
+    acceptBy:
+      - *kentonInfo
+  tPCoPAcceptHome:
+    <<: *tPCoPAcceptHome
+    acceptBy:
+      - *maverickInfo
+  tCoPAcceptHome:
+    <<: *tCoPAcceptHome
+    acceptBy:
+      - *maverickInfo
+  mwCoPAcceptEmail:
+    <<: *mwCoPAcceptEmail
+    acceptBy:
+      - *quentinInfo
+  oCoPAcceptEmail:
+    <<: *oCoPAcceptEmail
+    acceptBy:
+      - *quentinInfo
+  tPCoPAcceptEmail:
+    <<: *tPCoPAcceptEmail
+    acceptBy:
+      - *malloryInfo
+  tCoPAcceptEmail:
+    <<: *tCoPAcceptEmail
+    acceptBy:
+      - *malloryInfo
+  mwCoPAcceptDenyWeb:
+    <<: *mwCoPAcceptDenyWeb
+    acceptBy:
+      - *delphiaInfo
+  oCoPAcceptDenyWeb:
+    <<: *oCoPAcceptDenyWeb
+    acceptBy:
+      - *delphiaInfo
+  tPCoPAcceptDenyWeb:
+    <<: *tPCoPAcceptDenyWeb
+    acceptBy:
+      - *rootOrgUnitInfo
+  tCoPAcceptDenyWeb:
+    <<: *tCoPAcceptDenyWeb
+    acceptBy:
+      - *rootOrgUnitInfo
+
+AssignCommunityRole:
+  mwCoPAssignRole:
+    <<: *mwCoPAssignRole
+    roleMemberToAdmin: &roleMemberToAdmin
+      on:
+        uat: *auKendallEmailUat
+      previous: Member
+      new: Administrator
+    roleMemberToContactManager: &roleMemberToContactManager
+      on:
+        uat: *aueMurlEmailUat
+      previous: Member
+      new: &contactManagerRole Contact Manager
+    roleContactManagerToMember: &roleContactManagerToMember
+      on:
+        uat: *aueEnolaEmailUat
+      previous: *contactManagerRole
+      new: Member
+  oCoPAssignRole:
+    <<: *oCoPAssignRole
+    roleMemberToAdmin: *roleMemberToAdmin
+    roleMemberToContactManager: *roleMemberToContactManager
+    roleAdminToMember: &roleAdminToMember
+      on:
+        uat: *auBettyeEmail
+      previous: Administrator
+      new: Member
+  tPCoPAssignRole:
+    <<: *tPCoPAssignRole
+    roleMemberToAdmin: *roleMemberToAdmin
+    roleAdminToMember: *roleAdminToMember
+  tCoPAssignRole:
+    <<: *tCoPAssignRole
+    roleMemberToAdmin: *roleMemberToAdmin
+    roleMemberToContactManager: *roleMemberToContactManager
+    roleContactManagerToMember: *roleContactManagerToMember
+
+DeleteMembers:
+  mwCoPDeleteMember:
+    <<: *mwCoPDeleteMember
+    delete1Member:
+      uat:
+        - *auBettyeEmail
+    deleteBatchMember:
+      uat:
+        - *auKendallEmailUat
+        - *aueMurlEmailUat
+        - *aueEnolaEmailUat
+        - *auHazleEmailUat
+  oCoPDeleteMember:
+    <<: *oCoPDeleteMember
+    delete1Member:
+      uat:
+        - *freeFuncEmail
+    deleteBatchMember:
+      uat:
+        - *auKendallEmailUat
+        - *aueMurlEmailUat
+        - *aueEnolaEmailUat
+        - *auHazleEmailUat

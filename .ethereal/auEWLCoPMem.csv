@@ -1,0 +1,4 @@
+"Service","Name","Username","Password","Hostname","Port","Security"
+"SMTP","Jacey Welch","jacey.welch@ethereal.email","VB9vYxPv2dqkbxgHw2","smtp.ethereal.email",587,"STARTTLS"
+"IMAP","Jacey Welch","jacey.welch@ethereal.email","VB9vYxPv2dqkbxgHw2","imap.ethereal.email",993,"TLS"
+"POP3","Jacey Welch","jacey.welch@ethereal.email","VB9vYxPv2dqkbxgHw2","pop3.ethereal.email",995,"TLS"

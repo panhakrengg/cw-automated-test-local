@@ -1,0 +1,182 @@
+PostStatic:
+  typeAs:
+    standard:
+      label: &standard Standard
+    video:
+      label: &video Video
+      type:
+        vimeo: &vimeo Vimeo
+        youtube: &youtube YouTube
+        videoFile: &videoFile Video File
+    slideshow:
+      label: &slideshow Slideshow
+  visibility:
+    crosswired: &crosswired 1
+    organization: &organization 2
+    community: &community 3
+    onlyMe: &onlyMe 4
+  shareWithText: &shareWithText AU I Share Post With Text
+  commentText: Add a comment to post
+NewPost:
+  trainingCop:
+    label: Training 76th
+    type: Training
+    youtubeCrosswiredPost:
+      typeAs: *video
+      videoAs: *youtube
+      title: AU youtube video
+      isDraft: False
+      visibility:
+        value: *crosswired
+      postBody: This is a youtube video post
+      author:
+        name: wpOwner
+    standardCrosswiredPost:
+      typeAs: *standard
+      title: AU Standard Crosswired Post
+      isDraft: False
+      visibility:
+        value: *crosswired
+      postBody: This is a standard crosswired post
+      author:
+        name: wpOwner
+    standardCrosswiredDraftPost:
+      typeAs: *standard
+      title: AU Standard Crosswired Draft Post
+      isDraft: True
+      visibility:
+        value: *crosswired
+      postBody: This is a standard crosswired draft post
+      author:
+        name: wpOwner
+  orgCop:
+    label: Org 514th
+    type: Org
+    standardOrganizationDraftPost:
+      typeAs: *standard
+      title: AU Standard Organization Draft Post
+      isDraft: True
+      visibility:
+        value: *organization
+      postBody: This is a standard organization post
+      author:
+        name: wpOwner
+    standardCommunityPost:
+      typeAs: *standard
+      title: AU Standard Community Post
+      isDraft: False
+      visibility:
+        value: *community
+      postBody: This is a standard community post
+      author:
+        name: wpOwner
+    standardOrganizationPost:
+      typeAs: *standard
+      title: AU Standard Organization Post
+      isDraft: False
+      visibility:
+        value: *organization
+      postBody: This is a standard post
+      author:
+        name: wpOwner
+    standardOnlyMePost:
+      typeAs: *standard
+      title: AU Standard Only Me Post
+      isDraft: False
+      visibility:
+        value: *onlyMe
+      postBody: This is a standard post
+      author:
+        name: wpOwner
+    vimeoOrganizationPost:
+      typeAs: *video
+      videoAs: *vimeo
+      title: AU vimeo organization video
+      isDraft: False
+      visibility:
+        value: *organization
+      postBody: This is a video post
+      author:
+        name: wpOwner
+    videoFileOrganizationPost:
+      typeAs: *video
+      videoAs: *videoFile
+      title: AU video file organization post
+      isDraft: False
+      visibility:
+        value: *organization
+      postBody: This is a file video post
+    slideshowOrganizationPost:
+      typeAs: *slideshow
+      title: AU slideshow organization post
+      isDraft: False
+      visibility:
+        value: *organization
+      postBody: This is a slideshow post
+      author:
+        name: wpOwner
+SharePost:
+  orgCop:
+    standardOrganizationDraftPost:
+      users:
+        contactManager:
+          label: contactManager
+          shareWithText: *shareWithText
+          visibility: *onlyMe
+          isHome: True
+        orgCopMem:
+          label: orgCopMem
+          shareWithText: *shareWithText
+          visibility: *onlyMe
+          inPostDetail: True
+    slideshowOrganizationPost:
+      users:
+        contactManager:
+          label: contactManager
+          shareWithText: *shareWithText
+          visibility: *organization
+          inPostDetail: True
+    vimeoOrganizationPost:
+      users:
+        contactManager:
+          label: contactManager
+          shareWithText: *shareWithText
+          visibility: *onlyMe
+          inPostDetail: True
+    standardOrganizationPost:
+      users:
+        contactManager:
+          label: contactManager
+          shareWithText: *shareWithText
+          visibility: *community
+        orgCopMem:
+          label: orgCopMem
+          shareWithText: *shareWithText
+          visibility: *onlyMe
+          inPostDetail: True
+    videoFileOrganizationPost:
+      users:
+        contactManager:
+          label: contactManager
+          shareWithText: *shareWithText
+          visibility: *community
+
+  trainingCop:
+    youtubeCrosswiredPost:
+      users:
+        contactManager:
+          label: contactManager
+          shareWithText: *shareWithText
+          visibility: *crosswired
+    vimeoPost:
+      users:
+        contactManager:
+          label: contactManager
+          shareWithText: *shareWithText
+          visibility: *onlyMe
+    standardCrosswiredPost:
+      users:
+        contactManager:
+          label: contactManager
+          shareWithText: *shareWithText
+          visibility: *crosswired

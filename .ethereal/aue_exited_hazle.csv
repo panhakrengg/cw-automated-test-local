@@ -1,0 +1,4 @@
+"Service","Name","Username","Password","Hostname","Port","Security"
+"SMTP","Hazle Kozey","hazle24@ethereal.email","vCBgGV5BBw6m31UYcw","smtp.ethereal.email",587,"STARTTLS"
+"IMAP","Hazle Kozey","hazle24@ethereal.email","vCBgGV5BBw6m31UYcw","imap.ethereal.email",993,"TLS"
+"POP3","Hazle Kozey","hazle24@ethereal.email","vCBgGV5BBw6m31UYcw","pop3.ethereal.email",995,"TLS"

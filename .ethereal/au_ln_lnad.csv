@@ -1,0 +1,4 @@
+"Service","Name","Username","Password","Hostname","Port","Security"
+"SMTP","Emery MacGyver","emery.macgyver39@ethereal.email","DmKHvqKa2bugFQ9bs3","smtp.ethereal.email",587,"STARTTLS"
+"IMAP","Emery MacGyver","emery.macgyver39@ethereal.email","DmKHvqKa2bugFQ9bs3","imap.ethereal.email",993,"TLS"
+"POP3","Emery MacGyver","emery.macgyver39@ethereal.email","DmKHvqKa2bugFQ9bs3","pop3.ethereal.email",995,"TLS"

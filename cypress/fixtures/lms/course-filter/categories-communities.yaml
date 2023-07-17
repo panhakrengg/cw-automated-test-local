@@ -1,0 +1,9 @@
+CategoryData:
+  categoriesFilter: &categoriesFilter
+    name: Categories or Communities-Filter
+CourseData:
+  inSpecificCategory: &inSpecificCategory
+    name: Course under specific category
+    courseOverview: This course is under /Categories or Communities Filter/ of org lms FireCloud Zone
+    categories:
+      categoriesFilter: *categoriesFilter

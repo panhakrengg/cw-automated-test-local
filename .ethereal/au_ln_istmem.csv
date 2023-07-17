@@ -1,0 +1,4 @@
+"Service","Name","Username","Password","Hostname","Port","Security"
+"SMTP","Mallory Barton","mallory47@ethereal.email","dQqzwJdcss4ndNAMBv","smtp.ethereal.email",587,"STARTTLS"
+"IMAP","Mallory Barton","mallory47@ethereal.email","dQqzwJdcss4ndNAMBv","imap.ethereal.email",993,"TLS"
+"POP3","Mallory Barton","mallory47@ethereal.email","dQqzwJdcss4ndNAMBv","pop3.ethereal.email",995,"TLS"

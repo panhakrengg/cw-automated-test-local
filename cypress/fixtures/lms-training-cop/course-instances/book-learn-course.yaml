@@ -1,0 +1,47 @@
+BookedCourse:
+  free:
+    startDate: '2028-08-07'
+    endDate: '2028-08-13'
+    date: 07 Aug, 2028 - 13 Aug, 2028
+    additionalBookingNote: for booking free course & has only moodle activities
+    slotAvailable: 9
+  prePaid:
+    startDate: '2028-06-15'
+    endDate: '2028-06-18'
+    date: 15 Jun, 2028 - 18 Jun, 2028
+    additionalBookingNote: for booking pre-paid course & has only moodle activities
+    courseFee:
+      value: 26
+    slotAvailable: 9
+  learningPath:
+    startDate: '2028-08-15'
+    endDate: '2028-08-18'
+    date: 15 Aug, 2028 - 18 Aug, 2028
+    startTime: 12:00 am
+    endTime: 11:59 pm
+    deliveryMethod: Blended Learning
+CourseProgress:
+  quick:
+    startDate: '2028-04-15'
+    endDate: '2028-04-18'
+    date: 15 Apr, 2028 - 18 Apr, 2028
+  quickSequential:
+    startDate: '2028-05-15'
+    endDate: '2028-05-18'
+    date: 15 May, 2028 - 18 May, 2028
+  quickSequentialOptional:
+    startDate: '2028-07-15'
+    endDate: '2028-07-18'
+    date: 15 Jul, 2028 - 18 Jul, 2028
+  moodle:
+    startDate: '2028-03-15'
+    endDate: '2028-03-18'
+    date: 15 Mar, 2028 - 18 Mar, 2028
+  duplicateVideo:
+    startDate: '2028-09-15'
+    endDate: '2028-09-18'
+    date: 15 Sep, 2028 - 18 Sep, 2028
+  learningPath:
+    startDate: '2028-11-15'
+    endDate: '2028-11-18'
+    date: 15 Nov, 2028 - 18 Nov, 2028

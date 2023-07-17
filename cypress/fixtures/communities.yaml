@@ -1,0 +1,84 @@
+ManageCommunitySuite:
+  rootOrg:
+    webLearnUnit:
+      communities:
+        webLearnInternational:
+          local:
+            label: WebLearn International
+            type: Primary
+            url: /web/weblearn-international
+          uat:
+            label: WebLearn International
+            type: Primary
+            url: /web/weblearn-international
+          prd:
+            label: FireCloud Zone International
+            type: Primary
+            url: /web/firecloud-zone-international
+    WebLearn:
+      label: WebLearn
+      community:
+        WebLearn:
+          name: WebLearn
+          type: Organization
+          url: weblearn1
+  subOrg:
+    designFrontend:
+      label: Design Frontend
+      communities:
+        designFrontend:
+          label: Design Frontend
+          type: Organization
+          url: /web/design-frontend
+        designFrontend1:
+          label: Design Frontend
+          type: Training
+          url: /web/design-frontend1
+      subOrg:
+        instructionSession:
+          label: Instruction Session
+          type: Organization
+          communities:
+            computerFundamentals:
+              label: Computer Fundamentals
+            computerArchitecture:
+              label: Computer Architecture
+            dataStrucureAndAlgorithm:
+              label: Data Structure And Algorithm
+  nonOrg:
+    webDevelopmentConcept:
+      label: Web Development Concept
+      type: Organization
+      url:
+        local: /web/web-development-concept
+        uat: /web/web-development-concept
+        beta: /web/web-development-concept1
+    mobileDevelopmentConcept:
+      label: Mobile Development Concept
+      type: Training
+      url: /web/mobile-development-concept
+    androidDevelopmentConcept:
+      label: Android Development Concept
+      type: Organization
+      url: /web/android-development-concept
+    iosDevelopmentConcept:
+      label: IOS Development Concept
+      type: Training
+      url: /web/ios-development-concept
+
+CreateCommunities:
+  auJavaScriptEssential:
+    name: AU Javascript Essential
+    url: /web/au-javascript-essential
+  auCssEssential:
+    name: AU CSS3 Essential
+    url: /web/au-css3-essential
+  auJavaEssential:
+    name: AU JAVA Essential
+    url: /web/au-java-essential
+  auBootstrapEssential:
+    name: AU Bootstrap Essential
+    url: /web/au-bootstrap-essential
+  auCWTCoP:
+    name: AU CWTCoP Add to Org
+    url: /web/au-cwtcop-add-to-org

@@ -1,0 +1,24 @@
+SampleNote:
+  learner_Mallory:
+    user: &learnerMallory OrgLmsUsers.learners.auLnIstMem_Mallory
+    note: Learner Mallory - I follow training's session
+    note1: Learner Mallory - Good Training
+  learner_Delphia:
+    user: &learnerDelphia OrgLmsUsers.learners.auLnIstMem_Delphia
+    note: &learnerDelphiaNote Learner Delphia - Morning is a good time
+  istAdmin_Frances:
+    user: &istAdminFrances OrgLmsUsers.admins.instances.auLnIstAd_Frances
+    note: Instance Admin Frances - Should practice at least twice/week
+
+CreateNote:
+  learner_Mallory:
+    user: *learnerMallory
+    note: AU Learner Mallory - good knowledge
+  duplicate:
+    user: *learnerMallory
+    note: *learnerDelphiaNote
+
+EditNote:
+  learner_Mallory:
+    user: *learnerMallory
+    note: Learner Mallory - I follow training's session Updated

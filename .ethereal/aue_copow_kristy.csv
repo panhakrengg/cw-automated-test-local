@@ -1,0 +1,4 @@
+"Service","Name","Username","Password","Hostname","Port","Security"
+"SMTP","Kristy Bernhard","kristy78@ethereal.email","AFUpdyYegC4ys36em3","smtp.ethereal.email",587,"STARTTLS"
+"IMAP","Kristy Bernhard","kristy78@ethereal.email","AFUpdyYegC4ys36em3","imap.ethereal.email",993,"TLS"
+"POP3","Kristy Bernhard","kristy78@ethereal.email","AFUpdyYegC4ys36em3","pop3.ethereal.email",995,"TLS"

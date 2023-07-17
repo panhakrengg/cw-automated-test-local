@@ -1,0 +1,116 @@
+DiscussionInfo:
+  categories:
+    funCategoryEdit:
+      name: &funCategoryEditName Fun category for editing
+      description: Instance faci 'Britney' is owner
+      owner: &istFaciBritney istFaci_Britney()
+      parentCategory: &noneParentCategory
+        name: None
+    funCategoryUnsubscribe:
+      name: &funCategoryUnsubscriberName Fun category owner unsubscribe
+      description: Instance faci 'Britney' is owner, she unsubscribed the category.
+      owner: *istFaciBritney
+      parentCategory: *noneParentCategory
+    funCategoryForNewFaci:
+      name: Fun category for new facilitator
+      description: New facilitator will check existing category's subscription
+      owner: lnAdmin_Emery()
+      parentCategory: *noneParentCategory
+    parentCategory: &parentCategory
+      name: Parent category
+      owner: lnAdmin_Emery()
+      parentCategory: *noneParentCategory
+    funCategoryMoveParent:
+      name: Fun category for moving to None category
+      owner: lnAdmin_Emery()
+      parentCategory: *parentCategory
+  threads:
+    istFaci_Britney_ThreadEditCategory:
+      subject: Facilitator Britney - for checking category after editing
+      category:
+        name: *funCategoryEditName
+
+NewThreads:
+  auAdminCheckSubscription:
+    subject: AU Joanie - thread for check subscription behavior
+    category:
+      name: &uncategorisedCategoryName Uncategorised
+  auAdminNotifyAfterNewThreadCreate:
+    subject: AU Britney - thread other faci should notified.
+    category:
+      name: *uncategorisedCategoryName
+  auHopeUnsubscribeCategoryNoNotification:
+    subject: AU learner Delphia - hope unsubscribe category not receive notification
+    category:
+      name: *funCategoryUnsubscriberName
+
+NewCategory:
+  auCheckSubscriptionCategory:
+    name:
+      new: AU check subscription category
+    description: Author & another admin check subscription behavior after creating new category.
+    owner: couFaci_Joanie()
+    parentCategory: *noneParentCategory
+  auNotifyAfterNewCategoryCreate:
+    name:
+      new: AU check notification after create new category
+    description: Author create new category and course facilitator get notification.
+    owner: *istFaciBritney
+    parentCategory: *noneParentCategory
+  auFirstCategory:
+    name:
+      new: AU first category
+    description: Author & another facilitator get notification after creating first category.
+    owner: couFaci_Joanie()
+    parentCategory: *noneParentCategory
+  auSecondCategory:
+    name:
+      new: AU second category
+    description: Author & another facilitator get notification after creating second category.
+    owner: couFaci_Joanie()
+    parentCategory: *noneParentCategory
+
+CourseData:
+  courseFuncDiscussion:
+    name:
+      value: Course Func for Discussion
+    image: lms-admin/discussion-admin-site/attachments/courseFuncDiscussionValueImage.jpg
+    courseOverview: Use for discuss
+    categories:
+      - Ctg Func Instances
+    url:
+      beta:
+        id:
+          - 145861549
+      uat:
+        id:
+          - 129813685
+    managePeople:
+      admins:
+        - au_ln_couad
+      faci:
+        - au_ln_coufaci
+    funcInstanceDiscussion:
+      url:
+        beta:
+          id:
+            - 145879639
+        uat:
+          id:
+            - 129828166
+      deliveryMethod: Virtual Classroom
+      title:
+        value: Func Instance Discussion
+      startDate: '2039-11-01'
+      endDate: '2039-11-28'
+      date: 01 Nov, 2039 - 28 Nov, 2039
+      courseContactEmail: conuser2022@mail.com
+      additionalBookingNote: Course instance use for working on discussion
+      managePeople:
+        faci:
+          - au_ln_istfaci
+        learners:
+          - au_ln_istmem_del
+      newPeople:
+        faci:
+          - au_ln_istlfaci

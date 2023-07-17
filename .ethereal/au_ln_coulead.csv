@@ -1,0 +1,4 @@
+"Service","Name","Username","Password","Hostname","Port","Security"
+"SMTP","Giles Grimes","giles.grimes@ethereal.email","fYJSReq32pkWRD45GY","smtp.ethereal.email",587,"STARTTLS"
+"IMAP","Giles Grimes","giles.grimes@ethereal.email","fYJSReq32pkWRD45GY","imap.ethereal.email",993,"TLS"
+"POP3","Giles Grimes","giles.grimes@ethereal.email","fYJSReq32pkWRD45GY","pop3.ethereal.email",995,"TLS"

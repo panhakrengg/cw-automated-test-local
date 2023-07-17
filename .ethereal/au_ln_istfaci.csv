@@ -1,0 +1,4 @@
+"Service","Name","Username","Password","Hostname","Port","Security"
+"SMTP","Britney Windler","britney.windler89@ethereal.email","aw2m6QF8hmmXyqGG3s","smtp.ethereal.email",587,"STARTTLS"
+"IMAP","Britney Windler","britney.windler89@ethereal.email","aw2m6QF8hmmXyqGG3s","imap.ethereal.email",993,"TLS"
+"POP3","Britney Windler","britney.windler89@ethereal.email","aw2m6QF8hmmXyqGG3s","pop3.ethereal.email",995,"TLS"

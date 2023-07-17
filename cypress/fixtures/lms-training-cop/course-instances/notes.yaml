@@ -1,0 +1,60 @@
+CourseData:
+  tennisWarmUpGuide:
+    description: Use for edit course and data in course instance
+    name: Tennis Warm-Up Guide
+    url:
+      beta:
+        id:
+          - 102765415
+      uat:
+        id:
+          - 101485726
+      prd:
+        id:
+          - 52065394
+    courseInstances:
+      manageNote:
+        description: learner booked and use for Edit learner resources, discussion, note, virtual class activity
+        startDate: 31 Jan, 2025
+        endDate: 01 Jan, 2039
+        date: 31 Jan, 2025 - 01 Jan, 2039
+        url: &tennisWarmUpGuideNotesInstance
+          beta:
+            id:
+              - 102765491
+          uat:
+            id:
+              - 101486320
+          prd:
+            id:
+              - 52065632
+        learnerUrl: *tennisWarmUpGuideNotesInstance # please change InstanceId: /web/ci102765491/course-detail#_courseDetailPortlet_tab=
+        notes:
+          copAdmin:
+            user: &copAdmin CoPUsers.admin
+            note: Admin - Should practice at least twice/week
+          copOwner:
+            user: CoPUsers.owner
+            note: Owner - Morning is a good time
+          learner:
+            user: &copMember CoPUsers.member
+            note: &learnerNote Learner - I follow training's session
+            note1: &learnerNote1 Learner - Good Training
+CreateNote:
+  admin:
+    user: *copAdmin
+    note: AU Admin - 2 sessions a day
+  learner:
+    user: *copMember
+    note: AU Learner - good knowledge
+  duplicateLearner:
+    user: *copMember
+    note: *learnerNote1
+EditNote:
+  learner:
+    note:
+      note: *learnerNote
+      user: *copMember
+    edit:
+      note: Learner - I follow training's session Updated
+      user: *copMember

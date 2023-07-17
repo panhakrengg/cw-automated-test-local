@@ -1,0 +1,38 @@
+CourseData:
+  bookCourseContainsCompletedELearning:
+    name:
+      value: Book course that contains completed eLearning
+    courseOverview: Member booked course that contain eLearning which have been completed in another instance.
+    uploadedFiles:
+      - book completed eLearning.png
+    categories:
+      - &softSkillName Soft Skill
+    url:
+      beta:
+        id:
+          - 116540029
+      uat:
+        id:
+          - 117134562
+      prd:
+        id:
+          - ''
+    freeAndHasCompletedELearning: &freeAndHasCompletedELearning
+      title:
+        value: Free instance has eLearning
+      additionalBookingNote: eLearning is completed on another course instance, and also have other activities such as Assignment and Rich Text
+      date: 01 Jul, 2039 - 31 Jul, 2039
+      deliveryMethod: Virtual Classroom
+      url:
+        beta:
+          id:
+            - 116540429
+        uat:
+          id:
+            - 117134754
+        prd:
+          id:
+            - ''
+
+BookingCourse:
+  freeAndHasCompletedELearning: *freeAndHasCompletedELearning

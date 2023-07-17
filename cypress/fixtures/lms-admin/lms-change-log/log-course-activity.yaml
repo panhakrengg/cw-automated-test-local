@@ -1,0 +1,194 @@
+Categories:
+  ctgInstance:
+    name: &ctgInstanceName Ctg Func Instances
+    users:
+      addUsers:
+        - au_ln_ctgad
+        - &courseAdminScreenName au_ln_coulead
+        - &virtualClassInstanceFaciScreenName au_ln_istad
+      admins:
+        - aue_kenton.weimann@
+
+Courses:
+  courseActivitiesLog: &courseActivitiesLog
+    name: Course Activities func log
+    courseOverview: This coures use for checking Change Log of course activities.
+    categories:
+      - *ctgInstanceName
+    managePeople:
+      admins:
+        - *courseAdminScreenName
+
+SampleDueDate: &SampleDueDate
+  timeZone: &ppTimeZone (UTC +7:0) Indochina Time (Asia/Phnom_Penh)
+  date: '2039-12-12'
+  time: 3:10 pm
+
+Zooms:
+  previous: &previousZoom
+    name: &zoomPreviousLogName Course activity previous log
+    category: *ctgInstanceName
+    accountId: sNWtIi_ZQFe_l7bYj36pXg
+    clientId: 1WyFHau_S_GwHJXhzSHGIw
+    clientSecret: gJndPBpJPRR7p3nPXIEah44MidQyCcf3
+    hostEmail: aue_frances.ondricka@mail.com
+  new:
+    <<: *previousZoom
+    name: &zoomNewLogName Course activity new log
+
+CreateNewActivities:
+  courseActivitiesLog:
+    <<: *courseActivitiesLog
+    instanceOtherAdminsCheckLog:
+      title: Instance add activities, other admins check log
+      deliveryMethod: Virtual Classroom
+      activities:
+        auHyperlinkLog:
+          displayText: &auHyperlinkDisplayText AU Crosswired link
+          title: *auHyperlinkDisplayText
+          url: crosswired.com
+    instanceNewActivities:
+      title: Instance new activity to check log
+      deliveryMethod: Blended Learning
+      activities:
+        physicalClass: &trainAtSchoolPhysicalClass
+          title: AU Train at school playground
+          description: Remember this is a warm-up and everything should be taken relatively gently.
+          address: st 230, Toek L'ak III, TK, PP, KH
+          city: Phnom Penh
+          country: Cambodia
+          childrenProgramAvailable: false
+          scheduledDate:
+            firstDay: &firstDay
+              date: '2039-11-04'
+              from: 7:00 am
+              to: 8:00 am
+            secondDay: &secondDay
+              date: '2039-11-05'
+              from: 8:30 am
+              to: 9:45 am
+          optionalActivity: true
+        video:
+          title: AU youtube video
+          description: YouTube link
+          youtube: https://www.youtube.com/watch?v=P1hl_xjHTYc&pp=ygUKY3Jvc3N3aXJlZA%3D%3D
+          dueDate: *SampleDueDate
+          optionalActivity: false
+        virtualClass:
+          title: AU virtual class
+          facilitators:
+            - *virtualClassInstanceFaciScreenName
+          zoomName: *zoomPreviousLogName
+          timeZone: *ppTimeZone
+          scheduledDate:
+            firstDay: *firstDay
+            secondDay: *secondDay
+          description: New virtual class activity
+          optionalActivity: false
+        elearning:
+          title: &miracleElearningTitle AU elearning - Miracle
+          description: After dash(-) is original package name.
+          uploadLessonPackage:
+            path: &miracleElearningPath lms-admin/org-course-instance-activities/attachments/Miracle.zip
+          language:
+            - Portuguese (Brazil)
+          scoreLimit: 0.6
+          estimateComplete: 60
+          dueDate: *SampleDueDate
+          optionalActivity: true
+        assignment:
+          assignmentName: &auAssignmentName AU Assignment
+          title: *auAssignmentName
+          description: Team can have 5 members.
+          additionalFiles:
+            path: lms-admin/org-activity-library/attachments/file as pdf.pdf
+          dueDate: *SampleDueDate
+          optionalActivity: true
+        quiz:
+          title: AU Weekly quiz
+          description: This may take a few minutes.
+          gradeToPass: 5
+          dueDate: *SampleDueDate
+          optionalActivity: false
+    instanceChooseActivities:
+      title: Instance activities from library to check log
+      deliveryMethod: Self-study
+      activities:
+        file:
+          title: TOActivity file as image
+        learningGoal:
+          title: TOActivity Play tennis 5-6 hours / week
+        richText:
+          title: TOActivity Reasons Your Workout Should Include a Warm Up
+        feedback:
+          title: TOActivity Do after completing course
+
+AddActivityToLibrary:
+  courseActivitiesLog:
+    <<: *courseActivitiesLog
+    instanceAddToLibraryLog:
+      title: Instance add activity to library - log
+      deliveryMethod: Virtual Classroom
+      activities:
+        feedback:
+          title: AU Feedback from Course Activity to check log
+
+EditActivities:
+  courseActivitiesLog:
+    <<: *courseActivitiesLog
+    instanceEditActivitiesLog:
+      title: Instance for editing activities to check log
+      deliveryMethod: Blended Learning
+      activities:
+        physicalClass:
+          previous:
+            <<: *trainAtSchoolPhysicalClass
+            title: Train at school playground
+            scheduledDate:
+              firstDay: &firstDay
+                date: '2039-11-04'
+                from: 7:00 am
+                to: 8:00 am
+          new:
+            <<: *trainAtSchoolPhysicalClass
+            title: Train at school playground
+        virtualClass:
+          previous: &virtualClassPrevious
+            title: Talking together
+            facilitators:
+              - *virtualClassInstanceFaciScreenName
+            zoomName: *zoomPreviousLogName
+            scheduledDate:
+              firstDay: *firstDay
+            description: Feel free to join us all together, so we can know each other well.
+          new:
+            <<: *virtualClassPrevious
+            zoomName: *zoomNewLogName
+        quiz:
+          previous: &quizPrevious
+            title: Small quiz
+            description: This may take a few minutes.
+            gradeToPass: 2
+          new:
+            title: Small quiz updated
+            description: This may take a few minutes. updated
+            gradeToPass: 6
+    instanceReorderLog:
+      title: Instance reordering to check log
+      deliveryMethod: Physical Classroom
+      activities:
+        physicalClass: *trainAtSchoolPhysicalClass
+        virtualClass: *virtualClassPrevious
+        quiz: *quizPrevious
+
+DeleteActivities:
+  courseActivitiesLog:
+    <<: *courseActivitiesLog
+    instanceDeleteActivitiesLog:
+      title: Instance for deleting activities
+      deliveryMethod: Self-study
+      activities:
+        auElearning:
+          title: *miracleElearningTitle
+          uploadLessonPackage:
+            path: *miracleElearningPath

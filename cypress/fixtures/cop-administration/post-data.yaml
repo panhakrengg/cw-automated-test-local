@@ -1,0 +1,16 @@
+QuickPosts:
+  welcomeMessage:
+    title:
+      value: We are so excited you have joined our community! With your experience, you are going to be a great addition. Welcome!
+
+NewQuickPost:
+  authorMyself:
+    title:
+      new: AU post author is MySelf
+  authorCommunity:
+    title:
+      new: AU post author is My Community of Purpose
+
+NewComment:
+  quickPost:
+    new: AU comment quick post

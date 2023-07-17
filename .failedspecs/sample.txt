@@ -1,0 +1,1 @@
+cypress/e2e/smoke/account/activity-log/cw_normal_user_able_to_filters_by_activity_categories.cy.js,

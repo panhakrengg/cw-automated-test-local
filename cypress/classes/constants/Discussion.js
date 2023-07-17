@@ -1,0 +1,27 @@
+class Discussion {
+  static DISCUSSIONS = 'Discussions'
+  static RECENT = 'Recent'
+  static MY_THREADS = 'My Threads'
+  static MY_SUBSCRIPTIONS = 'My Subscriptions'
+  static ALL_CATEGORIES = 'All Categories'
+  static ALL_THREADS = 'All Threads'
+  static SUBSCRIBED_CATEGORIES = 'Subscribed Categories'
+  static SUBSCRIBED_THREADS = 'Subscribed Threads'
+  static SUB_CATEGORIES = 'Sub Categories'
+  static BACK = 'Back'
+  static SUBSCRIBE = 'Subscribe'
+  static UNSUBSCRIBE = 'Unsubscribe'
+  static EDIT = 'Edit'
+  static MOVE = 'Move'
+  static MOVE_CATEGORY = 'Move Category'
+  static REMOVE = 'Remove'
+  static MOVE_THREAD_TITLE = 'Move Thread'
+  static REMOVE_THREAD_TITLE = 'Are you sure you want to remove this thread?'
+  static MOST_RECENT = 'Most Recent'
+  static MOST_POPULAR = 'Most Popular'
+  static NEW_CATEGORY = 'New Category'
+  static NONE = 'None'
+  static UNANSWERED_THREADS = 'Unanswered Threads'
+}
+
+export default Discussion

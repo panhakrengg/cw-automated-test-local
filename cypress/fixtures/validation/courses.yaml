@@ -1,0 +1,46 @@
+Courses:
+  courseConsentHasABookedMember:
+    title: Course Consent Has A Booked Member (Automation Do not Delete)
+    url:
+      beta:
+        id:
+          - 102819680
+      local:
+        id:
+          - 94537127
+      uat:
+        id:
+          - 94537127
+      prd:
+        id:
+          -
+    courseInstances:
+      socialAndBehavioralSciences:
+        url:
+          beta:
+            id:
+              - 102819810
+          local:
+            id:
+              - 94537238
+          uat:
+            id:
+              - 94537238
+          prd:
+            id:
+              -
+  javaOopConcept:
+    title: JAVA OOP Concept
+    url:
+      beta:
+        id:
+          - 102751803
+      local:
+        id:
+          - 101004967
+      uat:
+        id:
+          - 101004967
+      prd:
+        id:
+          -

@@ -1,0 +1,30 @@
+LearningPathStatic:
+  quickTip:
+    title:  Learning Path
+    desc:
+      - Create clear learning paths and prepare effective learning guides for your learners.
+      - Keep the title of the learning path general, and include specific learning modules relevant to the general topic.
+      - Ensure that courses you add into your Learning Path are built upon each other and arranged in a logical manner
+      - Adding category tags makes navigating to learning paths easy (according to your privacy setting).
+      - Onboard individuals or large quantities of new learners using the individual invite or bulk upload function.
+CreateLearningPath:
+  onlyTitleNoImage:
+    name: AU Second Class in Club
+  weekendClass:
+    name: AU Weekend Class
+    image: weekend class.jpg
+    path: /lms-training-cop/learning-paths/weekend class.jpg
+    overview: Has all info & enable certificate.
+    duration:
+      months: 2
+      days: 5
+      hours: 3
+      minutes: 15
+      totalMinutes:
+    certificate: true
+    allowAddingProfile: true
+  existingName:
+    name: Tennis City Club
+    overview: Learning Path with existing name
+    image: tennis city club.jpg
+    path: /lms-training-cop/learning-paths/tennis city club.jpg

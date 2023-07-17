@@ -1,0 +1,19 @@
+CourseData:
+  typedRacket:
+    name: Typed Racket
+    courseOverview: 'Typed Racket provides a type-driven optimizer that rewrites well-typed programs to potentially make them faster. It should in no way make your programs slower or unsafe. Thus the type hinting can make your programs faster, but it guarantees the programs wont be slower than #lang racket as well.'
+    url: &typedRacketCourseId
+      beta:
+        id:
+          - 102785267
+      uat:
+        id:
+          - 101790154
+      prd:
+        id:
+          - 52066740
+    learner:
+      courseDetailInLearning:
+        url: *typedRacketCourseId
+      courseDetailInCourseCatalog:
+        url: *typedRacketCourseId

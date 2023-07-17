@@ -1,0 +1,8 @@
+InvalidEmails:
+  description: get from this email https://docs.blackberry.com/en/id-comm-collab/blackberry-athoc/blackberry-athoc/7_9/create-publish-alerts/email-format-validation/invalid-email-address-examples
+  emails:
+    - Abc.example.com
+    - A@b@c@example.com
+    - a"b(c)d,e:f;g<h>i[j\k]l@example.com
+    - just"not"right@example.com
+    - this is"not\allowed@example.com

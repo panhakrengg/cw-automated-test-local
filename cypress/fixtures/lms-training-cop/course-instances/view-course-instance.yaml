@@ -1,0 +1,39 @@
+DeliveryMethod:
+  physicalClass: &physicalClassMethod Physical Classroom
+CourseData:
+  scoreInTennis:
+    description: Use for changing publish/unpublish course and course instance
+    courseOverview: Use for changing publish/unpublish course and course instance
+    name: A Score in tennis
+    courseInstances:
+      achieveInstance:
+        startDate: 03 Jan, 2025
+        endDate: 01 Sep, 2039
+        date: 03 Jan, 2025 - 01 Sep, 2039
+        deliveryMethod: *physicalClassMethod
+        status: Archived
+        3dotsOptions:
+          - Overview
+          - Unarchive
+          - Delete
+      draftInstance:
+        startDate: 02 Jan, 2025
+        endDate: 01 Nov, 2039
+        date: 02 Jan, 2025 - 01 Nov, 2039
+        deliveryMethod: *physicalClassMethod
+        status: Draft
+        3dotsOptions: &draft3dotsOptions
+          - View
+          - Edit
+          - Duplicate
+          - Archive
+          - Training Reports
+          - Learner Resources
+          - View Discussion
+      publishInstance:
+        startDate: 01 Jan, 2025
+        endDate: 01 Oct, 2039
+        date: 01 Jan, 2025 - 01 Oct, 2039
+        deliveryMethod: *physicalClassMethod
+        status: Published
+        3dotsOptions: *draft3dotsOptions

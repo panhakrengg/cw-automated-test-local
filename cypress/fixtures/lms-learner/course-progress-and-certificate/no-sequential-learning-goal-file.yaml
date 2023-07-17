@@ -1,0 +1,43 @@
+ActivityLibrary:
+  file:
+    tOActivityImage: &tOActivityImage
+      title:
+        value: TOActivity file as image
+  learningGoal:
+    tOActivityPlayTennisAWeek: &tOActivityPlayTennisAWeek
+      title:
+        value: TOActivity Play tennis 5-6 hours / week
+
+CourseData:
+  progressActivityNoSequential:
+    name: Progress On Quick Activity & No Sequential
+    courseOverview: Draft course, has 1 instance uses for duplicate.
+    attachment:
+      - pexels-rodion-kutsaiev-9436715.jpg
+    url:
+      beta:
+        id:
+          - 108741153
+      uat:
+        id:
+          - 110515007
+      prd:
+        id:
+          - ''
+    instanceNoSequentialHasActivities: &instanceNoSequentialHasActivities
+      deliveryMethod: Virtual Classroom
+      title:
+        value: Instance no sequential & has learning goal and file
+      date: 01 Sep, 2039 - 24 Sep, 2039
+      additionalBookingNote: For testing course progress on quick file - File Image & Learning Goal. The course has no Sequential.
+      activities:
+        value:
+          total: 2
+          tOActivityImage: *tOActivityImage
+          tOActivityPlayTennisAWeek: *tOActivityPlayTennisAWeek
+
+CourseProgress:
+  auInstanceNoSequentialHasActivities:
+    <<: *instanceNoSequentialHasActivities
+    title:
+      new: AU Instance no sequential & has learning goal and file

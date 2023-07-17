@@ -1,0 +1,45 @@
+CategoryData:
+  ctgFuncInstances:
+    name:
+      value: &ctgFuncInstancesName Ctg Func Instances
+
+ActivityLibrary:
+  file:
+    tOActivityImage: &tOActivityImage
+      type: File
+      from: Organization
+      title:
+        value: TOActivity file as image
+
+CourseData:
+  courseFuncRetake:
+    name:
+      value: Course Func for retaking
+    courseOverview: This course use for retaking course instances
+    image: lms-learner/course-progress-and-certificate/attachments/courseFuncRetakeValue.jpg
+    categories:
+      - *ctgFuncInstancesName
+    url:
+      beta:
+        id:
+          -
+      uat:
+        id:
+          -
+      prd:
+        id:
+          -
+    instanceCompleteRetake: &instanceCompleteRetake
+      title:
+        value: Instance completed then retake
+      deliveryMethod: Self-study
+      activities:
+        value:
+          total: 1
+          tOActivityImage: *tOActivityImage
+
+CourseProgress:
+  instanceCompleteRetake: *instanceCompleteRetake
+
+RetakeCourse:
+  instanceCompleteRetake: *instanceCompleteRetake

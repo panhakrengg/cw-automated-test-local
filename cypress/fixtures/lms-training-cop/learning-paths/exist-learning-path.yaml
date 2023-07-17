@@ -1,0 +1,127 @@
+CourseData:
+  tennisByYourself: &tennisByYourselfCourse
+    description: &publishCourse published course under current CoP
+    name: Tennis By Yourself
+    courseOverview: Tips on how to practice tennis alone and what equipment is helpful when practicing by yourself.
+    tags:
+      - Online Communities
+  tennisWarmUpGuide:
+    description: *publishCourse
+    name: Tennis Warm-Up Guide
+  acceptedForEveryone:
+    description: &draftCourse Draft course under current CoP
+    name: Acceptable for everyone
+  basicHtml:
+    description: published course from organization WebLearn
+    name: Basic HTML
+  scoreInTennis: &scoreInTennisCourse
+    name: A Score in tennis
+    courseOverview: Use for changing publish/unpublish course and course instance
+  completedCourse: &completedCourse
+    name: TCoP Completed Course
+    courseOverview: Draft Course, has 1 instance and learner completed instance
+
+LearningPathData:
+  tennisCityClub:
+    createdBy: CoPUsers.owner
+    name: Tennis City Club
+    overview: Created by CoP Owner. This learning path use for Smoke, enable certificate & add new member.
+    status: Published
+    url:
+      beta:
+        id:
+          - 111183000
+      uat:
+        id:
+          - 126794932
+      prd:
+        id:
+          - ''
+    courses: &coursesCityClub
+      total: 2
+      tennisByYourself:
+        <<: *tennisByYourselfCourse
+        optional: false
+      scoreInTennis:
+        <<: *scoreInTennisCourse
+        optional: true
+  firstClassInCityClub:
+    createdBy: &copAdmin  CoPUsers.admin
+    name: First Class in City Club
+    overview: Created by cop admin, use for Edit, Publish test case, not enable certificate & has member/learner.
+    image: first-time.jpg
+    path: /lms-training-cop/learning-paths/first-time.jpg
+    status: Published
+    url:
+      beta:
+        id:
+          - 111182953
+      uat:
+        id:
+          - 108642975
+      prd:
+        id:
+          - ''
+    courses:
+      total: 3
+      practiceMorning:
+        name: Practice early morning
+        optional: false
+      scoreInTennis:
+        name: A Score in tennis
+        optional: true
+      onlineTraining:
+        name: Online Training
+        optional: false
+  shortTerm:
+    createdBy: *copAdmin
+    name: Short Term
+    overview: No course and member & use for unpublish learning path
+    url:
+      beta:
+        id:
+          - ''
+      uat:
+        id:
+          - 108674421
+      prd:
+        id:
+          - ''
+  childCourse:
+    name: Child Course
+    overview: Has course, for smoke testing & use for publish learning path
+    url:
+      beta:
+        id:
+          - ''
+      uat:
+        id:
+          - 108697408
+      prd:
+        id:
+          - ''
+  missionEvening: &missionEveningLP
+    name: Mission Evening
+    overview: Created by cop owner. For join learning path & always publish
+    duration: 1 Month 3 Days 4 Hours 30 Minutes
+    url:
+      beta:
+        id:
+          - 109780560
+      uat:
+        id:
+          - 109058580
+      prd:
+        id:
+          - ''
+    courses:
+      total: 2
+      notBook:
+        <<: *scoreInTennisCourse
+        optional: true
+      completed:
+        <<: *completedCourse
+        optional: false
+
+SaveLearningPath:
+  containCompleteCourse: *missionEveningLP

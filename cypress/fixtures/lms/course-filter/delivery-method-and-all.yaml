@@ -1,0 +1,52 @@
+CourseData:
+  allMethodsButDeletedArchived: &allMethodsButDeletedArchived
+    name: DeliveryMethod 2 are archived and 2 are deleted in Full Catalog
+    courseOverview: Publish, Self-study & Physical class are deleted, Virtual class & Blended Learning are archived
+  allMethodsPublished: &allMethodsPublished
+    name: &allMethodsPublishedCourseName DeliveryMethod all types and publish in Full Catalog
+    courseOverview: Publish and there is course instances with all delivery method types.
+  blended: &blendedInstance
+    name: &blendedOnlyCourseName DeliveryMethod blended class
+    courseOverview: Publish and has only blended learning course instance
+  physical: &physicalInstance
+    name: &physicalOnlyCourseName DeliveryMethod physical class
+    courseOverview: Publish and has only physical classroom course instance
+  selfStudy: &selfStudyInstance
+    name: &selfStudyOnlyCourseName DeliveryMethod self-study
+    courseOverview: Publish and has only self study course instance
+  virtual: &virtualInstance
+    name: &virtualOnlyCourseName DeliveryMethod virtual class
+    courseOverview: Publish and has only virtual classroom course instance
+
+FilterDeliveryMethod:
+  virtual:
+    totalResult: 2
+    resultShow:
+      - *virtualInstance
+      - *allMethodsPublished
+    resultNotShow:
+      - *allMethodsButDeletedArchived
+  physical:
+    totalResult: 2
+    resultShow:
+      - *physicalInstance
+      - *allMethodsPublished
+    resultNotShow:
+      - *allMethodsButDeletedArchived
+  selfStudyBlended:
+    totalResult: 3
+    resultShow:
+      - *selfStudyInstance
+      - *blendedInstance
+      - *allMethodsPublished
+    resultNotShow:
+      - *allMethodsButDeletedArchived
+
+FilterAll: #except Tags and Skills, Providers, and Start Date
+  courseType: Course
+  languages: Spanish
+  categoriesCommunities: FireCloud Zone
+  deliveryMethod: Self-study
+  resultShow:
+    - *selfStudyInstance
+    - *allMethodsPublished

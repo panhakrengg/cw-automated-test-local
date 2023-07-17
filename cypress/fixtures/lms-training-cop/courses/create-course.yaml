@@ -1,0 +1,16 @@
+CreateCourse:
+  creationCourse:
+    url:
+      uat: /web/learn-tennis/admin/admin?p_p_id=copMemberManagementPortlet&p_p_lifecycle=0&_copMemberManagementPortlet_mvcRenderCommandName=%2Fmanage_courses%2Fnew_course
+      prd: /web/tcop-learning-management/admin/admin?p_p_id=copMemberManagementPortlet&p_p_lifecycle=0&_copMemberManagementPortlet_mvcRenderCommandName=%2Fmanage_courses%2Fnew_course
+  courseWithoutBanner:
+    name: AU Empty Playground
+    courseOverview: Course create without banner
+    courseFee:
+      value: 0
+  courseWithBanner:
+    name: AU Start Understand Playground
+    courseOverview: Course create with banner
+    courseFee:
+      value: 0
+    bannerImage: tennis playground.jpg

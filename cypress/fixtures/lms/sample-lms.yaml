@@ -1,0 +1,584 @@
+LmsData:
+  webLearn:
+    url:
+      beta:
+        id:
+          - ''
+      uat:
+        id:
+          - 14117326
+      prd:
+        id:
+          - ''
+CategoryData:
+  fullCatalog: &fullCatalog
+    name: Organization Full Catalog
+  softSkill: &softSkillCtg
+    name: Soft Skill
+  courseAnnouncementCtg: &courseAnnouncementCtg
+    name: Course Announcement Ctg
+  courseConsentCtg: &courseConsentCtg
+    name: Course Consent Ctg
+PaymentMethod:
+  postpaid: &postpaid Postpaid
+  prepaid: &prepaid Prepaid
+SampleInstance: &sampleInstance
+  timeZone: &UTC7TimeZone (UTC +7:0) Indochina Time (Asia/Phnom_Penh)
+  language: English (United States)
+  courseCompletion: 0
+  expectedDuration: 0
+  maxParticipant: 10
+  mustBookBy: 0
+  mustCancelBy: 0
+  facilitator: &instanceFaci OrgLmsUsers.admins.instances.auLnIstFaci_Britney
+  contactEmail: aue_shannon.bednar94@ethereal.email
+  courseFee:
+    value: 0
+    currency: USD
+    paymentMethod: *postpaid
+  url:
+    beta:
+      id:
+        - ''
+    uat:
+      id:
+        - ''
+    prd:
+      id:
+        - ''
+DeliveryMethod:
+  virtualClass: &virtualClassMethod Virtual Classroom
+  blendedLearning: &blendedLearningMethod Blended Learning
+  physicalClass: &physicalClassMethod Physical Classroom
+Status:
+  notYetStarted: Not yet started
+  inProgress: In Progress
+  completed: Completed
+CourseData:
+  restApi: &courseRestApi
+    name: REST Architectural Style
+    courseOverview: Always publish, for booking, course progress, training report, publish/unpublish instance. Free, payment method prepaid.
+    courseFee: &freeFee
+      value: 0
+      currency: USD
+      paymentMethod: *prepaid
+    uploadedFiles:
+      - what_is_rest_api.png
+    categories:
+      softSkill: *softSkillCtg
+    attachment:
+      - what_is_rest_api.png
+    url: &restApiCourseId
+      beta:
+        id:
+          - 107715058 #WebLearn
+          - 108721239 #FireCloud Zone
+      uat:
+        id:
+          - 109386808 #WebLearn
+          - 110450013 #FireCloud Zone
+      prd:
+        id:
+          - 52161015
+    courseInstances:
+      publishedNotBook: &publishedNotBookInstance
+        title: Instance smoke published & no one book
+        date: 01 Jan, 2039 - 31 Jan, 2039
+        additionalBookingNote: This instance always publishes and no one booked.
+        facilitator: *instanceFaci
+        maxParticipant: 80
+        expectedDuration: 600 # minutes
+        activities: #all activities list in /lms/course-activities/sample-activities.yaml > SampleActivities
+          total: 2
+          physicalClassChildren:
+            title: Children training # get more data on "physicalClassChildren"
+            address: Russian Federation Blvd (110), TK, PP, KH, Phnom Penh, Cambodia
+          virtualTalking:
+            title: Talking together # get more data on "virtualTalking"
+      freeMoodle: &freeMoodleInstance
+        additionalBookingNote: Free course & has only moodle activities
+        date: 01 Aug, 2039 - 24 Aug, 2039
+        facilitator: *instanceFaci
+        maxParticipant: 10
+        url: &freeMoodleInstanceCourseId
+          beta:
+            id:
+              - 107726401
+          uat:
+            id:
+              - 109434190
+          prd:
+            id:
+              - ''
+        activities:
+          total: 3
+          quizCheckUnderstand:
+            title: Check understanding about Warm-up
+          assignmentMidterm:
+            title: Midterm 30 pt
+          feedbackCompleteCourse:
+            title: Do after completing course
+      prepaidMoodle: &prepaidMoodleInstance
+        <<: *freeMoodleInstance
+        courseFee:
+          value: 26
+        additionalBookingNote: Prepaid course & has only moodle activities
+        data: 01 Feb, 2039 - 24 Feb, 2039
+        url: &prepaidMoodleInstanceCourseId
+          beta:
+            id:
+              - 108148052
+          uat:
+            id:
+              - 109956066
+          prd:
+            id:
+              - ''
+      postpaidMoodle: &postpaidMoodleInstance
+        <<: *freeMoodleInstance
+        courseFee:
+          value: 26
+        additionalBookingNote: Prepaid course & has only moodle activities
+        data: 01 Mar, 2039 - 24 Mar, 2039
+        url: &postpaidMoodleInstanceCourseId
+          beta:
+            id:
+              - 108288142
+          uat:
+            id:
+              - 110071668
+          prd:
+            id:
+              - ''
+      bookedNotOptional: &bookedNotOptionalInstance
+      <<: *sampleInstance
+      date: 01 Nov, 2039 - 24 Nov, 2039
+      deliveryMethod: *virtualClassMethod
+      additionalBookingNote: has all activities type and instance member (learner booked course)
+      maxParticipant: 10
+      availableParticipant: 9
+      courseFee:
+        value: 60
+        paymentMethod: *prepaid
+      url:
+        beta:
+          id:
+            - 108722221
+        uat:
+          id:
+            - 110451069
+      activities:
+        total: 14
+        physicalTrainAtSchool: &physicalTrainAtSchool
+          title: Train at school playground
+        fileImage: &fileImage
+          Title: Tennis Scoreboard Image
+        videoYouTube: &videoYouTube
+          title: YouTube video
+        hyperlink: &hyperlink
+          displayText: Beginner Tennis Lesson
+        learningGoal: &learningGoal
+          title: Play tennis 5-6 hours / week
+        eLearningOrganization:
+          lessonName: When a Disaster Happens, Who Would You Call
+        videoVimeo: &videoVimeo
+          title: Vimeo video
+        fileDoc: &fileDoc
+          title: Warm Up Guide
+        videoFile: &videoFile
+          title: File Video
+        richText: &richText
+          title: Reasons Your Workout Should Include a Warm Up
+        virtualTalking_Org: &virtualTalking_Org
+          title: Talking together
+        quizDailyClass: &quizDailyClass
+          title: Daily class
+        assignmentMidterm: &assignmentMidterm
+          title: Midterm 30 pt
+        feedbackClassmate: &feedbackClassmate
+          title: About Classmate
+  mvcPattern:
+    name: MVC Pattern (Model-View-Controller)
+    courseOverview: This course is not under category, it means in full category. Has instance & published
+    courseFee:
+      value: 50
+      currency: USD
+      paymentMethod: *prepaid
+    category:
+      fullCatalog: *fullCatalog
+    url: &mvcPatternCourseId
+      beta:
+        id:
+          - 107724490
+      uat:
+        id:
+          - 109433456
+      prd:
+        id:
+          - 52051091
+  resourcesNotesDiscussion:
+    name: Resources, Notes, Discussion
+    courseOverview: Test case about Resources, Notes, & Discussion
+    url:
+      beta:
+        id:
+          - 109044523
+      uat:
+        id:
+          - 111131429
+      prd:
+        id:
+          - 52040715
+    resourceInstance:
+      deliveryMethod: *virtualClassMethod
+      date: 01 Mar, 2039 - 31 Mar, 2039
+      url:
+        beta:
+          id:
+            - 109479811
+        uat:
+          id:
+            - 111131521
+        prd:
+          id:
+            - 52046839
+    noteInstance:
+      deliveryMethod: *blendedLearningMethod
+      date: 01 Oct, 2039 - 31 Oct, 2039
+      additionalBookingNote: Notes
+      url:
+        beta:
+          id:
+            - 109584915
+        uat:
+          id:
+            - 111206197
+        prd:
+          id:
+            - 52046524
+      learnerResources:
+        folders:
+          tennisWarmUp:
+            name: Tennis warm up
+            files:
+              - tennis warm up.docx
+    discussion:
+      deliveryMethod: *physicalClassMethod
+      date: 01 Feb, 2039 - 28 Feb, 2039
+      additionalBookingNote: Test case discussion, and has all instance facilitators (inherit course admin). virtual class facilitator is a previous owner of 1 category (means now he is removed from instance)
+      url:
+        beta:
+          id:
+            - 114600163
+        uat:
+          id:
+            - 115484721
+        prd:
+          id:
+            - 52041894
+  underSoftSkill:
+    name: Course In Soft Skill Ctg
+    courseOverview: Publish For testing searching course under category
+    categories:
+      softSkill: *softSkillCtg
+    url:
+      beta:
+        id:
+          - 115723029
+      uat:
+        id:
+          - 116442667
+      prd:
+        id:
+          - 52127639
+  announcementForAllInstanceStaticData:
+    name: For course announcement on all instances
+    courseOverview: Publish course and course instances, Booked, & Create only 1 course announcement for all instances
+    uploadedFiles:
+      - pexels-cottonbro-studio-7859934.jpg
+    categories:
+      courseAnnouncementCtg: *courseAnnouncementCtg
+    url:
+      beta:
+        id:
+          - 116084822
+      uat:
+        id:
+          - 116760016
+      prd:
+        id:
+          - 52038431
+    selfStudyInstance:
+      url:
+        beta:
+          id:
+            - 116084901
+        uat:
+          id:
+            - 116760099
+        prd:
+          id:
+            - 52038856
+    physicalClassInstance:
+      url:
+        beta:
+          id:
+            - 116085194
+        uat:
+          id:
+            - 116760595
+        prd:
+          id:
+            - 52038521
+  announcementForSomeInstanceStaticData:
+    name: For course announcement on some instances
+    courseOverview: There is instance member, 2 course instances has the same course announcement & 1 course instance doesn't have course announcement.
+    uploadedFiles:
+      - pexels-markus-winkler-5227049.jpg
+    categories:
+      courseAnnouncementCtg: *courseAnnouncementCtg
+    url:
+      beta:
+        id:
+          - 115943729
+      uat:
+        id:
+          - 116635862
+      prd:
+        id:
+          - 52039129
+    virtualClassInstance:
+      additionalBookingNote: Archive course instanced & has course announcement
+      date: 01 Jan, 2039 - 31 Jan, 2039
+      url:
+        beta:
+          id:
+            - 115943815
+        uat:
+          id:
+            - 116636068
+        prd:
+          id:
+            - 52039401
+    selfStudyInstance:
+      url:
+        beta:
+          id:
+            - 115943919
+        uat:
+          id:
+            - 116636516
+        prd:
+          id:
+            - 52039308
+    blendedLearningInstance:
+      additionalBookingNote: No course announcement
+      date: 01 Feb, 2039 - 28 Feb, 2039
+      url:
+        beta:
+          id:
+            - 115944173
+        uat:
+          id:
+            - 116638367
+        prd:
+          id:
+            - 52039211
+  announcementExpiration:
+    name: Expiration Course Announcement
+    courseOverview: Course announcement for this course is expiration.
+    uploadedFiles:
+      - expiration course announcement.png
+    categories:
+      courseAnnouncementCtg: *courseAnnouncementCtg
+    url:
+      beta:
+        id:
+          - 116103348
+      uat:
+        id:
+          - 116776523
+      prd:
+        id:
+          - 52039576
+    virtualClassInstance:
+      date: 01 Jan, 2039 - 31 Jan, 2039
+      url:
+        beta:
+          id:
+            - 116103448
+        uat:
+          id:
+            - 116776635
+        prd:
+          id:
+            - 52039664
+  announcementLearnerClose:
+    name: Close course announcement
+    courseOverview: Learner booked course then s/he clicks to close course announcement.
+    uploadedFiles:
+      - cancel course announcement.png
+    categories:
+      courseAnnouncementCtg: *courseAnnouncementCtg
+    url:
+      beta:
+        id:
+          - 116141043
+      uat:
+        id:
+          - 116811756
+      prd:
+        id:
+          - ''
+    virtualClassInstance:
+      additionalBookingNote: Learner click cancel/close course announcement from this course instance.
+      date: 01 May, 2039 - 31 May, 2039
+      deliveryMethod: *virtualClassMethod
+      url:
+        beta:
+          id:
+            - 116158737
+        uat:
+          id:
+            - 116812253
+        prd:
+          id:
+            - ''
+    blendedLearningInstance:
+      additionalBookingNote: This course instance also cannot see course announcement because another course instance clicked to cancel/close announcement.
+      date: 01 Mar, 2039 - 31 Mar, 2039
+      deliveryMethod: *blendedLearningMethod
+      url:
+        beta:
+          id:
+            - 116158640
+        uat:
+          id:
+            - 116812034
+        prd:
+          id:
+            - ''
+  consentForRevoke:
+    name: Revoke consent only
+    courseOverview: This one uses for revoking course consent, and then check what happen on the learner.
+    uploadedFiles:
+      - revoke consent.png
+    categories:
+      courseConsentCtg: *courseConsentCtg
+    url:
+      beta:
+        id:
+          - 116159338
+      uat:
+        id:
+          - 116828649
+      prd:
+        id:
+          - ''
+    virtualClassInstance:
+      date: 01 Nov, 2039 - 30 Nov, 2039
+      deliveryMethod: *virtualClassMethod
+      url:
+        beta:
+          id:
+            - 116159530
+        uat:
+          id:
+            - 116828749
+        prd:
+          id:
+            - ''
+  consentExistingMemberMustAgreeChange:
+    name: Require existing members give consent again
+    courseOverview: Learner booked this course and gave consent > admin update by clicking existing members give consent again > learner needs to give one more time.
+    uploadedFiles:
+      - give consent again.png
+    categories:
+      courseConsentCtg: *courseConsentCtg
+    url:
+      beta:
+        id:
+          - 116360830
+      uat:
+        id:
+          - 116982346
+      prd:
+        id:
+          - ''
+    gaveConsentInstance:
+      additionalBookingNote: Learner gave consent
+      date: 01 Feb, 2039 - 28 Feb, 2039
+      deliveryMethod: *virtualClassMethod
+      url:
+        beta:
+          id:
+            - 116360927
+        uat:
+          id:
+            - 116982543
+        prd:
+          id:
+            - ''
+  consentRevokeThenGiveCheckActivities:
+    name: Check course progress after revoking and giving consent again
+    courseOverview: Learner completed some activities then s/he revoke consent > s/he give consent again. Will check what happen on the course progress.
+    uploadedFiles:
+      - revoke consent progress.png
+    categories:
+      courseConsentCtg: *courseConsentCtg
+    url:
+      beta:
+        id:
+          - 116380648
+      uat:
+        id:
+          - 117002799
+      prd:
+        id:
+          - ''
+    completeActivitiesInstance:
+      additionalBookingNote: Has File - Doc, Rich Text, Hyper link, Quiz and Feedback. Learner complete Hyperlink and Quiz then revoke consent. After that, s/he comes and give consent again.
+      date: 01 Oct, 2039 - 31 Oct, 2039
+      deliveryMethod: *blendedLearningMethod
+      url:
+        beta:
+          id:
+            - 116380786
+        uat:
+          id:
+            - 117003067
+        prd:
+          id:
+            - ''
+      activities: #all activities list in /lms/course-activities/sample-activities.yaml > SampleActivities
+        total: 5
+        completed: 2
+        progress: 40
+        fileDoc:
+          title: Warm Up Guide
+        hyperlink:
+          displayText: Beginner Tennis Lesson
+          completed: true
+        richText:
+          title: Reasons Your Workout Should Include a Warm Up
+        quizCheckUnderstand:
+          title: Check understanding about Warm-up
+          completed: true
+        feedbackCompleteCourse:
+          title: Do after completing course
+  connectEveryoneInCourse:
+    name: Connect Everyone in a course
+    courseOverview: Test case about connect
+    physicalClass:
+      date: 01 Jul, 2039 - 31 Jul, 2039
+      deliveryMethod: *physicalClassMethod
+      activities:
+        total: 1
+        completed: 0
+        talkingTogether:
+          title: Talking together
+BookCourses:
+  free: *freeMoodleInstance
+  prepaid: *prepaidMoodleInstance
+  postpaid: *postpaidMoodleInstance
+  notBook: *publishedNotBookInstance

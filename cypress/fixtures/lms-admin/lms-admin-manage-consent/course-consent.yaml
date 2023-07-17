@@ -1,0 +1,74 @@
+Courses:
+  auCourseForNewCreationConsent: &auCourseForNewCreationConsent
+    name: AU course for new creation consent
+    image: lms-admin/lms-admin-manage-consent/attachments/auCourseForNewCreationConsentImage.jpg
+    courseOverview: This course will create new consent by admin, not use existing consent from org.
+    categories: &consentCtg
+      - Course Consent Ctg
+  courseForEditingConsent: &courseForEditingConsent
+    name: Course func for editing consent
+    image: lms-admin/lms-admin-manage-consent/attachments/courseForEditingConsentImage.jpg
+    courseOverview: The consent in this course is a custom consent, not use existing consent from org.
+    categories: *consentCtg
+    managePeople:
+      admins:
+        - au_ln_couad
+    manageConsent:
+      customCourseConsent: &courseForEditingConsentPreviousConsent
+        formName: Custom course consent
+        description: The consent create by course admin.
+        consentItems:
+          first: &firstConsentItem
+            shortLabel: first
+            description: The first consent item from course level.
+            optional: false
+  courseForDownloadingConsent:
+    name: Course func for downloading consent
+    image: lms-admin/lms-admin-manage-consent/attachments/courseForDownloadingConsentImage.jpg
+    courseOverview: The consent in this course is a custom consent, not use existing consent from org.
+    categories: *consentCtg
+    managePeople:
+      admins:
+        - &courseAdminScreenName au_ln_couad
+    manageConsent:
+      customCourseConsent:
+        formName: Custom course consent for downloading
+        description: The consent create by course admin and book by 3 members
+        consentItems:
+          first: *firstConsentItem
+          second: &secondConsentItem
+            shortLabel: second
+            description: The second consent item from course level.
+            optional: true
+    instanceLearnerGivenConsent:
+      title: Instance Learner given consent
+      deliveryMethod: Self-study
+      managePeople:
+        learners:
+          - au_ln_istmem
+          - au_ln_coumem
+          - *courseAdminScreenName
+
+NewCustomConsent:
+  auCourseForNewCreationConsent:
+    <<: *auCourseForNewCreationConsent
+    manageConsent:
+      auCourseConsent:
+        formName: AU custom course consent
+        description: The consent create by learning admin on new course.
+        consentItems:
+          first: *firstConsentItem
+          second: *secondConsentItem
+
+EditCustomConsent:
+  courseForEditingConsent:
+    <<: *courseForEditingConsent
+    manageConsent:
+      previous: *courseForEditingConsentPreviousConsent
+      update:
+        formName: Custom course consent updated
+        description: The consent create by course admin. updated
+        consentItems:
+          first:
+            <<: *firstConsentItem
+            optional: true

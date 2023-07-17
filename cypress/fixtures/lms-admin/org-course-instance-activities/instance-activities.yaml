@@ -1,0 +1,227 @@
+CourseActivities:
+  elearning:
+    activityElearningToLibrary: &activityElearningToLibrary
+      type: Interactive eLearning
+      title: Elearning in Instance for add to Library - Miracle
+      description: This elearning is created in instance course activities after dash(-) is original package name.
+      uploadLessonPackage:
+        path: lms-admin/org-course-instance-activities/attachments/Miracle.zip
+      scoreLimit: 0.8
+
+ActivityLibrary:
+  elearning:
+    sPActivityElearningOrg:
+      title: SPActivity elearning for org - 4 Slide Only
+      description: This elearning is a standard activity from the public & availability is "Organization learning admin" after dash(-) is original package name.
+      coverImage:
+        path: lms-admin/org-course-instance-activities/attachments/sPActivityElearningOrg.jpg
+      uploadLessonPackage:
+        path:
+          - lms-admin/org-course-instance-activities/attachments/4 Slide Only.zip
+      templateOption: &standardActivity Standard activity
+      availability:
+        - &availabilityOrg Organization learning admin
+  quiz:
+    tPActivityQuizOrg:
+      title: &tPActivityQuizOrgName TPActivity quiz for Org
+      description: &checkUnderstandQuizDesc This may take a few minutes short text multiple choices true/false Pass score is 2.
+      gradeToPass: 2
+      templateOption: &activityTemplate Activity template
+      availability:
+        - *availabilityOrg
+    tOActivityQuizInstanceEdit: &tOActivityQuizInstanceEdit
+      type: Quiz
+      from: Organization
+      coverImage:
+        path: lms-admin/org-course-instance-activities/attachments/quizCoverImage.webp
+      title: TOActivity quiz for Org for edit from instance
+      description: *checkUnderstandQuizDesc
+      gradeToPass: 2
+      templateOption: &activityTemplate Activity template
+  file:
+    tOActivityImage:
+      title: TOActivity file as image
+      description: It's a file as image, so it can view and download. It is template activity from org
+      uploadFiles:
+        path:
+          - lms-admin/org-course-instance-activities/attachments/tOActivityImage.jpg
+      templateOption: *activityTemplate
+  hyperlink:
+    sOActivityLink:
+      title: SOActivity link - Crosswired
+      description: It's a hyperlink. It is standard activity from org
+      protocol: https://
+      url: crosswired.com
+      templateOption: *standardActivity
+    tOActivityLinkInstanceEdit: &tOActivityLinkInstanceEdit
+      type: Hyperlink
+      from: Organization
+      displayText: &tOActivityLinkInstanceEditDisplayText TOActivity link - YouTube for edit from instance
+      title: *tOActivityLinkInstanceEditDisplayText
+      description: It's a hyperlink, will use for edit from course instance. It is activity template activity from org
+      coverImage: 
+        path: lms-admin/org-course-instance-activities/attachments/hyperlinkYouTubeCoverImage.jpg
+      protocol: https://
+      url: youtube.com
+      templateOption: *activityTemplate
+
+CourseData:
+  courseFuncActivityFromLibrary: &courseFuncActivity
+    name:
+      value: Course Func Activity from Library
+    image: &courseFuncActivityImage lms-admin/org-course-instance-activities/attachments/courseFuncActivity.jpg
+    courseOverview: Use for manage activities that choose from library
+    categories:
+      - Ctg Func Instances
+    url:
+      beta:
+        id:
+          - 129534951
+      uat:
+        id:
+          - 128103903
+    managePeople:
+      addUsers:
+        - au_ln_coufaci
+        - au_ln_couad
+      faciEmails:
+        - aue_joanie.deckow@
+      adminEmails:
+        - aue_tressie.hettinger47@
+    funcSPActivityElearning:
+      url:
+        beta:
+          id:
+            - 129535281
+        uat:
+          id:
+            - 128103974
+      deliveryMethod: Blended Learning
+      title:
+        value: Func SPActivity elearning
+      startDate: '2039-02-01'
+      endDate: '2039-02-28'
+      date: 01 Feb, 2039 - 28 Feb, 2039
+      courseContactEmail: conuser2022@mail.com
+      additionalBookingNote: Course instance use for creating activities (elearning) by choose from public
+      courseFee:
+        value: 20
+      managePeople:
+        faci:
+          - au_ln_istfaci
+    funcTPActivityQuiz:
+      url:
+        beta:
+          id:
+            - 129554963
+        uat:
+          id:
+            - 128107738
+      deliveryMethod: Self-study
+      title:
+        value: Func TPActivity quiz
+      courseContactEmail: conuser2022@mail.com
+      additionalBookingNote: Course instance use for creating activities (quiz) by choose from public
+    funcTOActivityFileImage:
+      url:
+        beta:
+          id:
+            - 129591379
+        uat:
+          id:
+            - 128124467
+      deliveryMethod: &virtualClass Virtual Classroom
+      title:
+        value: Func TOActivity file as image
+      startDate: '2039-06-01'
+      endDate: '2039-06-30'
+      date: 01 Jun, 2039 - 30 Jun, 2039
+      courseContactEmail: conuser2022@mail.com
+      additionalBookingNote: Course instance use for creating activities (file) by choose from org
+      managePeople:
+        faci:
+          - au_ln_istfaci
+    funcSOActivityHyperlink:
+      url:
+        beta:
+          id:
+            - 136469335
+        uat:
+          id:
+            - 128229943
+      deliveryMethod: &physicalClass Physical Classroom
+      title:
+        value: Func SOActivity hyperlink
+      courseContactEmail: conuser2022@mail.com
+      additionalBookingNote: Course instance use for creating activities (hyperlink) by choose from org
+      managePeople:
+        faci:
+          - au_ln_istfaci
+    funcTOActivityHyperlinkInstanceEdit:
+      url:
+        beta:
+          id:
+            - 132676449
+        uat:
+          id:
+            - 129032195
+      deliveryMethod: *virtualClass
+      title:
+        value: Func edit TOActivity hyperlink in course instance
+      additionalBookingNote: Course instance use for editing activities (hyperlink) by choose from org
+      activities:
+        value:
+          tOActivityLinkInstanceEdit: *tOActivityLinkInstanceEdit
+    funcTOActivityQuizInstanceEdit:
+      url:
+        beta:
+          id:
+            - 136469449
+        uat:
+          id:
+            - 129037913
+      deliveryMethod: *physicalClass
+      title:
+        value: Func edit TOActivity quiz in course instance
+      additionalBookingNote: Course instance use for editing activities (quiz) by choose from org
+      activities:
+        value:
+          tOActivityQuizInstanceEdit: *tOActivityQuizInstanceEdit
+
+  courseFuncActivityToLibrary:
+    url:
+      beta:
+        id:
+          - 132621188
+      uat:
+        id:
+          - 128981742
+    name:
+      value: Course Func Add Activity to Library
+    image: &courseFuncActivityImage lms-admin/org-course-instance-activities/attachments/courseFuncActivityToLibrary.jpg
+    courseOverview: Use for manage activities that add from course instance to library
+    categories:
+      - Ctg Func Instances
+    managePeople:
+      addUsers:
+        - au_ln_coufaci
+        - au_ln_couad
+      faci:
+        - aue_joanie.deckow@
+      adminEmails:
+        - aue_tressie.hettinger47@
+    funcAddElearningToLibrary:
+      url:
+        beta:
+          id:
+            - 132621290
+        uat:
+          id:
+            - 132476192
+      deliveryMethod: *physicalClass
+      title:
+        value: Func add elearning to activity library
+      additionalBookingNote: Course instance use for add activity (elearning) from instance to library
+      activities:
+        value:
+          activityElearningToLibrary: *activityElearningToLibrary

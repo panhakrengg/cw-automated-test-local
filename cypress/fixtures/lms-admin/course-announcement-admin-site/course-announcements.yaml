@@ -1,0 +1,254 @@
+CrosswiredUrl: &CrosswiredUrl
+  protocol: https://
+  url: crosswired.com
+
+expirationDate: &expirationDate
+  date: '2039-01-31'
+  hour: 11:59 pm
+
+CourseData:
+  courseFuncForCreateAnnouncement: &courseFuncForCreateAnnouncement
+    name:
+      value: Course Func for creating new announcement
+    courseOverview: This one for creating new course announcement.
+    uploadedFiles:
+      - pexels-lara-jameson-8898643.jpg
+    categories:
+      - &courseAnnouncementCtgName Course Announcement Ctg
+    url:
+      beta:
+        id:
+          - 116139795
+      uat:
+        id:
+          - 116807928
+      prd:
+        id:
+          - ''
+    funcInstanceCheckAnnouncementNotify:
+      url:
+        beta:
+          id:
+            -
+        uat:
+          id:
+            -
+      deliveryMethod: Self-study
+      title:
+        value: Func Instance to check announcement notification
+      additionalBookingNote: The instance has learner book and use to check notification when admin create and publish new announcement.
+    forSpecificAnnounceToFirst:
+      url:
+        beta:
+          id:
+            -
+        uat:
+          id:
+            -
+      deliveryMethod: &virtualClass Virtual Classroom
+      title:
+        value: &forSpecificAnnounceToFirstName First Instance for specific announce
+    forSpecificAnnounceToSecond:
+      url:
+        beta:
+          id:
+            -
+        uat:
+          id:
+            -
+      deliveryMethod: &blendedLearning Blended Learning
+      title:
+        value: &forSpecificAnnounceToSecondName Second Instance for specific announce
+    notForSpecificAnnounceTo:
+      url:
+        beta:
+          id:
+            -
+        uat:
+          id:
+            -
+      deliveryMethod: Physical Classroom
+      title:
+        value: &notForSpecificAnnounceToName Instance is not for specific announce
+  courseFuncNewInstanceUnderAnnouncement: &courseFuncNewInstanceUnderAnnouncement
+    name:
+      value: Course Func for new instance under course with announcement
+    image: lms-admin/course-announcement-admin-site/attachments/courseFuncNewInstanceUnderAnnouncementValue.jpg
+    courseOverview: Use for checking existing specific announcement with new creating instance. In order to make sure that new instances doesn't add to specific announcement.
+    categories:
+      - *courseAnnouncementCtgName
+    url:
+      beta:
+        id:
+          - 136296735
+      uat:
+        id:
+          - 130548766
+    managePeople:
+      admins:
+        - au_ln_couad
+    staticInstanceForAnnouncement:
+      url:
+        beta:
+          id:
+            -
+        uat:
+          id:
+            -
+      deliveryMethod: *blendedLearning
+      title:
+        value: &staticInstanceForAnnouncementName Static instance for specific announcement
+    announcements:
+      total: 1
+      specificInstance:
+        body: Announcement for specific course instances
+        announcementUrl: *CrosswiredUrl
+        expiryDate: *expirationDate
+        announceTo: &specificInstances Specific course instances
+        specificCourseInstances:
+          - *staticInstanceForAnnouncementName
+        notAnnounceTo:
+          - &auNewInstanceNoAnnouncement AU new Instance, should no announcement
+  courseFuncPublishAnnouncement:
+    name:
+      value: Course Func for publish announcement
+    image: lms-admin/course-announcement-admin-site/attachments/courseFuncPublishAnnouncementValue.jpg
+    courseOverview: Use for publish announcement.
+    categories:
+      - *courseAnnouncementCtgName
+    url:
+      beta:
+        id:
+          - 136296809
+      uat:
+        id:
+          - 130548939
+    staticInstanceForPublishAnnouncement:
+      url:
+        beta:
+          id:
+            - 136299332
+        uat:
+          id:
+            - 130579807
+      deliveryMethod: *blendedLearning
+      title:
+        value: Static Instance for checking publish announcement
+      managePeople:
+        members:
+          - au_ln_lnad
+    announcements:
+      forPublish: &publishAnnouncement
+        body: Announce to all course instances for publishing
+        announcementUrl: *CrosswiredUrl
+        timeZone: &indochinaTime '(UTC +7:0) Indochina Time (Asia/Phnom_Penh)'
+        expiryDate: *expirationDate
+        announceTo: &allInstances All course instances
+  courseFuncUnpublishAnnouncement:
+    name:
+      value: Course Func for unpublish announcement
+    image: lms-admin/course-announcement-admin-site/attachments/courseFuncUnpublishAnnouncementValue.jpg
+    courseOverview: Use for unpublish announcement.
+    categories:
+      - *courseAnnouncementCtgName
+    url:
+      beta:
+        id:
+          - 136296958
+      uat:
+        id:
+          - 130549088
+    staticInstanceForUnpublishAnnouncement:
+      url:
+        beta:
+          id:
+            - 136299957
+        uat:
+          id:
+            - 130580092
+      deliveryMethod: *virtualClass
+      title:
+        value: Static Instance for checking unpublish announcement
+      managePeople:
+        members:
+          - firecloudamy
+    announcements:
+      forUnpublish:
+        <<: *publishAnnouncement
+        body: Announce to all course instances for unpublishing
+  courseFuncRemoveAnnouncement: &courseFuncRemoveAnnouncement
+    name:
+      value: Course Func for remove announcement
+    image: lms-admin/course-announcement-admin-site/attachments/courseFuncRemoveAnnouncementValue.jpg
+    courseOverview: Use for remove announcement then check notification.
+    categories:
+      - *courseAnnouncementCtgName
+    url:
+      beta:
+        id:
+          - 136296888
+      uat:
+        id:
+          - 130549014
+    staticInstanceForRemoveAnnouncement:
+      url:
+        beta:
+          id:
+            - 136299864
+        uat:
+          id:
+            - 130579894
+      deliveryMethod: *virtualClass
+      title:
+        value: Static Instance for checking remove announcement
+      managePeople:
+        members:
+          - au_ln_ctgad
+
+NewAnnouncements:
+  courseFuncForCreateAnnouncement:
+    <<: *courseFuncForCreateAnnouncement
+    announcements:
+      auAnnounceAllInstances: &auAnnounceAllInstances
+        body: AU announce to all course instances
+        announcementUrl: *CrosswiredUrl
+        timeZone: *indochinaTime
+        expiryDate: *expirationDate
+        announceTo: *allInstances
+      auNotifyToday:
+        <<: *auAnnounceAllInstances
+        body: AU notify today
+      auAnnounceSpecificInstances:
+        body: AU announce to specific course instances
+        announcementUrl: *CrosswiredUrl
+        timeZone: *indochinaTime
+        expiryDate: *expirationDate
+        announceTo: *specificInstances
+        specificCourseInstances:
+          - *forSpecificAnnounceToFirstName
+          - *forSpecificAnnounceToSecondName
+        notAnnounceTo:
+          - *notForSpecificAnnounceToName
+      auAnnouncementMoreThan255:
+        <<: *auAnnounceAllInstances
+        body: AU We regret to inform you that due to unforeseen circumstances, all products currently available in our store have been recalled. We have discovered a widespread issue with the quality and safety of our products and have taken the necessary measures to ensure the safety of our customers.
+
+DeleteAnnouncements:
+  courseFuncRemoveAnnouncement:
+    <<: *courseFuncRemoveAnnouncement
+    announcements:
+      forRemove:
+        <<: *publishAnnouncement
+        body: AU Announce to all course instances then remove it.
+
+CreateInstances:
+  courseFuncNewInstanceUnderAnnouncement:
+    <<: *courseFuncNewInstanceUnderAnnouncement
+    auNewInstanceNoAnnouncement:
+      deliveryMethod: Self-study
+      title:
+        value: *auNewInstanceNoAnnouncement
+      additionalBookingNote: Admin add learner to this instance to check there is also no announcement on learner site.
+      managePeople:
+        members:
+          - au_ln_couad

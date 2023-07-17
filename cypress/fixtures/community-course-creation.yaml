@@ -1,0 +1,14 @@
+EnableDisableCommunityCourseCreation:
+  organizationStructure:
+    webLearnInternational:
+      name: WEBLEARN INTERNATIONAL
+      subOrgUnit:
+        new:
+          name: AU Organization From Sub Org of WebLearn International
+        existing:
+          designFrontend:
+            name: Design Frontend
+            community:
+              name:
+                new: AU Organization Community From Design Frontend Org Unit
+              url: /web/au-organization-community-from-design-frontend-org-unit

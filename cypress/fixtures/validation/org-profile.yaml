@@ -1,0 +1,25 @@
+orgProfile:
+  memberRootOrg:
+    uuid:
+      local: 830b2273-9d1a-4a7b-ba77-4f071d3a1803
+      uat: 830b2273-9d1a-4a7b-ba77-4f071d3a1803
+      beta: 22733525-cfe7-4db0-8190-33534a66fd61
+      prd: 
+  twoFaRootOrg:
+    uuid:
+      local: 05a9cdc1-ebfb-412c-8aa2-fec195a92c38
+      uat: 05a9cdc1-ebfb-412c-8aa2-fec195a92c38
+      beta: 78ff3222-0b18-4f62-bb63-0a1d46cdc34d
+      prd: 
+  twoFaPlan:
+    uuid:
+      local: cf1646c9-91f0-4ef9-877e-b7fab57e74c9
+      uat: cf1646c9-91f0-4ef9-877e-b7fab57e74c9
+      beta: 1aab4fec-9a1f-45ef-8726-45376614cb69
+      prd: 
+  memberFe:
+    uuid:
+      local: 594dd077-a3b7-4d45-8b55-080cc7b1f1a3
+      uat: 594dd077-a3b7-4d45-8b55-080cc7b1f1a3
+      beta: 33761c10-cd7b-4dd0-8eea-67f268a2ead2
+      prd: 

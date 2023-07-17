@@ -1,0 +1,45 @@
+ActivityLibrary:
+  assignment:
+    tOActivityMidterm30pt: &tOActivityMidterm30pt
+      assignmentName:
+        value: TOActivity Midterm 30 pt
+        new: AU TOActivity Midterm 30 pt
+
+CourseData:
+  courseFuncCompletedInstance:
+    name:
+      value: Course Func that contains only completed courses instances
+    courseOverview: This course have only courses that have been completed by Learner
+    categories:
+      - Soft Skill
+    url:
+      beta:
+        id:
+          - 116540634
+      uat:
+        id:
+          - 117134861
+      prd:
+        id:
+          - ''
+    completedInstanceAddActivity: &completedInstanceAddActivity
+      title:
+        value: Completed instance then admin add new activity
+      deliveryMethod: Self-study
+      url:
+        beta:
+          id:
+            - 130671011
+        uat:
+          id:
+            - 130743274
+        prd:
+          id:
+            - ''
+
+AddActivityFromLibrary:
+  completedInstanceAddActivity:
+    <<: *completedInstanceAddActivity
+    activities:
+      new:
+        tOActivityMidterm30pt: *tOActivityMidterm30pt

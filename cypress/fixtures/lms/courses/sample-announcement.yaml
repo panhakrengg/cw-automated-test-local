@@ -1,0 +1,42 @@
+SampleTimezoneExpiration: &SampleTimezoneExpiration
+  timezone: Asia/Phnom_Penh
+  expiryDate:
+    value: 2039-01-31
+  hour:
+    value: 11:59 pm
+
+SampleAnnouncementUrl: &SampleAnnouncementUrl
+  protocol: https://
+  url:
+    value: crosswired.com
+
+SampleAnnouncement:
+  forAllInstance: &forAllInstanceAnnouncement
+    body:
+      value: Hope all course instances able to see this announcement :)
+    announcementUrl: *SampleAnnouncementUrl
+    announceTo:
+      allInstances: &allInstancesAnnounceTo
+        label: All course instances
+    <<: *SampleTimezoneExpiration
+  someInstance:
+    body:
+      value: Hello everyone, hope you can see this announcement on some instances only. Thanks
+    announcementUrl: *SampleAnnouncementUrl
+    announceTo:
+      specificInstances:
+        label: Specific course instances
+        instances:
+          - Self-study
+          - Virtual Classroom
+    <<: *SampleTimezoneExpiration
+  expirationAnnouncement:
+    body:
+      value: This announcement create when creation course, so I'll expire soon. No on can see
+    announcementUrl: *SampleAnnouncementUrl
+    announceTo:
+      allInstances: *allInstancesAnnounceTo
+  learnerClose:
+    <<: *forAllInstanceAnnouncement
+    body:
+      value: Learner already cancelled this announcement, so s/he cannot view it again in case admin remove then create new.

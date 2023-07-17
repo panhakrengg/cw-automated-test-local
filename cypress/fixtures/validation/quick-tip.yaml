@@ -1,0 +1,27 @@
+QuickTip:
+  createNewCourse:
+    title: &quickTipTitle Quick Tip
+    headerTitle: Create Course
+    icon: quicktip.png
+    tipContents:
+      - Creating a course is the best way to share your knowledge with people. Here are a few tips for you to get started.
+      - Course Title
+      - Keep the course title specific but catchy. Ensure that it encapsulates what learners will discover throughout the course.
+      - Add Course image
+      - Provide brief information about the course to grab learners' attention. The recommended size is 833 x 400 pixels.
+      - Course Overview
+      - Think about your course’s target audience and highlight the relevant learning experiences they will gain in a clear and compelling manner.
+      - Upload Files
+      - Provide necessary files for learners to review before booking the course. These files might include the course syllabus, handouts, class poster, or other files.
+      - Make it a shared course
+      - Allow other communities in your organization to use your course. You can view their progress through the training reports.
+    viewMoreTips: &viewMoreTips
+      label: View more tips
+      link: /web/help-guide
+  createNewInstance:
+    title: *quickTipTitle
+    headerTitle: Instance Title
+    icon: quicktip.png
+    tipContents:
+      - Give course instances a unique title to differentiate them from other instances of the course and help your learners choose which instance to book.
+    viewMoreTips: *viewMoreTips

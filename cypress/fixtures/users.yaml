@@ -1,0 +1,935 @@
+Users:
+  uat: # same in beta
+    devteam:
+      label: Dev team
+      screenName: devteam
+      description: Development script
+      email: devteam@crosswired.com
+    allCw:
+      label: &allCw All Crosswired
+      screenName: &allCwScreenName au_allcw
+      description: &allCwDescription CW user that has profile visibility as All Logged-in Users
+      email: &allCwEmail allcw@gmail.com
+    allRole:
+      label: &allRole User has all role in Crosswired
+      screenName: &allRoleScreenName au_allrole
+      description: &allRoleDescription User has all role in CW as Admin in LMS, Admin in CoP, ...
+      email: &allRoleEmail auallrole@yopmail.com
+    ciMember:
+      label: &ciMember Course Instance Member
+      screenName: &ciMemberScreenName au_instancemember
+      role: &ciMemberRole Course Instance Member of Demo instance
+      email: &ciMemberEmail cimem@uat.crosswired.net
+    contactManager:
+      label: &contactManager Contact Manager
+      screenName: &contactManagerScreenName au_copcontactmanager
+      role: &contactManagerRole Contact Manager of Automation CoP
+      email: &contactManagerEmail copcontactmanager@yopmail.com
+    contactUser:
+      label: &contactUser Contact User
+      screenName: &contactUserScreenName au_copcontactuser
+      role: &contactUserRole Contact User of Automation CoP
+      email: &contactUserEmail copcontactuser@yopmail.com
+    couponUser:
+      label: &couponUser Coupon User
+      screenName: &couponUserScreenName au_coupon
+      description: &couponUserDescription CW user that register by Coupon Code
+      email: &couponUserEmail coupon@crosswired.net
+    freeMium:
+      label: &freeMium Freemium User
+      givenName: AU
+      familyName: Freemium
+      screenName: &freeMiumScreenName au_freemium
+      description: &freeMiumDescription CW user that is Freemium user
+      email: &freeMiumEmail freemium@yopmail.com
+    freeMiumFunc:
+      label: *freeMium
+      givenName: &freeMiumFuncGivenName AUFree
+      familyName: &freeMiumFuncFamilyName Func
+      screenName: &freeMiumFuncScreenName au_freemium_func
+      description: &freeMiumFuncDescription CW user that is Freemium user and use for Functionality
+      email: &freeMiumFuncEmail free.func@mail.com
+    learnAdmin:
+      label: &learnAdmin Learning Admin
+      screenName: &learnAdminScreenName au_learnadmin
+      givenName: &learnAdminGivenName AULearnA
+      familyName: &learnAdminFamilyName LearningAdmin
+      role: &learnAdminRole Learning Admin of Demo Instance
+      email: &learnAdminEmail learnadmin@uat.crosswired.net
+    learnCwAdmin:
+      label: &learnCwAdmin Learning Connect Admin
+      screenName: &learnCwAdminScreenName au_learnconnectadmin
+      role: Learning Admin of Connect Instance
+      email: &learnCwAdminEmail learnconnectadmin@uat.crosswired.net
+    memberInOtherCop:
+      label: &memberInOtherCop Member In Other Cop
+      screenName: &memberInOtherCopScreenName au_memberinothercop
+      role: &memberInOtherCopRole CoP Member, but not in Automation CoP
+      email: &memberInOtherCopEmail memberinothercop@corsswired.com
+    myConnection_Amanda:
+      label: &myConnection My Connection
+      screenName: &amandaScreenName au_connect_amand
+      givenName: &amandaGivenName AUAmanda
+      familyName: &amandaFamilyName Connection
+      description: &myConnectionDescription CW user that has connection with *onlyMe
+      email: &amandaEmail au.connection_amanda@mail.com
+    myConnection_Jamison:
+      label: &auJamisonLabel CW user that has connection with other users
+      givenName: &auJamisonGivenName AUJamison
+      familyName: &auJamisonFamilyName Connection
+      fullName: &auJamisonFullName AUJamison Connection
+      screenName: &auJamisonScreenName au_connect_jami
+      email: &auJamisonEmail au.connection_jamison@mail.com
+    myOrganization:
+      label: &myOrganization My Organization
+      screenName: &myOrganizationScreenName au_myorganization
+      givenName: &myOrganizationGivenName AUNormal
+      familyName: &myOrganizationFamilyName MyOrganization
+      description: &myOrganizationDescription User in Demo Instance, but no any role.
+      email: &myOrganizationEmail organization@gmail.com
+    notCW:
+      label: &notCW Not Crosswired user
+      description: &notCWDescription Not CW user
+      email: &notCWEmail unknow@crosswired.net
+    onlyMe:
+      label: &onlyMe Only Me
+      screenName: &onlyMeScreenName au_onlyme
+      description: &onlyMeDescription CW user that has profile visibility as Only Me
+      email: &onlyMeEmail onlyme@gmail.com
+    orgAdmin:
+      label: &orgAdmin Organization Admin
+      screenName: &orgAdminScreenName au_orgadmin
+      givenName: &orgAdminGivenName AUOrgA
+      familyName: &orgAdminFamilyName OrgAdmin
+      role: &orgAdminRole Organization Admin of Demo Instance.
+      email: &orgAdminEmail orgadmin@uat.crosswired.net
+    orgCopMem:
+      label: &orgCopMem Org Cop Member
+      screenName: &orgCopMemScreenName au_orgcopmem
+      role: &orgCopMemRole CoP Member
+      email: &orgCopMemEmail orgcopmem@uat.crosswired.net
+    visaCardUser:
+      label: &visaCardUser Visa Card User
+      screenName: &visaCardUserScreenName au_visacard
+      description: &visaCardUserDescription CW user that register by Visa Card
+      email: &visaCardUserEmail visacard@uat.crosswired.net
+    wpAdmin:
+      label: &wpAdmin CoP Admin
+      screenName: &wpAdminScreenName au_copadmin
+      givenName: &wpAdminGivenName AU
+      familyName: &wpAdminFamilyName CoPAdmin
+      role: &wpAdminRole Admin of Automation CoP
+      email: &wpAdminEmail webad@uat.crosswired.net
+      fullName: &wpAdminFullName AU CoPAdmin
+    wpOwner:
+      label: &wpOwner CoP Owner
+      screenName: &wpOwnerScreenName au_copowner
+      role: &wpOwnerRole Owner of Automation CoP
+      email: &wpOwnerEmail webowner@uat.crosswired.net
+      wpOwnerGivenName: &wpOwnerGivenName AU
+      wpOwnerFamilyName: &wpOwnerFamilyName CoPOwner
+    wpSubscribe:
+      email: &wpSubscribeEmail websub@uat.crosswired.net
+      familyName: &wpSubscribeFamilyName CoPMember
+      givenName: &wpSubscribeGivenName AU
+      label: &wpSubscribe CoP Subscribe
+      role: &wpSubscribeRole CoP Member
+      screenName: &wpSubscribeScreenName au_copmember
+    ciMemberOMF:
+      label: &ciMemberOMF Course Instance Member OMF
+      screenName: &ciMemberOMFScreenName koalaDoll
+      role: Course Instance Member of OMF instance
+      email: &ciMemberOMFEmail enghorng@uat.crosswired.net
+    orgAdminOMF:
+      label: &orgAdminOMF Learning Admin OMF
+      screenName: &orgAdminOMFScreenName koala
+      role: Organization Admin of OMF instance
+      email: &orgAdminOMFEmail enghorng2@crosswired.net
+    learnAdminOMF:
+      label: &learnAdminOMF Learning Admin OMF
+      screenName: &learnAdminOMFScreenName koala
+      role: Learning Admin of OMF instance
+      email: &learnAdminOMFEmail enghorng2@crosswired.net
+    omfAdmin:
+      label: &omfAdmin OMF Admin
+      screenName: &omfAdminScreenName sa_sa_koem
+      role: Organization Admin of OMF Organization
+      email: &omfAdminEmail sasa@gmail.com
+    helpGuideAdmin:
+      email: &helpGuideAdminEmail helpguideadmin@yopmail.com
+      familyName: &helpGuideAdminFamilyName GuideAdmin
+      givenName: &helpGuideAdminGivenName AUHelp
+      label: &helpGuideAdmin Help Guide Admin
+      role: &helpGuideAdminRole Help Guide Admin of Platform
+      screenName: &helpGuideAdminScreenName auhelpgui
+    helpGuideOrgAdmin:
+      email: &helpGuideOrgAdminEmail helpguideorgadmin@yopmail.com
+      familyName: &helpGuideOrgAdminFamilyName Admin
+      givenName: &helpGuideOrgAdminGivenName AUGuideOrg
+      label: &helpGuideOrgAdmin Help Guide and Organization Management Admin
+      role: &helpGuideOrgAdminRole Help Guide Admin of Platform and Organization Management
+      screenName: &helpGuideOrgAdminScreenName auhelpogad
+    helpGuideTwoOrgAdmin:
+      email: &helpGuideTwoOrgAdminEmail guideorg2@yopmail.com
+      familyName: &helpGuideTwoOrgAdminFamilyName Org2
+      givenName: &helpGuideTwoOrgAdminGivenName AUGuide
+      screenName: &helpGuideTwoOrgAdminScreenName auguide2org
+      label: &helpGuideTwoOrgAdmin Help Guide and Org admin of WebLearn and Demo Frontier
+    learnMgtAdmin:
+      label: &learnMgtAdmin Learning Management Admin
+      email: &learnMgtAdminEmail learnmgtadmin@yopmail.com
+      screenName: &learnMgtAdminScreenName au_learnmgtadmin
+      familyName: &learnMgtAdminFamilyName LearningMgtAdmin
+      givenName: &learnMgtAdminGivenName AULearnMgt
+      fullName: &learnMgtAdminGivenNameFullName AULearnMgt LearningMgtAdmin
+      role: &learnMgtAdminRole Learning Admin of WebLearn & CoP Admin of Learn Tennis
+    backupCodeUser:
+      label: &backupCodeUser backup code user
+      screenName: &backupCodeUserScreenName au_backup_code
+      email: &backupCodeUserEmail au_get_backup_code@yopmail.com
+      givenName: &backupCodeUserGivenName AU Backup Code
+      familyName: &backupCodeUserFamilyName User
+    otpCodeUser:
+      label: &otpCodeUser otp code user
+      screenName: &otpCodeUserScreenName au_otp_code
+      email: &otpCodeUserEmail au_otp_code@yopmail.com
+      givenName: &otpCodeUserGivenName AU OTP Code
+      familyName: &otpCodeUserFamilyName User
+    getOtpCodeUser:
+      label: &getOtpCodeUser get otp code user
+      screenName: &getOtpCodeUserScreenName au_get_otp_code
+      email: &getOtpCodeUserEmail au_get_otp_code@yopmail.com
+      givenName: &getOtpCodeUserGivenName AU Get OTP Code
+      familyName: &getOtpCodeUserFamilyName User
+    auOptOutOwner:
+      label: &auOptOutOwner Au CoPOwner Opt Out
+      screenName: &auOptOutOwnerScreenName au_optout_owner
+      email: &auOptOutOwnerEmail au_optout_owner@mail.com
+      givenName: &auOptOutOwnerGivenName Au CoPOwner
+      familyName: &auOptOutOwnerFamilyName Opt Out
+    auOptOutMember:
+      label: &auOptOutMember Au CoPMember Opt Out
+      screenName: &auOptOutMemberScreenName au_optout_member
+      email: &auOptOutMemberEmail au_optout_member@mail.com
+      givenName: &auOptOutMemberGivenName Au CoPMember
+      familyName: &auOptOutMemberFamilyName Opt Out
+    aueEldredLegros:
+      label: &aueEldredLegros Normal user add connection user
+      email: &aueEldredLegrosEmail eldred50@ethereal.email
+      screenName: &aueEldredLegrosScreenName au_eldred50
+      givenName: &aueEldredLegrosGivenName Aue Red
+      familyName: &aueEldredLegrosFamilyName Legros
+    aueJasonFunk:
+      label: &aueJasonFunk Normal user CoP Administrator
+      email: &aueJasonFunkEmail jason.funk@ethereal.email
+      screenName: &aueJasonFunkScreenName aue_jason_funk
+      givenName: &aueJasonFunkGivenName Aue Jason
+      familyName: &aueJasonFunkFamilyName Funk
+    normalUser:
+      label: &normalUser normal user
+      screenName: &normalUserScreenName au_normaluser
+      email: &normalUserEmail au.normaluser@crosswired.com
+      givenName: &normalUserGivenName au
+      familyName: &normalUserFamilyName normaUser
+    passwordChangeUser:
+      label: &passwordChangeUser password change user
+      screenName: &passwordChangeUserScreenName au_pass_change
+      email: &passwordChangeUserEmail au_password_change@yopmail.com
+      givenName: &passwordChangeUserGivenName AU Password Change
+      familyName: &passwordChangeUserFamilyName User
+    auDeonBogisich:
+      label: &auDeonBogisichLabel Normal user add connection user
+      email: &auDeonBogisichEmail deon.bogisich48@mail.com
+      screenName: &auDeonBogisichScreenName deon.bogisich48
+      givenName: &auDeonBogisichGivenName Deon
+      familyName: &auDeonBogisichFamilyName Bogisich
+    auMozellLuettgen:
+      label: &auMozellLuettgenLabel Normal user for change cop role log activity
+      email: &auMozellLuettgenEmail mozell7@mail.com
+      screenName: &auMozellLuettgenScreenName mozell7
+      givenName: &auMozellLuettgenGivenName Mozell
+      familyName: &auMozellLuettgenFamilyName Luettgen
+    auPlatformFirstName_Ferry:
+      email: &auFerryEmail au_ferry45@mail.com
+      familyName: &auFerryFamilyName PlatformFirstName
+      givenName: &auFerryGivenName AuFerry
+      label: &auFerryLabel not org member, has First/Given name's visibility as Platform
+      screenName: &auFerryScreenName au_ferry
+      profile: &auFerryProfile users/attachments/au_ferry.jpg
+  prd:
+    allCw:
+      label: *allCw
+      screenName: &allCwScreenNameprd au_normaluser
+      description: *allCwDescription
+      email: &allCwEmailprd au.normaluser@mail.com
+    allRole:
+      label: *allRole
+      screenName: &allRoleScreenNameprd enghorng
+      description: *allRoleDescription
+      email: &allRoleEmailprd enghorng.lean@khalibre.com
+    ciMember:
+      label: *ciMember
+      screenName: &ciMemberScreenNameprd enghornglean03
+      role: *ciMemberRole
+      email: &ciMemberEmailprd enghorng.lean+03@khalibre.com
+    instanceMember:
+      role: Subscription Member
+      screenName: &instanceMemberScreeNamePrd au_instancemem
+      givenName: AU
+      familyName: Instance Member
+      email: &instanceMemberEmailprd cimem@mail.com
+    contactManager:
+      label: *contactManager
+      screenName: &contactManagerScreenNameprd copcnmg_murl
+      role: *contactManagerRole
+      email: &contactManagerEmailprd murl0@mail.com
+    contactUser:
+      label: *contactUser
+      screenName: &contactUserScreenNameprd enghorng.lean.04
+      role: *contactUserRole
+      email: &contactUserEmailprd enghorng.lean+04@khalibre.com
+    couponUser:
+      label: *couponUser
+      screenName: &couponUserScreenNameprd enghorng.lean.07
+      description: *couponUserDescription
+      email: &couponUserEmailprd enghorng.lean+07@khalibre.com
+    freeMium:
+      label: *freeMium
+      screenName: &freeMiumScreenNameprd freekayley
+      description: *freeMiumDescription
+      email: &freeMiumEmailprd free.kayley@mail.com
+    learnAdmin:
+      label: *learnAdmin
+      screenName: &learnAdminScreenNameprd enghorng
+      givenName: &learnAdminGivenNameprd Horng
+      familyName: &learnAdminFamilyNameprd Lean
+      role: *learnAdminRole
+      email: &learnAdminEmailprd enghorng.lean@khalibre.com
+    memberInOtherCop:
+      label: *memberInOtherCop
+      screenName: &memberInOtherCopScreenNameprd enghorng.lean01
+      role: *memberInOtherCopRole
+      email: &memberInOtherCopEmailprd enghorng.lean+01@khalibre.com
+    myConnection:
+      label: *myConnection
+      screenName: &myConnectionScreenNameprd enghorng.lean.05
+      description: *myConnectionDescription
+      email: &myConnectionEmailprd enghorng.lean+05@khalibre.com
+    myOrganization:
+      label: *myOrganization
+      screenName: &myOrganizationScreenNameprd enghorng.lean.09
+      givenName: &myOrganizationGivenNameprd OeangYang
+      familyName: &myOrganizationFamilyNameprd 09
+      description: *myOrganizationDescription
+      email: &myOrganizationEmailprd enghorng.lean+09@khalibre.com
+    notCW:
+      label: *notCW
+      description: *notCWDescription
+      email: &notCWEmailprd enghorng.lean+08@khalibre.com
+    onlyMe:
+      label: *onlyMe
+      screenName: &onlyMeScreenNameprd enghorng.lean.06
+      description: *onlyMeDescription
+      email: &onlyMeEmailprd enghorng.lean+06@khalibre.com
+    orgAdmin:
+      label: *orgAdmin
+      screenName: &orgAdminScreenNameprd enghorng
+      givenName: &orgAdminGivenNameprd Horng
+      familyName: &orgAdminFamilyNameprd Lean
+      role: *orgAdminRole
+      email: &orgAdminEmailprd enghorng.lean@khalibre.com
+    orgCopMem:
+      label: *orgCopMem
+      screenName: &orgCopMemScreenNameprd enghorng.lean.04
+      role: *orgCopMemRole
+      email: &orgCopMemEmailprd enghorng.lean+04@khalibre.com
+    visaCardUser:
+      label: *visaCardUser
+      screenName: &visaCardUserScreenNameprd enghorng.lean.07
+      description: *visaCardUserDescription
+      email: &visaCardUserEmailprd enghorng.lean+07@khalibre.com
+    wpAdmin:
+      label: *wpAdmin
+      screenName: &wpAdminScreenNameprd copad_kendal
+      role: *wpAdminRole
+      email: &wpAdminEmailprd kendall.feeney@mail.com
+    wpOwner:
+      label: *wpOwner
+      screenName: &wpOwnerScreenNameprd copow_kristy
+      role: *wpOwnerRole
+      email: &wpOwnerEmailprd kristy78@mail.com
+      familyName: &wpOwnerFamilyNameprd CoP Owner
+      givenName: &wpOwnerGivenNameprd AuKristy
+      fullName: &wpOwnerFullNameprd AuKristy CoP Owner
+    wpSubscribe:
+      label: *wpSubscribe
+      screenName: &wpSubscribeScreenNameprd copmem_enola
+      role: *wpSubscribeRole
+      email: &wpSubscribeEmailprd enola.renner@mail.com
+      familyName: &wpSubscribeFamilyNameprd CoP Mem
+      givenName: &wpSubscribeGivenNameprd AuEnola
+      fullName: &wpSubscribeFullNameprd AuEnola CoP Mem
+    normalUser:
+      screenName: &normalUserScreenNamePrd au_normaluser
+      email: &normalUserEmailPrd au.normaluser@mail.com
+      givenName: &normalUserGivenNamePrd AuEinar
+      familyName: &normalUserFamilyNamePrd NormaUser
+    auSwitchLang:
+      label: &auSwitchLang normal user
+      screenName: &auSwitchLangScreenName au_switch_lang
+      email: &auSwitchLangEmail au_switch_lang@yopmail.com
+      givenName: &auSwitchLangGivenName Au Switch Language
+      familyName: &auSwitchLangFamilyName PT And DE
+    auFireCloudReplace1:
+      label: &auFireCloudLabel normal user
+      screenName: &auFireCloudScreenName aufirecloudre1
+      email: &auFireCloudEmail aufirecloudreplace1@yopmail.com
+      secondEmail: &auFireCloudSecondEmail aufirecloudreplace3@yopmail.com
+      givenName: &auFireCloudGivenName aufirecloud
+      familyName: &auFireCloudFamilyName replace1
+    auELaurenKozey:
+      label: &auENotSign Ethereal user account not register in cw
+      screenName: &auENotSignScreenName au_lauren.kozey
+      email: &auENotSignEmail lauren.kozey@ethereal.email
+      givenName: &auENotSignGivenName AU Lauren
+      familyName: &auENotSignFamilyName Kozey
+    auELucius:
+      label: &auELucius CoP Admin preferred domain Crosswired
+      screenName: &auELuciusScreenName au_lucius51
+      email: &auELuciusEmail lucius51@ethereal.email
+      givenName: &auELuciusGivenName AU Lucius
+      familyName: &auELuciusFamilyName Friesen
+    auEWLCoPMem:
+      label: &auEWLCoPMem Org Member preferred domain FireCloud Zone
+      screenName: &auEWLCoPMemScreenName au_ewlcopmem
+      email: &auEWLCoPMemEmail jacey.welch@ethereal.email
+      givenName: &auEWLCoPMemGivenName AU Jacey
+      familyName: &auEWLCoPMemFamilyName Welch
+    auEResetPassword:
+      label: &auEResetPassword password change user
+      screenName: &auEResetPasswordScreenName aue_reset_pass
+      email: &auEResetPasswordEmail berneice.morissette@ethereal.email
+      givenName: &auEResetPasswordGivenName AUE Berneice
+      familyName: &auEResetPasswordFamilyName Morissette
+    passwordChangeUser:
+      email: &passwordChangeUserEmailPrd abraham.torphy@mail.com
+      label: &passwordChangeUserPrd password change user
+      screenName: &passwordChangeUserScreenNamePrd au_pass_change
+      givenName: &passwordChangeUserGivenNamePrd AU Password Change
+      familyName: &passwordChangeUserFamilyNamePrd User
+    backupCodeUser:
+      label: &backupCodeUserPrd backup code user
+      screenName: &backupCodeUserScreenNamePrd au_backup_code
+      email: &backupCodeUserEmailPrd au_get_backup_code@mail.com
+      givenName: &backupCodeUserGivenNamePrd AU Backup Code
+      familyName: &backupCodeUserFamilyNamePrd User
+    auPamela:
+      label: &auPamelaPrd Free user Add connection user
+      screenName: &auPamelaScreenNamePrd au_pamela
+      givenName: &auPamelaGivenNamePrd Pamela
+      familyName: &auPamelaFamilyNamePrd Hand
+      email: &auPamelaEmailPrd pamela.hand@mail.com
+    aueEldredLegros:
+      label: &aueEldredLegrosPrd Normal user add connection user
+      email: &aueEldredLegrosEmailPrd eldred50@mail.com
+      screenName: &aueEldredLegrosScreenNamePrd au_eldred50
+      givenName: &aueEldredLegrosGivenNamePrd Aue Red
+      familyName: &aueEldredLegrosFamilyNamePrd Legros
+CoPUsers:
+  owner:
+    label: *wpOwner
+    users:
+      uat:
+        screenNames:
+          - *wpOwnerScreenName
+        emails:
+          - *wpOwnerEmail
+        givenNames:
+          - *wpOwnerGivenName
+        familyNames:
+          - *wpOwnerFamilyName
+      prd:
+        screenNames:
+          - *wpOwnerScreenNameprd
+        emails:
+          - *wpOwnerEmailprd
+        givenNames:
+          - *wpOwnerGivenNameprd
+        familyNames:
+          - *wpOwnerFamilyNameprd
+        fullNames:
+          - *wpOwnerFullNameprd
+  admin:
+    label: *wpAdmin
+    users:
+      uat:
+        screenNames:
+          - *wpAdminScreenName
+          - *learnMgtAdminScreenName
+        emails:
+          - *wpAdminEmail
+          - *learnMgtAdminEmail
+        givenNames:
+          - *wpAdminGivenName
+          - *learnMgtAdminGivenName
+        familyNames:
+          - *wpAdminFamilyName
+          - *learnMgtAdminFamilyName
+        fullNames:
+          - *wpAdminFullName
+      prd:
+        screenNames:
+          - *wpAdminScreenNameprd
+        emails:
+          - *wpAdminEmailprd
+  member:
+    label: *wpSubscribe
+    users:
+      uat:
+        screenNames:
+          - *wpSubscribeScreenName
+          - *orgCopMemScreenName
+        emails:
+          - *wpSubscribeEmail
+          - *orgCopMemEmail
+        givenNames:
+          - *wpSubscribeGivenName
+        familyNames:
+          - *wpSubscribeFamilyName
+      prd:
+        screenNames:
+          - *wpSubscribeScreenNameprd
+          - *orgCopMemScreenNameprd
+        emails:
+          - *wpSubscribeEmailprd
+          - *orgCopMemEmailprd
+        familyNames:
+          - *wpSubscribeFamilyNameprd
+        givenNames:
+          - *wpSubscribeGivenNameprd
+          - ''
+        fullNames:
+          - *wpSubscribeFullNameprd
+  contactManager:
+    label: *contactManager
+    users:
+      uat:
+        screenNames:
+          - *contactManagerScreenName
+        emails:
+          - *contactManagerEmail
+      prd:
+        screenNames:
+          - *contactManagerScreenNameprd
+        emails:
+          - *contactManagerEmailprd
+  memberInOtherCoP:
+    label: *memberInOtherCop
+    users:
+      uat:
+        screenNames:
+          - *memberInOtherCopScreenName
+        emails:
+          - *memberInOtherCopEmail
+      prd:
+        screenNames:
+          - *memberInOtherCopScreenNameprd
+        emails:
+          - *memberInOtherCopEmailprd
+  contactUser:
+    label: *contactUser
+    users:
+      uat:
+        screenNames:
+          - *contactUserScreenName
+        emails:
+          - *contactUserEmail
+      prd:
+        screenNames:
+          - *contactUserScreenNameprd
+        emails:
+          - *contactUserEmailprd
+CWUsers:
+  auDeonBogisich:
+    label: *auDeonBogisichLabel
+    users:
+      uat:
+        screenNames:
+          - *auDeonBogisichScreenName
+        emails:
+          - *auDeonBogisichEmail
+  allLogin:
+    label: *allCw
+    users:
+      uat:
+        screenNames:
+          - *allCwScreenName
+        emails:
+          - *allCwEmail
+      prd:
+        screenNames:
+          - *allCwScreenNameprd
+        emails:
+          - *allCwEmailprd
+  coupon:
+    label: *couponUser
+    users:
+      uat:
+        screenNames:
+          - *couponUserScreenName
+        emails:
+          - *couponUserEmail
+      prd:
+        screenNames:
+          - *couponUserScreenNameprd
+        emails:
+          - *couponUserEmailprd
+  aueEldredLegros:
+    label: *aueEldredLegros
+    users:
+      uat:
+        screenNames:
+          - *aueEldredLegrosScreenName
+        emails:
+          - *aueEldredLegrosEmail
+      prd:
+        screenNames:
+          - *aueEldredLegrosScreenNamePrd
+        emails:
+          - *aueEldredLegrosEmailPrd
+  auPamela:
+    label: *auPamelaPrd
+    users:
+      prd:
+        screenNames:
+          - *auPamelaScreenNamePrd
+        emails:
+          - *auPamelaEmailPrd
+  onlyMe:
+    label: *onlyMe
+    users:
+      uat:
+        screenNames:
+          - *onlyMeScreenName
+        emails:
+          - *onlyMeEmail
+      prd:
+        screenNames:
+          - *onlyMeScreenNameprd
+        emails:
+          - *onlyMeEmailprd
+  visa:
+    label: *visaCardUser
+    users:
+      uat:
+        screenNames:
+          - *visaCardUserScreenName
+        emails:
+          - *visaCardUserEmail
+      prd:
+        screenNames:
+          - *visaCardUserScreenNameprd
+        emails:
+          - *visaCardUserEmailprd
+  freemium:
+    label: *freeMium
+    users:
+      uat:
+        screenNames:
+          - *freeMiumScreenName
+        emails:
+          - *freeMiumEmail
+      prd:
+        screenNames:
+          - *freeMiumScreenNameprd
+        emails:
+          - *freeMiumEmailprd
+  freemiumFunc:
+    label: *freeMium
+    users:
+      uat:
+        screenNames:
+          - *freeMiumFuncScreenName
+        emails:
+          - *freeMiumFuncEmail
+        familyNames:
+          - *freeMiumFuncFamilyName
+        givenNames:
+          - *freeMiumFuncGivenName
+  myConnection_Amanda:
+    label: *myConnection
+    users:
+      uat:
+        emails:
+          - *amandaEmail
+        screenNames:
+          - *amandaScreenName
+        familyNames:
+          - *amandaFamilyName
+        givenNames:
+          - *amandaGivenName
+  myConnection_Jamison:
+    label: *auJamisonLabel
+    users:
+      uat:
+        screenNames:
+          - *auJamisonScreenName
+        emails:
+          - *auJamisonEmail
+        fullNames:
+          - *auJamisonFullName
+  notCW:
+    label: *notCW
+    users:
+      uat:
+        emails:
+          - *notCWEmail
+      prd:
+        emails:
+          - *notCWEmailprd
+  normalUser:
+    label: *normalUser
+    users:
+      uat:
+        screenNames:
+          - *normalUserScreenName
+        emails:
+          - *normalUserEmail
+        givenNames:
+          - *normalUserGivenName
+        familyNames:
+          - *normalUserFamilyName
+      prd:
+        screenNames:
+          - *normalUserScreenNamePrd
+        emails:
+          - *normalUserEmailPrd
+  switchLangUser:
+    label: *auSwitchLang
+    users:
+      uat:
+        screenNames:
+          - *auSwitchLangScreenName
+        emails:
+          - *auSwitchLangEmail
+  auFireCloudReplace1:
+    label: *auFireCloudLabel
+    users:
+      uat:
+        screenNames:
+          - *auFireCloudScreenName
+        emails:
+          - *auFireCloudEmail
+  passwordChangeUser:
+    label: *passwordChangeUser
+    users:
+      uat:
+        screenNames:
+          - *passwordChangeUserScreenName
+        emails:
+          - *passwordChangeUserEmail
+      prd:
+        screenNames:
+          - *passwordChangeUserScreenNamePrd
+        emails:
+          - *passwordChangeUserEmailPrd
+  backupCodeUser:
+    label: *backupCodeUser
+    users:
+      uat:
+        screenNames:
+          - *backupCodeUserScreenName
+        emails:
+          - *backupCodeUserEmail
+      prd:
+        screenNames:
+          - *backupCodeUserScreenName
+        emails:
+          - *backupCodeUserEmailPrd
+  otpCodeUser:
+    label: *otpCodeUser
+    users:
+      uat:
+        screenNames:
+          - *otpCodeUserScreenName
+        emails:
+          - *otpCodeUserEmail
+  getOtpCodeUser:
+    label: *getOtpCodeUser
+    users:
+      uat:
+        screenNames:
+          - *getOtpCodeUserScreenName
+        emails:
+          - *getOtpCodeUserEmail
+  auOptOutMember:
+    label: *auOptOutMember
+    users:
+      uat:
+        screenNames:
+          - *auOptOutMemberScreenName
+        emails:
+          - *auOptOutMemberEmail
+  aueJasonFunk:
+    label: *aueJasonFunk
+    users:
+      uat:
+        screenNames:
+          - *aueJasonFunkScreenName
+        emails:
+          - *aueJasonFunkEmail
+  auMozellLuettgen:
+    label: *auMozellLuettgenLabel
+    users:
+      uat:
+        screenNames:
+          - *auMozellLuettgenScreenName
+        emails:
+          - *auMozellLuettgenEmail
+        givenNames:
+          - *auMozellLuettgenGivenName
+        familyNames:
+          - *auMozellLuettgenFamilyName
+  auPlatformFirstName_Ferry:
+    label: *auFerryLabel
+    users:
+      uat:
+        screenNames:
+          - *auFerryScreenName
+        emails:
+          - *auFerryEmail
+        givenNames:
+          - *auFerryGivenName
+        familyNames:
+          - *auFerryFamilyName
+InstanceLMSUsers:
+  demo:
+    admins:
+      organization:
+        label: *orgAdmin
+        users:
+          uat:
+            screenNames:
+              - *orgAdminScreenName
+            givenNames:
+              - *orgAdminGivenName
+            familyNames:
+              - *orgAdminFamilyName
+            emails:
+              - *orgAdminEmail
+          prd:
+            screenNames:
+              - *orgAdminScreenNameprd
+            givenNames:
+              - *orgAdminGivenNameprd
+            familyNames:
+              - *orgAdminFamilyNameprd
+            emails:
+              - *orgAdminEmailprd
+      learning:
+        label: *learnAdmin
+        users:
+          uat:
+            screenNames:
+              - *learnAdminScreenName
+            givenNames:
+              - *learnAdminGivenName
+            familyNames:
+              - *learnAdminFamilyName
+            emails:
+              - *learnAdminEmail
+          prd:
+            screenNames:
+              - *learnAdminScreenNameprd
+            givenNames:
+              - *learnAdminGivenNameprd
+            familyNames:
+              - *learnAdminFamilyNameprd
+            emails:
+              - *learnAdminEmailprd
+    learners: # also can call Members
+      courseInstance:
+        label: *ciMember
+        users:
+          uat:
+            screenNames:
+              - *ciMemberScreenName
+            emails:
+              - *ciMemberEmail
+          prd:
+            screenNames:
+              - *ciMemberScreenNameprd
+            emails:
+              - *ciMemberEmailprd
+      normal:
+        label: *myOrganization
+        users:
+          uat:
+            screenNames:
+              - *myOrganizationScreenName
+            givenNames:
+              - *myOrganizationGivenName
+            familyNames:
+              - *myOrganizationFamilyName
+            emails:
+              - *myOrganizationEmail
+          prd:
+            screenNames:
+              - *myOrganizationScreenNameprd
+            givenNames:
+              - *myOrganizationGivenNameprd
+            familyNames:
+              - *myOrganizationFamilyNameprd
+            emails:
+              - *myOrganizationEmailprd
+HelpGuideUsers:
+  devteam:
+    users:
+      uat:
+        emails:
+          - devteam@crosswired.com
+  admin:
+    users:
+      uat:
+        emails:
+          - *helpGuideAdminEmail
+          - *helpGuideOrgAdminEmail
+          - devteam@crosswired.com
+          - *helpGuideTwoOrgAdminEmail
+        screenNames:
+          - *helpGuideAdminScreenName
+          - *helpGuideOrgAdminScreenName
+          - devteam
+          - *helpGuideTwoOrgAdminScreenName
+  orgAdmin:
+    users:
+      uat:
+        emails:
+          - *helpGuideOrgAdminEmail
+        screenNames:
+          - *helpGuideOrgAdminScreenName
+ProfileUsers:
+  normalUser:
+    instanceMember:
+      users:
+        uat:
+          screenNames:
+            - *ciMemberScreenName
+          emails:
+            - *ciMemberEmail
+        prd:
+          screenNames:
+            - *instanceMemberScreeNamePrd
+          emails:
+            - *instanceMemberEmailprd
+CWLmsUsers:
+  admins:
+    learnings:
+      learnCwAdmin:
+        label: *learnCwAdmin
+        users:
+          uat:
+            screenNames:
+              - *learnCwAdminScreenName
+            emails:
+              - *learnCwAdminEmail

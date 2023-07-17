@@ -1,0 +1,89 @@
+ActivityLibrary:
+  assignment:
+    tOActivityMidterm30pt: &tOActivityMidterm30pt
+      assignmentName:
+        value: TOActivity Midterm 30 pt
+      learner:
+        fileSubmissionName:
+          - learner_for_midterm30pt.pdf
+        fileSubmissionPath:
+          - lms-learner/course-progress-and-certificate/attachments/learner_for_midterm30pt.pdf
+  feedback:
+    tOActivityDoAfterCompleteCourse: &tOActivityDoAfterCompleteCourse
+      name:
+        value: TOActivity Do after completing course
+      learner:
+        feedback:
+          multipleChoice:
+            question:
+              value: Please rate our course
+            rate: 2/**
+          shortText: &shortTextFeedback
+            question:
+              value: How do you feel on the course?
+            text: Good, it helps me improve myself. thanks
+  quiz:
+    toActivityCheckUnderstanding: &toActivityCheckUnderstanding
+      title:
+        value: TOActivity Check understanding about Warm-up
+      learner:
+        multipleChoice:
+          questionText:
+            value: The first point scored in a game is called? Correct answer is 15
+          correctAnswer: 15
+          wrongAnswer: 20
+        shortText:
+          questionText:
+            value: The stroke used to put the ball into play is called?
+          correctAnswer: Serve
+          wrongAnswer: Serve1
+        trueFalse:
+          questionText:
+            value: Today is Sunday?
+          correctAnswer: False
+          wrongAnswer: True
+
+CourseData:
+  progressOnMoodleNoSequential:
+    name: Progress On Moodle Activity & No Sequential
+    courseOverview: Draft course, has 1 instance uses for duplicate.
+    attachment:
+      - pexels-johannes-plenio-1632790.jpg
+    url:
+      beta:
+        id:
+          - 108953500
+      uat:
+        id:
+          - 110683396
+      prd:
+        id:
+          - ''
+    instanceNoSequentialHasMoodle: &instanceNoSequentialHasMoodle
+      title:
+        value: Instance no sequential & has moodle
+      deliveryMethod: Virtual Classroom
+      startDate: '2039-08-01'
+      endDate: '2039-08-24'
+      maxParticipant: 1
+      additionalBookingNote: For testing course progress on moodle activities. The course has no Sequential.
+      courseFee:
+        value: 70
+        paymentMethod: Prepaid
+      activities:
+        value:
+          total: 3
+          tOActivityMidterm30pt: *tOActivityMidterm30pt
+          tOActivityDoAfterCompleteCourse: *tOActivityDoAfterCompleteCourse
+          toActivityCheckUnderstanding:
+            <<: *toActivityCheckUnderstanding
+            learner:
+              result:
+                mark: 4.00/4.00
+                grade: 10.00 out of 10.00 (100%)
+
+CourseProgress:
+  auInstanceNoSequentialHasMoodle:
+    <<: *instanceNoSequentialHasMoodle
+    title:
+      new: AU Instance no sequential & has moodle

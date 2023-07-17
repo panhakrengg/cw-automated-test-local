@@ -1,0 +1,73 @@
+CategoryData:
+  ctgFuncInstances:
+    name:
+      value: &ctgFuncInstancesName Ctg Func Instances
+    users:
+      addUsers: &ctgFuncInstancesUsers
+        - &courseAdminScreenName au_ln_couad
+        - au_ln_istmem
+        - au_ln_istmem_del
+        - &instanceFaci au_ln_istfaci
+        - au_ln_coufaci
+        - au_ln_ctgad
+        - au_ln_istlfaci
+      members: *ctgFuncInstancesUsers
+      admins:
+        - aue_kenton.weimann@
+
+CourseData:
+  courseFuncManageInstance: &courseFuncManageInstance
+    name:
+      value: Course Func Manage Instances
+    image: &courseFuncManageInstanceImage lms-admin/course-instance/attachments/courseFuncManageInstance_Image.png
+    courseOverview: Use for update course instances only such as archive, edit, ...
+    categories:
+      - *ctgFuncInstancesName
+    url:
+      beta:
+        id:
+          - 129323264
+      uat:
+        id:
+          - 127941037
+    managePeople:
+      addUsers:
+        - *courseAdminScreenName
+      adminEmails:
+        - aue_tressie.hettinger47@
+    funcArchiveInstance: &funcArchiveInstance
+      url:
+        beta:
+          id:
+            - 129323463
+        uat:
+          id:
+            - 127941112
+      deliveryMethod: Blended Learning
+      title:
+        value: Func Archive Instance
+      startDate: '2039-02-01'
+      endDate: '2039-02-28'
+      date: 01 Feb, 2039 - 28 Feb, 2039
+      courseContactEmail: conuser2022@mail.com
+      additionalBookingNote: Course instance use for archive
+      courseFee:
+        value: 20
+      managePeople:
+        faci:
+          - *instanceFaci
+    funcUnarchiveInstance:
+      <<: *funcArchiveInstance
+      url:
+        beta:
+          id:
+            - 129362100
+        uat:
+          id:
+            - 130958294
+      title:
+        value: Func Unarchive Instance
+      startDate: '2039-03-01'
+      endDate: '2039-03-30'
+      date: 01 Mar, 2039 - 30 Mar, 2039
+      additionalBookingNote: Course instance use for unarchive

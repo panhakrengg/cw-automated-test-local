@@ -1,0 +1,130 @@
+CourseData:
+  publishNoBook: &publishNoBookCourse
+    name: Publish no one book
+    courseOverview: Has course instance but no one book the course
+    attachment:
+      - pexels-cottonbro-studio-3825295.jpg
+    noOneBookInstance:
+      deliveryMethod: &physicalClassMethod Physical Classroom
+      date: 01 Nov, 2039 - 30 Nov, 2039
+      courseFee:
+        value: 70
+        currency: USD
+      activities:
+        total: 2
+        richText:
+          title: Reasons Your Workout Should Include a Warm Up
+        hyperlink:
+          displayText: Beginner Tennis Lesson
+  publishNoInstance: &publishNoInstanceCourse
+    name: Publish under LP
+    courseOverview: Always publish, and no instance
+  completeCourse: &completeCourse
+    name: Completed course LP
+    courseOverview: Draft and completed course
+  booking: &bookingCourse
+    name: Booking Course
+    courseOverview: Always publish, for booking course
+    url:
+      beta:
+        id:
+          - 109586492
+      uat:
+        id:
+          - 111828926
+      prd:
+        id:
+          - ''
+    freeCourse: &freeCourseInstance
+      additionalBookingNote: Publish for booking FREE course from Learning Path
+      deliveryMethod: *physicalClassMethod
+      date: 01 Jan, 2039 - 31 Jan, 2039
+      slotAvailable: 8
+      url:
+        beta:
+          id:
+            - 117883333
+        uat:
+          id:
+            - 118229466
+        prd:
+          id:
+            - ''
+      activities: #sample-activities.yaml > SampleActivities
+        fileImage:
+          Title: Tennis Scoreboard Image
+LearningPathData:
+  savingNoBook: &savingNoBookLP
+    name: Saving LP and NOT contain booked course
+    learningPathOverview: For saving learning path, make sure no one book course.
+    duration: 1 Month 3 Days 4 Hours 30 Minutes
+    url:
+      beta:
+        id:
+          - 109586241
+      uat:
+        id:
+          - 111274013
+      prd:
+        id:
+          - ''
+    courses:
+      total: 2
+      notBook:
+        <<: *publishNoBookCourse
+        optional: false
+      noInstance:
+        <<: *publishNoInstanceCourse
+        optional: true
+  noBookAndCompleteCourse: &noBookAndCompleteCourseLP
+    name: LP contains Not book and complete course
+    learningPathOverview: Publish, and has member, 1 course is no one book and 1 completed course
+    url:
+      beta:
+        id:
+          - 109798061
+      uat:
+        id:
+          - 111407277
+      prd:
+        id:
+          - ''
+    courses:
+      total: 2
+      notBook:
+        <<: *publishNoBookCourse
+        optional: true
+      completed:
+        <<: *completeCourse
+        optional: false
+  forBookCourse: &forBookCourseLP
+    name: LP For Booking Course
+    learningPathOverview: Course Member join this learning path, and also book a course from this learning path. Has 1 member
+    url:
+      beta:
+        id:
+          - 117865255
+      uat:
+        id:
+          - 118228459
+      prd:
+        id:
+          - ''
+    courses:
+      total: 3
+      notBook:
+        <<: *publishNoBookCourse
+        optional: false
+      booking:
+        <<: *bookingCourse
+        optional: true
+      noInstance:
+        <<: *publishNoInstanceCourse
+        optional: false
+
+SaveLearningPath:
+  noBookCourse: *savingNoBookLP
+  containCompletedCourse: *noBookAndCompleteCourseLP
+
+BookingCourse:
+  fromLearningPath: *freeCourseInstance

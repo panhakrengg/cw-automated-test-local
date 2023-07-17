@@ -1,0 +1,52 @@
+SampleLesson:
+  cambodia:
+    description: In Community "Learn Tennis" & For smoke testing and add to activity
+    originalName: &cambodiaLesson Cambodia
+    lessonName: *cambodiaLesson
+    size: 4.6 MB
+  whenDisaster:
+    description: In Org "FireCloud Zone" & For smoke testing and add to activity
+    originalName: &whenDisaster When a Disaster Happens, Who Would You Call
+    lessonName: *whenDisaster
+    size: 19.2 MB
+    author: OrgLmsUsers.admins.categories.auLnCtgAd_Kenton
+  case100MB:
+    description: In Community "Learn Tennis", Organization & For Edit test case
+    originalName: &case100MBLesson case 100 Mb
+    lessonName: *case100MBLesson
+    size: 101 MB
+  whenCulture:
+    description: In Community "Learn Tennis", Org "WebLearn" & For Delete test case
+    originalName: When Culture Meets Scripture
+    lessonName: AU When Culture Meets Scripture
+    path: /lms/lesson-library/When Culture Meets Scripture.zip
+    imagePath: /lms/lesson-library/when meet.jpg
+    size: 11 MB
+  hospital:
+    description: For upload new lesson on Community from Community
+    originalName: Hospital Connected
+    lessonName: AU Hospital Connected
+    path: /lms/lesson-library/Hospital Connected.zip
+    imagePath: /lms/lesson-library/hospital.jpg
+    size: 5.6 MB
+  storyLine:
+    description: For upload new lesson on Community from Community
+    originalName: Storyline 3 Cam
+    lessonName: AU Storyline 3 Cam
+    path: /lms/lesson-library/Storyline 3 Cam.zip
+    imagePath: /lms/lesson-library/Story.jpg
+    size: 10 MB
+  imagineCannotRead:
+    description: For upload new lesson on Organization from Community
+    originalName: Imagine You Can't Read
+    lessonName: AU Imagine You Can't Read
+    path: /lms/lesson-library/Imagine You Can't Read.zip
+    imagePath: /lms/lesson-library/read.jpg
+    size: 13.4 MB
+  isTithing:
+    description: For upload new lesson on Organization from LMS Admin
+    originalName: Is Tithing Biblical.zip
+    lessonName: AU Is Tithing Biblical.zip
+    path: /lms/lesson-library/Is Tithing Biblical.zip
+    imagePath: /lms/lesson-library/isTithing.jpg
+    size: 14.4 MB

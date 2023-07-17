@@ -1,0 +1,131 @@
+CoPUsers:
+  admin:
+    timeZone: &UTC7TimeZone (UTC +7:0) Indochina Time (Asia/Phnom_Penh)
+  owner:
+    timeZone: *UTC7TimeZone
+DeliveryMethod:
+  blendedLearning: &blendedLearningMethod Blended Learning
+  physicalClass: &physicalClassMethod Physical Classroom
+  selfStudy: &selfStudyMethod Self-study
+  virtualClass: &virtualClassMethod Virtual Classroom
+NavigationInstanceLevel:
+  - Instance Overview
+  - Edit Instance
+  - Course Activities
+  - LearnerResources
+  - Training Report
+CourseData:
+  newCourseInstanceFunc: &newCourseInstanceFuncCourse
+    description: Use for creating new course instance functionality only.
+    name: New Course Instances Func
+    url: &newCourseInstanceFuncCourseId
+      local:
+        id:
+          - 137105942
+      beta:
+        id:
+          - 127768099
+      uat:
+        id:
+          - 144846731
+      prd:
+        id:
+          - 52194448
+    courseOverview: Use for creating new course instance functionality only.
+    uploadedFiles:
+      - insert.png
+    tagSkill:
+      - Compliance & Leadership
+    courseFee: &scoreInTennisCourseFee
+      value: 2
+      currency: USD
+    courseInstances:
+      createNewInstance:
+        url: *newCourseInstanceFuncCourseId
+    displayLanguages: English
+CreateEmptyInstances:
+  selfStudy: &selfStudyEmptyInstances
+    <<: *newCourseInstanceFuncCourse
+    description: empty self study
+    duration: 0 minute
+    deliveryMethod: *selfStudyMethod
+    language: &englishLanguage English
+    url: null
+    courseInstances: null
+    date: '-'
+  blendedLearning:
+    <<: *selfStudyEmptyInstances
+    description: empty blended learning
+    deliveryMethod: *blendedLearningMethod
+CreateInstances:
+  selfStudy:
+    createdBy: &copOwner CoPUsers.owner
+    deliveryMethod: *selfStudyMethod
+    language: null # remove default language
+    courseCompletion: 1
+    expectedDuration: 35
+    contactEmail: &contactEmail conuser2022@outlook.com
+    additionalBookingNote: &additionalBookingNote AU course instance
+    courseFee:
+      <<: *scoreInTennisCourseFee
+      value: 3
+  virtualClass: &virtualClassCreateInstances
+    createdBy: *copOwner
+    createdByScreenName:
+      uat: au_copowner
+      prd: copow_kristy
+    deliveryMethod: *virtualClassMethod
+    facilitators: CoPUsers.admin
+    language: Spanish (Spain)
+    displayLanguages: English
+    courseCompletion: 5
+    expectedDuration: 900
+    timeZone: *UTC7TimeZone
+    startDate: '2028-07-22'
+    startTime: 8:00 am
+    endDate: '2028-09-26'
+    endTime: 5:20 pm
+    date: 22 Jul, 2028 - 26 Sep, 2028
+    duration: 15 Hours
+    maxParticipant: 25
+    mustBookBy: 1
+    mustCancelBy: 2
+    contactEmail: *contactEmail
+    additionalBookingNote: *additionalBookingNote
+    courseFee:
+      <<: *scoreInTennisCourseFee
+      value: 35
+  physicalClass:
+    <<: *virtualClassCreateInstances
+    deliveryMethod: *physicalClassMethod
+    startDate: '2028-04-14'
+    startTime: 7:00 am
+    endDate: '2028-06-15'
+    endTime: 9:00 pm
+    date: 14 Apr, 2028 - 15 Jun, 2028
+    createdByScreenName:
+      uat: au_copowner
+      prd: copow_kristy
+  blendedLearning:
+    <<: *virtualClassCreateInstances
+    deliveryMethod: *blendedLearningMethod
+    startDate: '2028-01-26'
+    startTime: 9:00 am
+    endDate: '2028-01-30'
+    endTime: 7:00 pm
+    date: 26 Jan, 2028 - 30 Jan, 2028
+    duration: 15 Hours
+    createdByScreenName:
+      uat: au_copowner
+      prd: copow_kristy
+  forCreateQuiz: &instanceMoodle
+    deliveryMethod: *virtualClassMethod
+    startDate: '2028-12-08'
+    endDate: '2028-12-09'
+    date: 08 Dec, 2028 - 09 Dec, 2028
+  forCreateFeedback:
+    <<: *instanceMoodle
+    deliveryMethod: *physicalClassMethod
+  forCreateAssignment:
+    <<: *instanceMoodle
+    deliveryMethod: *blendedLearningMethod

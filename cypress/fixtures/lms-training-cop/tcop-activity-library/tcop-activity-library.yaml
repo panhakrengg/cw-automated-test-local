@@ -1,0 +1,256 @@
+CommunityUsers:
+  - &auBettyeEmail au.copad_connection_bettye@mail.com
+  - &copOwnerKristyGivenName Kristy
+
+ActivityType:
+  elearning: &elearningType Interactive eLearning
+
+ActivityLibrary:
+  elearning:
+    auSCActivityElearning: &auSCActivityElearning
+      type: *elearningType
+      title: AU SCActivity elearning - Upload Testing Purpose
+      description: &elearningDesc This elearning is a standard activity, after dash(-) is original package name.
+      descriptionImage:
+        path: &auSCActivityElearningImage lms-training-cop/tcop-activity-library/attachments/auSCActivityElearning.jpg
+        name: auSCActivityElearning.jpg
+      coverImage:
+        path: *auSCActivityElearningImage
+        name: auSCActivityElearning.jpg
+      uploadLessonPackage: &auSCActivityElearningUploadLessonPackage
+        path:
+          - lms-training-cop/tcop-activity-library/attachments/Upload Testing Purpose.zip
+        name:
+          - Upload Testing Purpose.zip
+      uploadFiles: *auSCActivityElearningUploadLessonPackage
+    sCActivityElearningArchive: &sCActivityElearningArchive
+      type: *elearningType
+      from: Community
+      title: SCActivity elearning to archive - 4 Slide Only
+      description: *elearningDesc
+      coverImage:
+        path: lms-training-cop/tcop-activity-library/attachments/sCActivityElearningArchiveImage.jpg
+        name: sCActivityElearningArchiveImage.jpg
+      uploadLessonPackage: &sCActivityElearningArchiveUploadLessonPackage
+        path:
+          - lms-training-cop/tcop-activity-library/attachments/4 Slide Only.zip
+      uploadFiles: *sCActivityElearningArchiveUploadLessonPackage
+      templateOption: &standardActivity Standard activity
+      availability:
+        - &availabilityOrg Organization learning admin
+  file:
+    auSCActivityFileDoc: &auSCActivityFileDoc
+      title: AU SCActivity file Doc
+      description: It's document file, so it can only download. It is standard activity from community
+      uploadFiles:
+        path:
+          - &fileAsDocPath lms-training-cop/tcop-activity-library/attachments/file-sample_100kB.doc
+        name:
+          - &fileAsDocName file-sample_100kB.doc
+      templateOption: *standardActivity
+    auTCActivityFileImage: &auTCActivityFileImage
+      title: AU TCActivity file image
+      description: It's a file as image, so it can view and download.
+      coverImage:
+        path: &tCopProfilePath lms-training-cop/tcop-activity-library/attachments/tCopForActivityLibraryProfile.jpg
+      uploadFiles:
+        path:
+          - *tCopProfilePath
+        name:
+          - tCopForActivityLibraryProfile.jpg
+      templateOption: &activityTemplate Activity Template
+  hyperlink:
+    auSCActivityHyperlinkCw: &auSCActivityHyperlinkCw
+      displayText: AU SCActivity link - Crosswired
+      url: &cwUrl crosswired.com
+      description: &notChooseTemplateText Not choose template option, keep it as default.
+      coverImage:
+        path: lms-training-cop/tcop-activity-library/attachments/hyperlinkCoverImage.png
+  learningGoal:
+    auSCActivityLearningGoal: &auSCActivityLearningGoal
+      title: AU SCActivity learning goal
+      description: *notChooseTemplateText
+      coverImage:
+        path: lms-training-cop/tcop-activity-library/attachments/learningGoalCoverImage.jpg
+        name: learningGoalCoverImage.jpg
+      uploadFiles:
+        path:
+          - *fileAsDocPath
+          - *tCopProfilePath
+        name:
+          - *fileAsDocName
+          - &tCopProfileName tCopForActivityLibraryProfile.jpg
+  richText:
+    auSCActivityRichText: &auSCActivityRichText
+      title: AU SCActivity rich text
+      content: *notChooseTemplateText
+      contentImage: &auSCActivityRichTextImage
+        path: lms-training-cop/tcop-activity-library/attachments/auSCActivityRichTextCoverImage.jpg
+        name: auSCActivityRichTextCoverImage.jpg
+      coverImage: *auSCActivityRichTextImage
+  video:
+    auTCActivityVideoFile: &auTCActivityVideoFile
+      title: AU TCActivity upload video file
+      description: *notChooseTemplateText
+      descriptionImage: &activityVideoDescriptionImage
+        path: lms-training-cop/tcop-activity-library/attachments/description_content_image.jpg
+        name: description_content_image.jpg
+      coverImage: *activityVideoDescriptionImage
+      uploadVideoFile:
+        path:
+          - lms-training-cop/tcop-activity-library/attachments/samplemp4filesmall.mp4
+        name:
+          - samplemp4filesmall.mp4
+      templateOption: *activityTemplate
+    auSCActivityYouTube: &auSCActivityYouTube
+      title: AU SCActivity YouTube
+      youtubeUrl: https://www.youtube.com/watch?v=BrWgVUZwbbs
+      youtubeThumbnail: https://i.ytimg.com/vi/BrWgVUZwbbs/maxresdefault.jpg
+      templateOption: *standardActivity
+  assignment:
+    auTCActivityAssignment: &auTCActivityAssignment
+      assignmentName: AU TCActivity Assignment
+      description: &teamMembers Team can have 5 members.
+      additionalFiles:
+        path: *fileAsDocPath
+      coverImage:
+        path: lms-training-cop/tcop-activity-library/attachments/assignmentCoverImage.jpg
+        name: assignmentCoverImage.jpg
+    tCActivityAssignmentEditPrevious: &tCActivityAssignmentEditPrevious
+      type: Assignment
+      from: Community
+      assignmentName: &tOActivityAssignmentEditName TCActivity Assignment for editing
+      title: *tOActivityAssignmentEditName
+      description: *teamMembers
+      additionalFiles:
+        path: *fileAsDocPath
+      coverImage:
+        path: lms-training-cop/tcop-activity-library/attachments/assignmentPreviousCoverImage.jpg
+        name: assignmentPreviousCoverImage.jpg
+  tCActivityAssignmentEditNew: &tCActivityAssignmentEditNew
+    assignmentName: &tOActivityAssignmentEditNameUpdated TCActivity Assignment for editing updated
+    title: *tOActivityAssignmentEditNameUpdated
+    description: Team can have 5 members. updated
+    coverImage:
+      path: lms-training-cop/tcop-activity-library/attachments/assignmentNewCoverImage.jpg
+      name: assignmentNewCoverImage.jpg
+  feedback:
+    auTCActivityFeedback: &auTCActivityFeedback
+      name: AU TCActivity Feedback
+      description: Feel free to give feedback. thanks
+      coverImage:
+        path: lms-training-cop/tcop-activity-library/attachments/feedback cover image.jpg
+  quiz:
+    auTCActivityQuiz: &auTCActivityQuiz
+      title: AU TCActivity quiz
+      description: This may take a few minutes short text multiple choices true/false Pass score is 2.
+      gradeToPass: 2
+      coverImage:
+        path: lms-training-cop/tcop-activity-library/attachments/quizCoverImage.jpg
+
+Communities:
+  tCopForActivityLibrary: &tCopForActivityLibrary
+    type: Training
+    organization: &fireCloudZone FireCloud Zone
+    name: TCoP Func For Activity Library
+    profile:
+      path: *tCopProfilePath
+      name: *tCopProfileName
+    url: &tCopForActivityLibraryUrl /web/tcop-func-for-activity-library
+    admin:
+      url: &tCopForActivityLibraryAdminUrl /web/tcop-func-for-activity-library/admin/admin
+    copUsers:
+      uat:
+        inviteViaEmails:
+          - *auBettyeEmail
+        members:
+          - *auBettyeEmail
+        admins:
+          - *auBettyeEmail
+        owner: *copOwnerKristyGivenName
+    activityLibrary:
+      tCActivityAssignmentEditPrevious: *tCActivityAssignmentEditPrevious
+      sCActivityElearningArchive: *sCActivityElearningArchive
+
+Courses:
+  copCourseFuncActivityLibrary: &copCourseFuncActivityLibrary
+    name: CoP Course Func Activity Library
+    courseOverview: This CoP Course use for activity library
+    image: lms-training-cop/tcop-activity-library/attachments/copCourseFuncActivityLibraryImage.jpg
+    trainingCoP: *tCopForActivityLibrary
+    url:
+      local:
+        id:
+          - 137781889
+      beta:
+        id:
+          - 139978975
+      uat:
+        id:
+          - 138545141
+    instanceFuncEditMoodleAssignment:
+      title: Instance Func Edit Moodle Assignment
+      deliveryMethod: Self-study
+      url:
+        local:
+          id:
+            - 137782107
+        beta:
+          id:
+            - 139979430
+        uat:
+          id:
+            - 138680915
+      activities:
+        tCActivityAssignmentEditPrevious: *tCActivityAssignmentEditPrevious
+    instanceFuncArchiveElearning:
+      title: Instance Func Archive Elearning
+      deliveryMethod: Self-study
+      url:
+        local:
+          id:
+            - 137782008
+        beta:
+          id:
+            - 139979331
+        uat:
+          id:
+            - 138681184
+      activities:
+        sCActivityElearningArchive: *sCActivityElearningArchive
+
+NewActivityLibrary:
+  tCopForActivityLibrary:
+    <<: *tCopForActivityLibrary
+    activityLibrary:
+      auSCActivityElearning: *auSCActivityElearning
+      auSCActivityFileDoc: *auSCActivityFileDoc
+      auSCActivityHyperlinkCw: *auSCActivityHyperlinkCw
+      auSCActivityRichText: *auSCActivityRichText
+      auTCActivityAssignment: *auTCActivityAssignment
+      auTCActivityFeedback: *auTCActivityFeedback
+      auTCActivityFileImage: *auTCActivityFileImage
+      auTCActivityQuiz: *auTCActivityQuiz
+      auTCActivityVideoFile: *auTCActivityVideoFile
+      auSCActivityYouTube: *auSCActivityYouTube
+      auSCActivityLearningGoal: *auSCActivityLearningGoal
+
+EditActivityLibrary:
+  copCourseFuncActivityLibrary:
+    <<: *copCourseFuncActivityLibrary
+    trainingCoP:
+      admin:
+        url: *tCopForActivityLibraryAdminUrl
+      activityLibrary:
+        tCActivityAssignmentEdit:
+          previous: *tCActivityAssignmentEditPrevious
+          new: *tCActivityAssignmentEditNew
+
+ArchiveActivityLibrary:
+  copCourseFuncActivityLibrary:
+    <<: *copCourseFuncActivityLibrary
+    trainingCoP:
+      admin:
+        url: *tCopForActivityLibraryAdminUrl
+      activityLibrary:
+        sCActivityElearningArchive: *sCActivityElearningArchive

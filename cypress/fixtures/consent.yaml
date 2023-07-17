@@ -1,0 +1,912 @@
+# SampleConsent
+consentBaseYaml:
+  name: consent name
+  description: consent description
+  consentItems:
+    first:
+      shortLabel: sort label for first
+      desc: description for first consent item
+    second:
+      shortLabel: sort label for second
+      desc: description for second consent item
+      optional: true
+
+ConsentItemStatic:
+  shortLabel:
+    input:
+      label: Short label
+      value:
+  consentDescription:
+    textEditor:
+      label: Consent description
+      value:
+  checkbox:
+    label: Optional
+    value: false
+  btnAdd: Add
+ConsentItemSuite:
+  systemItems:
+    trainingReportNameVisibility:
+      shortLabel: &trainingReportNameShortLabel Training Report Name Visibility
+      desc: &trainingReportNameDesc I agree for training facilitators and administrators of this community to see my full name and review my training progress.
+    billingAddressVisibility:
+      shortLabel: &trainingReportNameShortLabel Training Report Name Visibility
+      desc: &trainingReportNameDesc I agree for training facilitators and administrators of this community to see my full name and review my training progress.
+  customItems:
+    trainingCredit: &trainingCreditConsentItemSuite
+      shortLabel: Credit conduct
+      desc: Credit will conduct by learning administrators
+    adminViewEmail: &adminViewEmailConsentItemSuite
+      shortLabel: Email
+      desc: Course admins will be able to view your training and email account
+ConsentStatic:
+  formName:
+    label: Form name
+  consentTarget:
+    label: Consent target
+    course:
+      label: &consentTargetCourse Course
+    organization:
+      label: &consentTargetOrganization Organization
+    medical:
+      label: &consentTargetMedical Medical
+    community:
+      label: &consentTargetCommunity Community
+  consentType:
+    label: Consent type
+    join:
+      label: &consentTypeJoin Join
+    declaration:
+      label: Declaration
+  inUse:
+    label: In use
+    empty: --
+  lastChanged:
+    label: Last changed
+  status:
+    label: Status
+    deprecated:
+      label: &statusDeprecated Deprecated
+    active:
+      label: &statusActive Active
+  threeDots:
+    edit: Edit
+    preview: Preview
+    deprecated: Mark as deprecated
+    delete: Delete
+  recurrence:
+    isRecurrence: true
+    every:
+      3months: &every3months 3 months
+      6months: &every6months 6 months
+      12months: &every12months 12 months
+      24months: &every24months 24 months
+      36months: &every36months 36 months
+  formSize:
+    small: &formSizeSmall Small popup
+    large: &formSizeLarge Large popup
+CreateConsentForms:
+  auSmokeConsentTrainingAutomate:
+    name:
+      new: &auSmokeConsentTrainingAutomate AU Smoke Consent Training Automate
+    desc:
+      new: I agree for training facilitators and administrators
+    formSize:
+      new: *formSizeSmall
+    consentTarget: *consentTargetCommunity
+    recurrence:
+      new:
+        isRecurrence: true
+        every: *every3months
+      edit:
+        isRecurrence: true
+        every: *every3months
+    consentItems:
+      systemItems:
+        trainingReportNameVisibility:
+          shortLabel: *trainingReportNameShortLabel
+          desc: *trainingReportNameDesc
+        optional:
+          new: true
+      customItems:
+        trainingCredit:
+          shortLabel:
+            input:
+              value:
+                new: Credit conduct
+          consentDescription:
+            textEditor:
+              value:
+                new: Credit will conduct by learning administrators
+          optional:
+            new: true
+        trainingDebit:
+          shortLabel:
+            input:
+              value:
+                new: Debit conduct
+          consentDescription:
+            textEditor:
+              value:
+                new: Debit will conduct by learning administrators
+          optional:
+            new: false
+  auConsentTrainingAutomate:
+    name:
+      new: &auConsentTrainingAutomate AU Consent Training Automate
+    desc:
+      new: I agree for training facilitators and administrators
+    formSize:
+      new: *formSizeSmall
+    consentTarget: *consentTargetCommunity
+    recurrence:
+      new:
+        isRecurrence: true
+        every: *every3months
+      edit:
+        isRecurrence: true
+        every: *every3months
+    consentItems:
+      systemItems:
+        trainingReportNameVisibility:
+          shortLabel: *trainingReportNameShortLabel
+          desc: *trainingReportNameDesc
+        optional:
+          new: true
+      customItems:
+        trainingCredit:
+          shortLabel:
+            input:
+              value:
+                new: Credit conduct
+          consentDescription:
+            textEditor:
+              value:
+                new: Credit will conduct by learning administrators
+          optional:
+            new: true
+        trainingDebit:
+          shortLabel:
+            input:
+              value:
+                new: Debit conduct
+          consentDescription:
+            textEditor:
+              value:
+                new: Debit will conduct by learning administrators
+          optional:
+            new: false
+  auCoursePolicyAndPrivacyForBookingCourseAddress:
+    name:
+      new: &auCoursePolicyAndPrivacyForBookingCourseAddress AU Course policy and privacy for booking course address
+      old: Consent Replace Student Privacy 2010
+    desc:
+      new: "AU The need to change tests comes from two directions: changes in requirements and changes in the system's implementation."
+    formSize:
+      new: *formSizeLarge
+    consentTarget: *consentTargetCourse
+    recurrence:
+      new:
+        isRecurrence: true
+        every: *every12months
+    consentItems:
+      customItems:
+        auILearnedThisIdea:
+          shortLabel:
+            input:
+              value:
+                new:
+          consentDescription:
+            textEditor:
+              value:
+                new: AU I learned this idea from Elisabeth Hendrickson, an extraordinary tester.
+          optional:
+            new: false
+        auAnAcceptanceTest:
+          shortLabel:
+            input:
+              value:
+                new:
+          consentDescription:
+            textEditor:
+              value:
+                new: AU An acceptance test investigates a system to determine whether it correctly
+          optional:
+            new: false
+        auCrossBrowsers:
+          shortLabel:
+            input:
+              value:
+                new:
+          consentDescription:
+            textEditor:
+              value:
+                new: AU Cross Browsers
+          optional:
+            new: false
+        auMobileResponsive:
+          shortLabel:
+            input:
+              value:
+                new:
+          consentDescription:
+            textEditor:
+              value:
+                new: AU Mobile Responsive
+          optional:
+            new: true
+    existingMemberMustAgree: true
+  auCourseConsentTitle:
+    name:
+      new: &auCourseConsentTitle AU Course Student Privacy 2023
+      old: Consent Replace Student Privacy 2010
+    desc:
+      new: 'AU Course Consent Description'
+    formSize:
+      new: *formSizeLarge
+    consentTarget: *consentTargetCourse
+    recurrence:
+      new:
+        isRecurrence: true
+        every: *every12months
+    consentItems:
+      customItems:
+        auCourseConsentItemFirstDesc:
+          shortLabel:
+            input:
+              value:
+                new:
+          consentDescription:
+            textEditor:
+              value:
+                new: AU Course Consent Item Description 1
+          optional:
+            new: false
+        auCourseConsentItemSecondDesc:
+          shortLabel:
+            input:
+              value:
+                new:
+          consentDescription:
+            textEditor:
+              value:
+                new: AU Course Consent Item Description 2
+          optional:
+            new: false
+    existingMemberMustAgree: true
+  auChildCareConsentForm:
+    name:
+      new: &auChildCareConsentForm AU Child Care Consent Form1
+    desc:
+      new: Please read below carefully and ask for help if you need
+    formSize:
+      new: *formSizeSmall
+    consentTarget: *consentTargetCourse
+    recurrence:
+      new:
+        isRecurrence: true
+        every: *every6months
+      edit:
+        isRecurrence: true
+        every: *every6months
+    consentItems:
+      customItems:
+        suffering:
+          shortLabel:
+            input:
+              value:
+                new: The COVID-19 vaccine will reduce the risk of being suffering from the new type of Coronavirus disease as known as COVID-19.
+          consentDescription:
+            textEditor:
+              value:
+                new: The COVID-19 vaccine will reduce the risk of being suffering from the new type of Coronavirus disease as known as COVID-19.
+          optional:
+            new: true
+        protection:
+          shortLabel:
+            input:
+              value:
+                new: It can take a few weeks for your body to build up protection from the vaccine.
+          consentDescription:
+            textEditor:
+              value:
+                new: It can take a few weeks for your body to build up protection from the vaccine.
+          optional:
+            new: false
+        sideEffects:
+          shortLabel:
+            input:
+              value:
+                new: The vaccine has some side effects as the other vaccines/medicines, but not everyone gets them.
+          consentDescription:
+            textEditor:
+              value:
+                new: The vaccine has some side effects as the other vaccines/medicines, but not everyone gets them.
+          optional:
+            new: false
+  auTattooConsentForm:
+    name:
+      new: AU Tattoo New Consent Form
+      edit: AU Tattoo New Consent Form Edit
+    desc:
+      new: Please read below carefully and ask for help if you need
+      edit: Please read below carefully and ask for help if you need Edit
+    formSize:
+      new: *formSizeSmall
+      edit: *formSizeLarge
+    consentTarget: *consentTargetCommunity
+    recurrence:
+      new:
+        isRecurrence: true
+        every: *every6months
+      edit:
+        isRecurrence: true
+        every: *every6months
+    consentItems:
+      customItems:
+        understand:
+          shortLabel:
+            input:
+              value:
+                new: I understand that this procedure is a permanent change to my skin and body.
+                edit: I understand that this procedure is a permanent change to my skin and body edit.
+          consentDescription:
+            textEditor:
+              value:
+                new: I understand that this procedure is a permanent change to my skin and body.
+                edit: I understand that this procedure is a permanent change to my skin and body edit.
+          optional:
+            new: true
+            edit: false
+        acknowledge:
+          shortLabel:
+            input:
+              value:
+                new: I acknowledge that the Tatto Shop does not offer refund.
+                edit: I acknowledge that the Tatto Shop does not offer refund edit.
+          consentDescription:
+            textEditor:
+              value:
+                new: I acknowledge that the Tatto Shop does not offer refund.
+                edit: I acknowledge that the Tatto Shop does not offer refund edit.
+          optional:
+            new: false
+            edit: true
+  auConsentDemoWebLearn:
+    name:
+      new: AU Consent WebLearn Not Show In Demo Frontier
+    desc:
+      new: I agree for training facilitators and administrators
+    formSize:
+      new: *formSizeSmall
+    consentTarget: *consentTargetCommunity
+    recurrence:
+      new:
+        isRecurrence: true
+        every: *every6months
+      edit:
+        isRecurrence: true
+        every: *every3months
+    consentItems:
+      systemItems:
+        trainingReportNameVisibility:
+          shortLabel: *trainingReportNameShortLabel
+          desc: *trainingReportNameDesc
+        optional:
+          new: true
+      customItems:
+        trainingCredit:
+          shortLabel:
+            input:
+              value:
+                new: Credit conduct
+          consentDescription:
+            textEditor:
+              value:
+                new: Credit will conduct by learning administrators
+          optional:
+            new: true
+        trainingDebit:
+          shortLabel:
+            input:
+              value:
+                new: Debit conduct
+          consentDescription:
+            textEditor:
+              value:
+                new: Debit will conduct by learning administrators
+          optional:
+            new: false
+  auTattooConsentFormDeprecated:
+    name:
+      new: AU New Tattoo Consent Form Deprecated
+    desc:
+      new: Please read below carefully and ask for help if you need
+    formSize:
+      new: *formSizeSmall
+    consentTarget: *consentTargetCommunity
+    recurrence:
+      new:
+        isRecurrence: true
+        every: *every6months
+    consentItems:
+      customItems:
+        understand:
+          shortLabel:
+            input:
+              value:
+                new: I understand that this procedure is a permanent change to my skin and body.
+          consentDescription:
+            textEditor:
+              value:
+                new: I understand that this procedure is a permanent change to my skin and body.
+          optional:
+            new: true
+        acknowledge:
+          shortLabel:
+            input:
+              value:
+                new: I acknowledge that the Tatto Shop does not offer refund.
+          consentDescription:
+            textEditor:
+              value:
+                new: I acknowledge that the Tatto Shop does not offer refund.
+          optional:
+            new: false
+  auCourseConsentFormDeprecated:
+    name:
+      new: AU New Course Consent1 Form For Deprecated
+    desc:
+      new: Please read below carefully and ask for help if you need
+    formSize:
+      new: *formSizeSmall
+    consentTarget: *consentTargetCourse
+    recurrence:
+      new:
+        isRecurrence: true
+        every: *every6months
+    consentItems:
+      customItems:
+        understand:
+          shortLabel:
+            input:
+              value:
+                new: You must join class on time.
+          consentDescription:
+            textEditor:
+              value:
+                new: You must join class on time.
+          optional:
+            new: true
+        acknowledge:
+          shortLabel:
+            input:
+              value:
+                new: You must join class regulary.
+          consentDescription:
+            textEditor:
+              value:
+                new: You must join class regulary.
+          optional:
+            new: false
+  auComputerDeprecatedForm:
+    name:
+      new: AU Computer Form
+      edit: AU Computer Deprecated Form
+    desc:
+      new: This form is used for CoP Computer Deprecated Form
+      edit: This form is used for CoP Computer Deprecated Form Edit
+    formSize:
+      new: *formSizeSmall
+      edit: *formSizeLarge
+    consentTarget: *consentTargetCommunity
+    recurrence:
+      new:
+        isRecurrence: true
+        every: *every12months
+      edit:
+        isRecurrence: true
+        every: *every6months
+    consentItems:
+      customItems:
+        understand:
+          shortLabel:
+            input:
+              value:
+                new: You must join class on time.
+                edit: You must join class on time. Edit
+          consentDescription:
+            textEditor:
+              value:
+                new: You must join class on time.
+                edit: You must join class on time. Edit
+          optional:
+            new: true
+        acknowledge:
+          shortLabel:
+            input:
+              value:
+                new: You must join class regularly.
+                edit: You must join class regularly. Edit
+          consentDescription:
+            textEditor:
+              value:
+                new: You must join class regularly.
+                edit: You must join class regularly. Edit
+          optional:
+            new: false
+            edit: true
+  auCssOnlineLearningConsentForm:
+    name:
+      new: AU CSS Online Learning Consent Form
+    desc:
+      new: Please read below carefully and ask for help if you need
+    formSize:
+      new: *formSizeSmall
+    consentTarget: *consentTargetCourse
+    recurrence:
+      new:
+        isRecurrence: true
+        every: *every6months
+    consentItems:
+      customItems:
+        understand:
+          shortLabel:
+            input:
+              value:
+                new: You must join class on time.
+          consentDescription:
+            textEditor:
+              value:
+                new: You must join class on time.
+          optional:
+            new: true
+        acknowledge:
+          shortLabel:
+            input:
+              value:
+                new: You must join class regulary.
+          consentDescription:
+            textEditor:
+              value:
+                new: You must join class regulary.
+          optional:
+            new: false
+ExistingConsentForms:
+  gladToSeeYouInOurCommunity:
+    name: &gladToSeeYouInOurCommunity Glad To See You In Our Community
+  welcomeToWebLearnOrganization:
+    name: &welcomeToWebLearnOrganization Welcome To WebLearn Organization
+    logoUrl: /image/organization_logo
+    headerText: There is some consent to inform before starting a member
+    description: All consents are just a information for members in our organization, especially for new comer. No pleasure, please help to submit it, thanks.
+    linkLabel: more info (uat)
+    linkUrl: https://uat-connect.crosswired.com/web/help-guide
+    consentItems:
+      - I agress for Organization Admin has permission to lock my account or ask to setup 2-Step Verification.
+      - Please aware one thing if you are in this organization, Organization Admin will can see all your information such as Given Name, Family Name, and also Email.
+  permissionToViewData:
+    name: &permissionToViewData Permission To View Data
+  hopeTheCourseIsWhatYouNeed:
+    name: &hopeTheCourseIsWhatYouNeed Hope The Course Is What You Need
+  hopeTheCourseIsWhatYouNeedDeprecated:
+    name: &hopeTheCourseIsWhatYouNeedDeprecated Hope The Course Is What You Need (Deprecated)
+  opportunityPolicyOnExitedMembers:
+    name: &opportunityPolicyOnExitedMembers Opportunity policy on exited members
+  computerDeprecatedForm:
+    name:
+      new: Computer Deprecated Form
+    desc:
+      new: This form is used for CoP Computer Deprecated Form
+    formSize:
+      new: *formSizeSmall
+    consentTarget: *consentTargetCommunity
+    recurrence:
+      new:
+        isRecurrence: true
+        every: *every12months
+    consentItems:
+      customItems:
+        understand:
+          shortLabel:
+            input:
+              value:
+                new: You must join class on time.
+          consentDescription:
+            textEditor:
+              value:
+                new: You must join class on time.
+          optional:
+            new: true
+        acknowledge:
+          shortLabel:
+            input:
+              value:
+                new: You must join class regularly.
+          consentDescription:
+            textEditor:
+              value:
+                new: You must join class regularly.
+          optional:
+            new: false
+  courseCopyRightCaseStudiesTestAutomation:
+    name: Course Copy Right Case Studies Test Automation
+    desc: I agree for training facilitators and administrators
+    formSize: *formSizeLarge
+    consentType: *consentTypeJoin
+    consentTarget: *consentTargetCourse
+    status: *statusDeprecated
+    inUse:
+      total: 1
+      courses:
+        caseStudiesOfSoftwareTestAutomation:
+          url:
+            beta:
+              id:
+                - 98234323
+            uat:
+              id:
+                - 94352338
+          courseInstances:
+            url:
+              beta:
+                id:
+                  - 98234558
+              uat:
+                id:
+                  - 94352622
+          name: Case Studies Of Software Test Automation
+          urlBooking: /u/home/course-detail?p_p_id=courseDetailPortlet&p_p_lifecycle=0&_courseDetailPortlet_id=94352338&_courseDetailPortlet_type=2&_courseDetailPortlet_isMyLearning=false&_courseDetailPortlet_mvcRenderCommandName=%2Fcourse%2Fdetail
+          urlManageConsent: /web/org-full-catalog-14117326/manage-courses?p_p_id=learningAdminManageCoursesPortlet&p_p_lifecycle=0&_learningAdminManageCoursesPortlet_mvcRenderCommandName=%2Fcourse%2Fedit&_learningAdminManageCoursesPortlet_id=94352338&_learningAdminManageCoursesPortlet_tab=consent-management
+          urlManagePeople: /web/org-full-catalog-14117326/manage-courses?p_p_id=learningAdminManageCoursesPortlet&p_p_lifecycle=0&_learningAdminManageCoursesPortlet_mvcRenderCommandName=%2Fcourse%2Fedit&_learningAdminManageCoursesPortlet_id=94352338&_learningAdminManageCoursesPortlet_tab=manage-course-people
+          people:
+            members:
+              - &aumemist aumemist
+              - &au_orgmgtuser au_orgmgtuser
+    notUse:
+      courses:
+        courseNotEnableConsent:
+          name: Course Not Enable Consent
+          urlManageConsent: /web/org-full-catalog-14117326/manage-courses?p_p_id=learningAdminManageCoursesPortlet&p_p_lifecycle=0&_learningAdminManageCoursesPortlet_mvcRenderCommandName=%2Fcourse%2Fedit&_learningAdminManageCoursesPortlet_id=94536911&_learningAdminManageCoursesPortlet_tab=consent-management
+    recurrence:
+      isRecurrence: false
+      every: *every36months
+    consentItems:
+      customItems:
+        copyRightPage:
+          shortLabel:
+            input:
+              value: Copyright Page
+          consentDescription:
+            textEditor:
+              value: The authors and publisher have taken care in the preparation of this book, but make no expressed or implied warranty of any kind and assume no responsibility for errors or omissions
+          optional:
+            value: false
+  consentReplaceStudentPrivacy2010:
+    name:
+      new: &consentReplaceStudentPrivacy2010 Consent Replace Student Privacy 2010
+    desc:
+      new: *consentReplaceStudentPrivacy2010
+    consentItems:
+      customItems:
+        consentReplaceStudent:
+          shortLabel:
+            input:
+              value:
+                new:
+          consentDescription:
+            textEditor:
+              value:
+                new: *consentReplaceStudentPrivacy2010
+          optional:
+            new: true
+  welcomeToNewCourseConsent:
+    name: Welcome to new course
+    desc: Please accept this consent when you are booking course.
+    consentItems:
+      trainingCredit: *trainingCreditConsentItemSuite
+  viewEmailCourseConsent:
+    name: Nice to meet you!
+    desc: &thereAreFewConsentItems There are a few consent items for this course. Please read and accept these. Thanks
+    consentItems:
+      trainingCredit:
+        <<: *trainingCreditConsentItemSuite
+        optional: true
+      adminViewEmail: *adminViewEmailConsentItemSuite
+ConsentSuite:
+  orgMgt:
+    rootOrg:
+      webLearnUnit:
+        subOrg:
+          designFrontend:
+            subOrg:
+              instructionSession:
+                communities:
+                  computerDeprecatedForm:
+                    name: AU New Computer Deprecated Form
+                    manageConsent:
+                      enable: true
+                      consentForm: *gladToSeeYouInOurCommunity
+                    members:
+                      - *aumemist
+                      - *au_orgmgtuser
+                subOrg:
+                  organizationConsentForm:
+                    communities:
+                      oCoPConsentFormExitMember:
+                        name: OCoP Consent Form Exit Member
+                        type: Organization
+                        url: /web/ocop-consent-form-exit-member
+                        manageConsent:
+                          enable: true
+                          consentForm: *opportunityPolicyOnExitedMembers
+                        members:
+                          - &csexiteduser csexiteduser
+        communities:
+          webLearnConsentOrgAutomate:
+            label: WebLearn Consent Org Automate
+            type: Organization
+            url: /web/weblearn-consent-org-automate
+            manageConsent:
+              enable: false
+              existing:
+              predefine:
+                consentForms:
+                  - *auConsentTrainingAutomate
+                  - *gladToSeeYouInOurCommunity
+          webLearnConsentTrainingAutomate:
+            manageConsent:
+              existing: *gladToSeeYouInOurCommunity
+              replace: *auConsentTrainingAutomate
+            manageLearningPaths:
+            members:
+              -
+          computerDeprecatedForm:
+            label: Computer Deprecated Form
+            type: Training
+            url: /web/computer-deprecated-form-9/home
+            admin:
+              manageConsent:
+                url: /web/computer-deprecated-form-9/admin/admin#_copMemberManagementPortlet_option=manage-consent
+        courses:
+          htmlOnlineCourseConsent:
+            name: HTML Online Course Consent
+            manageConsent:
+              enable: false
+              existing:
+              predefine:
+                consentForms:
+                  - &hopeTheCourseIsWhatYouNeedToBeUpdate Hope The Course Is What You Need To be update
+          cssOnlineCourseConsent:
+            name: CSS Online Course Consent
+            manageConsent:
+              enable: true
+              existing: *hopeTheCourseIsWhatYouNeedToBeUpdate
+              predefine:
+                consentForms:
+                  - *hopeTheCourseIsWhatYouNeedToBeUpdate
+      fireCloudUnit:
+        communities:
+          aPCopPredefinedConsent:
+            label: aPCoP Predefined Consent
+            type: Primary CoP
+            url: /web/apcop-predefined-consent
+            predefineConsent:
+              name: Community predefined consent
+              description: *thereAreFewConsentItems
+              consentItems:
+                trainingCredit: *trainingCreditConsentItemSuite
+                adminViewEmail:
+                  <<: *adminViewEmailConsentItemSuite
+                  optional: true
+  learningAdmin:
+    webLearn:
+      uat:
+        url: /web/org-full-catalog-14117326/manage-courses
+      beta:
+        url: /web/org-full-catalog-14117326/manage-courses
+  courses:
+    predefineConsent:
+      name: Predefined Consent
+      url:
+        beta:
+          id:
+            - 122058832
+        uat:
+          id:
+            - 121922358
+      manageConsent:
+        predefine:
+          name: Course predefined consent - booking
+          description: *thereAreFewConsentItems
+          consentItems:
+            trainingCredit:
+              <<: *trainingCreditConsentItemSuite
+              optional: true
+            adminViewEmail: *adminViewEmailConsentItemSuite
+      blendedInstance:
+        name: See predefined after booking
+        deliveryMethod: Self-study
+        url:
+          beta:
+            id:
+              - 122095142
+          uat:
+            id:
+              - 121953831
+
+AccountSettings:
+  communities:
+    consent:
+      name: Agree with consent
+      formName:
+        label: Welcome to our new chapter
+      desc: READ before submit
+      consentItems:
+        customItems:
+          shareKnowledge:
+            shortLabel:
+              input:
+                value:
+                  new: &firstLabel first
+            consentDescription:
+              textEditor:
+                value:
+                  new: Feel free to share knowledge
+            optional:
+              new: true
+          adminSeeEmail:
+            shortLabel:
+              input:
+                value:
+                  new: &secondLabel second
+            consentDescription:
+              textEditor:
+                value:
+                  new: Admin able to see your email
+            optional:
+              new: false
+  courses:
+    consent:
+      name: Accepted consent
+      formName:
+        label: Rules in our course
+      desc: Please read carefully and then accept rules. thanks
+      consentItems:
+        customItems:
+          teacherCome:
+            shortLabel:
+              input:
+                value:
+                  new: *firstLabel
+            consentDescription:
+              textEditor:
+                value:
+                  new: Teacher will always come before class start at least 5 minutes
+            optional:
+              new: false
+          joinTime:
+            shortLabel:
+              input:
+                value:
+                  new: *secondLabel
+            consentDescription:
+              textEditor:
+                value:
+                  new: Students will get P if they join class after 15 minutes start.
+            optional:
+              new: true
+          weekly:
+            shortLabel:
+              input:
+                value:
+                  new: third
+            consentDescription:
+              textEditor:
+                value:
+                  new: Have weekly work as team or individual.
+            optional:
+              new: true
+  others:
+    consent:
+      name: Crosswired

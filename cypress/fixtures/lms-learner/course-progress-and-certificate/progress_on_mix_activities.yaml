@@ -1,0 +1,156 @@
+CategoryData:
+  ctgFuncInstances:
+    name:
+      value: &ctgFuncInstancesName Ctg Func Instances
+
+ActivityLibrary:
+  assignment:
+    tOActivityMidterm30pt: &tOActivityMidterm30pt
+      type: Assignment
+      from: Organization
+      assignmentName: &tOActivityMidterm30ptName
+        value: TOActivity Midterm 30 pt
+      title: *tOActivityMidterm30ptName
+      learner:
+        fileSubmissionName:
+          - learner_for_midterm30pt.pdf
+        fileSubmissionPath:
+          - lms-learner/course-progress-and-certificate/attachments/learner_for_midterm30pt.pdf
+  file:
+    tOActivityImage: &tOActivityImage
+      type: File
+      from: Organization
+      title:
+        value: TOActivity file as image
+  feedback:
+    tOActivityDoAfterCompleteCourse: &tOActivityDoAfterCompleteCourse
+      from: Organization
+      type: Feedback
+      name: &tOActivityDoAfterCompleteCourseName
+        value: TOActivity Do after completing course
+      title: *tOActivityDoAfterCompleteCourseName
+      learner:
+        feedback:
+          multipleChoice:
+            question:
+              value: Please rate our course
+            rate: 2/**
+          shortText: &shortTextFeedback
+            question:
+              value: How do you feel on the course?
+            text: Good, it helps me improve myself. thanks
+  quiz:
+    toActivityQuizOneQuestion: &toActivityQuizOneQuestion
+      type: Quiz
+      from: Organization
+      title:
+        value: TOActivity Quiz 1 question
+      question:
+        multipleChoice:
+          category: Default for TOActivity Quiz 1 question
+          questionName:
+            value: first
+          questionText:
+            value: &firstPointScore The first point scored in a game is called? Correct answer is 15
+          choice1:
+            value: 1
+            grade: 20%
+          choice2:
+            value: 15
+            grade: 100%
+          choice3:
+            value: 20
+            grade: 25%
+      learner:
+        multipleChoice:
+          questionText:
+            value: *firstPointScore
+          correctAnswer: 15
+          wrongAnswer: 20
+  video:
+    tOActivityVideoYouTube: &tOActivityVideoYouTube
+      type: Video
+      from: Organization
+      title:
+        value: TOActivity YouTube video
+
+CourseActivities:
+  elearning:
+    snapshotBlob: &snapshotBlobElearning
+      type: Interactive eLearning
+      title:
+        value: Elearning in Instance - snapshot_blob.bin
+      description: Score limit is 0.1. This elearning is created in instance course activities after dash(-) is original package name.
+      uploadLessonPackage:
+        value: lms-learner/course-progress-and-certificate/attachments/snapshot_blob.bin.zip
+      scoreLimit:
+        value: 0.1
+    Living: &LivingElearning
+      <<: *snapshotBlobElearning
+      title:
+        value: Elearning in Instance - Living
+      uploadLessonPackage:
+        value: lms-learner/course-progress-and-certificate/attachments/Living.zip
+
+CourseData:
+  progressOnMixActivities:
+    name:
+      value: Progress on mix activities
+    courseOverview: Learner will learner mix activity type such as eLearning, cw activity, and moodle.
+    image: lms-learner/course-progress-and-certificate/attachments/progressElearningFileFeedbackValue.jpg
+    categories:
+      - *ctgFuncInstancesName
+    url:
+      beta:
+        id:
+          -
+      uat:
+        id:
+          -
+      prd:
+        id:
+          -
+    instanceElearningFileFeedback: &instanceElearningFileFeedback
+      title:
+        value: Instance has elearning, file, feedback
+      deliveryMethod: Self-study
+      activities:
+        value:
+          total: 3
+          snapshotBlob: *snapshotBlobElearning
+          tOActivityImage: *tOActivityImage
+          tOActivityDoAfterCompleteCourse: *tOActivityDoAfterCompleteCourse
+    instanceTwoElearningQuiz: &instanceTwoElearningQuiz
+      title:
+        value: Instance has 2 elearning and quiz
+      deliveryMethod: Self-study
+      activities:
+        value:
+          total: 3
+          snapshotBlob: *snapshotBlobElearning
+          Living: *LivingElearning
+          toActivityQuizOneQuestion: *toActivityQuizOneQuestion
+    instanceVideoElearningAssignment: &instanceVideoElearningAssignment
+      title:
+        value: Instance has video, elearning and assignment
+      deliveryMethod: Self-study
+      activities:
+        value:
+          total: 3
+          tOActivityVideoYouTube: *tOActivityVideoYouTube
+          Living: *LivingElearning
+          tOActivityMidterm30pt: *tOActivityMidterm30pt
+
+CourseProgress:
+  auInstanceElearningFileFeedback:
+    <<: *instanceElearningFileFeedback
+    title:
+      new: AU Instance has elearning, file, feedback
+  auInstanceTwoElearningQuiz:
+    <<: *instanceTwoElearningQuiz
+    title:
+      new: AU Instance has 2 elearning and quiz
+  auInstanceVideoElearningAssignment:
+    <<: *instanceVideoElearningAssignment
+    title:
+      new: AU Instance has video, elearning and assignment

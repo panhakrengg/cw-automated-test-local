@@ -1,0 +1,35 @@
+cw01:
+  email: 'noncw01@yopmail.com'
+cw02:
+  email: 'noncw02@yopmail.com'
+cw03:
+  email: noncw03@mail.com
+  firstName: NonCW03
+  lastName: User
+cw04:
+  email: noncw04@mail.com
+  firstName: NonCW04
+  lastName: User
+cw05:
+  email: noncw05@mail.com
+  firstName: NonCW05
+  lastName: User
+cw06:
+  email: noncw06@mail.com
+  firstName: NonCW06
+  lastName: User
+cw07:
+  email: noncw07@mail.com
+  firstName: NonCW07
+  lastName: User
+cw08:
+  email: noncw08@mail.com
+  firstName: NonCW08
+  lastName: User
+
+ValidationScreenName:
+  description: max of suggestion screen name is 8 characters including 4 random numbers.
+  firstName1: au
+  firstName2: au Famil
+  firstName3: au Famil Family
+  firstName4: au&$$#4.-&Family

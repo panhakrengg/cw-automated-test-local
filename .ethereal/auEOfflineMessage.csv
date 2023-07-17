@@ -1,0 +1,4 @@
+"Service","Name","Username","Password","Hostname","Port","Security"
+"SMTP","Jaquan Abshire","jaquan.abshire@ethereal.email","mHs3AtMAN81kEmRkPy","smtp.ethereal.email",587,"STARTTLS"
+"IMAP","Jaquan Abshire","jaquan.abshire@ethereal.email","mHs3AtMAN81kEmRkPy","imap.ethereal.email",993,"TLS"
+"POP3","Jaquan Abshire","jaquan.abshire@ethereal.email","mHs3AtMAN81kEmRkPy","pop3.ethereal.email",995,"TLS"

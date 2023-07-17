@@ -1,0 +1,4 @@
+"Service","Name","Username","Password","Hostname","Port","Security"
+"SMTP","Hayden Walter","hayden.walter97@ethereal.email","bRaGQj6U5H2sHatA3Q","smtp.ethereal.email",587,"STARTTLS"
+"IMAP","Hayden Walter","hayden.walter97@ethereal.email","bRaGQj6U5H2sHatA3Q","imap.ethereal.email",993,"TLS"
+"POP3","Hayden Walter","hayden.walter97@ethereal.email","bRaGQj6U5H2sHatA3Q","pop3.ethereal.email",995,"TLS"

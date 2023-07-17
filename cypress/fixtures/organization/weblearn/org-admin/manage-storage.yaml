@@ -1,0 +1,162 @@
+StorageStatic:
+  maxBandwidth: &maxBandwidth Max Bandwidth
+  maxStorage: &maxStorage Max Storage
+  totalBandwidth: &totalBandwidth Total Bandwidth
+  totalStorage: &totalStorage Total Storage
+  storageUsage: &storageUsage Storage Usage
+  bandwidthUsage: &bandwidthUsage Bandwidth Usage
+  manageStorage: &manageStorage Manage Storage
+  manageBandwidth: &manageBandwidth Manage Bandwidth
+  communityStorage: &communityStorage Community Storage
+  lmsStorage: &lmsStorage LMS Storage
+  storageUsagePopup: &storageUsagePopup Storage usage
+  bandwidthUsagePopup: &bandwidthUsagePopup Bandwidth usage
+  courseAndCourseInstance: &courseAndCourseInstance Courses and Course Instances
+  communityLessonLibrary: &communityLessonLibrary Community Lesson Library
+CommunityStatic:
+  tCoPStorageSLT: &tCoPStorageSLT TCoP Max Storage And Bandwidth SLT
+ManageStorageStatic:
+  label: *manageStorage
+  defaultStorage:
+    label: Set default storage limit for all communities.
+    maxStorage:
+      label: Max Storage (GB)
+      value: 10
+    maxBandwidth:
+      label: Max Bandwidth (GB)
+      value: 15
+  overview:
+    threeDots:
+      menuItem:
+        manageStorage:
+          label: *manageStorage
+    quickTip:
+      title: *manageStorage
+      desc: 'On this page you can:'
+      list:
+        - View storage and bandwidth usage for the past 6 months
+        - Set default storage limit for all communities
+        - View usage detail in specific communities and courses
+      url: /web/help-guide
+    graph:
+      totalUsage:
+        label: *totalStorage
+        usedSize:
+        available:
+          label: Available
+          value:
+      totalBandwidth:
+        label: *totalBandwidth
+        usedSize:
+          label: available this month
+          value:
+    communities:
+      storageUsage:
+        label: *storageUsagePopup
+        value:
+      bandwidthUsage:
+        label: *bandwidthUsagePopup
+        value:
+    lms:
+      storageUsage:
+        label: *storageUsagePopup
+        value:
+      bandwidthUsage:
+        label: *bandwidthUsagePopup
+        value:
+  communityStorage:
+    label: Communities
+    quickTip:
+      title: *communityStorage
+      desc: 'Click the ellipsis button beside each community to:'
+      list:
+        - View details of its storage usage
+        - Change storage limit for a specific community
+        - Reset its storage limit
+      url: /web/help-guide
+    table:
+      headers:
+        - Community name
+        - Storage usage
+        - Storage limit
+        - Bandwidth usage
+        - Bandwidth limit
+    storageUsage:
+      label: *storageUsage
+      value:
+    bandwidthUsage:
+      label: *bandwidthUsage
+      value:
+    communities:
+      - *tCoPStorageSLT
+  lmsStorage:
+    quickTip:
+      title: *lmsStorage
+      desc: Go to the Lesson Library to identify lessons that utilize the most storage space.
+      url: /web/help-guide
+    totalStorage:
+      label: *totalStorage
+      value:
+    totalBandwidth:
+      label: *totalBandwidth
+      value:
+    details:
+      courses:
+        storageUsage:
+          value:
+        bandwidthUsage:
+          value:
+      lessonLibrary:
+        storageUsage:
+          value: 6.2 MB
+        bandwidthUsage:
+          value: 0B
+    courses:
+      courseMaxStorageBandWidth:
+        label: Course Max Storage Bandwidth
+ManageStorageSuite:
+  orgMgt:
+    rootOrg:
+      webLearnUnit:
+        communities:
+          webLearnInternational:
+            label: WebLearn International
+            storageUsage:
+              value: 218 KB
+            storageLimit:
+              value: 88 GB
+              valueUnit: 88 GB
+              edit: 88
+            bandwidthLimit:
+              value: 99 GB
+              valueUnit: 99 GB
+              edit: 99
+            bandwidthUsage:
+              value: 0 B
+              valueUnit: 0 B
+        subOrg:
+          startLearningTime:
+            label: Start Learning Time
+            alias: SLT
+            communities:
+              tCoPStorageSLT:
+                label: *tCoPStorageSLT
+                type: Training
+                url: /web/tcop-max-storage-and-bandwidth-slt
+              startLearningTime:
+                label: Start Learning Time
+                type: Primary
+                storageUsage:
+                  value: 0 B
+                storageLimit:
+                  value: 1 GB
+                bandwidthUsage:
+                  value: 1GB
+LMSStorage:
+  detail:
+    label: LMS Storage
+    courses:
+      basicHtml:
+        name: Basic HTML
+        storageUsage: 4.4 MB
+        bandwidthUsage: 151 KB

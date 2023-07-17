@@ -1,0 +1,28 @@
+CourseData:
+  tennisByYourself:
+    name: Tennis By Yourself
+    url:
+      beta:
+        id:
+          - 104648328
+      uat:
+        id:
+          - 105290121
+      prd:
+        id:
+          - 52066797
+    courseInstances:
+      unpublishInstance:
+        startDate: 01 Mar, 2025
+        endDate: 01 Mar, 2039
+        date: 01 Mar, 2025 - 01 Mar, 2039
+        url:
+          beta:
+            id:
+              - 104684857
+          uat:
+            id:
+              - 105344602
+          prd:
+            id:
+              - ''

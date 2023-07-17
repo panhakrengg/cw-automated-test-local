@@ -1,0 +1,47 @@
+ActivityLibrary:
+  file:
+    tOActivityImage: &tOActivityImage
+      title:
+        value: TOActivity file as image
+    tOActivityDocWarmUp: &toActivityDocWarmUp
+      title:
+        value: TOActivity Warm Up Guide
+  richtext:
+    tOActivityReasonsWorkout: &tOActivityReasonsWorkout
+      title:
+        value: TOActivity Reasons Your Workout Should Include a Warm Up
+
+CourseData:
+  progressActivityHasSequential:
+    name: Progress on Quick Activity & Has Sequential
+    courseOverview: Draft course & has 1 instance.
+    attachment:
+      - pexels-wencheng-jiang-6635794.jpg
+    url:
+      beta:
+        id:
+          - 108777078
+      uat:
+        id:
+          - 110515287
+      prd:
+        id:
+          - ''
+    instanceSequential: &instanceSequential
+      title:
+        value: Instance has sequential & has rich text, 2 files
+      deliveryMethod: Virtual Classroom
+      date: 01 May, 2039 - 24 May, 2039
+      additionalBookingNote: For testing course progress on quick file - File Image, File Doc, & Rich Text. The course is below Sequential.
+      activities: #all activities list in /lms/course-activities/sample-activities.yaml > SampleActivities
+        value:
+          total: 3
+          tOActivityImage: *tOActivityImage
+          tOActivityDocWarmUp: *toActivityDocWarmUp
+          tOActivityReasonsWorkout: *tOActivityReasonsWorkout
+
+CourseProgress:
+  auInstanceSequential:
+    <<: *instanceSequential
+    title:
+      new: AU Instance has sequential & has rich text, 2 files

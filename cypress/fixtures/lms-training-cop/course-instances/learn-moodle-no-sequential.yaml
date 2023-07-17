@@ -1,0 +1,34 @@
+CourseData:
+  learnQuickNoSequential:
+    name: CoP Course On Moodle Activity & No Sequential
+    courseOverview: Publish course, has 1 instance uses for duplicate.
+    attachment:
+      - pexels-pixabay-271816.jpg
+    url:
+      beta:
+        id:
+          - 108953793
+      uat:
+        id:
+          - 110683286
+      prd:
+        id:
+          - ''
+    duplicateMoodle:
+      deliveryMethod: Virtual Classroom
+      date: 01 Aug, 2039 - 24 Aug, 2039
+      additionalBookingNote: For testing course progress on moodle activities. The course has no Sequential.
+      activities: #all activities list in /lms/course-activities/sample-activities.yaml > SampleActivities
+        total: 3
+        quizCheckUnderstand: 
+          title: Check understanding about Warm-up
+        assignmentMidterm:
+          title: Midterm 30 pt
+        feedbackCompleteCourse: 
+          title: Do after completing course
+
+CourseProgress:
+  moodle:
+    startDate: 2028-03-15
+    endDate: 2028-03-18
+    date: 15 Mar, 2028 - 18 Mar, 2028

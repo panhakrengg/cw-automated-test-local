@@ -1,0 +1,375 @@
+GeneralScheduleInfo:
+  dueDate: &dueDate
+    description: use for all activities type besides physical & virtual class
+    timeZone: &phnomPenhTimeZone (UTC +7:0) Indochina Time (Asia/Phnom_Penh)
+    dueDate: 2039-08-22
+    dateFormat: 22 Aug, 2039
+    time: 5:00 pm
+    displayTime: 5:00 PM
+  scheduleDate: &scheduleDate
+    description: use for physical & virtual class
+    timeZone: *phnomPenhTimeZone
+    firstDay:
+      date: 2039-11-04
+      dateFormat: 04 Nov, 2039
+      from: 7:00 am
+      startTime: 7:00 AM
+      to: 8:00 am
+      endTime: 8:00 AM
+    secondDay:
+      date: 2039-11-04
+      dateFormat: 04 Nov, 2039
+      from: 8:10 am
+      startTime: 8:10 AM
+      to: 8:45 am
+      endTime: 8:45 AM
+SampleActivities:
+  physicalTrainAtSchool: &physicalTrainAtSchool
+    type: physical-class
+    title: Train at school playground
+    description: Remember this is a warm up and everything should be taken relatively gently.
+    address: st 230, Toek L'ak III, TK, PP, KH
+    city: Phnom Penh
+    country: Cambodia
+    childrenProgramAvailable: false
+    scheduledDate: *scheduleDate
+    optionalActivity: false
+  physicalClassChildren: &physicalClassChildren
+    <<: *physicalTrainAtSchool
+    title: Children training
+    childrenProgramAvailable: true
+    address: Russian Federation Blvd (110), TK, PP, KH
+    optionalActivity: true
+  virtualTalking: &virtualTalking
+    type: virtual-class
+    title: Talking together
+    facilitators: CoPUsers.owner
+    zoomName: Introduction yourself
+    scheduledDate: *scheduleDate
+    description: Feel free to join us all together, so we can know each other well.
+  virtualTalking_Org: &virtualTalking_Org
+    <<: *virtualTalking
+    facilitators: OrgLmsUsers.admins.instances.auLnIstFaci_Britney
+  fileImage: &fileImage
+    <<: *dueDate
+    type: &fileType file-component
+    title: Tennis Scoreboard Image
+    path: &scoreboardPath /lms/course-activities/tennis scoreboard.jpg
+    size: 164 KB
+    description: It's a file as image, so it can view and download.
+    buttonText: View File
+  fileDoc: &fileDoc
+    <<: *dueDate
+    type: *fileType
+    title: Warm Up Guide
+    path: &tennisWarmUpPath /lms/course-activities/tennis warm up.docx
+    size: 46 KB
+    description: It's document file, so it can only download.
+    fileAsLink: tennis+warm+up.docx
+    buttonLinkText: Download (46 KB)
+  learningGoal: &learningGoal
+    type: learning-goal
+    title: Play tennis 5-6 hours / week
+    description: I want to improve the most! And also where I CAN improve the most!
+    imageInDescription: &imageInCkEditor Hit Against a Wall.png
+    imageAsLink: &imageInCkEditorLink Hit+Against+a+Wall.png
+    uploadFile: &scoreboardFile tennis scoreboard.jpg
+    path: *scoreboardPath
+    attachment: tennis scoreboard.jpg (164 KB)
+    buttonLinkText: Accept Goal
+  videoYouTube: &videoYouTube
+    <<: *dueDate
+    type: video-activity
+    title: YouTube video
+    url: https://www.youtube.com/watch?v=xmAccdXUiMQ
+    description: It's basic lesson.
+    buttonLinkText: View Video
+  videoVimeo: &videoVimeo
+    <<: *videoYouTube
+    title: Vimeo video
+    url: https://vimeo.com/61088058
+  videoFile: &videoFile
+    <<: *videoYouTube
+    title: File Video
+    path: /attachments/Video1.mp4
+  richText: &richText
+    <<: *dueDate
+    type: rich-text
+    title: Reasons Your Workout Should Include a Warm Up
+    content:
+      title: Why is it important?
+      body:
+        - Gradually increases body temperature and blood flow to the muscles
+        - Prepares muscles, including the heart, for exercise
+        - Reduces risk of muscular injury
+      image: *imageInCkEditor
+    buttonText: Read Text
+  eLearningCommunity: &eLearningCommunity
+    <<: *dueDate
+    type: &eLearningType interactive-elearning
+    lessonName: &lessonName Cambodia
+    title: *lessonName
+    lessonFrom: Community library
+    description: For user learning
+    author: CoPUsers.admin
+    buttonLinkText: &enterActivityButton Enter Activity
+  eLearningOrganization: &eLearningOrganization
+    <<: *dueDate
+    type: *eLearningType
+    lessonName: When a Disaster Happens, Who Would You Call
+    lessonFrom: Organization library
+    description: In Org "FireCloud Zone" & For smoke testing and add to activity
+    buttonLinkText: *enterActivityButton
+  eLearningCompletedOrg: &eLearningCompletedOrg
+    <<: *dueDate
+    type: *eLearningType
+    lessonName: TestingStoryline3
+    lessonFrom: Organization library
+    description: In Org "FireCloud Zone" & For booking completed eLearning.
+    buttonLinkText: *enterActivityButton
+  hyperlink: &hyperlink
+    type: hyperlink-component
+    displayText: &hyperlink Beginner Tennis Lesson
+    title: *hyperlink
+    protocol: https://
+    url: tennissg.com/beginner-tennis-lessons/
+    description: reference https://tennissg.com/beginner-tennis-lessons/
+    buttonLinkText: Enter Link
+  feedbackCompleteCourse: &feedbackCompleteCourse
+    <<: *dueDate
+    type: &feedbackType course-feedback
+    title: &doAfterCompleteFeedbackName Do after completing course
+    description: &doAfterCompleteFeedbackDesc It takes a few minutes
+    questions:
+      multipleChoice:
+        require: true
+        question: Please rate our course
+        label: &firstQuestion first question
+        type: Multiple choice - single answer allowed (drop-down menu)
+        choice values:
+          - 1/*
+          - 2/**
+          - 3/***
+        position: 1
+        learner: 2/**
+      shortText: &shortTextFeedback
+        require: false
+        question: How do you feel on the course?
+        label: &secondQuestion second question
+        maxCharacters: 255 #default value
+        learner: Good, it helps me improve myself. thanks
+      information:
+        addQuestion: Information
+        question: Thanks for your feedback. It can help us improve next course
+        label: &thirdQuestion third question
+        position: 3
+        informationType: Course #default value
+        value: ''
+    buttonLinkText: &feedbackButton Enter Course Feedback
+  feedbackTeacher: &teacherFeedback
+    <<: *dueDate
+    type: *feedbackType
+    title: Teacher's learning
+    description: *doAfterCompleteFeedbackDesc
+    displayCoursePage: true
+    buttonLinkText: *feedbackButton
+  feedbackClassmate: &classmateFeedback
+    <<: *dueDate
+    type: *feedbackType
+    title: About Classmate
+    description: Ask something about classmate in this course.
+    displayCoursePage: false
+    buttonLinkText: *feedbackButton
+  assignmentGroup: &assignmentGroup
+    <<: *dueDate
+    type: &assignmentType assignment
+    title: &groupWorkAssignmentName Group's Work
+    description: &groupWorkAssignmentDesc Allow to have 5 members.
+    additionalFiles: *scoreboardFile
+    path: *scoreboardPath
+    # Availability #
+    allowSubmissionsFrom:
+      day: 15
+      month: November
+      year: 2025
+      hour: 06
+      minute: 30
+    dueDate:
+      day: 30
+      month: December
+      year: 2025
+      hour: 17
+      minute: 10
+      enable: true
+      fullFormat: Wednesday, 31 December 2025, 5:10 PM
+    remindMeGrade:
+      day: 22
+      month: January
+      year: 2026
+      hour: 08
+      minute: 15
+      enable: true
+    # End Availability #
+    maxNumberOfUploadFile: 10
+    timeRemaining: 3 years 39 days
+    buttonLinkText: &assignmentButton Enter Assignment
+  assignmentMidterm: &midtermAssignment
+    <<: *dueDate
+    type: *assignmentType
+    title: Midterm 30 pt
+    description: Summary lesson 1 - 3
+    displayCoursePage: false
+    learnerFiles: &tennisWarmupDoc tennis warm up.docx
+    learnerPath: *tennisWarmUpPath
+    buttonLinkText: *assignmentButton
+  assignmentCreateVideo: &assignmentCreateVideo
+    <<: *dueDate
+    type: *assignmentType
+    title: Create video when playing
+    description: This for final project.
+    displayCoursePage: true
+    buttonLinkText: *assignmentButton
+  quizCheckUnderstand: &quizCheckUnderstand
+    <<: *dueDate
+    type: &quizType quiz
+    title: &quizCheckUnderstandName Check understanding about Warm-up
+    description: &checkUnderstandQuizDesc This may take a few minutes short text multiple choices true/false Pass score is 2.
+    gradeToPass: 2
+    questions:
+      multipleChoice: &quizMultipleChoiceQuestion
+        description: use for edit question
+        category: *quizCheckUnderstandName
+        questionName: *firstQuestion
+        questionText: The first point scored in a game is called? Correct answer is 15
+        defaultMark: 2
+        generalFeedback: &generalFeedback Thanks your submitted.
+        oneOrMultipleAnswer: One answer only
+        numberTheChoice: a., b., c., ...
+        showStandardInstruction: No
+        choice1:
+          value: 1
+          grade: 20%
+        choice2:
+          value: 15
+          grade: 100%
+          feedback: Yes, it's the correct answer.
+        choice3:
+          value: 20
+          grade: 25%
+      shortText: &shortTextQuiz
+        description: use for delete question
+        category: *quizCheckUnderstandName
+        questionName: *secondQuestion
+        questionText: The stroke used to put the ball into play is called?
+        generalFeedback: *generalFeedback
+        answer: Serve
+        grade: 100%
+      trueFalse:
+        category: *quizCheckUnderstandName
+        questionName: *thirdQuestion
+        questionText: Today is Sunday?
+        correctAnswer: False
+    buttonLinkText: &quizButton Enter Quiz
+  quizDailyClass: &quizDailyClass
+    <<: *dueDate
+    type: *quizType
+    title: Daily class
+    description: Individual work
+    displayCoursePage: true
+    optionalActivity: false
+    gradeToPass: 0
+    buttonLinkText: *quizButton
+  quizWeeklyClass: &weeklyClassQuiz
+    <<: *dueDate
+    type: *quizType
+    title: Weekly class
+    description: Pair work
+    displayCoursePage: false #default value
+    optionalActivity: true
+    buttonLinkText: *quizButton
+AddActivities: #new data need prefix AU, please call faker.getAuText() for all title
+  physicalClass: *physicalTrainAtSchool
+  physicalClassChildren: *physicalClassChildren
+  virtualClass: *virtualTalking
+  fileImage: *fileImage
+  fileDoc: *fileDoc
+  learningGoal: *learningGoal
+  videoYouTube: *videoYouTube
+  videoVimeo: *videoVimeo
+  videoFile: *videoFile
+  richText: *richText
+  eLearning: *eLearningCommunity
+  hyperlink: *hyperlink
+  feedback:
+    <<: *feedbackCompleteCourse
+    optionalActivity: true
+  assignment:
+    <<: *assignmentGroup
+    optionalActivity: true
+  quiz:
+    <<: *quizCheckUnderstand
+    passScore: 5.00
+    attempt: 2
+    gradingMethod: Highest Grade
+CreateMoodle:
+  quiz:
+    <<: *dueDate
+    title: AU Monthly Quiz
+    description: It takes 15 minutes.
+    passScore: 5.00
+    attempt: Unlimited
+    gradingMethod: Average Grade
+    questions:
+      shortText:
+        <<: *shortTextQuiz
+        questionName: first question
+  feedback:
+    <<: *dueDate
+    title: AU Course Survey
+    description: *doAfterCompleteFeedbackDesc
+    questions:
+      shortText:
+        <<: *shortTextFeedback
+        requires: true
+        label: Share your feeling
+        textfieldWidth: 20
+        position: 1 #default value
+  assignment:
+    <<: *dueDate
+    title: AU Weekly Classwork
+    description: *groupWorkAssignmentDesc
+    additionalFiles: *tennisWarmupDoc
+    path: *tennisWarmUpPath
+EditMoodle: #*Note: all input field just add Updated at the end of text
+  quiz:
+    <<: *quizCheckUnderstand
+    editQuestion:
+      multipleChoice:
+        <<: *quizMultipleChoiceQuestion
+        oneOrMultipleAnswer: Multiple answers allowed
+        numberTheChoice: 1., 2., 3., ...
+        showStandardInstruction: Yes
+        choice1:
+          grade: 10%
+  assignment:
+    <<: *assignmentGroup
+    additionalFiles: *tennisWarmupDoc
+    path: *tennisWarmUpPath
+  feedback:
+    <<: *feedbackCompleteCourse
+    editQuestion:
+      shortText:
+        <<: *shortTextFeedback
+        require: true
+        maxCharacters: 150
+        position: 3
+ChangeMoodle:
+  quiz:
+    old: *quizDailyClass
+    new: *weeklyClassQuiz
+  feedback:
+    old: *teacherFeedback
+    new: *classmateFeedback
+  assignment:
+    old: *midtermAssignment
+    new: *assignmentCreateVideo

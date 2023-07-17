@@ -1,0 +1,96 @@
+CourseData:
+  tennisWarmUpGuide:
+    description: Use for edit course and data in course instance
+    name: Tennis Warm-Up Guide
+    url:
+      beta:
+        id:
+          - 102765415
+      uat:
+        id:
+          - 101485726
+      prd:
+        id:
+          - 52065394
+    courseInstances:
+      createActivities:
+        description: learner booked and use for Edit learner resources, discussion, note, virtual class activity
+        startDate: 31 Jan, 2025
+        endDate: 01 Jan, 2039
+        date: 31 Jan, 2025 - 01 Jan, 2039
+        url: &tennisWarmUpGuideBookedCourseInstance
+          beta:
+            id:
+              - 102765491
+          uat:
+            id:
+              - 101486320
+          prd:
+            id:
+              - ''
+        learnerUrl: *tennisWarmUpGuideBookedCourseInstance # please change InstanceId: /web/ci102765491/course-detail#_courseDetailPortlet_tab=
+      modifyMoodle:
+        deliveryMethod: Virtual Classroom
+        startDate: 01 Feb, 2025
+        endDate: 28 Feb, 2039
+        date: 01 Feb, 2025 - 28 Feb, 2039
+        additionalBookingNote: for Editing/Changing Moodle
+        url: &modifyMoodleInstanceUrl
+          beta:
+            id:
+              - 106973783
+          uat:
+            id:
+              - 107624237
+          prd:
+            id:
+              - ''
+        quizCheckUnderstand: # activity detail, please check /lms/course-activities/sample-activities.yaml
+          title: Check understanding about Warm-up
+          url:
+            beta:
+              id:
+                - 4888
+            uat:
+              id:
+                - 8996
+            prd:
+              id:
+                - ''
+        quizDailyClass:
+          title: Daily class
+        quizWeeklyClass:
+          title: Weekly class
+        assignmentGroup:
+          title: Group's Work
+          url:
+            beta:
+              id:
+                - 4889
+            uat:
+              id:
+                - 9004
+            prd:
+              id:
+                - ''
+        assignmentMidterm:
+          title: Midterm 30 pt
+        assignmentCreateVideo:
+          title: Create video when playing
+        feedbackCompleteCourse:
+          title: Do after completing course
+          url:
+            # chang Env, CourseID, InstanceID, MoodleID:
+            beta:
+              id:
+                - 4890
+            uat:
+              id:
+                - 9013
+            prd:
+              id:
+                - ''
+        feedbackTeacher:
+          title: Teacher's learning
+        feedbackClassmate:
+          title: About Classmate

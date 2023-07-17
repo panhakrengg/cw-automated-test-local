@@ -1,0 +1,57 @@
+SampleResources:
+  folders:
+    atLeast: 2
+    meetTrainee: &meetTraineeFolder
+      description: for Smoke and Download functionality
+      name: &meetTraineeFolderName Meet trainee
+      folders: Group A
+      files:
+        tennisWarmUp: &tennisWarmUpFile
+          name: tennis warm up.docx
+          size: 46 KB
+          type: *docxFile
+          owner: &copOwner CoPUsers.owner
+          path: /lms/attachment/file/tennis warm up.docx
+        tennisBall:
+          name: tennis ball.jpg
+          size: 5.4 MB
+          type: *jpgFile
+          owner: *copOwner
+    morningExercise: &morningExerciseFolder
+      description: for Smoke and Download functionality - no sub folder & file
+      name: Morning exercise
+    introduction: &introductionFolder
+      description: for Delete functionality - has 1 file inside
+      name: Introduction
+      files:
+        tennisWarmUp: *tennisWarmUpFile
+    weekendTime: &weekendTimeFolder
+      description: for Delete functionality - has no file inside
+      name: Weekend Time
+  files:
+    atLeast: 2
+    tennisRacket: &tennisRacketFile
+      description: for Smoke and Download functionality
+      name: tennis racket.jpg
+      size: 1.5 MB
+      type: *jpgFile
+      owner: *copOwner
+    tennisWarmUpGuide: &tennisWarmUpGuideFile
+      description: for Smoke and Download functionality
+      name: tennis warm-up guide 2022.pdf
+      size: 8.4 MB
+      type: *pdfFile
+      owner: *copOwner
+    tennisPlayground: &tennisPlaygroundFile
+      description: for Delete functionality
+      name: tennis playground.jpg
+      size: 1.1 MB
+      type: *jpgFile
+
+DownloadFileFolders:
+  singleFileInFolder:
+    folders:
+      meetTrainee:
+        name: *meetTraineeFolderName
+        files:
+          tennisWarmUp: *tennisWarmUpFile

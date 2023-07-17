@@ -1,0 +1,4 @@
+"Service","Name","Username","Password","Hostname","Port","Security"
+"SMTP","Kendall Feeney","kendall.feeney@ethereal.email","zAx4Fp46886qZCWVnc","smtp.ethereal.email",587,"STARTTLS"
+"IMAP","Kendall Feeney","kendall.feeney@ethereal.email","zAx4Fp46886qZCWVnc","imap.ethereal.email",993,"TLS"
+"POP3","Kendall Feeney","kendall.feeney@ethereal.email","zAx4Fp46886qZCWVnc","pop3.ethereal.email",995,"TLS"
